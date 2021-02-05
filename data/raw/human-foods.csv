@@ -512,7 +512,9 @@ Thunnus albacares,yellowfin tuna,animal,BP
 Thunnus obesus,bigeye tuna,animal,JL
 Thunnus thynnus,atlantic bluefin tuna,animal,BP
 Thymus vulgaris,thyme,plant,BP
-Tilapia,tilapia,animal,BP
+Oreochromis niloticus,nile tilapia,animal,BP
+Oreochromis aureus,blue tilapia,animal,BP
+Oreochromis mossambicus,mozambique tilapia,animal,BP
 Trachinotus,Pompano,animal,JL
 Tragopogon porrifolius,salsify,plant,JL
 Trametes versicolor,turkey tail mushroom,fungus,JL
