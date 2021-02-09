@@ -154,7 +154,12 @@ Citrus x aurantium,"bitter orange, seville orange",plant,BP
 Citrus x paradisi,grapefruit,plant,BP
 Pinnipedia,seal,animal,JL
 Selachimorpha,Shark,animal,JL
-Echinoidea,"sea urchin, uni",animal,JL
+Paracentrotus lividus,purple sea urchin (atlantic),animal,BP
+Strongylocentrotus droebachiensis,green sea urchin,animal,BP
+Eucidaris tribuloides,slate pencil urchin,animal,BP
+Mesocentrotus franciscanus,red sea urchin,animal,BP
+Strongylocentrotus purpuratus,purple sea urchin (pacific),animal,BP
+Evechinus chloroticus,kina (new zealand urchin),animal,BP
 Holothuroidea,sea cucumber,animal,JL
 Pinospida,pine cones,plant,JL
 Cleome gynandra,"shona cabbage, african cabbage",plant,BP
