@@ -422,7 +422,9 @@ Pistacia vera,pistachio,plant,BP
 Pisum sativum,pea,plant,BP
 Pisum sativum var. macrocarpum,sugar snap pea,plant,BP
 Pisum sativum var. macrocarpum,snow pea,plant,BP
-Plantago,psyllium,plant,JL
+Plantago afra,black psyllium,plant,BP
+Plantago arenaria,french psyllium,plant,BP
+Plantago ovata,blond psyllium,plant,BP
 Pleurotus eryngii,king oyster,fungus,BP
 Pleurotus ostreatus,Pearl oyster mushroom,fungus,JL
 Pollachius pollachius,pollock,animal,JL
