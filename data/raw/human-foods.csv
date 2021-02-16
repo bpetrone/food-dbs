@@ -52,6 +52,7 @@ Artocarpus altilis ,breadfruit,plant,BP
 Artocarpus heterophyllus,jackfruit,plant,JL
 Artocarpus lacucha,"monkey fruit, monkey jack, barhar, badahar, dewa, bohot",plant,JL
 Asimina triloba,pawpaw,plant,JL
+Aspalathus linearis,rooibos,plant,BP
 Asparagus officinalis,asparagus,plant,BP
 Aspergillus oryzae,koji,fungus,JL
 Avena sativa,oat,plant,BP
@@ -311,6 +312,7 @@ Hypomyces lactifluorum,lobster mushroom,fungus,JL
 Hypsizygus marmoreus,white beech,fungus,BP
 Cetacea,whales,animal,JL
 Inga vera,"ice-cream-bean, joaquiniquil",plant,BP
+Ilex paraguariensis,yerba mate,plant,BP
 Illicium verum,star anise,plant,SJ
 Ipomoea aquatica,"water spinach, swamp morning glory",plant,BP
 Ipomoea batatas,sweet potato,plant,BP
@@ -325,6 +327,7 @@ Leccinum scabrum,Birch bolete,fungus,JL
 Lens,lentil,plant,BP
 Lens culinaris,lentil,plant,BP
 Lentinula edodes,shiitake,fungus,BP
+Lepidium meyenii,maca root,plant,BP
 Limonia acidissima,"wood apple, elephant apple",plant,JL
 Linum usitatissimum,flaxseed,plant,BP
 Littorina littorea,periwinkle,animal,JL
