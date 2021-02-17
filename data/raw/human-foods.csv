@@ -4,10 +4,12 @@ Abramis brama,common bream,animal,JL
 Acacia pennata,cha-om,plant,BP
 Acanthocereus tetragonus,sword pear,plant,JL
 Acanthocybium solandri,"Wahoo, ono",animal,JL
-Acer saccharum,maple (syrup),plant,JL
-Acer rubrum,maple (syrup),plant,JL
 Acer nigrum,maple (syrup),plant,JL
+Acer rubrum,maple (syrup),plant,JL
+Acer saccharum,maple (syrup),plant,JL
+Acipenseridae,"sturgeon, caviar",animal,JL
 Actinidia deliciosa,kiwi,plant,BP
+﻿Adansonia digitata,baobab,plant,BP
 Aegle marmelos,"bael, Bengal quince",plant,JL
 Aframomum laurentii,bongongoo,plant,BP
 Agaricus arvensis,Horse mushroom,fungus,JL
@@ -26,6 +28,7 @@ Allium sativum,garlic,plant,BP
 Allium schoenoprasum,chive,plant,BP
 Alocasia macrorrhizos,giant taro,plant,BP
 Aloe,aloe,plant,JL
+Alosinae,Shad†(incl. roe),animal,JL
 Alpinia galanga,greater galangal,plant,BP
 Amalocalyx microlobus,mak sim,plant,BP
 Amaranthus cruentus,red amaranth,plant,BP
@@ -37,6 +40,7 @@ Ananas comosus,pineapple,plant,BP
 Anas,duck,animal,BP
 Anas platyrhynchos,mallard duck,animal,BP
 Anethum graveolens,dill,plant,BP
+Anguilliformes,eel,animal,JL
 Annona muricata,soursop,plant,BP
 Anonidium mannii,bobo,plant,BP
 Anoplopoma fimbria,"Sablefish, black cod",animal,JL
@@ -46,8 +50,8 @@ Apium graveolens,celery,plant,BP
 Arachis hypogaea,peanut,plant,BP
 Armoracia rusticana,horseradish,plant,BP
 Artemisia dracunculus,tarragon,plant,BP
-Arthrospira platensis,spirulina,bacteria,JL
 Arthrospira maxima,spirulina,bacteria,JL
+Arthrospira platensis,spirulina,bacteria,JL
 Artocarpus altilis ,breadfruit,plant,BP
 Artocarpus heterophyllus,jackfruit,plant,JL
 Artocarpus lacucha,"monkey fruit, monkey jack, barhar, badahar, dewa, bohot",plant,JL
@@ -55,6 +59,8 @@ Asimina triloba,pawpaw,plant,JL
 Aspalathus linearis,rooibos,plant,BP
 Asparagus officinalis,asparagus,plant,BP
 Aspergillus oryzae,koji,fungus,JL
+Astacoidea,"crayfish, crawfish",animal,JL
+Asteraceae,thistle,plant,JL
 Avena sativa,oat,plant,BP
 Averrhoa carambola,starfruit,plant,BP
 Bambusa vulgaris,common bamboo,plant,BP
@@ -68,13 +74,13 @@ Beta vulgaris subsp. vulgaris,swiss chard,plant,BP
 Bison bison,bison,animal,BP
 Bixa orellana,"achiote, annato",plant,BP
 Boletus,Bolete,fungus,JL
-Sinapis alba,white mustard,plant,BP
 Bos taurus,cow,animal,BP
+Bramidae,Pomfret,animal,JL
 Brassica juncea,brown mustard,plant,BP
+Brassica juncea,"canola, rapeseed",plant,JL
+Brassica juncea,"jujube, red date",plant,BP
 Brassica napobrassica,rutabaga,plant,JL
 Brassica napus L.,"canola, rapeseed",plant,JL
-Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
-Brassica juncea,"canola, rapeseed",plant,JL
 Brassica oleracea,"cabbage, broccoli, cauliflower, kale, Brussels sprouts, collard greens, savoy, kohlrabi, gai lan",plant,BP
 Brassica oleracea var. alboglabra,gai-lan,plant,BP
 Brassica oleracea var. botrytis,"cauliflower, romanesco broccoli",plant,BP
@@ -97,6 +103,7 @@ Brassica oleracea var. viridis,"kale, collard greens",plant,BP
 Brassica rapa,mustards,plant,BP
 Brassica rapa subsp. chinensis,bok choy,plant,BP
 Brassica rapa subsp. narinosa,tatsoi,plant,BP
+Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
 Brassica rapa subsp. oleifera,field mustard,plant,BP
 Brassica rapa subsp. Parachinensis,choy sum,plant,BP
 Brassica rapa subsp. pekinensis,napa cabbage,plant,BP
@@ -112,6 +119,7 @@ Callinectes sapidus,atlantic blue crab,animal,BP
 Callinectes sapidus,blue crab,animal,JL
 Calvatia gigantea,giant puffball,fungus,JL
 Camellia sinensis,tea,plant,BP
+Cancer magister,dungeness crab,animal,JL
 Canis lupus,wolf,animal,BP
 Cannabis sativa,hemp seed,plant,JL
 "Cantharellus, Craterellus, Gomphus,  Polyozellus",chantarelle,fungus,JL
@@ -122,6 +130,7 @@ Capsicum baccatum ,"aji amarillo, aji limon, ciolla sella",plant,JL
 Capsicum chinense,"habanero, scotch bonnet, trinidad scorpions, bhut jolokia, carolina reaper",plant,JL
 Capsicum frutescens,"tabascos, indian chiles",plant,BP
 Capsicum pubescens,rocoto and manzano peppers,plant,BP
+Cardiidae,cockle,animal,JL
 Carica papaya,papaya,plant,BP
 Carica x pentagona,babaco,plant,BP
 Carnegiea gigantea,Saguaro,plant,JL
@@ -135,10 +144,13 @@ Cephalophus natalensis,red forest duiker,animal,BP
 Ceratonia siliqua,carob bean,plant,JL
 Cereus repandus†,Peruvian apple cactus,plant,JL
 Cervus canadensis,elk,animal,BP
+Cetacea,whales,animal,JL
 Chamaedorea tepejilote,pacaya,plant,JL
+Channidae,Snakehead,animal,JL
 Chenopodium pallidicaule,CaÒihua†,plant,JL
 Chenopodium quinoa,quinoa,plant,BP
 Chionoecetes,snow crab,animal,JL
+Chirostyloidea,"langostino, squat lobster",animal,JL
 Cicer arietinum,chickpea,plant,BP
 Cichorium endivia ,endive,plant,JL
 Cichorium intybus ,chicory,plant,JL
@@ -153,17 +165,8 @@ Citrus reticulata,mandarin orange,plant,BP
 Citrus sinensis,sweet orange,plant,BP
 Citrus x aurantium,"bitter orange, seville orange",plant,BP
 Citrus x paradisi,grapefruit,plant,BP
-Pinnipedia,seal,animal,JL
-Selachimorpha,Shark,animal,JL
-Paracentrotus lividus,purple sea urchin (atlantic),animal,BP
-Strongylocentrotus droebachiensis,green sea urchin,animal,BP
-Eucidaris tribuloides,slate pencil urchin,animal,BP
-Mesocentrotus franciscanus,red sea urchin,animal,BP
-Strongylocentrotus purpuratus,purple sea urchin (pacific),animal,BP
-Evechinus chloroticus,kina (new zealand urchin),animal,BP
-Holothuroidea,sea cucumber,animal,JL
-Pinospida,pine cones,plant,JL
 Cleome gynandra,"shona cabbage, african cabbage",plant,BP
+Clupeidae,"Herring, kazunoko†(roe)",animal,JL
 Cocos nucifera,coconut,plant,BP
 Coffea,coffee bean,plant,BP
 Coffea arabica,coffee bean,plant,BP
@@ -196,9 +199,9 @@ Cucurbita moschata,"squash, pumpkin",plant,BP
 Cucurbita pepo,"pumpkin, summer squash",plant,BP
 Cucurbita pepo subsp. Pepo,spaghetti squash,plant,BP
 Cucurbita pepo var. turbinata,acorn squash,plant,BP
-Curcuma longa,turmeric,plant,BP
 Cuminum cyminum,cumin,plant,BP
 Cuniculus paca,lowland paca,animal,BP
+Curcuma longa,turmeric,plant,BP
 Cyamopsis tetragonoloba,guar bean,plant,JL
 Cyclopterus lumpus,Lumpfish roe,animal,JL
 Cymbopogon citratus,lemongrass,plant,BP
@@ -209,13 +212,15 @@ Cyprinus carpio,common carp,animal,BP
 Dacryodes edulis,"safou, butterfruit",plant,BP
 Daucus carota,wild carrot,plant,BP
 Daucus carota subsp. sativus,carrot,plant,BP
+Decapodiformes,"squid, calamari",animal,JL
+Delphinidae,dolphin,animal,JL
 Digitaria exilis,fonio,plant,JL
 Digitaria iburua,fonio,plant,JL
 Dimocarpus longan,longan,plant,BP
+Diodon,fugu fish,animal,JL
 Dioscorea,yam,plant,BP
 Dioscorea alata,"ube, purple yam",plant,JL
 Dissostichus eleginoides,"Patagonian toothfish, Chilean sea bass",animal,JL
-Rhodophyta,carageenan,plant,JL
 Dromaius novaehollandiae,emu,animal,BP
 Durio zibethinus,durian,plant,BP
 Echinocereus†,strawberry cactus,plant,JL
@@ -227,40 +232,16 @@ Elettaria cardamomum,green cardamom,plant,BP
 Eleusine coracana,finger millet,plant,BP
 Engraulidae,anchovy,animal,JL
 Enydra fluctuans,buffalo spinach,plant,BP
+Epinephelinae,Grouper,animal,JL
 Equus caballus,horse,animal,BP
 Eragrostis tef,teff,plant,JL
 Eryngium foetidum,culantro,plant,BP
 Esox,Pike,animal,JL
+Eucidaris tribuloides,slate pencil urchin,animal,BP
 Euterpe oleracea,aÁaÌ palm,plant,JL
-Fagopyrum esculentum,buckwheat,plant,BP
-Delphinidae,dolphin,animal,JL
-Platanistidae,dolphin,animal,JL
-Iniidae,dolphin,animal,JL
-Acipenseridae,"sturgeon, caviar",animal,JL
-Asteraceae,thistle,plant,JL
-Bramidae,Pomfret,animal,JL
-Cardiidae,cockle,animal,JL
-Channidae,Snakehead,animal,JL
-Clupeidae,"Herring, kazunoko†(roe)",animal,JL
+Evechinus chloroticus,kina (new zealand urchin),animal,BP
 Exocoetidae,"flying fish, tobiko (roe)",animal,JL
-Latidae,Asian sea bass,animal,JL
-Lithodidae,king crab,animal,JL
-Lutjanidae,Snapper,animal,JL
-Malacanthidae,tilefish,animal,JL
-Merlucciidae,hake,animal,JL
-Phycidae,hake,,
-Mugilidae,Mullet,animal,JL
-Mytilidae,mussel,animal,JL
-Osmeridae,Smelt,animal,JL
-Pectinidae,scallop,animal,JL
-Rajidae,Skate,animal,JL
-Scaridae,Parrotfish,animal,JL
-Serranidae,Sea bass,animal,JL
-Soleidae,Sole,animal,JL
-Squalidae,Dogfish,animal,JL
-Stromateidae,Butter fish,animal,JL
-Strombidae,conch,animal,JL
-Tetraodontidae ,"Blowfish, pufferfish",animal,JL
+Fagopyrum esculentum,buckwheat,plant,BP
 Felis catus,cat,animal,BP
 Ficus racemosa,cluster fig,plant,BP
 Flammulina velutipes,enokitake,fungus,BP
@@ -268,15 +249,9 @@ Foeniculum vulgare,fennel,plant,BP
 Fragaria,strawberry,plant,BP
 Fragaria x ananassa,strawberry,plant,BP
 Gadus,Cod,animal,JL
+Galatheoidea,"langostino, squat lobster",animal,JL
 Gallus gallus,chicken,animal,BP
 Garcinia oblongifolia,south china mangosteen,plant,BP
-Scylla,mud crab,animal,JL
-Panopeidae,mud crab,animal,JL
-Xanthidae,mud crab,animal,JL
-Takifugu,fugu fish,animal,JL
-Lagocephalus,fugu fish,animal,JL
-Sphoeroides,fugu fish,animal,JL
-Diodon,fugu fish,animal,JL
 Geoffroea decorticans,chaÒar,plant,JL
 Gigantochloa,bamboo,plant,BP
 Glebionis coronaria,crown daisy,plant,BP
@@ -300,6 +275,8 @@ Hericium erinaceus,"lion's mane, monkey head",fungus,BP
 Hibiscus sabdariffa,roselle,plant,BP
 Hippoglossus hippoglossus,halibut,animal,JL
 Hippoglossus stenolepis,halibut,animal,JL
+Hippoidea,"sand crab, mole crab",animal,JL
+Holothuroidea,sea cucumber,animal,JL
 Homarus americanus,lobster,animal,BP
 Hoplobatrachus tigerinus,indian bullfrog,animal,BP
 Hoplostethus atlanticus,Orange roughy,animal,JL
@@ -310,18 +287,21 @@ Humulus lupulus,hops,plant,JL
 Hylocereus undatus ,"dragon fruit, pitahaya",plant,BP
 Hypomyces lactifluorum,lobster mushroom,fungus,JL
 Hypsizygus marmoreus,white beech,fungus,BP
-Cetacea,whales,animal,JL
-Inga vera,"ice-cream-bean, joaquiniquil",plant,BP
 Ilex paraguariensis,yerba mate,plant,BP
 Illicium verum,star anise,plant,SJ
+Inga vera,"ice-cream-bean, joaquiniquil",plant,BP
+Iniidae,dolphin,animal,JL
 Ipomoea aquatica,"water spinach, swamp morning glory",plant,BP
 Ipomoea batatas,sweet potato,plant,BP
+Irvingia gabonensis,bush mango,plant,BP
 Juglans nigra,black walnut,plant,JL
 Juglans regia,walnut,plant,BP
 Lactuca sativa,lettuce,plant,BP
 Laetiporus ,chicken of the woods,fungus,JL
 Lagenaria siceraria,calabash,plant,BP
+Lagocephalus,fugu fish,animal,JL
 Lasia spinosa,"lasia, geli-geli",plant,BP
+Latidae,Asian sea bass,animal,JL
 Laurus nobilis,bay leaf,plant,BP
 Leccinum scabrum,Birch bolete,fungus,JL
 Lens,lentil,plant,BP
@@ -330,22 +310,26 @@ Lentinula edodes,shiitake,fungus,BP
 Lepidium meyenii,maca root,plant,BP
 Limonia acidissima,"wood apple, elephant apple",plant,JL
 Linum usitatissimum,flaxseed,plant,BP
+Lithodidae,king crab,animal,JL
 Littorina littorea,periwinkle,animal,JL
 Lophius,Monkfish,animal,JL
 Luffa acutangula,chinese okra,plant,BP
 Luffa cylindrica ,sponge gourd,plant,BP
-Lupinus mutabilis,lupini beans,plant,JL
 Lupinus albus,lupini beans,plant,JL
-Lycium chinense,goji berry,plant,JL
+Lupinus mutabilis,lupini beans,plant,JL
+Lutjanidae,Snapper,animal,JL
 Lycium barbarum,goji berry,plant,JL
+Lycium chinense,goji berry,plant,JL
 Macadamia integrifolia,macadamia,plant,BP
 Maclura pomifera,osage orange,plant,JL
+Malacanthidae,tilefish,animal,JL
 Mallotus villosus,"capelin, masago (roe)",animal,JL
 Malus domestica,apple,plant,BP
 Malus sylvestris,crab apple,plant,BP
 Mangifera indica,mango,plant,BP
 Manihot esculenta,cassava,plant,BP
 Marsilea quadrifolia,water clover,plant,BP
+Medusozoa,jellyfish,animal,JL
 Megaphrynium macrostachyum,yoruba soft cane,plant,BP
 Melanogrammus aeglefinus,Haddock,animal,JL
 Meleagris,turkey,animal,BP
@@ -357,37 +341,41 @@ Mercenaria mercenaria,quahog,animal,BP
 Mercenaria mercenaria,"quahog, hard clam",animal,JL
 "Mercenaria mercenaria, others",clam,animal,JL
 Merlangius merlangus,whiting,animal,JL
+Merlucciidae,hake,animal,JL
+Mesocentrotus franciscanus,red sea urchin,animal,BP
 Metacarcinus magister,dungeness crab,animal,JL
-Cancer magister,dungeness crab,animal,JL
 Microcosmus sabatieri,"sea fig, violet",animal,JL
 Momordica charantia,bitter melon,plant,BP
 Morchella angusticeps ,black morel,fungus,JL
 Morone saxatilis,striped bass,animal,JL
 Morus nigra,mulberry,plant,JL
+Mugilidae,Mullet,animal,JL
 Murraya koenigii,curry leaf,plant,BP
 Musa,banana,plant,BP
-Musa†◊†paradisiaca,plantain,plant,JL
 Musa acuminata,banana,plant,BP
+Musa†◊†paradisiaca,plantain,plant,JL
 Myristica fragrans,nutmeg,plant,BP
+Mytilidae,mussel,animal,JL
 Mytilus edulis,blue mussel,animal,BP
 Nasturtium microphyllum ,one-row watercress,plant,BP
 Nautilus,nautilus,animal,JL
 Nelumbo nucifera,lotus root,plant,JL
+Nematognathi,catfish,animal,JL
 Ocimum basilicum,basil,plant,BP
+Octopoda,octopus,animal,JL
 Odocoileus virginianus,white-tailed deer,animal,BP
 Olea europaea,olive,plant,BP
 Oncorhynchus mykiss,rainbow trout,animal,JL
 Ophiodon elongatus,Lingcod,animal,JL
 Opuntia,"nopales, prickly pear, paddle cactus",plant,JL
-Anguilliformes,eel,animal,JL
-Octopoda,octopus,animal,JL
-Petromyzontiformes,Lamprey,animal,JL
-Sepiida,cuttlefish,animal,JL
-Siluriformes,catfish,animal,JL
-Nematognathi,catfish,animal,JL
+Oreochromis aureus,blue tilapia,animal,BP
+Oreochromis mossambicus,mozambique tilapia,animal,BP
+Oreochromis niloticus,nile tilapia,animal,BP
 Origanum vulgare,oregano,plant,BP
 Oryza sativa,rice,plant,BP
+Osmeridae,Smelt,animal,JL
 Osmundastrum cinnamomeum,cinnamon fern,plant,BP
+Ostreoidea,oyster,animal,JL
 Ovis aries,sheep,animal,BP
 Oxalis tuberosa,oca,plant,JL
 Oxypolis filiformis,water cowbane,plant,BP
@@ -396,23 +384,31 @@ Paederia foetida,stinkvine,plant,BP
 Panax vietnamensis,vietnamese ginseng,plant,BP
 Pangasius bocourti,"Pangasius, basa, swai",animal,JL
 Panicum miliaceum,proso millet,plant,BP
+Panopeidae,mud crab,animal,JL
 Papaver somniferum,poppy,plant,JL
+Paracentrotus lividus,purple sea urchin (atlantic),animal,BP
 Paralichthys lethostigma,flounder,animal,BP
+Parastacoidea,"crayfish, crawfish",animal,JL
 Passiflora edulis,passion fruit,plant,BP
 Passiflora quadrangularis,"giant granadilla, grenadine",plant,BP
 Pastinaca sativa,parsnip,plant,JL
+Pectinidae,scallop,animal,JL
 Penaeus setiferus,white shrimp,animal,BP
 Perca fluviatilis,common perch,animal,BP
 Persea americana,avocado,plant,BP
+Petromyzontiformes,Lamprey,animal,JL
 Petroselinum crispum,parsley,plant,BP
 Phaseolus lunatus,lima bean,plant,BP
 Phaseolus vulgaris,"common bean, green bean, French bean",plant,BP
 Phoenix dactylifera,date,plant,BP
+Phycidae,hake,,
 Physalis angulata,cutleaf groundcherry,plant,BP
 Physalis philadelphica,tomatillo,plant,JL
 Piaractus brachypomus,pirapitinga,animal,BP
 Pimenta dioica,allspice,plant,BP
 Pimpinella anisum,anise seed,plant,BP
+Pinnipedia,seal,animal,JL
+Pinospida,pine cones,plant,JL
 Pinus,pine nut,plant,JL
 Piper guineense,ashanti pepper,plant,BP
 Piper longum,long pepper,plant,JL
@@ -425,6 +421,7 @@ Pisum sativum var. macrocarpum,snow pea,plant,BP
 Plantago afra,black psyllium,plant,BP
 Plantago arenaria,french psyllium,plant,BP
 Plantago ovata,blond psyllium,plant,BP
+Platanistidae,dolphin,animal,JL
 Pleurotus eryngii,king oyster,fungus,BP
 Pleurotus ostreatus,Pearl oyster mushroom,fungus,JL
 Pollachius pollachius,pollock,animal,JL
@@ -445,15 +442,17 @@ Pseudohyndum gelatinosum,Toothed jelly fungus,fungus,JL
 Psidium guajava,common guava,plant,BP
 Psophocarpus scandens,tropical african winged bean,plant,BP
 Punica granatum,pomegranate,plant,JL
-Pyropia yezoensis,nori,plant,JL
 Pyropia tenera,nori,plant,JL
+Pyropia yezoensis,nori,plant,JL
 Pyrus,pear,plant,BP
 Pyrus communis,european pear,plant,BP
 Quercus,"acorn, oak",plant,JL
+Rajidae,Skate,animal,JL
 Raphanus sativus,radish,plant,BP
 Rastrineobola argenta,silver cyprinid,animal,BP
 Rattus rattus,rat,animal,BP
 Rhizopus microsporus,rhizopus,fungus,BP
+Rhodophyta,carageenan,plant,JL
 Ribes uva-crispa or R. grossularia,gooseberry,plant,JL
 Rosa,rose,plant,JL
 Rubus,blackberry,plant,JL
@@ -471,16 +470,23 @@ Salvia rosmarinus,rosemary,plant,BP
 Sardina pilchardus,european pilchard,animal,BP
 Sardinops sagax,south american pilchard,animal,BP
 Sauropus androgynus,katuk,plant,BP
+Scaridae,Parrotfish,animal,JL
 Schinus molle,pink peppercorn,plant,JL
 Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
 Scophthalmus maximus,Turbot,animal,JL
 Scophthalmus rhombus,Brill,animal,JL
 Scorodophloeus zenkeri,"garlic tree, divida",plant,BP
 Scorzonera hispanica,"Spanish salsify, black salsify",plant,JL
+Scylla,mud crab,animal,JL
 Secale cereale,rye,plant,BP
 Secale cereale x Triticum aestivum,triticale,plant,BP
 Sechium edule,chayote,plant,BP
+Selachimorpha,Shark,animal,JL
+Sepiida,cuttlefish,animal,JL
+Serranidae,Sea bass,animal,JL
 Sesamum indicum,sesame,plant,BP
+Siluriformes,catfish,animal,JL
+Sinapis alba,white mustard,plant,BP
 Smallanthus sonchifolius,yacon,plant,JL
 Solanum aethiopicum,"bitter tomato, african eggplant",plant,BP
 Solanum americanum,nightshade,plant,BP
@@ -488,43 +494,40 @@ Solanum anguivi,"african eggplant, forest bitterberry",plant,BP
 Solanum lycopersicum,tomato,plant,BP
 Solanum macrocarpon,"african eggplant, vietnamese eggplant",plant,BP
 Solanum melongena,eggplant,plant,BP
+Solanum nigrum,blackberry nightshade,plant,BP
 Solanum quitoense,naranjilla,plant,BP
 Solanum tuberosum,potato,plant,BP
+Soleidae,Sole,animal,JL
 Sorghum bicolor,sorghum,plant,BP
 Sparus aurata,"Dorade, gilt-head bream, orata",animal,JL
+Sphoeroides,fugu fish,animal,JL
 Sphyraena,barracuda,animal,JL
 Spinacia oleracea,spinach,plant,BP
 Spondias dulcis,ambarella,plant,BP
 Sprattus,Sprat,animal,JL
+Squalidae,Dogfish,animal,JL
 Stachys affinis,"Chinese artichoke, crosne",plant,JL
-Alosinae,Shad†(incl. roe),animal,JL
-Epinephelinae,Grouper,animal,JL
-Medusozoa,jellyfish,animal,JL
+Stromateidae,Butter fish,animal,JL
+Strombidae,conch,animal,JL
+Strongylocentrotus droebachiensis,green sea urchin,animal,BP
+Strongylocentrotus purpuratus,purple sea urchin (pacific),animal,BP
 Suillus luteus,slippery jack,fungus,JL
-Astacoidea,"crayfish, crawfish",animal,JL
-Parastacoidea,"crayfish, crawfish",animal,JL
-Chirostyloidea,"langostino, squat lobster",animal,JL
-Galatheoidea,"langostino, squat lobster",animal,JL
-Hippoidea,"sand crab, mole crab",animal,JL
-Ostreoidea,oyster,animal,JL
-Decapodiformes,"squid, calamari",animal,JL
 Sus scrofa,pig,animal,BP
 Sylvilagus,cottontail rabbit,animal,BP
 Synsepalum dulcificum,miracle berry,plant,JL
 Syzygium aromaticum,clove,plant,BP
+Takifugu,fugu fish,animal,JL
 Talinum fruticosum ,ceylon spinach,plant,BP
 Tamarindus indica,tamarind,plant,BP
 Taraxacum ,dandelion,plant,JL
 Tenualosa ilisha,Ilish,animal,JL
+Tetraodontidae ,"Blowfish, pufferfish",animal,JL
 Theobroma cacao,cocoa bean,plant,BP
 Thunnus alalunga,albacore tuna,animal,JL
 Thunnus albacares,yellowfin tuna,animal,BP
 Thunnus obesus,bigeye tuna,animal,JL
 Thunnus thynnus,atlantic bluefin tuna,animal,BP
 Thymus vulgaris,thyme,plant,BP
-Oreochromis niloticus,nile tilapia,animal,BP
-Oreochromis aureus,blue tilapia,animal,BP
-Oreochromis mossambicus,mozambique tilapia,animal,BP
 Trachinotus,Pompano,animal,JL
 Tragopogon porrifolius,salsify,plant,JL
 Trametes versicolor,turkey tail mushroom,fungus,JL
@@ -532,9 +535,9 @@ Trigonella foenum-graecum,fenugreek,plant,JL
 Triticum aestivum,wheat,plant,BP
 Triticum dicoccon,farro,plant,JL
 Triticum durum,"bulgur, freekeh",plant,JL
-Triticum turgidum subsp. durum,"bulgur, freekeh",plant,BP
 Triticum spelta,spelt,plant,BP
 Triticum turanicum,"kamut, Khorasan wheat",plant,JL
+Triticum turgidum subsp. durum,"bulgur, freekeh",plant,BP
 Ucides occidentalis,pacific mangrove ghost crab,animal,BP
 Ullucus tuberosus,ullucus,plant,BP
 Vaccinium microcarpum,cranberry,plant,BP
@@ -552,10 +555,10 @@ Vigna unguiculata,cowpea,plant,BP
 Vigna unguiculata subsp. Sesquipedalis,"long bean, asparagus beasn",plant,JL
 Vitis rotundifolia,muscadine grape,plant,BP
 Vitis vinifera,common grape vine,plant,BP
+Xanthidae,mud crab,animal,JL
 Xanthosoma,yautia,plant,JL
 Xiphias gladius,Swordfish,animal,JL
 Zamia integrifolia,arrowroot,plant,JL
 Zea mays,corn,plant,BP
 Zeus faber,"John Dory, St Pierre, Peter's Fish",animal,JL
 Zingiber officinale,ginger,plant,BP
-Brassica juncea,"jujube, red date",plant,BP
