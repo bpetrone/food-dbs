@@ -1,0 +1,277 @@
+---
+title: "12SV5 reference"
+output: html_notebook
+---
+
+# Setup 
+```{r setup, include=FALSE, echo=FALSE}
+require("knitr")
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+## Packages and functions
+```{r}
+library(Biostrings)
+library(here)
+library(ShortRead) # for clean()
+library(tidyverse)
+
+source(here('code', 'functions', 'find_primer_pair.R'))
+source(here('code', 'functions', 'query_ncbi.R'))
+source(here('code', 'functions', 'ncbi_to_dada.R'))
+source(here('code', 'functions', 'get_binomial.R'))
+```
+
+## Primer sequences
+```{r}
+# 12SV5
+V5F <- DNAString('TAGAACAGGCTCCTCTAG')
+V5R <- DNAString('TTAGATACCCCACTATGC')
+
+primers <- list(list(V5F, V5R))
+names(primers) <- '12SV5'
+```
+
+## Dietary animals
+
+*2020/11/16*: Starting with minimal database for first-pass analysis of blocking primer experiment (done by Sharon October 2020)
+
+Thoughts when clicking through sequences to assemble:
+
+* Multiple close matches to human, chicken, turkey, goat, Bos spp.  Will exact matching accommodate these?  Do I need to tune DADA2 parameters?
+* F. prau comes up!! (>90% identity)
+
+```{r}
+animals <- c('Homo sapiens', 
+             'Bos taurus', 
+             'Gallus gallus',
+             'Meleagris gallopavo',
+             'Sus scrofa',
+             'Bison bison',
+             'Salmo salar',
+             'Oreochromis niloticus',
+             'Capra hircus', 
+             'Epinephelus morio', 
+             'Coryphaena hippurus',
+             'Gadus morhua',
+             # BLAST cutoff here
+             'Paralichthys lethostigma',
+             'Callinectes sapidus',
+             'Oncorhynchus kisutch',
+             'Apis mellifera')
+```
+
+# Compile reference sequences
+
+Rough workflow is to 
+* pull sequences from curated databases (e.g. RefSeq mitochondria) first; 
+* pull sequences for any remaining species from a general NCBI query
+
+## RefSeq mito database
+
+This already has its names reformatted in semicolon-separated phylogeny, compatible with DADA2's assignTaxonomy function
+
+```{r}
+refseq.mito <- readDNAStringSet(here('data', 'processed', 'parsed-refs',
+                                     'RefSeq', 'refseq_mito.fasta'))
+```
+
+### Look for primer binding sites
+
+```{r}
+path <- here('data', 'processed', 'dada2-compatible', '12SV5')
+
+for (i in seq_along(primers)){
+     cat(names(primers)[i], sep='\n')
+     varname <- paste0('epcr.', names(primers[i]), '.refseq')
+     assign(varname,
+            find_primer_pair(clean(refseq.mito), 
+                             fwd = primers[[i]][[1]],
+                             rev = primers[[i]][[2]]))
+            
+     # Find how many sequences have the primer set
+     cat(length(get(varname)), sep='\n')
+}
+```
+
+### Subset by food species
+
+```{r}
+# Find indices of entries matching 
+animals.i <- 
+        lapply(animals, grep, x = names(epcr.12SV5.refseq)) %>%
+        unlist()
+
+# Subset
+epcr.12SV5.refseq.foods <- epcr.12SV5.refseq[animals.i]
+```
+
+What foods are still missing?
+
+```{r}
+foods.refseq <- get_binomial(epcr.12SV5.refseq.foods)
+
+# Subset remaining foods based on this list
+animals.ncbi.query <- animals[!(animals %in% foods.refseq)]
+
+length(animals.ncbi.query)/length(animals)
+```
+
+## NCBI nucleotide record
+
+```{r}
+# Pull sequences from NCBI
+animals.ncbi.hits <- query_ncbi(marker = '12S',
+                                organisms = animals.ncbi.query)
+```
+
+This is from the total number of available sequences
+
+```{r}
+length(animals.ncbi.hits)
+```
+
+Now look for primer binding sites within retrieved sequences.
+Note that current strategy to remove ambiguous nucleotides is problematic-- because a single ambiguous nucleotide far from the amplicon could lead to throwing away a usable sequence
+TODO: Needs to be addressed in find_primer_pair.R
+
+```{r}
+for (i in seq_along(primers)){
+     cat(names(primers)[i], sep='\n')
+     varname <- paste0('epcr.', names(primers[i]), '.ncbi')
+     assign(varname,
+            find_primer_pair(clean(animals.ncbi.hits), # Remove ambiguous nucleotides prior to search 
+                             fwd = primers[[i]][[1]],
+                             rev = primers[[i]][[2]]))
+            
+     # Find how many sequences have the primer set
+     cat(length(get(varname)), sep='\n')
+}
+```
+
+Now we need to do some cleaning:
+* Names need to be simplified
+* Sequences that are the same and that come from the same species can be de-duplicated
+* Sequences that are different and come from the same species must be preserved
+
+All of this is done inside the ncbi_to_dada() function
+
+```{r}
+epcr.12SV5.ncbi <- ncbi_to_dada(epcr.12SV5.ncbi)
+```
+
+## Combine results for final reference
+
+```{r}
+reference.12SV5 <- append(epcr.12SV5.refseq.foods, epcr.12SV5.ncbi)
+```
+
+```{r}
+# What foods are still missing as of 2020/11/19?
+present <- get_binomial(reference.12SV5)
+
+# Subset remaining foods based on this list
+animals[!(animals %in% present)]
+```
+
+Only missing crab and bee.  Leave these for now.  
+
+### Write to file
+
+```{r}
+# assignTaxonomy format
+writeXStringSet(reference.12SV5,
+                here('data', 'processed', 'dada2-compatible','12SV5',
+                     '20201119_Minimal 12SV5, RefSeq with NCBI patch, taxonomy.fasta'))
+```
+
+```{r}
+# assignSpecies format
+names(reference.12SV5) <- make.unique(present, sep = ' ')
+
+writeXStringSet(reference.12SV5,
+                here('data', 'processed', 'dada2-compatible','12SV5',
+                     '20201119_Minimal 12SV5, RefSeq with NCBI patch, species.fasta'))
+```
+
+## Agastya's reference
+
+```{r}
+ref <- 
+     here('data', 'processed', 'dada2-compatible', '12SV5', 
+          '20210315_12SV5, AS curated, species.fasta') %>% 
+     readDNAStringSet()
+
+ref
+```
+
+```{r}
+hist(width(ref))
+```
+
+```{r}
+# Any duplicated?
+seqs <- as.character(ref)
+names(seqs) <- NULL
+length(unique(seqs))
+```
+No. 
+
+```{r}
+# How many with Ns?
+length(clean(ref))
+
+# Remove these
+ref <- clean(ref)
+```
+
+```{r}
+# Think most names are okay, but not all
+# Most names are formatted ACC Genus species, try extracting these with regular expression
+
+headers <- 
+     data.frame(header = names(ref)) %>% 
+     separate(header, into = c('accession', 'genus', 'species'), sep = ' ')
+```
+
+```{r}
+unique(headers$genus)
+```
+
+```{r}
+# Collect indices of values to remove
+remove <- numeric()
+
+# pdb accessions
+remove <- c(remove, 
+            grep('pdb', headers$accession), # PDB values
+            grep('duck61_LP-SSHFS3.50', headers$genus), # Duck virus
+            grep('C.coturnix', headers$genus)) # Unclear name (quail?)
+            
+headers <- headers[!(1:dim(headers)[1] %in% remove), ]
+```
+
+```{r}
+# Reconstruct names
+headers <- mutate(headers,
+                  name = paste(accession, genus, species))
+```
+
+```{r}
+# Pull only those sequences with an accompanying (filtered) name
+sum(names(ref) %in% headers$name)
+ref <- ref[names(ref) %in% headers$name]
+```
+
+```{r}
+# Have potential problem of duplicated names (non-unique-- can DADA2 accommodate?)
+headers[which(duplicated(headers$accession)), ]
+```
+
+```{r}
+# Write updated reference to file
+writeXStringSet(ref,
+                here('data', 'processed', 'dada2-compatible','12SV5',
+                     '20210510, 12SV5_AS curated, species, filtered.fasta'))
+```
+
