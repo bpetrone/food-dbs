@@ -11,7 +11,7 @@ opts_knit$set(root.dir = file.path(getwd(), '..'))
 
 ## Packages and functions
 ```{r}
-library(Biostrings)
+library(Biostrings) 
 library(here)
 library(ShortRead) # for clean()
 library(tidyverse)
@@ -28,8 +28,7 @@ source(here('code', 'functions', 'get_binomial.R'))
 V5F <- DNAString('TAGAACAGGCTCCTCTAG')
 V5R <- DNAString('TTAGATACCCCACTATGC')
 
-primers <- list(list(V5F, V5R))
-names(primers) <- '12SV5'
+primers <- list(V5F, V5R)
 ```
 
 ## Dietary animals
@@ -65,33 +64,61 @@ animals <- c('Homo sapiens',
 
 Rough workflow is to 
 * pull sequences from curated databases (e.g. RefSeq mitochondria) first; 
-* pull sequences for any remaining species from a general NCBI query
+* pull sequences from a general NCBI query
 
-## RefSeq mito database
+## RefSeq mitochondrial database
 
-This already has its names reformatted in semicolon-separated phylogeny, compatible with DADA2's assignTaxonomy function
+Downloaded from RefSeq FTP site on 5/18/2021.
+```{r}
+fs <- 
+     here('data', 'raw', 'organelles', 'refseq_mito') %>% 
+     list.files(full.names = TRUE)
+
+basename(fs)
+
+mito <- c(readDNAStringSet(fs[1]), readDNAStringSet(fs[2]))
+mito
+```
 
 ```{r}
-refseq.mito <- readDNAStringSet(here('data', 'processed', 'parsed-refs',
-                                     'RefSeq', 'refseq_mito.fasta'))
+head(names(mito))
+
+# Simplify naming from current
+names(mito) <- 
+     names(mito) %>%
+     str_split(' mitochondrion') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+head(names(mito))
+```
+
+```{r}
+# Are any names duplicated?
+any(duplicated(names(mito)))
+```
+
+Write to file
+```{r}
+# writeXStringSet(mito, 
+#                 here('data', 'processed', 'parsed-refs', 'RefSeq',
+#                      'refseq_mito_species.fasta'))
 ```
 
 ### Look for primer binding sites
 
 ```{r}
-path <- here('data', 'processed', 'dada2-compatible', '12SV5')
+# Note this discrepancy-- could potentially do better screening of these sequences.  Worried that I am tossing things for Ns that occur nowhere near 12SV5
+length(refseq.mito)
+length(clean(refseq.mito))
+```
 
-for (i in seq_along(primers)){
-     cat(names(primers)[i], sep='\n')
-     varname <- paste0('epcr.', names(primers[i]), '.refseq')
-     assign(varname,
-            find_primer_pair(clean(refseq.mito), 
-                             fwd = primers[[i]][[1]],
-                             rev = primers[[i]][[2]]))
-            
-     # Find how many sequences have the primer set
-     cat(length(get(varname)), sep='\n')
-}
+```{r}
+refseq.12SV5 <- find_primer_pair(clean(mito), 
+                                 fwd = primers[[1]],
+                                 rev = primers[[2]])
+
+cat(length(refseq.12SV5), 'sequences have the primer set')
 ```
 
 ### Subset by food species
@@ -99,36 +126,35 @@ for (i in seq_along(primers)){
 ```{r}
 # Find indices of entries matching 
 animals.i <- 
-        lapply(animals, grep, x = names(epcr.12SV5.refseq)) %>%
+        lapply(animals, grep, x = names(refseq.12SV5)) %>%
         unlist()
 
 # Subset
-epcr.12SV5.refseq.foods <- epcr.12SV5.refseq[animals.i]
+refseq.12SV5 <- refseq.12SV5[animals.i]
 ```
 
 What foods are still missing?
 
 ```{r}
-foods.refseq <- get_binomial(epcr.12SV5.refseq.foods)
+foods.refseq <- sub('\\S+\\s', '', names(refseq.12SV5))
 
 # Subset remaining foods based on this list
-animals.ncbi.query <- animals[!(animals %in% foods.refseq)]
-
-length(animals.ncbi.query)/length(animals)
+animals[lapply(animals,
+               function(x){length(grep(x, foods.refseq))}) == 0]
 ```
 
 ## NCBI nucleotide record
 
 ```{r}
 # Pull sequences from NCBI
-animals.ncbi.hits <- query_ncbi(marker = '12S',
-                                organisms = animals.ncbi.query)
+ncbi.12SV5 <- query_ncbi(marker = '12S',
+                         organisms = animals)
 ```
 
 This is from the total number of available sequences
 
 ```{r}
-length(animals.ncbi.hits)
+length(ncbi.12SV5)
 ```
 
 Now look for primer binding sites within retrieved sequences.
@@ -136,17 +162,11 @@ Note that current strategy to remove ambiguous nucleotides is problematic-- beca
 TODO: Needs to be addressed in find_primer_pair.R
 
 ```{r}
-for (i in seq_along(primers)){
-     cat(names(primers)[i], sep='\n')
-     varname <- paste0('epcr.', names(primers[i]), '.ncbi')
-     assign(varname,
-            find_primer_pair(clean(animals.ncbi.hits), # Remove ambiguous nucleotides prior to search 
-                             fwd = primers[[i]][[1]],
-                             rev = primers[[i]][[2]]))
-            
-     # Find how many sequences have the primer set
-     cat(length(get(varname)), sep='\n')
-}
+ncbi.12SV5 <- find_primer_pair(clean(ncbi.12SV5), 
+                                 fwd = primers[[1]],
+                                 rev = primers[[2]])
+
+cat(length(ncbi.12SV5), 'sequences have the primer set')
 ```
 
 Now we need to do some cleaning:
@@ -156,8 +176,12 @@ Now we need to do some cleaning:
 
 All of this is done inside the ncbi_to_dada() function
 
+Note here getting error that "Some IDs appear to be invalid"
+Most begin with MW, MH
+Looks like ~150 in all 
+
 ```{r}
-epcr.12SV5.ncbi <- ncbi_to_dada(epcr.12SV5.ncbi)
+epcr.12SV5.ncbi <- acc_to_dada(ncbi.12SV5)
 ```
 
 ## Combine results for final reference
