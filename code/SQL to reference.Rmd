@@ -1,0 +1,67 @@
+---
+title: "Make reference from SQL input"
+output: html_notebook
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+require("knitr")
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+```{r}
+library(Biostrings)
+library(here)
+library(readxl)
+library(tidyverse)
+```
+
+## Read in data
+
+```{r}
+# Read in sequences to be added
+exact <- 
+     here('data', 'processed', 'sql-compatible', '12SV5.xlsx') %>% 
+     read_excel(sheet = 1)
+
+ambiguous <- 
+     here('data', 'processed', 'sql-compatible', '12SV5.xlsx') %>% 
+     read_excel(sheet = 2)
+```
+
+## Sort
+
+```{r}
+exact <- arrange(exact, species_name, accession)
+ambiguous <- arrange(ambiguous, species_name, accession)
+```
+
+## Format names
+
+```{r}
+# Exact matches with accession numbers made unique
+exact.seqs <- DNAStringSet(exact$seq)
+names(exact.seqs) <- 
+     make.unique(exact$accession, sep = '_') %>% 
+     paste(exact$species_name)
+
+# Ambiguous matches with percent identity in name
+ambiguous.seqs <- DNAStringSet(ambiguous$seq)
+names(ambiguous.seqs) <- 
+     paste0(ambiguous$percent_id, '%') %>%  
+     paste(ambiguous$accession, ., sep = '_') %>% 
+     make.unique(sep = '_') %>% 
+     paste(ambiguous$species_name)
+```
+
+## Write output
+
+```{r}
+# Be careful-- this overwrites the current version of the reference
+# Push to Github after saving
+
+# For now, save only exact sequences
+writeXStringSet(exact.seqs,
+                here('data', 'processed', 'dada2-compatible', '12SV5',
+                     '12SV5.fasta'))
+```
+
