@@ -19,7 +19,7 @@ query_ncbi <- function(marker, organisms){
           organisms %>%
           sapply(dQuote) %>%
           sapply(paste0, '[ORGN]') %>%
-          lapply(paste, collapse = ' OR ') %>%
+          paste(collapse = ' OR ') %>%
           paste0('(', ., ')')
 
      # Add marker
