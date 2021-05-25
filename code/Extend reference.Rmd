@@ -1,0 +1,53 @@
+---
+title: "Extend reference"
+output: html_notebook
+---
+
+```{r}
+library(Biostrings)
+library(here)
+library(tidyverse)
+```
+
+```{r}
+# Read in current version of reference
+current <- 
+     here('data', 'processed', 'dada2-compatible', 'trnL', 'trnLGH.fasta') %>% 
+     readDNAStringSet()
+```
+
+```{r}
+# Read in sequences to be added
+additional <- 
+     here('data', 'processed', 'sql-compatible', '20210426_kenya-abc additions.csv') %>% 
+     read_csv()
+
+# Format as a DNAStringSet
+addseqs <- additional$sequence
+names(addseqs) <- additional$species_name
+
+# Check if any are already present
+any(addseqs %in% current)
+
+# Increment by integer from last index of current reference
+last.i <- 
+     names(current) %>% 
+     tail(1) %>% 
+     gsub(pattern = '\\s.+$', replacement = '') %>% 
+     as.numeric()
+
+is <- last.i + seq_along(addseqs)
+
+names(addseqs) <- paste(is, names(addseqs))
+
+addseqs <- DNAStringSet(addseqs)
+```
+
+```{r}
+# Write to file
+writeXStringSet(c(current, addseqs),
+                here('data', 'processed', 'dada2-compatible', 'trnL', 'trnLGH.fasta'))
+```
+
+After this, update in Git.
+
