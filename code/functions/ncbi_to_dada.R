@@ -1,4 +1,4 @@
-ncbi_to_dada <- function(ncbi_result){
+acc_to_dada <- function(ncbi_result){
      ### Formats the output of query_ncbi.R in a DADA2-compatible format.
      ### Handles processing of repeated sequences at the level of individual
      ### species. 
@@ -13,30 +13,50 @@ ncbi_to_dada <- function(ncbi_result){
           unlist()
      
      # Query NCBI to link accession number to taxid
+     taxmap <- taxa::lookup_tax_data(accs, 
+                                     type = 'seq_id')
+     
      # Split into 50-accession number chunks
      accs.50 <- split(accs, ceiling(seq_along(accs)/50))
      # Use accession number to link to taxid with entrez_link
      acc.links <- lapply(accs.50, function(x) {
           entrez_link(id=x, dbfrom='nucleotide', db='taxonomy', by_id = T)
      })
+     
      # Unless by_id = T, this gives a "collapsed" set of taxids rather than ones 
      # that are repeated for each entry
      
      # Un-chunk
      # Ordering is preserved, but names are concatenated
      # Item 1 of list 1 becomes item '11' in the unlisted version
-     acc.links.unlist <- unlist(acc.links, recursive = FALSE)
+     # Add underscore to eliminate risk of overlap
+     names(acc.links) <- paste0(names(acc.links), '_')
+     acc.links.unlist <- unlist(acc.links, recursive = FALSE) 
      
      # Extract taxids
+     accs.retreived <- 
+          lapply(acc.links.unlist, 
+                 function(x) x$links$nuccore_taxonomy)
+     
      taxids <- 
           lapply(acc.links.unlist, 
                  function(x) x$links$nuccore_taxonomy) %>% 
-          unlist()
+          unlist() %>% 
+          data.frame()
      
      # Organize
      revised_names <- data.frame(taxid = taxids, 
                                  accession = accs, 
                                  stringsAsFactors = F)
+     
+     taxmap <- taxa::lookup_tax_data(taxtab.species, 
+                                     type = 'taxon_name', 
+                                     column = 'Species')
+     
+     taxonomy <- taxa::taxonomy_table(taxmap, 
+                                      use_ranks = c('superkingdom', 'kingdom',
+                                                    'phylum', 'order', 'family',
+                                                    'genus', 'species'))
      
      taxonomy <- taxonomizr::getTaxonomy(revised_names$taxid, '/Volumes/brianna/david/taxonomy/prior/accessionTaxa.sql')
      
