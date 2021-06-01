@@ -1,0 +1,219 @@
+---
+title: "trnL reference"
+author: "brianna petrone"
+output: html_document
+---
+### Load packages and set parameters
+
+```{r setup, include=FALSE, echo=FALSE}
+require("knitr")
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+```{r}
+library(Biostrings)
+library(here)
+library(ShortRead) # for clean()
+library(tidyverse)
+
+source(here('code', 'functions', 'find_primer_pair.R'))
+source(here('code', 'functions', 'get_binomial.R'))
+```
+
+### Read in trnL primer pairs
+
+```{r}
+trnLG <- DNAString('GGGCAATCCTGAGCCAA')
+trnLH <- DNAString('CCATTGAGTCTCTGCACCTATC')
+
+primers <- list(trnLG, trnLH)
+```
+
+### Dietary plants
+
+```{r}
+plants <- 
+     here('data', 'raw', 'human-foods.csv') %>% 
+     read.csv(stringsAsFactors = FALSE) %>%
+     filter(category == 'plant')
+
+length(plants$scientific_name)
+```
+
+### Load parsed RefSeq plastid database
+
+Can load DADA2-compatible for making reference databases; or, load simplified naming for handing off to alignment tools.
+```{r}
+refseq_plastid <- 
+     here('data', 'processed', 'parsed-refs', 
+          'RefSeq', 'refseq_plastid.fasta') %>%
+     readDNAStringSet()
+
+# refseq_plastid <- readDNAStringSet(
+#      here('data', 'processed', 'parsed-refs', 'RefSeq', 
+#           '2019-09-16_RefSeq plastid food species.fasta')
+# )
+```
+
+Added 9/17: Would be helpful to see food common names on Veronica's tree.  Replace naming prior to generating databases, and make a "mapping" dataframe from food to accession number. 
+
+Would be okay to pull the first two words after the accession number, except for species like "Fragaria x ananasa."  Idea: do a first pass, see if name ends in 'x'.  Tried with taxonomizr's accessionToTaxa function, but this returned 27 NAs (think I need to update database)
+```{r eval = FALSE}
+accs <- 
+     refseq_plastid %>%
+     names() %>%
+     strsplit(' ') %>%
+     lapply('[[', 1) %>%
+     unlist()
+
+taxids <- accessionToTaxa(accs, 
+                          '/Volumes/brianna/david/taxonomy/accessionTaxa.sql')
+```
+
+```{r eval=FALSE}
+split_names <- names(refseq_plastid) %>% strsplit(' ')
+
+genera <- lapply(split_names, '[[', 2) %>% unlist()
+species <- lapply(split_names, '[[', 3) %>% unlist()
+
+# Find which entries need one "step" further down the split
+one_more <- grep('^x', species)
+# Go and get it
+species[one_more] <- paste(species[one_more],  
+                           split_names[[one_more]][4], sep = ' ')
+```
+
+Make mapping dataframe to cross-reference accession, binomial name, and common name.
+```{r eval = FALSE}
+plants <- 
+     here('data', 'raw', 'human-foods.csv') %>% 
+     read.csv(stringsAsFactors = FALSE) %>%
+     filter(category == 'plant') %>%
+     select(-category)
+
+mapping <- 
+     data.frame(accession = accs, 
+                scientific_name = paste(genera, species, sep = ' '),
+                genus = genera) %>%
+     # Catch those edible plants that are listed only to the genus level
+     left_join(plants, by=c('genus'= 'scientific_name')) %>%
+     left_join(plants, by='scientific_name')
+
+mapping <- 
+     mapping %>% 
+     unite('common_name', common_name.x, common_name.y) %>%
+     mutate(common_name = gsub('NA_', '', common_name)) %>%
+     mutate(common_name = gsub('_NA', '', common_name)) %>%
+     # Fix case for Cucurbita
+     mutate(common_name = gsub('squash, pumpkin, gourd_', '', common_name)) %>%
+     select(-genus)
+
+## Write CSV, add letters to distinguish common names manually, then read back in
+# write.csv(mapping, 
+#           here('data', 'processed', 'alignment-compatible', 
+#                'accession_map.csv'), row.names = FALSE)
+
+
+```
+```{r}
+mapping <- read.csv(here('data', 'processed', 'alignment-compatible',
+                         'accession_map.csv'), stringsAsFactors = FALSE)
+```
+
+Rename fasta headers with the common name
+```{r eval=FALSE}
+# Make a named character vector from mapping to recode names
+key <- mapping %>% pull(common_name)
+names(key) <- mapping %>% pull(accession)
+     
+# Then recode
+names(refseq_plastid) <- recode(accs, !!!key)
+```
+
+### Find primer binding sites
+```{r}
+path <- here('data', 'processed', 'alignment-compatible', 'trnL')
+
+for (i in seq_along(primers)){
+     cat(names(primers)[i], sep='\n')
+     varname <- paste0('epcr_', names(primers[i]))
+     assign(varname,
+            find_primer_pair(clean(refseq_plastid), 
+                             # Remove ambiguous nucleotides prior to search (leaving 2,910 sequences)
+                             # Or 120 sequences for plant foods only on 2019/9/16
+                             fwd = primers[[i]][[1]],
+                             rev = primers[[i]][[2]]))
+            
+     # Find how many sequences have the primer set
+     cat(length(get(varname)), sep='\n')
+     
+     # Find what species in template food list are contained in that set
+     # amplified <- get_binomial(get(varname))
+     # cat(template_panel %>%
+     #          filter(scientific_name %in% amplified) %>%
+     #          pull(scientific_name) %>%
+     #          as.character(), '\n')
+     
+     # Write to file
+     # fname <- paste0(paste(Sys.Date(), 'RefSeqPlastid', 'ePCR', names(primers[i]), sep='_'), '.fasta')
+     # writeFasta(get(varname), file.path(path, fname))
+}
+```
+
+```{r}
+trnLCD <- readDNAStringSet(file.path(path, 'ePCR_trnLCD_RefSeqPlastid.fasta'))
+trnLCH <- readDNAStringSet(file.path(path, 'ePCR_trnLCH_RefSeqPlastid.fasta'))
+trnLGH <- readDNAStringSet(file.path(path, 'ePCR_trnLGH_RefSeqPlastid.fasta'))
+```
+
+```{r}
+source(here('code', 'functions', 'get_binomial.R'))
+```
+Select only foods in list from each database
+```{r}
+refs <- list(trnLCD, trnLCH, trnLGH)
+short_names <- lapply(refs, get_binomial)
+
+foods_only <- function(i){
+     refs[[i]][short_names[[i]] %in% plants$scientific_name]
+}
+
+refs_food <- lapply(seq_along(refs), foods_only)
+```
+How does this change our number of sequences?
+```{r}
+lapply(refs, length)
+```
+```{r}
+lapply(refs_food, length)
+```
+What foods are missing?
+```{r}
+included <- 
+     lapply(refs_food, get_binomial) %>%
+     unlist() %>%
+     unique()
+
+plants %>% 
+     filter(!(scientific_name %in% included)) %>% 
+     View()
+```
+
+```{r}
+names(refs_food) <- c(paste0(Sys.Date(), '_', 'ePCR_trnLCD_foods.fasta'),
+                      paste0(Sys.Date(), '_', 'ePCR_trnLCH_foods.fasta'),
+                      paste0(Sys.Date(), '_', 'ePCR_trnLGH_foods.fasta'))
+
+for (i in seq_along(refs_food)){
+     writeXStringSet(refs_food[[i]], file.path(path, names(refs_food)[i]))
+}
+```
+Try looking at alignment
+```{r}
+CD.algn <- AlignSeqs(refs.food[[1]])
+```
+```{r}
+GH.algn <- AlignSeqs(refs.food[[3]])
+BrowseSeqs(GH.algn)
+```
+
