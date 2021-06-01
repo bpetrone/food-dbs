@@ -3,8 +3,9 @@ title: "trnL reference"
 author: "brianna petrone"
 output: html_document
 ---
-### Load packages and set parameters
 
+# Setup 
+### Packages and functions
 ```{r setup, include=FALSE, echo=FALSE}
 require("knitr")
 opts_knit$set(root.dir = file.path(getwd(), '..'))
@@ -20,8 +21,7 @@ source(here('code', 'functions', 'find_primer_pair.R'))
 source(here('code', 'functions', 'get_binomial.R'))
 ```
 
-### Read in trnL primer pairs
-
+### Primer sequences
 ```{r}
 trnLG <- DNAString('GGGCAATCCTGAGCCAA')
 trnLH <- DNAString('CCATTGAGTCTCTGCACCTATC')
@@ -30,7 +30,6 @@ primers <- list(trnLG, trnLH)
 ```
 
 ### Dietary plants
-
 ```{r}
 plants <- 
      here('data', 'raw', 'human-foods.csv') %>% 
@@ -40,19 +39,58 @@ plants <-
 length(plants$scientific_name)
 ```
 
-### Load parsed RefSeq plastid database
+# Compile reference sequences
 
-Can load DADA2-compatible for making reference databases; or, load simplified naming for handing off to alignment tools.
+## RefSeq plastid database
+
+Downloaded from RefSeq FTP site on 6/1/2021.
 ```{r}
-refseq_plastid <- 
-     here('data', 'processed', 'parsed-refs', 
-          'RefSeq', 'refseq_plastid.fasta') %>%
-     readDNAStringSet()
+fs <- 
+     here('data', 'raw', 'organelles', 'refseq_plastid') %>% 
+     list.files(full.names = TRUE)
 
-# refseq_plastid <- readDNAStringSet(
-#      here('data', 'processed', 'parsed-refs', 'RefSeq', 
-#           '2019-09-16_RefSeq plastid food species.fasta')
-# )
+basename(fs)
+
+plastid <- 
+     c(readDNAStringSet(fs[1]), 
+       readDNAStringSet(fs[2]),
+       readDNAStringSet(fs[3]),
+       readDNAStringSet(fs[4]))
+
+plastid
+```
+
+```{r}
+head(names(plastid))
+
+# Simplify naming from current
+names(plastid) <- 
+     names(plastid) %>%
+     str_split(' chloroplast| plastid| apicoplast') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+names(plastid) <- 
+     names(plastid) %>%
+     str_split(' voucher| isolate| culture') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+# May also want to remove strain, cultivar info? TBD.
+
+head(names(plastid))
+```
+
+```{r}
+# Are any names duplicated?
+any(duplicated(names(plastid)))
+```
+
+```{r}
+# Write to file
+# writeXStringSet(plastid,
+#                 here('data', 'processed', 'parsed-refs', 'RefSeq',
+#                      'refseq_plastid_species.fasta'))
 ```
 
 ### Find primer binding sites
