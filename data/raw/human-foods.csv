@@ -354,7 +354,7 @@ Mugilidae,Mullet,animal,JL
 Murraya koenigii,curry leaf,plant,BP
 Musa,banana,plant,BP
 Musa acuminata,banana,plant,BP
-Musa†◊†paradisiaca,plantain,plant,JL
+Musa x paradisiaca,plantain,plant,JL
 Myristica fragrans,nutmeg,plant,BP
 Mytilidae,mussel,animal,JL
 Mytilus edulis,blue mussel,animal,BP
@@ -409,8 +409,25 @@ Piaractus brachypomus,pirapitinga,animal,BP
 Pimenta dioica,allspice,plant,BP
 Pimpinella anisum,anise seed,plant,BP
 Pinnipedia,seal,animal,JL
-Pinospida,pine cones,plant,JL
-Pinus,pine nut,plant,JL
+Pinus armandii,pine nut,plant,BP
+Pinus bungeana,pine nut,plant,BP
+Pinus cembra,pine nut,plant,BP
+Pinus gerardiana,pine nut,plant,BP
+Pinus koraiensis,pine nut,plant,BP
+Pinus pinea,pine nut,plant,BP
+Pinus pumila,pine nut,plant,BP
+Pinus sibirica,pine nut,plant,BP
+Pinus albicaulis,pine nut,plant,BP
+Pinus cembroides,pine nut,plant,BP
+Pinus coulteri,pine nut,plant,BP
+Pinus culminicola,pine nut,plant,BP
+Pinus edulis,pine nut,plant,BP
+Pinus johannis,pine nut,plant,BP
+Pinus monophylla,pine nut,plant,BP
+Pinus orizabensis,pine nut,plant,BP
+Pinus quadrifolia,pine nut,plant,BP
+Pinus remota,pine nut,plant,BP
+Pinus sabiniana,pine nut,plant,BP
 Piper guineense,ashanti pepper,plant,BP
 Piper longum,long pepper,plant,JL
 Piper nigrum,black pepper,plant,BP
