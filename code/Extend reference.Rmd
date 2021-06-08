@@ -31,7 +31,9 @@ addseqs <- additional$sequence
 names(addseqs) <- additional$species_name
 
 # Check if any are already present
-any(addseqs %in% current)
+if (any(addseqs %in% current)){
+     addseqs <- addseqs[!(addseqs %in% current)]
+}
 
 # Increment by integer from last index of current reference
 last.i <- 
