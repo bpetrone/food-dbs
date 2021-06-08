@@ -14,12 +14,16 @@ library(tidyverse)
 current <- 
      here('data', 'processed', 'dada2-compatible', 'trnL', 'trnLGH.fasta') %>% 
      readDNAStringSet()
+
+names(current) <- gsub('>', '', names(current))
 ```
 
 ```{r}
 # Read in sequences to be added
 additional <- 
-     here('data', 'processed', 'sql-compatible', '20210426_kenya-abc additions.csv') %>% 
+     here('data', 'processed', 'sql-compatible', 
+          # '20210426_kenya-abc additions.csv'
+          '20210607_chomp-onr additions.csv') %>% 
      read_csv()
 
 # Format as a DNAStringSet
