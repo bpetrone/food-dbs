@@ -3,20 +3,103 @@ title: "Extend reference"
 output: html_notebook
 ---
 
+# Setup
 ```{r}
 library(Biostrings)
 library(here)
 library(tidyverse)
 ```
 
+# Read in data
 ```{r}
 # Read in current version of reference
 current <- 
-     here('data', 'processed', 'dada2-compatible', 'trnL', 'trnLGH.fasta') %>% 
+     here('data', 
+          'processed', 
+          'dada2-compatible', 
+          'trnL', 
+          'trnLGH.fasta') %>% 
      readDNAStringSet()
-
-names(current) <- gsub('>', '', names(current))
 ```
+
+# Cleaning up current reference
+```{r}
+# Combine species name and sequence to make unique identifier
+# First, remove numbers
+head(names(current))
+names(current) <- gsub('^\\d+\\s', 
+                       '',
+                       names(current))
+
+head(names(current))
+```
+
+```{r}
+# Make joint string for each sequence
+joint <- paste(names(current), 
+               current, 
+               sep = '_')
+
+head(joint)
+```
+
+```{r}
+any(duplicated(joint))
+```
+
+```{r}
+sum(duplicated(joint))
+length(joint)
+```
+
+```{r}
+# Make unique
+joint <- unique(joint)
+length(joint)
+```
+
+```{r}
+# Restructure as sequence object
+# sequences
+new <- gsub('^.+_', '', joint)
+     
+# names
+names(new) <- gsub('_[AGCT]+$', '', joint)
+
+# Note some sequences with degenerate nucleotide symbols:
+names(new)[grep('_', names(new))]
+
+# Remove these:
+new <- new[!grepl('_', names(new))]
+```
+
+```{r}
+# Sort by name
+new <- new[sort(names(new))]
+     
+# Re-index
+names(new) <- 
+     paste(
+          seq_along(names(new)),
+          names(new)
+     )
+```
+
+
+```{r}
+# Save
+new <- DNAStringSet(new)
+new
+```
+
+```{r}
+# Write to file
+# writeXStringSet(new,
+#                 here('data', 'processed', 'dada2-compatible', 'trnL',
+#                      'trnLGH.fasta'))
+```
+
+# Add new sequences
 
 ```{r}
 # Read in sequences to be added
@@ -24,14 +107,20 @@ additional <-
      here('data', 'processed', 'sql-compatible', 
           # '20210426_kenya-abc additions.csv'
           # '20210607_chomp-onr additions.csv') 
-          '20210617_pomms additions.csv') %>% 
+          # '20210617_pomms additions.csv') 
+          '20210814_pomms additions.csv') %>% 
      read_csv()
 
 # Format as a DNAStringSet
 addseqs <- additional$sequence
 names(addseqs) <- additional$species_name
+```
 
-# Check if any are already present
+```{r}
+# Check if any are already present by a combination of their name and sequence
+# Needs to be this combo because we want to duplicate a sequence if we also 
+# identify a new species that it maps to
+
 if (any(addseqs %in% current)){
      addseqs <- addseqs[!(addseqs %in% current)]
 }
@@ -58,4 +147,3 @@ writeXStringSet(c(current, addseqs),
 ```
 
 After this, update in Git.
-
