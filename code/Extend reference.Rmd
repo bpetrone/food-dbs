@@ -116,32 +116,65 @@ addseqs <- additional$sequence
 names(addseqs) <- additional$species_name
 ```
 
+Check if any are already present by a combination of their name and sequence. Needs to be this combo, because we want to duplicate a sequence if we also 
 ```{r}
-# Check if any are already present by a combination of their name and sequence
-# Needs to be this combo because we want to duplicate a sequence if we also 
-# identify a new species that it maps to
+# Set of current sequences
+head(names(current))
+names(current) <- gsub('^\\d+\\s', 
+                       '',
+                       names(current))
 
-if (any(addseqs %in% current)){
-     addseqs <- addseqs[!(addseqs %in% current)]
+head(names(current))
+```
+
+```{r}
+# Make joint string for each sequence
+joint.current <- paste(names(current), 
+               current, 
+               sep = '_')
+
+head(joint.current)
+```
+
+```{r}
+# Proposed additions
+joint.add <- paste(names(addseqs), 
+               addseqs, 
+               sep = '_')
+
+head(joint.add)
+```
+
+```{r}
+length(addseqs)
+# If any sequences are duplicated
+if (any(joint.add %in% joint.current)){
+     # Show what's duplicated
+     print(addseqs[which(joint.add %in% joint.current)])
+     # Remove it
+     addseqs <- addseqs[!(joint.add %in% joint.current)]
 }
+# Check difference in length
+length(addseqs)
+```
 
-# Increment by integer from last index of current reference
-last.i <- 
-     names(current) %>% 
-     tail(1) %>% 
-     gsub(pattern = '\\s.+$', replacement = '') %>% 
-     as.numeric()
+```{r}
+# Combine
+new <- c(current, addseqs)
+```
 
-is <- last.i + seq_along(addseqs)
-
-names(addseqs) <- paste(is, names(addseqs))
-
-addseqs <- DNAStringSet(addseqs)
+```{r}
+# Sort and add integer index
+new <- new[sort(names(new))]
+names(new) <- 
+     paste(seq_along(new),
+           names(new))
+new
 ```
 
 ```{r}
 # Write to file
-writeXStringSet(c(current, addseqs),
+writeXStringSet(new,
                 here('data', 'processed', 'dada2-compatible', 'trnL',
                      'trnLGH.fasta'))
 ```
