@@ -153,29 +153,47 @@ head(joint.add)
 ```
 
 ```{r}
-length(addseqs)
+length(joint.add)
 # If any sequences are duplicated
 if (any(joint.add %in% joint.current)){
      # Show what's duplicated
      print(addseqs[which(joint.add %in% joint.current)])
      # Remove it
-     addseqs <- addseqs[!(joint.add %in% joint.current)]
+     joint.add <- joint.add[!(joint.add %in% joint.current)]
 }
 # Check difference in length
-length(addseqs)
+length(joint.add)
 ```
 
 ```{r}
 # Combine
-new <- c(current, addseqs)
+joint <- c(joint.current, joint.add)
 ```
 
 ```{r}
-# Sort and add integer index
-new <- new[sort(names(new))]
-names(new) <- 
-     paste(seq_along(new),
-           names(new))
+# Re-index
+joint <- 
+     joint %>% 
+     sort() %>% 
+     paste(
+          seq_along(.),
+          .
+     )
+```
+
+```{r}
+# Separate sequence and name
+split <- str_split(joint, 
+                   pattern = '_')
+
+new <- lapply(split, '[[', 2)
+names(new) <- lapply(split, '[[', 1)
+```
+
+
+```{r}
+# Save
+new <- DNAStringSet(unlist(new))
 new
 ```
 
