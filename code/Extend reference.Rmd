@@ -59,36 +59,43 @@ length(joint)
 ```
 
 ```{r}
-# Restructure as sequence object
-# sequences
-new <- gsub('^.+_', '', joint)
-     
-# names
-names(new) <- gsub('_[AGCT]+$', '', joint)
-
-# Note some sequences with degenerate nucleotide symbols:
-names(new)[grep('_', names(new))]
-
-# Remove these:
-new <- new[!grepl('_', names(new))]
+any(duplicated(joint))
 ```
 
 ```{r}
-# Sort by name
-new <- new[sort(names(new))]
-     
+# Check for degenerate nucleotide characters
+degenerate <- grep('_[AGCT]+[^AGCT]+', joint)
+
+joint[degenerate]
+
+# Remove these:
+joint <- joint[!grepl('_[AGCT]+[^AGCT]+', joint)]
+```
+
+```{r}
 # Re-index
-names(new) <- 
+joint <- 
+     joint %>% 
+     sort() %>% 
      paste(
-          seq_along(names(new)),
-          names(new)
+          seq_along(.),
+          .
      )
+```
+
+```{r}
+# Separate sequence and name
+split <- str_split(joint, 
+                   pattern = '_')
+
+new <- lapply(split, '[[', 2)
+names(new) <- lapply(split, '[[', 1)
 ```
 
 
 ```{r}
 # Save
-new <- DNAStringSet(new)
+new <- DNAStringSet(unlist(new))
 new
 ```
 
@@ -105,10 +112,10 @@ new
 # Read in sequences to be added
 additional <- 
      here('data', 'processed', 'sql-compatible', 
-          # '20210426_kenya-abc additions.csv'
-          # '20210607_chomp-onr additions.csv') 
-          # '20210617_pomms additions.csv') 
-          '20210814_pomms additions.csv') %>% 
+          '20210426_kenya-abc additions.csv') %>%
+          # '20210607_chomp-onr additions.csv') %>% 
+          # '20210617_pomms additions.csv') %>% 
+          # '20210814_pomms additions.csv') %>% 
      read_csv()
 
 # Format as a DNAStringSet
