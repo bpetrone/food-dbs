@@ -207,7 +207,7 @@ Cyamopsis tetragonoloba,guar bean,plant,JL
 Cyclopterus lumpus,Lumpfish roe,animal,JL
 Cymbopogon citratus,lemongrass,plant,BP
 Cynara cardunculus,artichoke,plant,BP
-Cyperus esculentus†,tiger nut,plant,JL
+Cyperus esculentus,tiger nut,plant,JL
 Cyphomandra betacea,tamarillo,plant,BP
 Cyprinus carpio,common carp,animal,BP
 Dacryodes edulis,"safou, butterfruit",plant,BP
@@ -247,6 +247,7 @@ Exocoetidae,"flying fish, tobiko (roe)",animal,JL
 Fagopyrum esculentum,buckwheat,plant,BP
 Felis catus,cat,animal,BP
 Ficus racemosa,cluster fig,plant,BP
+Ficus carica,fig,plant,BP
 Flammulina velutipes,enokitake,fungus,BP
 Foeniculum vulgare,fennel,plant,BP
 Fragaria,strawberry,plant,BP
