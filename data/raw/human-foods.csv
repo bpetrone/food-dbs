@@ -177,13 +177,14 @@ Colocasia esculenta antiquorum,"malanga, eddo",plant,JL
 Concholepas concholepas,"loco, Chilean abalone",animal,JL
 Corchorus capsularis,white jute,plant,BP
 Corchorus olitorius,jute mallow,plant,BP
-Coregonus†,Whitefish,animal,JL
+Coregonus,whitefish,animal,JL
 Coriandrum sativum,"coriander, cilantro",plant,BP
 Corryocactus,Erdisia,plant,JL
 Corylus avellana,hazelnut,plant,BP
 Coryphaena hippurus,"Mahi Mahi, common dolphinfish",animal,JL
 Coryphantha,beehive cactus,plant,JL
 Coturnix japonica,japanese quail,animal,BP
+Crassostrea gigas,pacific cupped oyster,animal,BP
 Craterellus cornucopioides,"black trumpet, horn of plenty",fungus,JL
 Crithmum maritimum and others,"samphire, sea Beans/asparagus/pickles, pickleweed",plant,JL
 Crocothemis servilia,scarlet skimmer dragonfly,animal,BP
@@ -290,6 +291,7 @@ Hua gaboni,tropical garlic,plant,BP
 Humulus lupulus,hops,plant,JL
 Hylocereus undatus ,"dragon fruit, pitahaya",plant,BP
 Hypomyces lactifluorum,lobster mushroom,fungus,JL
+Ictalurus punctatus,channel catfish,animal,BP
 Hypsizygus marmoreus,white beech,fungus,BP
 Ilex paraguariensis,yerba mate,plant,BP
 Illicium verum,star anise,plant,SJ
@@ -316,6 +318,7 @@ Limonia acidissima,"wood apple, elephant apple",plant,JL
 Linum usitatissimum,flaxseed,plant,BP
 Lithodidae,king crab,animal,JL
 Littorina littorea,periwinkle,animal,JL
+Litopenaeus vannamei,whiteleg shrimp,animal,BP
 Lophius,Monkfish,animal,JL
 Luffa acutangula,chinese okra,plant,BP
 Luffa cylindrica ,sponge gourd,plant,BP
@@ -386,6 +389,7 @@ Oxypolis filiformis,water cowbane,plant,BP
 Pachyrhizus erosus,jicama,plant,BP
 Paederia foetida,stinkvine,plant,BP
 Panax vietnamensis,vietnamese ginseng,plant,BP
+Pangasianodon hypophthalmus,striped catfish,animal,BP
 Pangasius bocourti,"Pangasius, basa, swai",animal,JL
 Panicum miliaceum,proso millet,plant,BP
 Panopeidae,mud crab,animal,JL
@@ -397,6 +401,7 @@ Passiflora edulis,passion fruit,plant,BP
 Passiflora quadrangularis,"giant granadilla, grenadine",plant,BP
 Pastinaca sativa,parsnip,plant,JL
 Pectinidae,scallop,animal,JL
+Penaeus monodon,black tiger shrimp,animal,BP
 Penaeus setiferus,white shrimp,animal,BP
 Perca fluviatilis,common perch,animal,BP
 Persea americana,avocado,plant,BP
@@ -571,6 +576,7 @@ Vaccinium pallidum,dryland blueberry,plant,BP
 Vaccinium tenellum,southern blueberry,plant,BP
 Vaccinium vitis-idaea,lingonberry,plant,BP
 Vanilla planifolia,vanilla,plant,JL
+Venerupis philippinarum,japanese littleneck,animal,BP
 Vespa velutina,asian hornet,animal,BP
 Vicia faba,"fava bean, broad bean",plant,BP
 Vigna angularis,adzuki bean,plant,JL
