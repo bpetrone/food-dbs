@@ -19,6 +19,7 @@ library(tidyverse)
 
 source(here('code', 'functions', 'find_primer_pair.R'))
 source(here('code', 'functions', 'get_binomial.R'))
+source(here('code', 'functions', 'query_ncbi.R'))
 ```
 
 ### Primer sequences
@@ -34,9 +35,10 @@ primers <- list(trnLG, trnLH)
 plants <- 
      here('data', 'raw', 'human-foods.csv') %>% 
      read.csv(stringsAsFactors = FALSE) %>%
-     filter(category == 'plant')
+     filter(category == 'plant') %>% 
+     pull(scientific_name)
 
-length(plants$scientific_name)
+head(plants)
 ```
 
 # Compile reference sequences
@@ -76,10 +78,23 @@ names(plastid) <-
      lapply('[[', 1) %>% 
      unlist()
 
+names(plastid) <- 
+     names(plastid) %>%
+     str_split(' complete') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
 # May also want to remove strain, cultivar info? TBD.
 
 head(names(plastid))
 ```
+
+```{r}
+# Peek at any names that aren't binomial
+names(plastid)[grep('\\S+\\s\\S+\\s\\S+\\s\\S+', # More than 3 words
+                    names(plastid))]
+```
+
 
 ```{r}
 # Are any names duplicated?
@@ -94,89 +109,115 @@ any(duplicated(names(plastid)))
 ```
 
 ### Find primer binding sites
-```{r}
-path <- here('data', 'processed', 'alignment-compatible', 'trnL')
 
-for (i in seq_along(primers)){
-     cat(names(primers)[i], sep='\n')
-     varname <- paste0('epcr_', names(primers[i]))
-     assign(varname,
-            find_primer_pair(clean(refseq_plastid), 
-                             # Remove ambiguous nucleotides prior to search (leaving 2,910 sequences)
-                             # Or 120 sequences for plant foods only on 2019/9/16
-                             fwd = primers[[i]][[1]],
-                             rev = primers[[i]][[2]]))
-            
-     # Find how many sequences have the primer set
-     cat(length(get(varname)), sep='\n')
-     
-     # Find what species in template food list are contained in that set
-     # amplified <- get_binomial(get(varname))
-     # cat(template_panel %>%
-     #          filter(scientific_name %in% amplified) %>%
-     #          pull(scientific_name) %>%
-     #          as.character(), '\n')
-     
-     # Write to file
-     # fname <- paste0(paste(Sys.Date(), 'RefSeqPlastid', 'ePCR', names(primers[i]), sep='_'), '.fasta')
-     # writeFasta(get(varname), file.path(path, fname))
-}
+```{r}
+# Note this discrepancy-- could potentially do better screening of these sequences.  Worried that I am tossing things for Ns that occur nowhere near trnL-P6
+length(plastid)
+length(clean(plastid))
 ```
 
 ```{r}
-trnLCD <- readDNAStringSet(file.path(path, 'ePCR_trnLCD_RefSeqPlastid.fasta'))
-trnLCH <- readDNAStringSet(file.path(path, 'ePCR_trnLCH_RefSeqPlastid.fasta'))
-trnLGH <- readDNAStringSet(file.path(path, 'ePCR_trnLGH_RefSeqPlastid.fasta'))
+refseq.trnL <- find_primer_pair(clean(plastid), 
+                                fwd = primers[[1]],
+                                rev = primers[[2]])
+
+cat(length(refseq.trnL), 'sequences have the primer set')
+```
+
+### Subset by food species
+
+```{r}
+# Find indices of entries matching 
+plants.i <- 
+     lapply(plants, grep, x = names(refseq.trnL)) %>%
+     unlist()
+
+cat('There are', length(plants), 'food plants in our query\n')
+
+# Subset
+refseq.trnL <- refseq.trnL[plants.i]
+cat(length(refseq.trnL), 'have a trnL sequence in the RefSeq plastid database')
+```
+
+What foods are still missing?
+
+```{r}
+plants.refseq <- sub('\\S+\\s', '', names(refseq.trnL))
+
+# Subset remaining foods based on this list
+plants.missing <- 
+     plants[lapply(plants,
+                   function(x){length(grep(x, plants.refseq))}) == 0]
+
+plants.missing
+```
+
+## NCBI
+
+```{r}
+# Pull sequences from NCBI
+ncbi.trnL <- query_ncbi(marker = 'trnL',
+                        organisms = plants.missing)
+```
+
+This is from the total number of available sequences
+
+```{r}
+length(ncbi.trnL)
+length(clean(ncbi.trnL))
+```
+
+Now look for primer binding sites within retrieved sequences.
+Note that current strategy to remove ambiguous nucleotides is problematic-- because a single ambiguous nucleotide far from the amplicon could lead to throwing away a usable sequence
+TODO: Needs to be addressed in find_primer_pair.R
+
+```{r}
+ncbi.trnL <- find_primer_pair(clean(ncbi.trnL), 
+                                 fwd = primers[[1]],
+                                 rev = primers[[2]])
+
+cat(length(ncbi.trnL), 'sequences have the primer set')
+```
+
+Now we need to do some cleaning:
+* Names need to be simplified
+* Sequences that are the same and that come from the same species can be de-duplicated
+* Sequences that are different and come from the same species must be preserved
+
+```{r}
+# Inspect names
+data.frame(names(ncbi.trnL))
+```
+```{r}
+# Note some entries are marked as unverified
+names(ncbi.trnL)[grepl('UNVERIFIED', names(ncbi.trnL))]
 ```
 
 ```{r}
-source(here('code', 'functions', 'get_binomial.R'))
-```
-Select only foods in list from each database
-```{r}
-refs <- list(trnLCD, trnLCH, trnLGH)
-short_names <- lapply(refs, get_binomial)
-
-foods_only <- function(i){
-     refs[[i]][short_names[[i]] %in% plants$scientific_name]
-}
-
-refs_food <- lapply(seq_along(refs), foods_only)
-```
-How does this change our number of sequences?
-```{r}
-lapply(refs, length)
-```
-```{r}
-lapply(refs_food, length)
-```
-What foods are missing?
-```{r}
-included <- 
-     lapply(refs_food, get_binomial) %>%
-     unlist() %>%
-     unique()
-
-plants %>% 
-     filter(!(scientific_name %in% included)) %>% 
-     View()
+# Remove these
+length(ncbi.trnL)
+ncbi.trnL <- ncbi.trnL[!(grepl('UNVERIFIED', names(ncbi.trnL)))]
+length(ncbi.trnL)
 ```
 
 ```{r}
-names(refs_food) <- c(paste0(Sys.Date(), '_', 'ePCR_trnLCD_foods.fasta'),
-                      paste0(Sys.Date(), '_', 'ePCR_trnLCH_foods.fasta'),
-                      paste0(Sys.Date(), '_', 'ePCR_trnLGH_foods.fasta'))
+# Simplify naming from current
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>%
+     str_split(' chloroplast| plastid| apicoplast') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
 
-for (i in seq_along(refs_food)){
-     writeXStringSet(refs_food[[i]], file.path(path, names(refs_food)[i]))
-}
-```
-Try looking at alignment
-```{r}
-CD.algn <- AlignSeqs(refs.food[[1]])
-```
-```{r}
-GH.algn <- AlignSeqs(refs.food[[3]])
-BrowseSeqs(GH.algn)
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>%
+     str_split(' voucher| isolate| culture') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>%
+     str_split(' complete') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
 ```
 
