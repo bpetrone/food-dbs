@@ -105,11 +105,11 @@ Brassica rapa subsp. chinensis,bok choy,plant,BP
 Brassica rapa subsp. narinosa,tatsoi,plant,BP
 Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
 Brassica rapa subsp. oleifera,field mustard,plant,BP
-Brassica rapa subsp. Parachinensis,choy sum,plant,BP
+Brassica rapa subsp. parachinensis,choy sum,plant,BP
 Brassica rapa subsp. pekinensis,napa cabbage,plant,BP
 Brassica rapa subsp. perviridis,komatsuna,plant,BP
 Brassica rapa subsp. rapa,turnip,plant,BP
-Brassica rapa subsp. Trilocularis,yellow sarson,plant,BP
+Brassica rapa subsp. trilocularis,yellow sarson,plant,BP
 Brassica rapa var. glabra,bomdong,plant,BP
 Brassica rapa var. rapifera,rapini,plant,BP
 Browningia candelaris,candleholder cactus,plant,JL
@@ -287,7 +287,7 @@ Hordeum vulgare,barley,plant,BP
 Houttuynia cordata,fish mint,plant,BP
 Hua gaboni,tropical garlic,plant,BP
 Humulus lupulus,hops,plant,JL
-Hylocereus undatus ,"dragon fruit, pitahaya",plant,BP
+Hylocereus undatus,"dragon fruit, pitahaya",plant,BP
 Hypomyces lactifluorum,lobster mushroom,fungus,JL
 Hypsizygus marmoreus,white beech,fungus,BP
 Ictalurus punctatus,channel catfish,animal,BP
@@ -362,7 +362,7 @@ Musa x paradisiaca,plantain,plant,JL
 Myristica fragrans,nutmeg,plant,BP
 Mytilidae,mussel,animal,JL
 Mytilus edulis,blue mussel,animal,BP
-Nasturtium microphyllum ,one-row watercress,plant,BP
+Nasturtium microphyllum,one-row watercress,plant,BP
 Nautilus,nautilus,animal,JL
 Nelumbo nucifera,lotus root,plant,JL
 Nematognathi,catfish,animal,JL
@@ -451,7 +451,7 @@ Pollachius pollachius,pollock,animal,JL
 Pollachius virens,pollock,animal,JL
 Polygonum odoratum ,"vietnamese coriander, rau ram",plant,BP
 Polyporous squamosus,Dryad's saddle,fungus,JL
-Polystichum munitum and others,fiddleheads,plant,JL
+Polystichum munitum,fiddleheads,plant,JL
 Pomatomus saltatrix,"Bluefish, tailor, elf, shad",animal,JL
 Prunus armeniaca,apricot,plant,JL
 Prunus avium,sweet cherry,plant,BP
@@ -483,7 +483,7 @@ Rhodophyta,carageenan,plant,JL
 Ribes divaricatum,coast gooseberry,plant,BP
 Ribes hirtellum,american gooseberry,plant,BP
 Ribes lobbii,gummy gooseberry,plant,BP
-Ribes oxyacanthoides subsp. Irriguum,idaho gooseberry,plant,BP
+Ribes oxyacanthoides subsp. irriguum,idaho gooseberry,plant,BP
 Rosa,rose,plant,JL
 Rubus,blackberry,plant,JL
 Rubus caesius,european dewberry,plant,BP
@@ -584,7 +584,7 @@ Vigna angularis,adzuki bean,plant,JL
 Vigna radiata,mung bean,plant,BP
 Vigna subterranea,bambara groundnut,plant,BP
 Vigna unguiculata,cowpea,plant,BP
-Vigna unguiculata subsp. Sesquipedalis,"long bean, asparagus beasn",plant,JL
+Vigna unguiculata subsp. sesquipedalis,"long bean, asparagus beasn",plant,JL
 Vitis rotundifolia,muscadine grape,plant,BP
 Vitis vinifera,common grape vine,plant,BP
 Xanthidae,mud crab,animal,JL
