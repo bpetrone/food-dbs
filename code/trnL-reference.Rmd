@@ -335,12 +335,86 @@ trnL
 
 ```{r}
 # Save to file
-writeXStringSet(trnL,
-                here('data', 
-                     'processed',
-                     'dada2-compatible',
-                     'trnL',
-                     'trnLGH_update.fasta'))
+# writeXStringSet(trnL,
+#                 here('data', 
+#                      'processed',
+#                      'dada2-compatible',
+#                      'trnL',
+#                      'trnLGH_update.fasta'))
 ```
 
+# Compare to prior
+
+```{r}
+prior <- 
+     readDNAStringSet(
+          here('data', 
+               'processed',
+               'dada2-compatible',
+               'trnL',
+               'trnLGH.fasta')
+     )
+```
+
+```{r}
+# Convert to dataframe representation as above
+seqs.prior <- 
+     data.frame(name = names(prior),
+                seq = as.character(prior)) %>% 
+     separate(name,
+              into = c('accession', 'name'),
+              sep = ' ',
+              extra = 'merge') 
+
+row.names(seqs.prior) <- NULL
+```
+
+```{r}
+# How many species by number?
+n_distinct(seqs.prior$name)
+n_distinct(seqs$name)
+```
+
+
+```{r}
+# Add flag for distinguishing origin
+seqs$current = 1
+seqs.prior$prior = 1
+
+seqs <- rename(seqs, seq_current = seq)
+seqs.prior <- rename(seqs.prior, seq_prior = seq)
+
+seqs.compare <- 
+     full_join(
+          select(seqs, -accession),
+          select(seqs.prior, -accession)
+     ) %>% 
+     select(name, 
+            prior, 
+            current,
+            seq_prior,
+            seq_current)
+```
+
+```{r}
+# How many are exactly the same?
+intersect(
+     paste(seqs$name, seqs$seq_current),
+     paste(seqs.prior$name, seqs.prior$seq_prior)
+) %>% 
+     length()
+```
+
+```{r}
+# What species 
+filter(seqs.compare, 
+       prior == 1 & current == 1) %>% 
+     dim()
+```
+
+```{r}
+# Any represented in prior but not in current?
+filter(seqs.compare, 
+       prior == 1 & is.na(current)) 
+```
 
