@@ -68,13 +68,13 @@ head(names(plastid))
 # Simplify naming from current
 names(plastid) <- 
      names(plastid) %>%
-     str_split(' chloroplast| plastid| apicoplast') %>% 
+     str_split(' chloroplast| plastid| apicoplast| plastome| genome') %>% 
      lapply('[[', 1) %>% 
      unlist()
 
 names(plastid) <- 
      names(plastid) %>%
-     str_split(' voucher| isolate| culture') %>% 
+     str_split(' voucher| isolate| culture| genotype| clone| ecotype') %>% 
      lapply('[[', 1) %>% 
      unlist()
 
@@ -84,14 +84,19 @@ names(plastid) <-
      lapply('[[', 1) %>% 
      unlist()
 
-# May also want to remove strain, cultivar info? TBD.
+# Cultivar information not included in NCBI taxonomy look-up, and we could still pull this from accession number if desired
+names(plastid) <- 
+     names(plastid) %>%
+     str_split(' cultivar| strain') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
 
 head(names(plastid))
 ```
 
 ```{r}
 # Peek at any names that aren't binomial
-names(plastid)[grep('\\S+\\s\\S+\\s\\S+\\s\\S+', # More than 3 words
+names(plastid)[grep('(\\S+\\s){3,}', # More than 3 words
                     names(plastid))]
 ```
 
@@ -154,6 +159,8 @@ plants.missing
 
 ## NCBI
 
+### Pull sequences
+
 ```{r}
 # Pull sequences from NCBI
 ncbi.trnL <- query_ncbi(marker = 'trnL',
@@ -167,6 +174,7 @@ length(ncbi.trnL)
 length(clean(ncbi.trnL))
 ```
 
+### Find primers
 Now look for primer binding sites within retrieved sequences.
 Note that current strategy to remove ambiguous nucleotides is problematic-- because a single ambiguous nucleotide far from the amplicon could lead to throwing away a usable sequence
 TODO: Needs to be addressed in find_primer_pair.R
@@ -178,11 +186,6 @@ ncbi.trnL <- find_primer_pair(clean(ncbi.trnL),
 
 cat(length(ncbi.trnL), 'sequences have the primer set')
 ```
-
-Now we need to do some cleaning:
-* Names need to be simplified
-* Sequences that are the same and that come from the same species can be de-duplicated
-* Sequences that are different and come from the same species must be preserved
 
 ```{r}
 # Inspect names
@@ -200,8 +203,10 @@ ncbi.trnL <- ncbi.trnL[!(grepl('UNVERIFIED', names(ncbi.trnL)))]
 length(ncbi.trnL)
 ```
 
+### Tidy names
+
 ```{r}
-# Simplify naming from current
+# Remove trailing descriptors after species name
 names(ncbi.trnL) <- 
      names(ncbi.trnL) %>%
      str_split(' chloroplast| plastid| apicoplast') %>% 
@@ -210,14 +215,132 @@ names(ncbi.trnL) <-
 
 names(ncbi.trnL) <- 
      names(ncbi.trnL) %>%
-     str_split(' voucher| isolate| culture') %>% 
+     str_split(' voucher| isolate| culture| specimen| clone| bio-material') %>% 
      lapply('[[', 1) %>% 
      unlist()
 
 names(ncbi.trnL) <- 
      names(ncbi.trnL) %>%
-     str_split(' complete') %>% 
+     str_split(' complete| partial') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>%
+     str_split(' tRNA-| trnL-trnF| trnL gene| genes| trnT-trnL| trnF-trnL') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+# Cultivar information not included in NCBI taxonomy look-up, and we could still pull this from accession number if desired
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>%
+     str_split(' cultivar') %>% 
      lapply('[[', 1) %>% 
      unlist()
 ```
+
+There are a few exceptions not caught by these patterns, try to ID from names that are >2 words long
+```{r}
+names(ncbi.trnL)[grep('(\\S+\\s){3,}', names(ncbi.trnL))] %>% 
+     sort()
+```
+
+Checked, and those with names of format Genus sp. [number] do look up correctly in NCBI taxonomy; so leave these.
+```{r}
+# Correct others
+names(ncbi.trnL)[names(ncbi.trnL) == '>AY266228.1 Solanum quitoense LB747'] <- 
+     '>AY266228.1 Solanum quitoense'
+
+names(ncbi.trnL)[names(ncbi.trnL) == '>AY266240.1 Solanum melongena RGO244'] <- 
+     '>AY266240.1 Solanum melongena'
+
+names(ncbi.trnL)[names(ncbi.trnL) == '>AY266243.1 Solanum quitoense LB996'] <- 
+     '>AY266243.1 Solanum quitoense'
+
+names(ncbi.trnL)[names(ncbi.trnL) == '>LC568778.1 Prunus grayana FN170'] <- 
+     '>LC568778.1 Prunus grayana'
+
+names(ncbi.trnL)[names(ncbi.trnL) == '>LC637551.1 Piper sarmentosum Chiang Mai University, Faculty of Pharmacy:PSCM251220201'] <- 
+     '>LC637551.1 Piper sarmentosum'
+```
+
+## Combine
+
+```{r}
+trnL <- c(ncbi.trnL, refseq.trnL)
+trnL
+```
+
+Now we need to do some cleaning:
+* Sequences that are the same and that come from the same species can be de-duplicated
+* Sequences that are different and come from the same species must be preserved
+
+```{r}
+# Convert to dataframe to preserve information side-by-side
+seqs <- 
+     data.frame(name = names(trnL),
+                seq = as.character(trnL)) %>% 
+     separate(name,
+              into = c('accession', 'name'),
+              sep = ' ',
+              extra = 'merge') %>% 
+     mutate(accession = gsub('>', '', accession))
+
+seqs
+```
+Now, we want to only keep distinct sequences from the same species
+
+```{r}
+seqs %>% 
+     group_by(name, seq)
+```
+```{r}
+dups <- 
+     seqs %>% 
+     group_by(name) %>% 
+     summarize(n = sum(duplicated(seq)))
+
+arrange(dups, desc(n))
+```
+```{r}
+sum(dups$n)
+```
+
+So the number of sequences we expect after filtering is 
+```{r}
+dim(seqs)[1] - sum(dups$n)
+```
+
+```{r}
+seqs <- 
+     seqs %>%
+     group_by(name, seq) %>% 
+     arrange(accession) %>% 
+     summarize(accession = first(accession)) # Choose the first accession number
+```
+
+Note that the caveat in this is that I've done a really permissive query of species not represented in RefSeq (pulling from all NCBI), but a one-off look for species that *are* in RefSeq.  This is imbalanced and I think would be good to reconcile.
+
+```{r}
+# Sort alphabetically
+seqs <- arrange(seqs, name)
+
+# Convert back to DNAStringSet object
+trnL <- seqs$seq
+names(trnL) <- paste(seqs$accession, seqs$name)
+
+trnL <- DNAStringSet(trnL)
+trnL
+```
+
+```{r}
+# Save to file
+writeXStringSet(trnL,
+                here('data', 
+                     'processed',
+                     'dada2-compatible',
+                     'trnL',
+                     'trnLGH_update.fasta'))
+```
+
 

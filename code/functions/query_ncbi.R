@@ -19,8 +19,8 @@ query_ncbi <- function(marker, organisms){
           organisms %>%
           sapply(dQuote) %>%
           sapply(paste0, '[ORGN]') %>%
-          paste(collapse = ' OR ') %>%
-          paste0('(', ., ')')
+          sapply(paste, collapse = ' OR ') %>%
+          sapply(function(x){paste0('(', x, ')')})
 
      # Add marker
      query <- paste(marker, organism_query, sep = ' AND ')
@@ -45,7 +45,7 @@ query_ncbi <- function(marker, organisms){
                                  rettype='fasta') %>%
                     # This returns concatenated sequence strings; split apart 
                     # so we can re-name inline
-                    strsplit('\n\n') %>%
+                    strsplit('\n{2,}') %>% # Usually two newline chars, but sometimes more
                     unlist()
                # Save this to ultimately combine with taxonomy data, as want to
                # be able to identify these sequences after the fact
@@ -66,10 +66,11 @@ query_ncbi <- function(marker, organisms){
                names(seqs) <- headers
                
                # Update counters
-               seqs.count <- seqs.count + ids[[1]]$count
+               seqs.count <- seqs.count + ids[[i]]$count
                seqs.return <- append(seqs.return, seqs)
                
                cat('50 species processed... \n')
+               cat('Equal lengths:', seqs.count == length(seqs.return), '\n')
           }
      } 
      
