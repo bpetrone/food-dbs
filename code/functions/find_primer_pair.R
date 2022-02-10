@@ -22,7 +22,7 @@ find_primer_pair <- function(seqs, fwd, rev, err=0.2, removePrimers = FALSE){
                vmatchPattern(fwd, 
                              seqs, 
                              max.mismatch = fwd_err,
-                             fixed = FALSE) %>%
+                             fixed = TRUE) %>%
                as.data.frame() %>%
                mutate(trim_start = end + 1) %>% 
                select(group, trim_start)
