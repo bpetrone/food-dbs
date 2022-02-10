@@ -4,10 +4,19 @@ output: html_notebook
 ---
 
 # Setup
+
+```{r setup, include = FALSE, echo = FALSE}
+require(knitr)
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
 ```{r}
 library(Biostrings)
 library(here)
+library(rentrez)
 library(tidyverse)
+
+source(here('code', 'functions', 'find_primer_pair.R'))
 ```
 
 # Read in data
@@ -18,8 +27,11 @@ current <-
           'processed', 
           'dada2-compatible', 
           'trnL', 
-          'trnLGH_update.fasta') %>% 
+          # 'trnLGH.fasta') %>% 
+          '20220206_trnLGH_primers included.fasta') %>% 
      readDNAStringSet()
+
+current
 ```
 
 # QC
@@ -70,105 +82,220 @@ grep('[AGCT]*[^AGCT]+', current.df$seq)
 
 # Add new sequences
 
+## Pull sequence data
+
+Need to do this so primers are also included.
+
 ```{r}
-# Read in sequences to be added
-additional <- 
-     here('data', 'processed', 'sql-compatible', 
-          # '20210426_kenya-abc additions.csv') %>%
-          # '20210607_chomp-onr additions.csv') %>%
-          # '20210617_pomms additions.csv') %>%
-          '20210814_pomms additions.csv') %>%
-     read_csv()
+fs <- 
+     here('data',
+          'processed',
+          'sql-compatible') %>% 
+     list.files(pattern = 'additions.csv',
+                full.names = TRUE)
 
-# Format as a DNAStringSet
-addseqs <- additional$sequence
-names(addseqs) <- additional$species_name
-```
-
-Check if any are already present by a combination of their name and sequence. Needs to be this combo, because we want to duplicate a sequence if we also 
-```{r}
-# Set of current sequences
-head(names(current))
-names(current) <- gsub('^\\d+\\s', 
-                       '',
-                       names(current))
-
-head(names(current))
+basename(fs)
 ```
 
 ```{r}
-# Make joint string for each sequence
-joint.current <- paste(names(current), 
-               current, 
-               sep = '_')
+add <- 
+     sapply(fs, read_csv) %>% 
+     bind_rows()
 
-head(joint.current)
+add
+```
+Now, can use these accession numbers to query NCBI for sequence data:
+```{r}
+# Search for IDs
+ids <- lapply(add$accession_num, 
+              entrez_search, 
+              db='nucleotide', retmax = 10000, use_history=TRUE)
+
+class(ids)
+str(ids[[1]])
 ```
 
 ```{r}
-# Double-check no duplicates
-any(duplicated(joint.current))
+# Formulate this as a new query
+ids <- 
+     lapply(ids, function(x){x$ids}) %>% 
+     unlist()
+
+ids
 ```
 
 ```{r}
-# Proposed additions
-joint.add <- paste(names(addseqs), 
-               addseqs, 
-               sep = '_')
+# Use these IDs to fetch sequence data
+records <- 
+     entrez_fetch(db = 'nucleotide', id = ids, rettype = 'fasta')
 
-head(joint.add)
+# Returns one big character string
+class(records)
+length(records)
+nchar(records)
 ```
 
 ```{r}
-length(joint.add)
-# If any sequences are duplicated
-if (any(joint.add %in% joint.current)){
-     # Show what's duplicated
-     print(addseqs[which(joint.add %in% joint.current)])
-     # Remove it
-     joint.add <- joint.add[!(joint.add %in% joint.current)]
-}
-# Check difference in length
-length(joint.add)
+# Format as a DNA string set
+write(records,
+      here('data', 
+           'processed',
+           'sql-compatible',
+           'fastas',
+           '2021 Manual additions.fasta'))
+
+# Read back in
+records <- 
+     here('data', 
+           'processed',
+           'sql-compatible',
+           'fastas',
+           '2021 Manual additions.fasta') %>% 
+     readDNAStringSet()
+
+records
+```
+
+## Trim primers
+
+```{r}
+trnLG <- DNAString('GGGCAATCCTGAGCCAA')
+trnLH <- DNAString('CCATTGAGTCTCTGCACCTATC')
+
+# Keep defaults: 20% error tolerance, no primer trimming
+records.trim <- find_primer_pair(records,
+                                 trnLG,
+                                 trnLH)
+```
+
+## Rename
+Lots of variation in descriptors.  Try pulling taxon name by NCBI query of accession number
+
+```{r}
+accs <- 
+     names(records.trim) %>% 
+     str_split(pattern = '\\s') %>% 
+     lapply('[[', 1) %>% 
+     unlist()
+
+head(accs)
 ```
 
 ```{r}
-# Combine
-joint <- c(joint.current, joint.add)
+# Look up accession taxonomy with taxa package functions
+# Note-- this takes a long time depending on # of sequence IDs
+taxmap <- taxa::lookup_tax_data(accs, 
+                                type = 'seq_id')
 ```
 
 ```{r}
-# Re-index
-joint <- 
-     joint %>% 
-     sort() %>% 
-     paste(
-          seq_along(.),
-          .
-     )
+str(taxmap$data)
 ```
 
 ```{r}
-# Separate sequence and name
-split <- str_split(joint, 
-                   pattern = '_')
+# Want to combine these two, to get name for each query id
+# Get query info
+query_names <- 
+     data.frame(acc = taxmap$data$query_data,
+                taxon_id = names(taxmap$data$query_data))
 
-new <- lapply(split, '[[', 2)
-names(new) <- lapply(split, '[[', 1)
+# Join to NCBI names
+ncbi_names <- taxmap$data$tax_data
+
+query_names <- 
+     left_join(query_names, ncbi_names)
+
+query_names
+```
+
+```{r}
+# Any names missing?
+any(is.na(query_names$ncbi_name))
+```
+
+```{r}
+# How complete are entries?
+query_names %>% 
+     group_by(ncbi_rank) %>% 
+     count()
+```
+
+```{r}
+# Hmmm-- what's  no rank?
+query_names %>% 
+     filter(ncbi_rank == 'no rank')
+```
+```{r}
+# Rename sequences
+names(records.trim) <- paste(query_names$acc,
+                             query_names$ncbi_name)
+```
+
+## Combine
+
+Want to synchronize with the database representation of the current reference
+
+```{r}
+head(current.df)
 ```
 
 
 ```{r}
-# Save
-new <- DNAStringSet(unlist(new))
-new
+# Format as a dataframe
+add.df <- 
+     data.frame(name = names(records.trim),
+                seq = as.character(records.trim)) %>% 
+     separate(name,
+              into = c('accession', 'species'),
+              extra = 'merge', 
+              sep = '\\s') %>% 
+     mutate(ID = paste(species, seq))
 ```
 
 ```{r}
-# Write to file
-writeXStringSet(new,
-                here('data', 'processed', 'dada2-compatible', 'trnL',
-                     'trnLGH.fasta'))
+# Check for duplicates
+# In this list:
+any(duplicated(add.df$ID))
+
+# Remove
+add.df <- add.df[!duplicated(add.df$ID), ]
 ```
 
-After this, update in Git.
+```{r}
+# In the existing reference:
+any(add.df$ID %in% current.df$ID)
+
+# Remove
+add.df <- add.df[!(add.df$ID %in% current.df$ID), ]
+```
+
+```{r}
+update.df <- bind_rows(current.df,
+                        add.df)
+```
+
+## Save
+
+```{r}
+# Sort alphabetically (first by species name, and then accession number)
+update.df <- arrange(update.df, 
+                     species,
+                     accession)
+
+# Convert back to DNAStringSet object
+trnL <- update.df$seq
+names(trnL) <- paste(update.df$accession, update.df$species)
+
+trnL <- DNAStringSet(trnL)
+trnL
+```
+
+```{r}
+# # Save to file
+# writeXStringSet(trnL,
+#                 here('data',
+#                      'processed',
+#                      'dada2-compatible',
+#                      'trnL',
+#                      '20220206_trnLGH_primers included, additions.fasta'))
+```
