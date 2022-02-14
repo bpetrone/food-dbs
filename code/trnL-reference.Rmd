@@ -369,10 +369,37 @@ any(duplicated(seqs.df$ID))
 grep('[AGCT]*[^AGCT]+', seqs.df$seq)
 ```
 
+```{r}
+# Add a flag to these taxa, to see if there's a back-up sequence
+seqs.df$N <- grepl('[AGCT]*[^AGCT]+', seqs.df$seq)
+
+with_n <- 
+     seqs.df$taxon[grepl('[AGCT]*[^AGCT]+', seqs.df$seq)] %>% 
+     unique()
+```
 
 ```{r}
-trnL <- c(ncbi.trnL, refseq.trnL)
-trnL
+seqs.df %>% 
+     filter(taxon %in% with_n) %>% 
+     group_by(taxon, N) %>% 
+     count() %>% 
+     ungroup() %>% 
+     group_by(taxon) %>% 
+     summarize(any(!N))
+```
+Okay, so for all taxa but
+- Amaranthus cruentus
+- Amaranthus dubius
+- Amaranthus tricolor
+- Vaccinium tenellum
+
+we are covered by a second sequence. 
+
+```{r}
+# Remove sequences containing Ns
+seqs.df <- 
+     filter(seqs.df,
+            !grepl(pattern = '[AGCT]*[^AGCT]+', seq))
 ```
 
 ### Clean results
@@ -431,7 +458,7 @@ trnL
 #                      'processed',
 #                      'dada2-compatible',
 #                      'trnL',
-#                      '20220213_trnLGH_primers included.fasta'))
+#                      '20220214_trnLGH_primers included.fasta'))
 ```
 
 # Compare to prior

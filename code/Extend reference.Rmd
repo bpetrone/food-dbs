@@ -3,6 +3,8 @@ title: "Extend reference"
 output: html_notebook
 ---
 
+Can load in middle, no need to query if no updates to inputs!
+
 # Setup
 
 ```{r setup, include = FALSE, echo = FALSE}
@@ -28,7 +30,7 @@ current <-
           'dada2-compatible', 
           'trnL', 
           # 'trnLGH.fasta') %>% 
-          '20220213_trnLGH_primers included.fasta') %>% 
+          '20220214_trnLGH_primers included.fasta') %>% 
      readDNAStringSet()
 
 current
@@ -251,7 +253,8 @@ add.df <-
               sep = '\\s') %>% 
      mutate(ID = paste(species, seq))
 ```
-
+### QC
+#### Duplicates
 ```{r}
 # Check for duplicates
 # In this list:
@@ -267,6 +270,23 @@ any(add.df$ID %in% current.df$ID)
 
 # Remove
 add.df <- add.df[!(add.df$ID %in% current.df$ID), ]
+```
+
+#### Sequences with Ns
+
+```{r}
+# Remove sequences containing Ns
+any(grepl(pattern = '[AGCT]*[^AGCT]+', add.df$seq))
+
+add.df %>% 
+     filter(grepl(pattern = '[AGCT]*[^AGCT]+', seq)) 
+```
+Ok, basil with an R and D.  Remove:
+
+```{r}
+add.df <- 
+     filter(add.df,
+            !grepl(pattern = '[AGCT]*[^AGCT]+', seq))
 ```
 
 ```{r}
@@ -303,5 +323,5 @@ trnL <- trnL[!(names(trnL) == 'JX390727.1 Murraya koenigii')]
 #                      'processed',
 #                      'dada2-compatible',
 #                      'trnL',
-#                      '20220213_trnLGH_primers included, additions.fasta'))
+#                      '20220214_trnLGH_primers included, additions.fasta'))
 ```
