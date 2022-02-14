@@ -28,7 +28,7 @@ current <-
           'dada2-compatible', 
           'trnL', 
           # 'trnLGH.fasta') %>% 
-          '20220206_trnLGH_primers included.fasta') %>% 
+          '20220213_trnLGH_primers included.fasta') %>% 
      readDNAStringSet()
 
 current
@@ -291,11 +291,17 @@ trnL
 ```
 
 ```{r}
+# Manual edits:
+# Remove suspected mislabeled curry leaf entry (identical to peanut)
+trnL <- trnL[!(names(trnL) == 'JX390727.1 Murraya koenigii')]
+```
+
+```{r}
 # # Save to file
 # writeXStringSet(trnL,
 #                 here('data',
 #                      'processed',
 #                      'dada2-compatible',
 #                      'trnL',
-#                      '20220206_trnLGH_primers included, additions.fasta'))
+#                      '20220213_trnLGH_primers included, additions.fasta'))
 ```
