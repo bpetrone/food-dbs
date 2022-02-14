@@ -124,12 +124,14 @@ length(clean(plastid))
 ```
 
 ```{r}
-refseq.trnL <- find_primer_pair(clean(plastid), 
+refseq.trnL <- find_primer_pair(plastid, 
                                 fwd = primers[[1]],
                                 rev = primers[[2]])
 
 cat(length(refseq.trnL), 'sequences have the primer set')
 ```
+
+5290 from cleaned data
 
 ### Subset by food species
 
@@ -166,16 +168,17 @@ length(clean(ncbi.trnL))
 
 ### Find primers
 Now look for primer binding sites within retrieved sequences.
-Note that current strategy to remove ambiguous nucleotides is problematic-- because a single ambiguous nucleotide far from the amplicon could lead to throwing away a usable sequence
-TODO: Needs to be addressed in find_primer_pair.R
+Have now addressed 
 
 ```{r}
-ncbi.trnL <- find_primer_pair(clean(ncbi.trnL), 
+ncbi.trnL <- find_primer_pair(ncbi.trnL, 
                               fwd = primers[[1]],
                               rev = primers[[2]])
 
 cat(length(ncbi.trnL), 'sequences have the primer set')
 ```
+
+2996 from cleaned data, 2997 from sequences containing Ns. 
 
 ```{r}
 # Inspect names
@@ -341,6 +344,8 @@ setdiff(gb.taxa, refseq.taxa) %>%
      length()
 ```
 
+What's weird here is that the nucleotide database should *include* RefSeq, so I don't know why I'm pulling some things out but not others.
+
 How many of initial query not found?
 
 ```{r}
@@ -426,7 +431,7 @@ trnL
 #                      'processed',
 #                      'dada2-compatible',
 #                      'trnL',
-#                      '20220206_trnLGH_primers included.fasta'))
+#                      '20220213_trnLGH_primers included.fasta'))
 ```
 
 # Compare to prior
