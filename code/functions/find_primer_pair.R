@@ -120,7 +120,7 @@ find_primer_pair <- function(seqs, fwd, rev, err=0.2, removePrimers = FALSE){
      }
           
      # Trim input sequences based on paired primer coordinates
-     # Need to figure out how to deal with duplicates??p
+     # Need to figure out how to deal with duplicates??
      matches <- mapply(subseq, 
                        seqs[combined$group], 
                        combined$trim_start, combined$trim_end) 
