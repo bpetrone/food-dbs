@@ -565,23 +565,22 @@ Ribes hirtellum,american gooseberry,plant,BP
 Ribes lobbii,gummy gooseberry,plant,BP
 Ribes oxyacanthoides subsp. irriguum,idaho gooseberry,plant,BP
 Rosa canina,dog rose,plant,"van Wyk, ""Food Plants of the World"""
-Rosa rugosa,beach rose,plant,"van Wyk, ""Food Plants of the World"""
 Rosa gallica,common rose,plant,"van Wyk, ""Food Plants of the World"""
+Rosa rugosa,beach rose,plant,"van Wyk, ""Food Plants of the World"""
 Rosa x centifolia,cabbage rose,plant,"van Wyk, ""Food Plants of the World"""
 Rosa x damascena,damask rose,plant,"van Wyk, ""Food Plants of the World"""
-Rubus brasiliensis,,plant,"Milla, ""CropOrigins and PhyloFood"""
-Rubus glaucus,andean raspberry,plant,"Milla, ""CropOrigins and PhyloFood"""
-Rubus laciniatus,evergreen blackberry,plant,"Milla, ""CropOrigins and PhyloFood"""
-Rubus chamaemorus,cloudberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus caesius,european dewberry,plant,BP
-Rubus fruticosus,european blackberry,plant,BP
-Rubus idaeus,raspberry,plant,BP
-Rubus loganobaccus,boysenberry,plant,JL
-Rubus illecebrosus,strawberry raspberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus phoenicolasius,wineberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus occidentalis,black raspberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus ulmifolius,elmleaf blackberry,plant,"van Wyk, ""Food Plants of the World"""
 Rubus allegheniensis,common blackberry,plant,"van Wyk, ""Food Plants of the World"""
+Rubus caesius,european dewberry,plant,BP
+Rubus chamaemorus,cloudberry,plant,"van Wyk, ""Food Plants of the World"""
+Rubus fruticosus,european blackberry,plant,BP
+Rubus glaucus,andean raspberry,plant,"Milla, ""CropOrigins and PhyloFood"""
+Rubus idaeus,raspberry,plant,BP
+Rubus illecebrosus,strawberry raspberry,plant,"van Wyk, ""Food Plants of the World"""
+Rubus laciniatus,evergreen blackberry,plant,"Milla, ""CropOrigins and PhyloFood"""
+Rubus loganobaccus,boysenberry,plant,JL
+Rubus occidentalis,black raspberry,plant,"van Wyk, ""Food Plants of the World"""
+Rubus phoenicolasius,wineberry,plant,"van Wyk, ""Food Plants of the World"""
+Rubus ulmifolius,elmleaf blackberry,plant,"van Wyk, ""Food Plants of the World"""
 Saccharum officinarum,sugarcane,plant,BP
 Salsola soda,saltwort,plant,JL
 Salvia hispanica,chia seed,plant,JL
@@ -623,28 +622,31 @@ Trigonella foenum-graecum,fenugreek,plant,JL
 Triticum aestivum,bread wheat,plant,BP
 Triticum aestivum subsp. compactum,club wheat,plant,GRIN Taxonomy for Plants
 Triticum aestivum subsp. sphaerococcum,indian dwarf wheat,plant,GRIN Taxonomy for Plants
-Triticum macha,spelt,plant,GRIN Taxonomy for Plants
+Triticum araraticum,wild hulled wheat,plant,GRIN Taxonomy for Plants
 Triticum dicoccon,farro,plant,JL
 Triticum durum,durum wheat,plant,JL
 Triticum ispahanicum,emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum monococcum subsp. aegilopoides,wild einkorn,plant,GRIN Taxonomy for Plants
+Triticum macha,spelt,plant,GRIN Taxonomy for Plants
 Triticum monococcum,einkorn,plant,GRIN Taxonomy for Plants
+Triticum monococcum subsp. aegilopoides,wild einkorn,plant,GRIN Taxonomy for Plants
 Triticum spelta,spelt,plant,BP
-Triticum araraticum,wild hulled wheat,plant,GRIN Taxonomy for Plants
 Triticum timopheevii,domesticated hulled wheat,plant,GRIN Taxonomy for Plants
 Triticum turanicum,"kamut, Khorasan wheat",plant,JL
+Triticum turgidum,rivet wheat,plant,GRIN Taxonomy for Plants
+Triticum turgidum subsp. carthlicum,persian wheat,plant,GRIN Taxonomy for Plants
 Triticum turgidum subsp. dicoccoides,wild emmer wheat,plant,GRIN Taxonomy for Plants
 Triticum turgidum subsp. dicoccum,emmer wheat,plant,GRIN Taxonomy for Plants
 Triticum turgidum subsp. durum,durum wheat,plant,BP
 Triticum turgidum subsp. paleocolchicum,emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum,rivet wheat,plant,GRIN Taxonomy for Plants
 Triticum turgidum subsp. polonicum,polish wheat,plant,GRIN Taxonomy for Plants
 Triticum turgidum subsp. turanicum,khorasan wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. carthlicum,persian wheat,plant,GRIN Taxonomy for Plants
 Triticum urartu,wild einkorn,plant,GRIN Taxonomy for Plants
 Triticum vavilovii,spelt,plant,GRIN Taxonomy for Plants
 Ullucus tuberosus,ullucus,plant,BP
 Vaccinium microcarpum,cranberry,plant,BP
+Vaccinium corymbosum,highbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
+Vaccinium angustifolium,lowbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
+Vaccinium ashei,rabbiteye blueberry,plant,"van Wyk, ""Food Plants of the World"""
 Vaccinium myrtillus,european blueberry,plant,BP
 Vaccinium pallidum,dryland blueberry,plant,BP
 Vaccinium tenellum,southern blueberry,plant,BP
@@ -659,8 +661,8 @@ Vigna unguiculata subsp. sesquipedalis,"long bean, asparagus beasn",plant,JL
 Vitis rotundifolia,muscadine grape,plant,BP
 Vitis vinifera,common grape vine,plant,BP
 Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
-Xanthosoma sagittifolium,tannia,plant,"van Wyk, ""Food Plants of the World"""
 Xanthosoma,various starchy corms,plant,JL
+Xanthosoma sagittifolium,tannia,plant,"van Wyk, ""Food Plants of the World"""
 Zamia integrifolia,arrowroot,plant,JL
 Zea mays,corn,plant,BP
 Zingiber officinale,ginger,plant,BP
