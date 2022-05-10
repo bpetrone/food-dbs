@@ -1,0 +1,157 @@
+---
+title: "Taxa names"
+output: html_notebook
+---
+
+## Setup
+```{r setup}
+require('knitr')
+knitr::opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+```{r}
+library(here)
+library(tidyverse)
+```
+
+## Read in data
+
+### Crop Origins
+
+```{r}
+milla <- 
+     here('data',
+          'processed',
+          'Crop_Origins_Phylo',
+          'Crop_Origins_Phylo_v_live',
+          'crop_origins_v_live',
+          'crop_origins_live_db.csv') %>% 
+     read_delim(delim = ';')
+
+milla
+```
+
+### Foods list
+
+```{r}
+foods <- 
+     here('data',
+          'raw',
+          'human-foods.csv') %>% 
+     read_csv()
+
+foods
+```
+
+### Current reference
+
+```{r}
+ref <- 
+     here('data',
+          'processed',
+          'dada2-compatible',
+          'trnL',
+          'trnLGH.fasta') %>% 
+     Biostrings::readDNAStringSet()
+
+ref
+```
+
+## Pre-process
+
+### Crop Origins
+
+```{r}
+milla <- 
+     milla %>% 
+     select(taxon = species_name,
+            common_name = common_name_crop) %>% 
+     mutate(common_name = gsub(pattern = '_',
+                               replacement = ' ',
+                               common_name))
+```
+
+### Foods list
+
+```{r}
+# Prune to plants only
+dim(foods)
+foods <- 
+     foods %>% 
+     filter(category == 'plant') %>% 
+     select(taxon = scientific_name,
+            common_name)
+dim(foods)
+```
+
+### Reference
+
+```{r}
+# Format as dataframe
+ref <- as.character(ref)
+
+ref <- 
+     data.frame(
+         id = names(ref),
+         seq = ref
+     ) %>% 
+     # Separate ID into accession and taxon
+     separate(col = id,
+              into = c('accession',
+                       'taxon'),
+              sep = ' ',
+              extra = 'merge')
+
+ref
+```
+
+## Assign ASV names
+
+```{r}
+# How many total ASVs are there?
+nrow(ref)
+```
+
+```{r}
+# How many distinct sequences
+n_distinct(ref$seq)
+```
+
+So the goal here is to aggregate the names.
+
+### Add common names
+```{r}
+# From our annotation
+ref <- left_join(ref, foods)
+```
+
+```{r}
+# Many are still missing:
+table(is.na(ref$common_name))
+```
+
+```{r}
+# How many of these turn up in Milla?
+missing <- filter(ref, is.na(common_name))
+
+missing <- left_join(missing, milla, by = c('taxon'))
+table(is.na(missing$common_name.y))
+```
+
+I think the remainder are subspecies (from a species-level query) or species (from a genus-level query). May need to go in and refine these.
+
+### Group
+
+```{r}
+ref %>% 
+     group_by(seq) %>% 
+     summarize(taxon = paste(taxon, collapse=", "),
+               commmon_name = paste(common_name, collapse=", ")) %>% 
+     # write_csv(here('data',
+     #                'processed',
+     #                'dada2-compatible',
+     #                'trnL',
+     #                'trnLGH ASV common names.csv'))
+```
+
+Can then go on to manually edit these?
