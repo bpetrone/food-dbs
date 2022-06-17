@@ -33,8 +33,7 @@ primers <- list(trnLG, trnLH)
 ### Dietary plants
 ```{r}
 plants <- 
-     # here('data', 'raw', 'human-foods.csv') %>% 
-     here('data', 'raw', 'human-foods-update.csv') %>% 
+     here('data', 'raw', 'human-foods.csv') %>%
      read.csv(stringsAsFactors = FALSE) %>%
      filter(category == 'plant') %>% 
      pull(scientific_name)
@@ -402,7 +401,72 @@ seqs.df <-
             !grepl(pattern = '[AGCT]*[^AGCT]+', seq))
 ```
 
-### Clean results
+####  Get reads in same orientation
+
+```{r}
+# Get orientation of sequence by finding primers
+# How many mismatches are allowed?
+fwd_err <- floor(0.2*length(trnLG))
+rev_err <- floor(0.2*length(trnLH))
+
+fwd_err
+rev_err
+```
+
+```{r}
+# Forward primer at start of read
+fwd_matches <- 
+     vmatchPattern(trnLG, 
+                   ref, 
+                   max.mismatch = fwd_err,
+                   fixed = TRUE) %>%
+     as.data.frame() %>% 
+     filter(start <= 1) %>% 
+     mutate(type = 'forward') %>% 
+     select(group, type)
+
+# Reverse primer at start of read
+rev_matches <- 
+     vmatchPattern(trnLH, 
+                   ref, 
+                   max.mismatch = rev_err,
+                   fixed = TRUE) %>%
+     as.data.frame() %>% 
+     filter(start <= 1) %>% 
+     mutate(type = 'reverse') %>% 
+     select(group, type)
+```
+
+```{r}
+nrow(rev_matches) + nrow(fwd_matches) == nrow(seqs.df)
+```
+
+```{r}
+seqs.df <- 
+     bind_rows(fwd_matches,
+          rev_matches) %>% 
+     arrange(group) %>% 
+     bind_cols(seqs.df)
+
+seqs.df %>% 
+     group_by(type) %>% 
+     count()
+```
+Now, if a read is reversed, we want to replace it with its reverse complement
+```{r}
+seqs.df <- 
+     mutate(seqs.df,
+            seq = ifelse(type == 'reverse',
+                         yes = seq %>% 
+                              DNAStringSet() %>% 
+                              reverseComplement() %>% 
+                              as.character(),
+                         no = seq)) %>% 
+     select(-c(type, group))
+```
+
+#### Clean results
+
 * Sequences that are the same and that come from the same species can be de-duplicated
 * Sequences that are different and come from the same species must be preserved
 
@@ -436,6 +500,8 @@ seqs.df <-
 
 dim(seqs.df)
 ```
+
+## Save
 
 ```{r}
 # Sort alphabetically (first by species name, and then accession number)
