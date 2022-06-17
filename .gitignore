@@ -1,6 +1,5 @@
-*.html
-data/raw/
-results/
-*.Rproj
+.Rproj.user
 .Rhistory
-.Rproj.user/
+.RData
+.Ruserdata
+/results
