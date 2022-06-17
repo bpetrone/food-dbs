@@ -453,12 +453,13 @@ trnL
 
 ```{r}
 # Save to file
+# Consider updating name below so I can compare to prior file
 # writeXStringSet(trnL,
 #                 here('data',
 #                      'processed',
 #                      'dada2-compatible',
 #                      'trnL',
-#                      '20220214_trnLGH_primers included.fasta'))
+#                      'trnLGH.fasta'))
 ```
 
 # Compare to prior

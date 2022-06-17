@@ -205,7 +205,10 @@ Only missing crab and bee.  Leave these for now.
 ```{r}
 # assignTaxonomy format
 writeXStringSet(reference.12SV5,
-                here('data', 'processed', 'dada2-compatible','12SV5',
+                here('data', 
+                     'processed', 
+                     'dada2-compatible',
+                     '12SV5',
                      '20201119_Minimal 12SV5, RefSeq with NCBI patch, taxonomy.fasta'))
 ```
 
@@ -214,7 +217,10 @@ writeXStringSet(reference.12SV5,
 names(reference.12SV5) <- make.unique(present, sep = ' ')
 
 writeXStringSet(reference.12SV5,
-                here('data', 'processed', 'dada2-compatible','12SV5',
+                here('data', 
+                     'processed',
+                     'dada2-compatible',
+                     '12SV5',
                      '20201119_Minimal 12SV5, RefSeq with NCBI patch, species.fasta'))
 ```
 
