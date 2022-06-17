@@ -1,669 +1,721 @@
-﻿scientific_name,common_name,category,source
-Abramis brama,common bream,animal,JL
-Acanthocybium solandri,"Wahoo, ono",animal,JL
-Acipenseridae,"sturgeon, caviar",animal,JL
-Alces alces,moose,animal,BP
-Alosinae,Shad†(incl. roe),animal,JL
-Anas,duck,animal,BP
-Anas platyrhynchos,mallard duck,animal,BP
-Anguilliformes,eel,animal,JL
-Anoplopoma fimbria,"Sablefish, black cod",animal,JL
-Anser anser,greylag goose,animal,BP
-Apis mellifera,honeybee,animal,JL
-Astacoidea,"crayfish, crawfish",animal,JL
-Barbonymus gonionotus,silver barb,animal,BP
-Barbonymus schwanenfeldii,tinfoil barb (fish),animal,BP
-Bison bison,bison,animal,BP
-Bombyx mori,"silkworm, silkworm pupa, domestic silk moth",animal,SJ
-Bos taurus,cow,animal,BP
-Bramidae,Pomfret,animal,JL
-Bubalus bubalis,water buffalo,animal,BP
-Cairina moschata,muscovy duck,animal,BP
-Callinectes sapidus,atlantic blue crab,animal,BP
-Callinectes sapidus,blue crab,animal,JL
-Cancer magister,dungeness crab,animal,JL
-Canis lupus,wolf,animal,BP
-Capra hircus,goat,animal,BP
-Cardiidae,cockle,animal,JL
-Cavia porcellus,"guinea pig, cavy",animal,JL
-Centropus sinensis,crow pheasant,animal,BP
-Cephalophus natalensis,red forest duiker,animal,BP
-Cervus canadensis,elk,animal,BP
-Cetacea,whales,animal,JL
-Channidae,Snakehead,animal,JL
-Chionoecetes,snow crab,animal,JL
-Chirostyloidea,"langostino, squat lobster",animal,JL
-Citharichthys,Sanddab,animal,JL
-Clupeidae,"Herring, kazunoko†(roe)",animal,JL
-Concholepas concholepas,"loco, Chilean abalone",animal,JL
-Coregonus,whitefish,animal,JL
-Coryphaena hippurus,"Mahi Mahi, common dolphinfish",animal,JL
-Coturnix japonica,japanese quail,animal,BP
-Crassostrea gigas,pacific cupped oyster,animal,BP
-Crocothemis servilia,scarlet skimmer dragonfly,animal,BP
-Ctenopharyngodon idella,grass carp,animal,BP
-Cuniculus paca,lowland paca,animal,BP
-Cyclopterus lumpus,Lumpfish roe,animal,JL
-Cyprinus carpio,common carp,animal,BP
-Decapodiformes,"squid, calamari",animal,JL
-Delphinidae,dolphin,animal,JL
-Diodon,fugu fish,animal,JL
-Dissostichus eleginoides,"Patagonian toothfish, Chilean sea bass",animal,JL
-Dromaius novaehollandiae,emu,animal,BP
-Engraulidae,anchovy,animal,JL
-Epinephelinae,Grouper,animal,JL
-Equus africanus asinus,"donkey, ass",animal,SJ
-Equus caballus,horse,animal,BP
-Esox,Pike,animal,JL
-Eucidaris tribuloides,slate pencil urchin,animal,BP
-Evechinus chloroticus,kina (new zealand urchin),animal,BP
-Exocoetidae,"flying fish, tobiko (roe)",animal,JL
-Felis catus,cat,animal,BP
-Gadus,Cod,animal,JL
-Galatheoidea,"langostino, squat lobster",animal,JL
-Gallus gallus,chicken,animal,BP
-Glyptocephalus cynoglossus,"Witch, righteye flounder",animal,JL
-Gryllus,field cricket,animal,BP
-Harpadon nehereus,"Bombay duck, bummalo",animal,JL
-Helix pomatia,escargot,animal,BP
-Helix pomatia,land snail,animal,BP
-Hippoglossus hippoglossus,halibut,animal,JL
-Hippoglossus stenolepis,halibut,animal,JL
-Hippoidea,"sand crab, mole crab",animal,JL
-Holothuroidea,sea cucumber,animal,JL
-Homarus americanus,lobster,animal,BP
-Hoplobatrachus tigerinus,indian bullfrog,animal,BP
-Hoplostethus atlanticus,Orange roughy,animal,JL
-Ictalurus punctatus,channel catfish,animal,BP
-Iniidae,dolphin,animal,JL
-Lagocephalus,fugu fish,animal,JL
-Latidae,Asian sea bass,animal,JL
-Lithodidae,king crab,animal,JL
-Litopenaeus vannamei,whiteleg shrimp,animal,BP
-Littorina littorea,periwinkle,animal,JL
-Lophius,Monkfish,animal,JL
-Lutjanidae,Snapper,animal,JL
-Malacanthidae,tilefish,animal,JL
-Mallotus villosus,"capelin, masago (roe)",animal,JL
-Medusozoa,jellyfish,animal,JL
-Melanogrammus aeglefinus,Haddock,animal,JL
-Meleagris,turkey,animal,BP
-Mercenaria mercenaria,quahog,animal,BP
-Mercenaria mercenaria,"quahog, hard clam",animal,JL
-"Mercenaria mercenaria, others",clam,animal,JL
-Merlangius merlangus,whiting,animal,JL
-Merlucciidae,hake,animal,JL
-Mesocentrotus franciscanus,red sea urchin,animal,BP
-Metacarcinus magister,dungeness crab,animal,JL
-Microcosmus sabatieri,"sea fig, violet",animal,JL
-Morone saxatilis,striped bass,animal,JL
-Mugilidae,Mullet,animal,JL
-Mytilidae,mussel,animal,JL
-Mytilus edulis,blue mussel,animal,BP
-Nautilus,nautilus,animal,JL
-Nematognathi,catfish,animal,JL
-Octopoda,octopus,animal,JL
-Odocoileus virginianus,white-tailed deer,animal,BP
-Oncorhynchus mykiss,rainbow trout,animal,JL
-Ophiodon elongatus,Lingcod,animal,JL
-Oreochromis aureus,blue tilapia,animal,BP
-Oreochromis mossambicus,mozambique tilapia,animal,BP
-Oreochromis niloticus,nile tilapia,animal,BP
-Osmeridae,Smelt,animal,JL
-Ostreoidea,oyster,animal,JL
-Ovis aries,sheep,animal,BP
-Pangasianodon hypophthalmus,striped catfish,animal,BP
-Pangasius bocourti,"Pangasius, basa, swai",animal,JL
-Panopea generosa,"Pacific geoduck, geoduck",animal,SJ
-Panopeidae,mud crab,animal,JL
-Paracentrotus lividus,purple sea urchin (atlantic),animal,BP
-Paralichthys lethostigma,flounder,animal,BP
-Parastacoidea,"crayfish, crawfish",animal,JL
-Pectinidae,scallop,animal,JL
-Penaeus monodon,black tiger shrimp,animal,BP
-Penaeus setiferus,white shrimp,animal,BP
-Perca fluviatilis,common perch,animal,BP
-Petromyzontiformes,Lamprey,animal,JL
-Phycidae,hake,animal,JL
-Piaractus brachypomus,pirapitinga,animal,BP
-Pinnipedia,seal,animal,JL
-Platanistidae,dolphin,animal,JL
-Pollachius pollachius,pollock,animal,JL
-Pollachius virens,pollock,animal,JL
-Pomatomus saltatrix,"Bluefish, tailor, elf, shad",animal,JL
-Rajidae,Skate,animal,JL
-Rastrineobola argenta,silver cyprinid,animal,BP
-Rattus rattus,rat,animal,BP
-Rutilus rutilus,common roach (fish),animal,BP
-Salmo salar,salmon,animal,BP
-Sardina pilchardus,european pilchard,animal,BP
-Sardinops sagax,south american pilchard,animal,BP
-Scaridae,Parrotfish,animal,JL
-Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
-Scophthalmus maximus,Turbot,animal,JL
-Scophthalmus rhombus,Brill,animal,JL
-Scylla,mud crab,animal,JL
-Selachimorpha,Shark,animal,JL
-Sepiida,cuttlefish,animal,JL
-Serranidae,Sea bass,animal,JL
-Siluriformes,catfish,animal,JL
-Soleidae,Sole,animal,JL
-Sparus aurata,"Dorade, gilt-head bream, orata",animal,JL
-Sphoeroides,fugu fish,animal,JL
-Sphyraena,barracuda,animal,JL
-Sprattus,Sprat,animal,JL
-Squalidae,Dogfish,animal,JL
-Stromateidae,Butter fish,animal,JL
-Strombidae,conch,animal,JL
-Strongylocentrotus droebachiensis,green sea urchin,animal,BP
-Strongylocentrotus purpuratus,purple sea urchin (pacific),animal,BP
-Sus scrofa,pig,animal,BP
-Sylvilagus,cottontail rabbit,animal,BP
-Takifugu,fugu fish,animal,JL
-Tenualosa ilisha,Ilish,animal,JL
-Tetraodontidae ,"Blowfish, pufferfish",animal,JL
-Thunnus alalunga,albacore tuna,animal,JL
-Thunnus albacares,yellowfin tuna,animal,BP
-Thunnus obesus,bigeye tuna,animal,JL
-Thunnus thynnus,atlantic bluefin tuna,animal,BP
-Trachinotus,Pompano,animal,JL
-Ucides occidentalis,pacific mangrove ghost crab,animal,BP
-Venerupis philippinarum,japanese littleneck,animal,BP
-Vespa velutina,asian hornet,animal,BP
-Xanthidae,mud crab,animal,JL
-Xiphias gladius,Swordfish,animal,JL
-Zeus faber,"John Dory, St Pierre, Peter's Fish",animal,JL
-Arthrospira maxima,spirulina,bacteria,JL
-Arthrospira platensis,spirulina,bacteria,JL
-Agaricus arvensis,Horse mushroom,fungus,JL
-Agaricus augustus,The prine,fungus,JL
-Agaricus bisporus,common mushroom,fungus,BP
-Agaricus bitorquis,Pavement mushroom,fungus,JL
-Agaricus campestris,Field mushroom,fungus,JL
-Agaricus xanthodermus,Yellow-staining mushroom,fungus,JL
-Aspergillus oryzae,koji,fungus,JL
-Boletus,Bolete,fungus,JL
-Calvatia gigantea,giant puffball,fungus,JL
-"Cantharellus, Craterellus, Gomphus,  Polyozellus",chantarelle,fungus,JL
-Craterellus cornucopioides,"black trumpet, horn of plenty",fungus,JL
-Flammulina velutipes,enokitake,fungus,BP
-Grifola frondosa,"hen of the woods, maitake",fungus,JL
-Hericium abietis,"bear's head, western coral hedgehog",fungus,BP
-Hericium americanum,bear's head tooth,fungus,BP
-Hericium coralloides,comb tooth,fungus,BP
-Hericium erinaceus,lion's mane,fungus,JL
-Hericium erinaceus,"lion's mane, monkey head",fungus,BP
-Hypomyces lactifluorum,lobster mushroom,fungus,JL
-Hypsizygus marmoreus,white beech,fungus,BP
-Laetiporus ,chicken of the woods,fungus,JL
-Leccinum scabrum,Birch bolete,fungus,JL
-Lentinula edodes,shiitake,fungus,BP
-Morchella angusticeps ,black morel,fungus,JL
-Pleurotus eryngii,king oyster,fungus,BP
-Pleurotus ostreatus,Pearl oyster mushroom,fungus,JL
-Polyporous squamosus,Dryad's saddle,fungus,JL
-Pseudohyndum gelatinosum,Toothed jelly fungus,fungus,JL
-Rhizopus microsporus,rhizopus,fungus,BP
-Saccharomyces cerevisiae,yeast,fungus,BP
-Suillus luteus,slippery jack,fungus,JL
-Trametes versicolor,turkey tail mushroom,fungus,JL
-Abelmoschus esculentus,okra,plant,BP
-Acacia pennata,cha-om,plant,BP
-Acacia senegal,gum acacia,plant,"van Wyk, ""Food Plants of the World"""
-Acanthocereus tetragonus,sword pear,plant,JL
-Acca sellowiana,feijoa,plant,"van Wyk, ""Food Plants of the World"""
-Acer nigrum,maple (syrup),plant,JL
-Acer rubrum,maple (syrup),plant,JL
-Acer saccharum,maple (syrup),plant,JL
-Actinidia deliciosa,kiwi,plant,BP
-﻿Adansonia digitata,baobab,plant,BP
-Aegle marmelos,bael,plant,JL
-Aframomum laurentii,bongongoo,plant,BP
-Agathosma betulina,buchu,plant,"van Wyk, ""Food Plants of the World"""
-Agave americana,century plant,plant,"van Wyk, ""Food Plants of the World"""
-Agave tequilana,tequila plant,plant,"van Wyk, ""Food Plants of the World"""
-Aleurites moluccana,candlenut tree,plant,"van Wyk, ""Food Plants of the World"""
-Allium ampeloprasum,wild leek,plant,BP
-Allium cepa,onion,plant,BP
-Allium cepa var. aggregatum,shallot,plant,BP
-Allium fistulosum,scallion,plant,BP
-Allium porrum,garden leek,plant,BP
-Allium sativum,garlic,plant,BP
-Allium schoenoprasum,chive,plant,BP
-Allium tuberosum,garlic chive,plant,"van Wyk, ""Food Plants of the World"""
-Alocasia macrorrhizos,giant taro,plant,BP
-Aloe vera,aloe,plant,JL
-Aloysia triphylla,lemon verbena,plant,"van Wyk, ""Food Plants of the World"""
-Alpinia galanga,greater galangal,plant,BP
-Alpinia officinarum,lesser galangal,plant,BP
-Amalocalyx microlobus,mak sim,plant,BP
-Amaranthus cruentus,red amaranth,plant,BP
-Amaranthus dubius,red spinach,plant,BP
-Amaranthus tricolor,chinese spinach,plant,"van Wyk, ""Food Plants of the World"""
-Amomum subulatum,black cardamom,plant,BP
-Amorphophallus konjac,konjac,plant,JL
-Anacardium occidentale,cashew,plant,JL
-Ananas comosus,pineapple,plant,BP
-Anethum foeniculum,fennel,plant,BP
-Anethum graveolens,dill,plant,BP
-Angelica archangelica,angelica,plant,"van Wyk, ""Food Plants of the World"""
-Annona cherimola,cherimoya,plant,"van Wyk, ""Food Plants of the World"""
-Annona muricata,soursop,plant,BP
-Annona squamosa,sweetsop,plant,"van Wyk, ""Food Plants of the World"""
-Anonidium mannii,bobo,plant,BP
-Anthriscus cerefolium,chervil,plant,"van Wyk, ""Food Plants of the World"""
-Apium graveolens,celery,plant,BP
-Aponogeton distachyos,cape pondweed,plant,"van Wyk, ""Food Plants of the World"""
-Arachis hypogaea,peanut,plant,BP
-Arbutus unedo,strawberry tree,plant,"van Wyk, ""Food Plants of the World"""
-Arcticum lappa,burdock,plant,"van Wyk, ""Food Plants of the World"""
-Arenga pinnata,sugar palm,plant,"van Wyk, ""Food Plants of the World"""
-Argania spinosa,argan tree,plant,"van Wyk, ""Food Plants of the World"""
-Armoracia rusticana,horseradish,plant,BP
-Aronia melanocarpa,black chokeberry,plant,"van Wyk, ""Food Plants of the World"""
-Artemisia absinthium,wormwood,plant,"van Wyk, ""Food Plants of the World"""
-Artemisia dracunculus,tarragon,plant,BP
-Artemisia vulgaris,mugwort,plant,SJ
-Artocarpus altilis ,breadfruit,plant,BP
-Artocarpus heterophyllus,jackfruit,plant,JL
-Artocarpus lacucha,"monkey fruit, monkey jack, barhar, badahar, dewa, bohot",plant,JL
-Asimina triloba,pawpaw,plant,JL
-Aspalathus linearis,rooibos,plant,BP
-Asparagus officinalis,asparagus,plant,BP
-Atriplex hortensis,orache,plant,"van Wyk, ""Food Plants of the World"""
-Avena sativa,oat,plant,BP
-Averrhoa bilimbi,bilimbi,plant,"van Wyk, ""Food Plants of the World"""
-Averrhoa carambola,starfruit,plant,BP
-Bactris gasipaes,peach palm,plant,"van Wyk, ""Food Plants of the World"""
-Bambusa vulgaris,common bamboo,plant,BP
-Basella alba,malabar spinach,plant,BP
-Benincasa hispida,wax gourd,plant,BP
-Bertholletia excelsa,brazil nut,plant,JL
-Beta vulgaris,"beet, chard",plant,BP
-Beta vulgaris subsp. cicla,chard,plant,"van Wyk, ""Food Plants of the World"""
-Beta vulgaris subsp. vulgaris,"beet, chard",plant,BP
-Bixa orellana,annato,plant,BP
-Blighia sapida,akee,plant,"van Wyk, ""Food Plants of the World"""
-Boesenbergia rotunda,chinese ginger,plant,BP
-Borago officinalis,borage,plant,"van Wyk, ""Food Plants of the World"""
-Borassus flabellifer,palmyra palm,plant,"van Wyk, ""Food Plants of the World"""
-Brassica juncea var. juncea,brown mustard,plant,BP
-Brassica juncea var. rugosa,mustard greens,plant,"van Wyk, ""Food Plants of the World"""
-Brassica napobrassica,rutabaga,plant,JL
-Brassica napus,"canola, rapeseed",plant,JL
-Brassica nigra,black mustard,plant,"van Wyk, ""Food Plants of the World"""
-Brassica oleracea,"cabbage, broccoli, cauliflower, kale, Brussels sprouts, collard greens, savoy, kohlrabi, gai lan",plant,BP
-Brassica oleracea var. alboglabra,gai-lan,plant,BP
-Brassica oleracea var. botrytis,"cauliflower, romanesco broccoli",plant,BP
-Brassica oleracea var. botrytis x italica,broccoflower,plant,BP
-Brassica oleracea var. capitata f. acuta,cone cabbage,plant,BP
-Brassica oleracea var. capitata f. alba,cabbage,plant,BP
-Brassica oleracea var. capitata f. rubra,red cabbage,plant,BP
-Brassica oleracea var. capitata f. sabauda,savoy cabbage,plant,BP
-Brassica oleracea var. costata,tronchuda kale,plant,BP
-Brassica oleracea var. gemmifera,brussels sprout,plant,BP
-Brassica oleracea var. gongylodes,kohlrabi,plant,BP
-Brassica oleracea var. italica,broccoli,plant,BP
-Brassica oleracea var. italica x alboglabra,broccolini,plant,BP
-Brassica oleracea var. longata,jersey cabbage,plant,BP
-Brassica oleracea var. medullosa,marrow cabbage,plant,BP
-Brassica oleracea var. oleracea,wild cabbage,plant,BP
-Brassica oleracea var. palmifolia,lacinato kale,plant,BP
-Brassica oleracea var. ramosa,perpetual kale,plant,BP
-Brassica oleracea var. sabellica,curly kale,plant,"van Wyk, ""Food Plants of the World"""
-Brassica oleracea var. viridis,"kale, collard greens",plant,BP
-Brassica rapa,mustards,plant,BP
-Brassica rapa subsp. chinensis,bok choy,plant,BP
-Brassica rapa subsp. narinosa,tatsoi,plant,BP
-Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
-Brassica rapa subsp. oleifera,field mustard,plant,BP
-Brassica rapa subsp. parachinensis,choy sum,plant,BP
-Brassica rapa subsp. pekinensis,napa cabbage,plant,BP
-Brassica rapa subsp. perviridis,komatsuna,plant,BP
-Brassica rapa subsp. rapa,turnip,plant,BP
-Brassica rapa subsp. trilocularis,yellow sarson,plant,BP
-Brassica rapa var. glabra,bomdong,plant,BP
-Brassica rapa var. rapifera,rapini,plant,BP
-Browningia candelaris,candleholder cactus,plant,JL
-Camellia sinensis,tea,plant,BP
-Cannabis sativa,hemp seed,plant,JL
-Capparis spinosa,caper,plant,BP
-Capsicum annuum,"bell peppers, sweet/Italian peppers, serrano, cayenne, paprika, jalapeno",plant,BP
-Capsicum baccatum ,"aji amarillo, aji limon, ciolla sella",plant,JL
-Capsicum chinense,"habanero, scotch bonnet, trinidad scorpions, bhut jolokia, carolina reaper",plant,JL
-Capsicum frutescens,"tabascos, indian chiles",plant,BP
-Capsicum pubescens,rocoto and manzano peppers,plant,BP
-Carica papaya,papaya,plant,BP
-Carica x pentagona,babaco,plant,BP
-Carnegiea gigantea,saguaro,plant,JL
-Carum carvi,caraway seeds,plant,JL
-Carya illinoinensis,pecan,plant,BP
-Castania sativa,sweet chestnut,plant,BP
-Centella asiatica,pennywort,plant,BP
-Ceratonia siliqua,carob bean,plant,JL
-Cereus repandus,Peruvian apple cactus,plant,JL
-Chamaedorea tepejilote,pacaya,plant,JL
-Chenopodium pallidicaule,canihua,plant,JL
-Chenopodium quinoa,quinoa,plant,BP
-Chondrus crispus,carageenan,plant,JL
-Cicer arietinum,chickpea,plant,BP
-Cichorium endivia ,endive,plant,JL
-Cichorium intybus ,chicory,plant,JL
-Cinamommum burmannii,indonesian cinnamon,plant,BP
-Cinamommum citriodorum,malabar cinnamon,plant,BP
-Cinamommum loureiroi,saigon cinnamon,plant,BP
-Cinnamomum cassia,cinnamon,plant,BP
-Cinnamomum verum ,ceylon cinnamon,plant,BP
-Citrullus lanatus,watermelon,plant,BP
-Citrus aurantiifolia,key lime,plant,BP
-Citrus latifolia,persian lime,plant,BP
-Citrus limon,lemon,plant,BP
-Citrus maxima,pomelo,plant,BP
-Citrus reticulata,mandarin orange,plant,BP
-Citrus sinensis,sweet orange,plant,BP
-Citrus unshiu,satsuma mandarin,plant,SJ
-Citrus x aurantium,"bitter orange, seville orange",plant,BP
-Citrus x paradisi,grapefruit,plant,BP
-Cleome gynandra,"shona cabbage, african cabbage",plant,BP
-Cocos nucifera,coconut,plant,BP
-Coffea arabica,coffee,plant,"van Wyk, ""Food Plants of the World"""
-Coffea canephora,robusta coffee,plant,BP
-Coffea liberica,Liberian coffee,plant,"van Wyk, ""Food Plants of the World"""
-Colocasia antiquorum,eddo,plant,JL
-Colocasia esculenta,taro,plant,BP
-Corchorus capsularis,white jute,plant,BP
-Corchorus olitorius,jute mallow,plant,BP
-Coriandrum sativum,"coriander, cilantro",plant,BP
-Corylus avellana,hazelnut,plant,BP
-Crithmum maritimum,sea beans,plant,JL
-Crocus sativus,saffron,plant,BP
-Crotalaria brevidens,mitoo,plant,BP
-Crotalaria grahamiana,tum-thang,plant,BP
-Cucumis melo,"muskmelon, canteloupe",plant,BP
-Cucumis sativus,cucumber,plant,BP
-Cucurbita argyrosperma,japanese pie pumpkin,plant,BP
-Cucurbita ficifolia,fig-leaf gourd,plant,BP
-Cucurbita maxima,winter squash,plant,BP
-Cucurbita moschata,"squash, pumpkin",plant,BP
-Cucurbita pepo,"pumpkin, summer squash",plant,BP
-Cucurbita pepo subsp. pepo,spaghetti squash,plant,BP
-Cucurbita pepo var. turbinata,acorn squash,plant,BP
-Cuminum cyminum,cumin,plant,BP
-Curcuma longa,turmeric,plant,BP
-Cyamopsis tetragonoloba,guar bean,plant,JL
-Cymbopogon citratus,lemongrass,plant,BP
-Cynara cardunculus,artichoke,plant,BP
-Cyperus esculentus,tiger nut,plant,JL
-Cyphomandra betacea,tamarillo,plant,BP
-Dacryodes edulis,"safou, butterfruit",plant,BP
-Daucus carota,wild carrot,plant,BP
-Daucus carota subsp. sativus,carrot,plant,BP
-Digitaria exilis,fonio,plant,JL
-Digitaria iburua,fonio,plant,JL
-Dimocarpus longan,longan,plant,BP
-Dioscorea alata,"ube, purple yam",plant,JL
-Dioscorea rotundata,white yam,plant,BP
-Dioscorea trifida,indian yam,plant,BP
-Diplotaxis tenuifolia,wild rocket,plant,SJ
-Durio zibethinus,durian,plant,BP
-Elaeis guineensis,oil palm,plant,BP
-Eleocharis dulcis,water chestnut,plant,JL
-Elettaria cardamomum,green cardamom,plant,BP
-Eleusine coracana,finger millet,plant,BP
-Enydra fluctuans,buffalo spinach,plant,BP
-Eragrostis tef,teff,plant,JL
-Eruca vesicaria,rocket,plant,SJ
-Eryngium foetidum,culantro,plant,BP
-Euterpe oleracea,acai,plant,JL
-Fagopyrum esculentum,buckwheat,plant,BP
-Ficus carica,fig,plant,BP
-Ficus racemosa,cluster fig,plant,BP
-Fragaria,strawberry,plant,BP
-Fragaria x ananassa,strawberry,plant,BP
-Garcinia oblongifolia,south china mangosteen,plant,BP
-Geoffroea decorticans,chanar,plant,JL
-Glebionis coronaria,crown daisy,plant,BP
-Glycine max,soybean,plant,BP
-Glycyrrhiza glabra,licorice,plant,JL
-Gnetum africanum,eru,plant,BP
-Gurania,jungle cucumber,plant,Lachat
-Helianthus annuus,sunflower,plant,BP
-Helianthus tuberosus,"jerusalem artichoke, sunchoke",plant,JL
-Hibiscus sabdariffa,roselle,plant,BP
-Hordeum vulgare,barley,plant,BP
-Houttuynia cordata,fish mint,plant,BP
-Hua gaboni,tropical garlic,plant,BP
-Humulus lupulus,hops,plant,JL
-Hylocereus undatus,"dragon fruit, pitahaya",plant,BP
-Ilex paraguariensis,yerba mate,plant,BP
-Illicium verum,star anise,plant,SJ
-Inga vera,"ice-cream-bean, joaquiniquil",plant,BP
-Ipomoea aquatica,"water spinach, swamp morning glory",plant,BP
-Ipomoea batatas,sweet potato,plant,BP
-Irvingia gabonensis,bush mango,plant,BP
-Juglans nigra,black walnut,plant,JL
-Juglans regia,walnut,plant,BP
-Kaempferia galanga,black galangal,plant,BP
-Lablab purpureus,hyacinth bean,plant,BP
-Lactuca sativa,lettuce,plant,BP
-Lagenaria siceraria,calabash,plant,BP
-Lasia spinosa,"lasia, geli-geli",plant,BP
-Laurus nobilis,bay leaf,plant,BP
-Lens culinaris,lentil,plant,BP
-Lepidium meyenii,maca root,plant,BP
-Limonia acidissima,"wood apple, elephant apple",plant,JL
-Linum usitatissimum,flaxseed,plant,BP
-Luffa acutangula,chinese okra,plant,BP
-Luffa cylindrica ,sponge gourd,plant,BP
-Lupinus albus,lupini beans,plant,JL
-Lupinus mutabilis,lupini beans,plant,JL
-Lycium barbarum,goji berry,plant,JL
-Lycium chinense,goji berry,plant,JL
-Macadamia integrifolia,macadamia,plant,BP
-Maclura pomifera,osage orange,plant,JL
-Malus domestica,apple,plant,BP
-Malus sylvestris,crab apple,plant,BP
-Mangifera indica,mango,plant,BP
-Manihot esculenta,cassava,plant,BP
-Marsilea quadrifolia,water clover,plant,BP
-Megaphrynium macrostachyum,yoruba soft cane,plant,BP
-Melissa officinalis,lemon balm,plant,BP
-Mentha,mint,plant,BP
-Mentha arvensis,field mint,plant,"van Wyk, ""Food Plants of the World"""
-Mentha spicata,spearmint,plant,BP
-Mentha x piperita,peppermint,plant,BP
-Momordica charantia,bitter melon,plant,BP
-Morus nigra,mulberry,plant,JL
-Murraya koenigii,curry leaf,plant,BP
-Musa acuminata,banana,plant,BP
-Musa balbisiana,banana,plant,BP
-Musa x paradisiaca,plantain,plant,JL
-Myristica fragrans,nutmeg,plant,BP
-Nasturtium microphyllum,one-row watercress,plant,BP
-Nelumbo nucifera,lotus root,plant,JL
-Ocimum basilicum,basil,plant,BP
-Olea europaea,olive,plant,BP
-Origanum vulgare,oregano,plant,BP
-Oryza sativa,rice,plant,BP
-Osmundastrum cinnamomeum,cinnamon fern,plant,BP
-Oxalis pes-caprae,african wood-sorrel,plant,"van Wyk, ""Food Plants of the World"""
-Oxalis tuberosa,oca,plant,JL
-Oxypolis filiformis,water cowbane,plant,BP
-Pachyrhizus erosus,jicama,plant,BP
-Paederia foetida,stinkvine,plant,BP
-Panax vietnamensis,vietnamese ginseng,plant,BP
-Panicum miliaceum,proso millet,plant,BP
-Papaver somniferum,poppy,plant,JL
-Passiflora edulis,passion fruit,plant,BP
-Passiflora quadrangularis,"giant granadilla, grenadine",plant,BP
-Pastinaca sativa,parsnip,plant,JL
-Persea americana,avocado,plant,BP
-Petroselinum crispum,parsley,plant,BP
-Phaseolus lunatus,lima bean,plant,BP
-Phaseolus vulgaris,"common bean, green bean, French bean",plant,BP
-Phoenix dactylifera,date,plant,BP
-Phyllanthus acidus,sour gooseberry,plant,BP
-Physalis angulata,cutleaf groundcherry,plant,BP
-Physalis philadelphica,tomatillo,plant,JL
-Pimenta dioica,allspice,plant,BP
-Pimpinella anisum,anise seed,plant,BP
-Pinus albicaulis,pine nut,plant,BP
-Pinus armandii,pine nut,plant,BP
-Pinus bungeana,pine nut,plant,BP
-Pinus cembra,pine nut,plant,BP
-Pinus cembroides,pine nut,plant,BP
-Pinus coulteri,pine nut,plant,BP
-Pinus culminicola,pine nut,plant,BP
-Pinus edulis,pine nut,plant,BP
-Pinus gerardiana,pine nut,plant,BP
-Pinus johannis,pine nut,plant,BP
-Pinus koraiensis,pine nut,plant,BP
-Pinus monophylla,pine nut,plant,BP
-Pinus orizabensis,pine nut,plant,BP
-Pinus pinea,pine nut,plant,BP
-Pinus pumila,pine nut,plant,BP
-Pinus quadrifolia,pine nut,plant,BP
-Pinus remota,pine nut,plant,BP
-Pinus sabiniana,pine nut,plant,BP
-Pinus sibirica,pine nut,plant,BP
-Piper guineense,ashanti pepper,plant,BP
-Piper longum,long pepper,plant,JL
-Piper nigrum,black pepper,plant,BP
-Piper sarmentosum,wild betel,plant,BP
-Pistacia vera,pistachio,plant,BP
-Pisum sativum,pea,plant,BP
-Pisum sativum var. macrocarpum,snow pea,plant,BP
-Plantago afra,black psyllium,plant,BP
-Plantago arenaria,french psyllium,plant,BP
-Plantago ovata,blond psyllium,plant,BP
-Platostoma palustre,chinese mestoma,plant,BP
-Polygonum odoratum ,"vietnamese coriander, rau ram",plant,BP
-Polystichum munitum,fiddleheads,plant,JL
-Prunus armeniaca,apricot,plant,JL
-Prunus avium,sweet cherry,plant,BP
-Prunus domestica,plum,plant,BP
-Prunus dulcis,almond,plant,JL
-Prunus grayana,japanese bird cherry,plant,BP
-Prunus mume,"ume, Chinese plum",plant,JL
-Prunus persica,peach,plant,BP
-Prunus spinosa,sloe,plant,BP
-Psidium guajava,common guava,plant,BP
-Psophocarpus scandens,tropical african winged bean,plant,BP
-Punica granatum,pomegranate,plant,JL
-Pyropia tenera,nori,plant,JL
-Pyropia yezoensis,nori,plant,JL
-Pyrus × sinkiangensis,xinjiang pear,plant,BP
-Pyrus communis,european pear,plant,BP
-Pyrus pashia,afghan pear,plant,BP
-Pyrus pyrifolia,nashi pear,plant,BP
-Pyrus ussuriensis,siberian pear,plant,BP
-Pyrus x bretschneideri,hybrid chinese white pear,plant,BP
-Quercus robur,"acorn, oak",plant,JL
-Raphanus sativus,radish,plant,BP
-Ribes divaricatum,coast gooseberry,plant,BP
-Ribes hirtellum,american gooseberry,plant,BP
-Ribes lobbii,gummy gooseberry,plant,BP
-Ribes oxyacanthoides subsp. irriguum,idaho gooseberry,plant,BP
-Rosa canina,dog rose,plant,"van Wyk, ""Food Plants of the World"""
-Rosa gallica,common rose,plant,"van Wyk, ""Food Plants of the World"""
-Rosa rugosa,beach rose,plant,"van Wyk, ""Food Plants of the World"""
-Rosa x centifolia,cabbage rose,plant,"van Wyk, ""Food Plants of the World"""
-Rosa x damascena,damask rose,plant,"van Wyk, ""Food Plants of the World"""
-Rubus allegheniensis,common blackberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus caesius,european dewberry,plant,BP
-Rubus chamaemorus,cloudberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus fruticosus,european blackberry,plant,BP
-Rubus glaucus,andean raspberry,plant,"Milla, ""CropOrigins and PhyloFood"""
-Rubus idaeus,raspberry,plant,BP
-Rubus illecebrosus,strawberry raspberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus laciniatus,evergreen blackberry,plant,"Milla, ""CropOrigins and PhyloFood"""
-Rubus loganobaccus,boysenberry,plant,JL
-Rubus occidentalis,black raspberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus phoenicolasius,wineberry,plant,"van Wyk, ""Food Plants of the World"""
-Rubus ulmifolius,elmleaf blackberry,plant,"van Wyk, ""Food Plants of the World"""
-Saccharum officinarum,sugarcane,plant,BP
-Salsola soda,saltwort,plant,JL
-Salvia hispanica,chia seed,plant,JL
-Salvia officinalis,sage,plant,BP
-Salvia rosmarinus,rosemary,plant,BP
-Sauropus androgynus,katuk,plant,BP
-Schinus molle,pink peppercorn,plant,JL
-Scorodophloeus zenkeri,"garlic tree, divida",plant,BP
-Scorzonera hispanica,"Spanish salsify, black salsify",plant,JL
-Secale cereale,rye,plant,BP
-Secale cereale x Triticum aestivum,triticale,plant,BP
-Sechium edule,chayote,plant,BP
-Sesamum indicum,sesame,plant,BP
-Sinapis alba,white mustard,plant,BP
-Smallanthus sonchifolius,yacon,plant,JL
-Solanum aethiopicum,"bitter tomato, african eggplant",plant,BP
-Solanum americanum,nightshade,plant,BP
-Solanum anguivi,"african eggplant, forest bitterberry",plant,BP
-Solanum lycopersicum,tomato,plant,BP
-Solanum macrocarpon,"african eggplant, vietnamese eggplant",plant,BP
-Solanum melongena,eggplant,plant,BP
-Solanum nigrum,blackberry nightshade,plant,BP
-Solanum quitoense,naranjilla,plant,BP
-Solanum tuberosum,potato,plant,BP
-Sorghum bicolor,sorghum,plant,BP
-Spinacia oleracea,spinach,plant,BP
-Spinacia tetrandra,spinach,plant,BP
-Spondias dulcis,ambarella,plant,BP
-Stachys affinis,"Chinese artichoke, crosne",plant,JL
-Synsepalum dulcificum,miracle berry,plant,JL
-Syzygium aromaticum,clove,plant,BP
-Talinum fruticosum ,ceylon spinach,plant,BP
-Tamarindus indica,tamarind,plant,BP
-Taraxacum officinale,dandelion,plant,"van Wyk, ""Food Plants of the World"""
-Theobroma cacao,cocoa bean,plant,BP
-Thymus vulgaris,thyme,plant,BP
-Tragopogon porrifolius,salsify,plant,JL
-Trigonella foenum-graecum,fenugreek,plant,JL
-Triticum aestivum,bread wheat,plant,BP
-Triticum aestivum subsp. compactum,club wheat,plant,GRIN Taxonomy for Plants
-Triticum aestivum subsp. sphaerococcum,indian dwarf wheat,plant,GRIN Taxonomy for Plants
-Triticum araraticum,wild hulled wheat,plant,GRIN Taxonomy for Plants
-Triticum dicoccon,farro,plant,JL
-Triticum durum,durum wheat,plant,JL
-Triticum ispahanicum,emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum macha,spelt,plant,GRIN Taxonomy for Plants
-Triticum monococcum,einkorn,plant,GRIN Taxonomy for Plants
-Triticum monococcum subsp. aegilopoides,wild einkorn,plant,GRIN Taxonomy for Plants
-Triticum spelta,spelt,plant,BP
-Triticum timopheevii,domesticated hulled wheat,plant,GRIN Taxonomy for Plants
-Triticum turanicum,"kamut, Khorasan wheat",plant,JL
-Triticum turgidum,rivet wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. carthlicum,persian wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. dicoccoides,wild emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. dicoccum,emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. durum,durum wheat,plant,BP
-Triticum turgidum subsp. paleocolchicum,emmer wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. polonicum,polish wheat,plant,GRIN Taxonomy for Plants
-Triticum turgidum subsp. turanicum,khorasan wheat,plant,GRIN Taxonomy for Plants
-Triticum urartu,wild einkorn,plant,GRIN Taxonomy for Plants
-Triticum vavilovii,spelt,plant,GRIN Taxonomy for Plants
-Ullucus tuberosus,ullucus,plant,BP
-Vaccinium microcarpum,cranberry,plant,BP
-Vaccinium corymbosum,highbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
-Vaccinium angustifolium,lowbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
-Vaccinium ashei,rabbiteye blueberry,plant,"van Wyk, ""Food Plants of the World"""
-Vaccinium myrtillus,european blueberry,plant,BP
-Vaccinium pallidum,dryland blueberry,plant,BP
-Vaccinium tenellum,southern blueberry,plant,BP
-Vaccinium vitis-idaea,lingonberry,plant,BP
-Vanilla planifolia,vanilla,plant,JL
-Vicia faba,"fava bean, broad bean",plant,BP
-Vigna angularis,adzuki bean,plant,JL
-Vigna radiata,mung bean,plant,BP
-Vigna subterranea,bambara groundnut,plant,BP
-Vigna unguiculata,cowpea,plant,BP
-Vigna unguiculata subsp. sesquipedalis,"long bean, asparagus beasn",plant,JL
-Vitis rotundifolia,muscadine grape,plant,BP
-Vitis vinifera,common grape vine,plant,BP
-Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
-Xanthosoma,various starchy corms,plant,JL
-Xanthosoma sagittifolium,tannia,plant,"van Wyk, ""Food Plants of the World"""
-Zamia integrifolia,arrowroot,plant,JL
-Zea mays,corn,plant,BP
-Zingiber officinale,ginger,plant,BP
-Ziziphus jujuba,"jujube, red date",plant,BP
+﻿needs_QC,scientific_name,common_name,category,source
+,Abramis brama,common bream,animal,JL
+1,Acanthocybium solandri,"Wahoo, ono",animal,JL
+,Acipenser baerii,siberian sturgeon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Alces alces,moose,animal,BP
+1,Alosinae,shad,animal,JL
+1,Anas,duck,animal,BP
+1,Anas platyrhynchos,mallard duck,animal,BP
+,Anguilla anguilla,european eel,animal,FAO Cultured Aquatic Species Fact Sheets
+,Anguilla japonica,japanese eel,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Anoplopoma fimbria,"Sablefish, black cod",animal,JL
+,Anser anser,greylag goose,animal,BP
+,Apis mellifera,honeybee,animal,JL
+,Apostichopus japonicus,japanese sea cucumber,animal,FAO Cultured Aquatic Species Fact Sheets
+,Arapaima gigas,arapaima,animal,FAO Cultured Aquatic Species Fact Sheets
+,Argyrosomus regius,meagre,animal,FAO Cultured Aquatic Species Fact Sheets
+,Artemia,brine shrimps,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Astacoidea,"crayfish, crawfish",animal,JL
+,Barbonymus gonionotus,silver barb,animal,BP
+,Barbonymus schwanenfeldii,tinfoil barb,animal,BP
+,Bison bison,bison,animal,BP
+,Bombyx mori,silkworm,animal,SJ
+,Bos taurus,cattle,animal,BP
+,Bramidae,pomfret,animal,JL
+,Bubalus bubalis,water buffalo,animal,BP
+,Cairina moschata,muscovy duck,animal,BP
+,Callinectes sapidus,atlantic blue crab,animal,BP
+,Cancer magister,dungeness crab,animal,JL
+,Canis lupus,wolf,animal,BP
+,Capra hircus,goat,animal,BP
+,Carassius carassius,crucian carp,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Cardiidae,cockle,animal,JL
+,Catla catla,catla,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cavia porcellus,guinea pig,animal,JL
+,Centropus sinensis,crow pheasant,animal,BP
+,Cephalophus natalensis,red forest duiker,animal,BP
+,Cerax quadricarinatus,red claw crayfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cervus canadensis,elk,animal,BP
+1,Cetacea,whales,animal,JL
+1,Channidae,Snakehead,animal,JL
+,Chanos chanos,milkfish,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Chionoecetes,snow crab,animal,JL
+1,Chirostyloidea,"langostino, squat lobster",animal,JL
+,Cirrhinus molitorella,mud carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cirrhinus mrigala,mrigal carp,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Citharichthys,Sanddab,animal,JL
+,Clarias gariepinus,north african catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Clupeidae,herring,animal,JL
+,Concholepas concholepas,"loco, Chilean abalone",animal,JL
+1,Coregonus,whitefish,animal,JL
+,Coryphaena hippurus,mahi mahi,animal,JL
+,Coturnix japonica,japanese quail,animal,BP
+,Crassostrea gigas,pacific cupped oyster,animal,BP
+,Crassostrea virginica,american cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Crocothemis servilia,scarlet skimmer dragonfly,animal,BP
+,Ctenopharyngodon idellus,grass carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cuniculus paca,lowland paca,animal,BP
+,Cyclopterus lumpus,lumpfish roe,animal,JL
+,Cyprinus carpio,common carp,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Decapodiformes,"squid, calamari",animal,JL
+1,Delphinidae,dolphin,animal,JL
+,Dicentrarchus labrax,european seabass,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Diodon,fugu fish,animal,JL
+,Dissostichus eleginoides,chilean seabass,animal,JL
+,Dromaius novaehollandiae,emu,animal,BP
+1,Engraulidae,anchovy,animal,JL
+1,Epinephelinae,Grouper,animal,JL
+,Epinephelus coioides,orange-spotted grouper,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Equus africanus asinus,donkey,animal,SJ
+,Equus caballus,horse,animal,BP
+,Eriocheir sinensis,chinese mitten crab,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Esox,pike,animal,JL
+,Eucidaris tribuloides,slate pencil urchin,animal,BP
+,Evechinus chloroticus,kina (new zealand urchin),animal,BP
+1,Exocoetidae,"flying fish, tobiko (roe)",animal,JL
+,Felis catus,cat,animal,BP
+1,Gadus,Cod,animal,JL
+,Gadus morhua,atlantic cod,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Galatheoidea,"langostino, squat lobster",animal,JL
+,Gallus gallus,chicken,animal,BP
+,Glyptocephalus cynoglossus,"Witch, righteye flounder",animal,JL
+1,Gryllus,field cricket,animal,BP
+1,Harpadon nehereus,"Bombay duck, bummalo",animal,JL
+,Helix pomatia,escargot,animal,BP
+,Hippocampus comes,tiger tail seahorse,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hippoglossus hippoglossus,halibut,animal,JL
+,Hippoglossus stenolepis,halibut,animal,JL
+1,Hippoidea,"sand crab, mole crab",animal,JL
+1,Holothuroidea,sea cucumber,animal,JL
+,Homarus americanus,lobster,animal,BP
+,Hoplobatrachus tigerinus,indian bullfrog,animal,BP
+,Hoplostethus atlanticus,orange roughy,animal,JL
+,Hypophthalmichthys molitrix,silver carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hypophthalmichthys nobilis,bighead carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ictalurus punctatus,channel catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Iniidae,dolphin,animal,JL
+,Labeo rohita,roho labeo,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Lagocephalus,fugu fish,animal,JL
+,Laminaria japonica,japanese kelp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Lates calcarifer,barramundi,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Latidae,Asian sea bass,animal,JL
+1,Lithodidae,king crab,animal,JL
+,Litopenaeus vannamei,whiteleg shrimp,animal,BP
+,Littorina littorea,periwinkle,animal,JL
+1,Lophius,Monkfish,animal,JL
+1,Lutjanidae,Snapper,animal,JL
+,Macrobrachium rosenbergii,giant river prawn,animal,FAO Cultured Aquatic Species Fact Sheets
+,Magallana gigas,pacific cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Malacanthidae,tilefish,animal,JL
+,Mallotus villosus,"capelin, masago (roe)",animal,JL
+1,Medusozoa,jellyfish,animal,JL
+1,Melanogrammus aeglefinus,Haddock,animal,JL
+1,Meleagris,turkey,animal,BP
+,Mercenaria mercenaria,northern quahog,animal,FAO Cultured Aquatic Species Fact Sheets
+,Merlangius merlangus,whiting,animal,JL
+1,Merlucciidae,hake,animal,JL
+,Mesocentrotus franciscanus,red sea urchin,animal,BP
+,Metacarcinus magister,dungeness crab,animal,JL
+,Microcosmus sabatieri,"sea fig, violet",animal,JL
+,Mizuhopecten yessoensis,yesso scallop,animal,FAO Cultured Aquatic Species Fact Sheets
+,Morone chrysops x Morone saxatilis,striped bass hybrid,animal,FAO Cultured Aquatic Species Fact Sheets
+,Morone saxatilis,striped bass,animal,JL
+,Mugil cephalus,flathead grey mullet,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Mugilidae,Mullet,animal,JL
+,Mytilus edulis,blue mussel,animal,BP
+,Mytilus galloprovincalis,mediterranean mussel,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Nautilus,nautilus,animal,JL
+1,Nematognathi,catfish,animal,JL
+1,Octopoda,octopus,animal,JL
+,Odocoileus virginianus,white-tailed deer,animal,BP
+,Oncorhynchus kisutch,coho salmon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Oncorhynchus mykiss,rainbow trout,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ophiodon elongatus,lingcod,animal,JL
+,Oreochromis aureus,blue tilapia,animal,BP
+,Oreochromis mossambicus,mozambique tilapia,animal,BP
+,Oreochromis niloticus,nile tilapia,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Osmeridae,smelt,animal,JL
+,Osphronemus goramy,giant gourami,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ostrea edulis,european flat oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Ostreoidea,oyster,animal,JL
+,Ovis aries,sheep,animal,BP
+,Pangasianodon hypophthalmus,striped catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Pangasius bocourti,swai,animal,JL
+,Panopea generosa,geoduck,animal,SJ
+,Panopeidae,mud crab,animal,JL
+,Panulirus homarus,scalloped spiny lobster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Paracentrotus lividus,atlantic purple sea urchin,animal,BP
+,Paralichthys lethostigma,flounder,animal,BP
+1,Parastacoidea,crayfish,animal,JL
+1,Pectinidae,scallop,animal,JL
+,Penaeus indicus,indian white prawn,animal,FAO Cultured Aquatic Species Fact Sheets
+,Penaeus monodon,black tiger shrimp,animal,BP
+,Penaeus setiferus,white shrimp,animal,BP
+,Penaeus vannamei,whiteleg shrimp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Perca fluviatilis,common perch,animal,BP
+,Perna canaliculus,new zealand mussel,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Petromyzontiformes,lamprey,animal,JL
+1,Phycidae,hake,animal,JL
+,Piaractus brachypomus,pirapitinga,animal,BP
+1,Pinnipedia,seal,animal,JL
+1,Platanistidae,dolphin,animal,JL
+,Pollachius pollachius,pollock,animal,JL
+,Pollachius virens,pollock,animal,JL
+,Pomatomus saltatrix,shad,animal,JL
+,Procambarus clarkii,red swamp crawfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Rachycentron canadum,cobia,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Rajidae,Skate,animal,JL
+,Rana catesbeiana,american bull frog,animal,FAO Cultured Aquatic Species Fact Sheets
+,Rastrineobola argenta,silver cyprinid,animal,BP
+,Rattus rattus,rat,animal,BP
+,Ruditapes decussatus,grooved carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ruditapes philippinarum,japanese carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
+,Rutilus rutilus,common roach (fish),animal,BP
+,Saccostrea glomerata,sydney cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Salmo salar,atlantic salmon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Salmo trutta,sea trout,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sander lucioperca,pike-perch,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sardina pilchardus,european pilchard,animal,BP
+,Sardinops sagax,south american pilchard,animal,BP
+1,Scaridae,Parrotfish,animal,JL
+,Sciaenops ocellatus,red drum,animal,FAO Cultured Aquatic Species Fact Sheets
+,Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
+,Scophthalmus maximus,turbot,animal,FAO Cultured Aquatic Species Fact Sheets
+,Scophthalmus rhombus,brill,animal,JL
+1,Scylla,mud crab,animal,JL
+,Scylla serrata,indo-pacific swamp crab,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Selachimorpha,Shark,animal,JL
+1,Sepiida,cuttlefish,animal,JL
+,Seriola dumerili,greater amberjack,animal,FAO Cultured Aquatic Species Fact Sheets
+,Seriola quinqueradiata,japanese amberjack,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Serranidae,Sea bass,animal,JL
+1,Siganus,spinefeet,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Siluriformes,catfish,animal,JL
+,Siniperca chuatsi,mandarin fish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Solea solea,common sole,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Soleidae,Sole,animal,JL
+,Sparus aurata,gilthead seabream,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Sphoeroides,fugu fish,animal,JL
+1,Sphyraena,barracuda,animal,JL
+1,Sprattus,Sprat,animal,JL
+1,Squalidae,Dogfish,animal,JL
+1,Stromateidae,Butter fish,animal,JL
+1,Strombidae,conch,animal,JL
+,Strongylocentrotus droebachiensis,green sea urchin,animal,BP
+,Strongylocentrotus purpuratus,pacific purple sea urchin,animal,BP
+,Sus scrofa,pig,animal,BP
+,Sylvilagus,cottontail rabbit,animal,BP
+,Takifugu,fugu fish,animal,JL
+,Tenualosa ilisha,ilish,animal,JL
+1,Tetraodontidae ,"Blowfish, pufferfish",animal,JL
+,Thunnus alalunga,albacore tuna,animal,JL
+,Thunnus albacares,yellowfin tuna,animal,BP
+,Thunnus obesus,bigeye tuna,animal,JL
+,Thunnus thynnus,atlantic bluefin tuna,animal,FAO Cultured Aquatic Species Fact Sheets
+1,Trachinotus,Pompano,animal,JL
+,Trachinotus blochii,snubnose pompano,animal,FAO Cultured Aquatic Species Fact Sheets
+,Trionyx sinensis,chinese softshell turtle,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ucides occidentalis,pacific mangrove ghost crab,animal,BP
+,Venerupis philippinarum,japanese littleneck,animal,BP
+,Vespa velutina,asian hornet,animal,BP
+1,Xanthidae,mud crab,animal,JL
+,Xiphias gladius,swordfish,animal,JL
+,Zeus faber,john dory,animal,JL
+,Arthrospira maxima,spirulina,bacteria,JL
+,Arthrospira platensis,spirulina,bacteria,JL
+,Agaricus arvensis,Horse mushroom,fungus,JL
+,Agaricus augustus,The prine,fungus,JL
+,Agaricus bisporus,common mushroom,fungus,BP
+,Agaricus bitorquis,Pavement mushroom,fungus,JL
+,Agaricus campestris,Field mushroom,fungus,JL
+,Agaricus xanthodermus,Yellow-staining mushroom,fungus,JL
+,Aspergillus oryzae,koji,fungus,JL
+,Boletus,Bolete,fungus,JL
+,Calvatia gigantea,giant puffball,fungus,JL
+,"Cantharellus, Craterellus, Gomphus,  Polyozellus",chantarelle,fungus,JL
+,Craterellus cornucopioides,"black trumpet, horn of plenty",fungus,JL
+,Flammulina velutipes,enokitake,fungus,BP
+,Grifola frondosa,"hen of the woods, maitake",fungus,JL
+,Hericium abietis,"bear's head, western coral hedgehog",fungus,BP
+,Hericium americanum,bear's head tooth,fungus,BP
+,Hericium coralloides,comb tooth,fungus,BP
+,Hericium erinaceus,lion's mane,fungus,JL
+,Hericium erinaceus,"lion's mane, monkey head",fungus,BP
+,Hypomyces lactifluorum,lobster mushroom,fungus,JL
+,Hypsizygus marmoreus,white beech,fungus,BP
+,Laetiporus ,chicken of the woods,fungus,JL
+,Leccinum scabrum,Birch bolete,fungus,JL
+,Lentinula edodes,shiitake,fungus,BP
+,Morchella angusticeps ,black morel,fungus,JL
+,Pleurotus eryngii,king oyster,fungus,BP
+,Pleurotus ostreatus,Pearl oyster mushroom,fungus,JL
+,Polyporous squamosus,Dryad's saddle,fungus,JL
+,Pseudohyndum gelatinosum,Toothed jelly fungus,fungus,JL
+,Rhizopus microsporus,rhizopus,fungus,BP
+,Saccharomyces cerevisiae,yeast,fungus,BP
+,Suillus luteus,slippery jack,fungus,JL
+,Trametes versicolor,turkey tail mushroom,fungus,JL
+,Abelmoschus esculentus,okra,plant,BP
+,Acacia pennata,cha-om,plant,BP
+,Acacia senegal,gum acacia,plant,"van Wyk, ""Food Plants of the World"""
+,Acanthocereus tetragonus,sword pear,plant,JL
+,Acca sellowiana,feijoa,plant,"van Wyk, ""Food Plants of the World"""
+,Acer nigrum,black maple,plant,JL
+,Acer rubrum,red maple,plant,JL
+,Acer saccharum,sugar maple,plant,JL
+,Actinidia deliciosa,kiwi,plant,BP
+,﻿Adansonia digitata,baobab,plant,BP
+,Aegle marmelos,bael,plant,JL
+,Aframomum laurentii,bongongoo,plant,BP
+,Agathosma betulina,buchu,plant,"van Wyk, ""Food Plants of the World"""
+,Agave americana,century plant,plant,"van Wyk, ""Food Plants of the World"""
+,Agave tequilana,tequila plant,plant,"van Wyk, ""Food Plants of the World"""
+,Aleurites moluccanus,candlenut tree,plant,"van Wyk, ""Food Plants of the World"""
+,Allium ampeloprasum,wild leek,plant,BP
+,Allium cepa,onion,plant,BP
+,Allium cepa var. aggregatum,shallot,plant,BP
+,Allium fistulosum,scallion,plant,BP
+,Allium porrum,garden leek,plant,BP
+,Allium sativum,garlic,plant,BP
+,Allium schoenoprasum,chive,plant,BP
+,Allium tuberosum,garlic chive,plant,"van Wyk, ""Food Plants of the World"""
+,Alocasia macrorrhizos,giant taro,plant,BP
+,Aloe vera,aloe,plant,JL
+,Aloysia triphylla,lemon verbena,plant,"van Wyk, ""Food Plants of the World"""
+,Alpinia galanga,greater galangal,plant,BP
+,Alpinia officinarum,lesser galangal,plant,BP
+,Amalocalyx microlobus,mak sim,plant,BP
+,Amaranthus cruentus,red amaranth,plant,BP
+,Amaranthus dubius,red spinach,plant,BP
+,Amaranthus tricolor,chinese spinach,plant,"van Wyk, ""Food Plants of the World"""
+,Amomum subulatum,black cardamom,plant,BP
+,Amorphophallus konjac,konjac,plant,JL
+,Anacardium occidentale,cashew,plant,JL
+,Ananas comosus,pineapple,plant,BP
+,Anethum foeniculum,fennel,plant,BP
+,Anethum graveolens,dill,plant,BP
+,Angelica archangelica,angelica,plant,"van Wyk, ""Food Plants of the World"""
+,Annona cherimola,cherimoya,plant,"van Wyk, ""Food Plants of the World"""
+,Annona muricata,soursop,plant,BP
+,Annona squamosa,sweetsop,plant,"van Wyk, ""Food Plants of the World"""
+,Anonidium mannii,bobo,plant,BP
+,Anthriscus cerefolium,chervil,plant,"van Wyk, ""Food Plants of the World"""
+,Apium graveolens,celery,plant,BP
+,Aponogeton distachyos,cape pondweed,plant,"van Wyk, ""Food Plants of the World"""
+,Arachis hypogaea,peanut,plant,BP
+,Arbutus unedo,strawberry tree,plant,"van Wyk, ""Food Plants of the World"""
+,Arcticum lappa,burdock,plant,"van Wyk, ""Food Plants of the World"""
+,Arenga pinnata,sugar palm,plant,"van Wyk, ""Food Plants of the World"""
+,Argania spinosa,argan tree,plant,"van Wyk, ""Food Plants of the World"""
+,Armoracia rusticana,horseradish,plant,BP
+,Aronia melanocarpa,black chokeberry,plant,"van Wyk, ""Food Plants of the World"""
+,Artemisia absinthium,wormwood,plant,"van Wyk, ""Food Plants of the World"""
+,Artemisia dracunculus,tarragon,plant,BP
+,Artemisia vulgaris,mugwort,plant,SJ
+,Artocarpus altilis ,breadfruit,plant,BP
+,Artocarpus heterophyllus,jackfruit,plant,JL
+,Artocarpus lacucha,"monkey fruit, monkey jack, barhar, badahar, dewa, bohot",plant,JL
+,Asimina triloba,pawpaw,plant,JL
+,Aspalathus linearis,rooibos,plant,BP
+,Asparagus officinalis,asparagus,plant,BP
+,Atriplex hortensis,orache,plant,"van Wyk, ""Food Plants of the World"""
+,Avena sativa,oat,plant,BP
+,Averrhoa bilimbi,bilimbi,plant,"van Wyk, ""Food Plants of the World"""
+,Averrhoa carambola,starfruit,plant,BP
+,Bactris gasipaes,peach palm,plant,"van Wyk, ""Food Plants of the World"""
+,Bambusa vulgaris,common bamboo,plant,BP
+,Basella alba,malabar spinach,plant,BP
+,Benincasa hispida,wax gourd,plant,BP
+,Bertholletia excelsa,brazil nut,plant,JL
+,Beta vulgaris,"beet, chard",plant,BP
+,Beta vulgaris subsp. cicla,chard,plant,"van Wyk, ""Food Plants of the World"""
+,Beta vulgaris subsp. vulgaris,"beet, chard",plant,BP
+,Bixa orellana,annato,plant,BP
+,Blighia sapida,akee,plant,"van Wyk, ""Food Plants of the World"""
+,Boesenbergia rotunda,chinese ginger,plant,BP
+,Borago officinalis,borage,plant,"van Wyk, ""Food Plants of the World"""
+,Borassus flabellifer,palmyra palm,plant,"van Wyk, ""Food Plants of the World"""
+,Brassica juncea var. juncea,brown mustard,plant,BP
+,Brassica juncea var. rugosa,mustard greens,plant,"van Wyk, ""Food Plants of the World"""
+,Brassica napobrassica,rutabaga,plant,JL
+,Brassica napus,"canola, rapeseed",plant,JL
+,Brassica nigra,black mustard,plant,"van Wyk, ""Food Plants of the World"""
+,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, Brussels sprouts, collard greens, savoy, kohlrabi, gai lan",plant,BP
+,Brassica oleracea var. alboglabra,gai-lan,plant,BP
+,Brassica oleracea var. botrytis,"cauliflower, romanesco broccoli",plant,BP
+,Brassica oleracea var. botrytis x italica,broccoflower,plant,BP
+,Brassica oleracea var. capitata f. acuta,cone cabbage,plant,BP
+,Brassica oleracea var. capitata f. alba,cabbage,plant,BP
+,Brassica oleracea var. capitata f. rubra,red cabbage,plant,BP
+,Brassica oleracea var. capitata f. sabauda,savoy cabbage,plant,BP
+,Brassica oleracea var. costata,tronchuda kale,plant,BP
+,Brassica oleracea var. gemmifera,brussels sprout,plant,BP
+,Brassica oleracea var. gongylodes,kohlrabi,plant,BP
+,Brassica oleracea var. italica,broccoli,plant,BP
+,Brassica oleracea var. italica x alboglabra,broccolini,plant,BP
+,Brassica oleracea var. longata,jersey cabbage,plant,BP
+,Brassica oleracea var. medullosa,marrow cabbage,plant,BP
+,Brassica oleracea var. oleracea,wild cabbage,plant,BP
+,Brassica oleracea var. palmifolia,lacinato kale,plant,BP
+,Brassica oleracea var. ramosa,perpetual kale,plant,BP
+,Brassica oleracea var. sabellica,curly kale,plant,"van Wyk, ""Food Plants of the World"""
+,Brassica oleracea var. viridis,"kale, collard greens",plant,BP
+,Brassica rapa,mustards,plant,BP
+,Brassica rapa subsp. chinensis,bok choy,plant,BP
+,Brassica rapa subsp. narinosa,tatsoi,plant,BP
+,Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
+,Brassica rapa subsp. oleifera,field mustard,plant,BP
+,Brassica rapa subsp. parachinensis,choy sum,plant,BP
+,Brassica rapa subsp. pekinensis,napa cabbage,plant,BP
+,Brassica rapa subsp. perviridis,komatsuna,plant,BP
+,Brassica rapa subsp. rapa,turnip,plant,BP
+,Brassica rapa subsp. trilocularis,yellow sarson,plant,BP
+,Brassica rapa var. glabra,bomdong,plant,BP
+,Brassica rapa var. rapifera,rapini,plant,BP
+,Browningia candelaris,candleholder cactus,plant,JL
+,Camellia sinensis,tea,plant,BP
+,Cannabis sativa,hemp seed,plant,JL
+,Capparis spinosa,caper,plant,BP
+,Capsicum annuum,"bell peppers, sweet/Italian peppers, serrano, cayenne, paprika, jalapeno",plant,BP
+,Capsicum baccatum ,"aji amarillo, aji limon, ciolla sella",plant,JL
+,Capsicum chinense,"habanero, scotch bonnet, trinidad scorpions, bhut jolokia, carolina reaper",plant,JL
+,Capsicum frutescens,"tabascos, indian chiles",plant,BP
+,Capsicum pubescens,rocoto and manzano peppers,plant,BP
+,Carica papaya,papaya,plant,BP
+,Carica x pentagona,babaco,plant,BP
+,Carnegiea gigantea,saguaro,plant,JL
+,Carum carvi,caraway seeds,plant,JL
+,Carya illinoinensis,pecan,plant,BP
+,Castania sativa,sweet chestnut,plant,BP
+,Centella asiatica,pennywort,plant,BP
+,Ceratonia siliqua,carob bean,plant,JL
+,Cereus repandus,Peruvian apple cactus,plant,JL
+,Chamaedorea tepejilote,pacaya,plant,JL
+,Chenopodium pallidicaule,canihua,plant,JL
+,Chenopodium quinoa,quinoa,plant,BP
+,Chondrus crispus,carageenan,plant,JL
+,Cicer arietinum,chickpea,plant,BP
+,Cichorium endivia ,endive,plant,JL
+,Cichorium intybus ,chicory,plant,JL
+,Cinamommum burmannii,indonesian cinnamon,plant,BP
+,Cinamommum citriodorum,malabar cinnamon,plant,BP
+,Cinamommum loureiroi,saigon cinnamon,plant,BP
+,Cinnamomum cassia,cinnamon,plant,BP
+,Cinnamomum verum ,ceylon cinnamon,plant,BP
+,Citrullus lanatus,watermelon,plant,BP
+,Citrus aurantiifolia,key lime,plant,BP
+,Citrus latifolia,persian lime,plant,BP
+,Citrus limon,lemon,plant,BP
+,Citrus maxima,pomelo,plant,BP
+,Citrus reticulata,mandarin orange,plant,BP
+,Citrus sinensis,sweet orange,plant,BP
+,Citrus unshiu,satsuma mandarin,plant,SJ
+,Citrus x aurantium,"bitter orange, seville orange",plant,BP
+,Citrus x paradisi,grapefruit,plant,BP
+,Cleome gynandra,"shona cabbage, african cabbage",plant,BP
+,Cocos nucifera,coconut,plant,BP
+,Coffea arabica,coffee,plant,"van Wyk, ""Food Plants of the World"""
+,Coffea canephora,robusta coffee,plant,BP
+,Coffea liberica,Liberian coffee,plant,"van Wyk, ""Food Plants of the World"""
+,Colocasia antiquorum,eddo,plant,JL
+,Colocasia esculenta,taro,plant,BP
+,Corchorus capsularis,white jute,plant,BP
+,Corchorus olitorius,jute mallow,plant,BP
+,Coriandrum sativum,"coriander, cilantro",plant,BP
+,Corylus avellana,hazelnut,plant,BP
+,Crithmum maritimum,sea beans,plant,JL
+,Crocus sativus,saffron,plant,BP
+,Crotalaria brevidens,mitoo,plant,BP
+,Crotalaria grahamiana,tum-thang,plant,BP
+,Cucumis melo,"muskmelon, canteloupe",plant,BP
+,Cucumis sativus,cucumber,plant,BP
+,Cucurbita argyrosperma,japanese pie pumpkin,plant,BP
+,Cucurbita ficifolia,fig-leaf gourd,plant,BP
+,Cucurbita maxima,winter squash,plant,BP
+,Cucurbita moschata,"squash, pumpkin",plant,BP
+,Cucurbita pepo,"pumpkin, summer squash",plant,BP
+,Cucurbita pepo subsp. pepo,spaghetti squash,plant,BP
+,Cucurbita pepo var. turbinata,acorn squash,plant,BP
+,Cuminum cyminum,cumin,plant,BP
+,Curcuma longa,turmeric,plant,BP
+,Cyamopsis tetragonoloba,guar bean,plant,JL
+,Cymbopogon citratus,lemongrass,plant,BP
+,Cynara cardunculus,artichoke,plant,BP
+,Cyperus esculentus,tiger nut,plant,JL
+,Cyphomandra betacea,tamarillo,plant,BP
+,Dacryodes edulis,"safou, butterfruit",plant,BP
+,Daucus carota,wild carrot,plant,BP
+,Daucus carota subsp. sativus,carrot,plant,BP
+,Digitaria exilis,fonio,plant,JL
+,Digitaria iburua,fonio,plant,JL
+,Dimocarpus longan,longan,plant,BP
+,Dioscorea alata,"ube, purple yam",plant,JL
+,Dioscorea rotundata,white yam,plant,BP
+,Dioscorea trifida,indian yam,plant,BP
+,Diplotaxis tenuifolia,wild rocket,plant,SJ
+,Durio zibethinus,durian,plant,BP
+,Elaeis guineensis,oil palm,plant,BP
+,Eleocharis dulcis,water chestnut,plant,JL
+,Elettaria cardamomum,green cardamom,plant,BP
+,Eleusine coracana,finger millet,plant,BP
+,Enydra fluctuans,buffalo spinach,plant,BP
+,Eragrostis tef,teff,plant,JL
+,Eruca vesicaria,rocket,plant,SJ
+,Eryngium foetidum,culantro,plant,BP
+,Eucheuma,eucheuma seaweeds,plant,FAO Cultured Aquatic Species Fact Sheets
+,Euterpe oleracea,acai,plant,JL
+,Fagopyrum esculentum,buckwheat,plant,BP
+,Ficus carica,fig,plant,BP
+,Ficus racemosa,cluster fig,plant,BP
+,Fragaria,strawberry,plant,BP
+,Fragaria x ananassa,strawberry,plant,BP
+,Garcinia oblongifolia,south china mangosteen,plant,BP
+,Geoffroea decorticans,chanar,plant,JL
+,Glebionis coronaria,crown daisy,plant,BP
+,Glycine max,soybean,plant,BP
+,Glycyrrhiza glabra,licorice,plant,JL
+,Gnetum africanum,eru,plant,BP
+,Gracilaria,gracilaria seaweeds,plant,FAO Cultured Aquatic Species Fact Sheets
+,Gurania,jungle cucumber,plant,Lachat
+,Helianthus annuus,sunflower,plant,BP
+,Helianthus tuberosus,"jerusalem artichoke, sunchoke",plant,JL
+,Hibiscus sabdariffa,roselle,plant,BP
+,Hordeum vulgare,barley,plant,BP
+,Houttuynia cordata,fish mint,plant,BP
+,Hua gaboni,tropical garlic,plant,BP
+,Humulus lupulus,hops,plant,JL
+,Hylocereus undatus,"dragon fruit, pitahaya",plant,BP
+,Ilex paraguariensis,yerba mate,plant,BP
+,Illicium verum,star anise,plant,SJ
+,Inga vera,"ice-cream-bean, joaquiniquil",plant,BP
+,Ipomoea aquatica,"water spinach, swamp morning glory",plant,BP
+,Ipomoea batatas,sweet potato,plant,BP
+,Irvingia gabonensis,bush mango,plant,BP
+,Juglans nigra,black walnut,plant,JL
+,Juglans regia,walnut,plant,BP
+,Kaempferia galanga,black galangal,plant,BP
+,Lablab purpureus,hyacinth bean,plant,BP
+,Lactuca sativa,lettuce,plant,BP
+,Lagenaria siceraria,calabash,plant,BP
+,Lasia spinosa,"lasia, geli-geli",plant,BP
+,Laurus nobilis,bay leaf,plant,BP
+,Lens culinaris,lentil,plant,BP
+,Lepidium meyenii,maca root,plant,BP
+,Limonia acidissima,"wood apple, elephant apple",plant,JL
+,Linum usitatissimum,flaxseed,plant,BP
+,Luffa acutangula,chinese okra,plant,BP
+,Luffa cylindrica ,sponge gourd,plant,BP
+,Lupinus albus,lupini beans,plant,JL
+,Lupinus mutabilis,lupini beans,plant,JL
+,Lycium barbarum,goji berry,plant,JL
+,Lycium chinense,goji berry,plant,JL
+,Macadamia integrifolia,macadamia,plant,BP
+,Maclura pomifera,osage orange,plant,JL
+,Malus domestica,apple,plant,BP
+,Malus sylvestris,crab apple,plant,BP
+,Mangifera indica,mango,plant,BP
+,Manihot esculenta,cassava,plant,BP
+,Marsilea quadrifolia,water clover,plant,BP
+,Megaphrynium macrostachyum,yoruba soft cane,plant,BP
+,Melissa officinalis,lemon balm,plant,BP
+,Mentha,mint,plant,BP
+,Mentha arvensis,field mint,plant,"van Wyk, ""Food Plants of the World"""
+,Mentha spicata,spearmint,plant,BP
+,Mentha x piperita,peppermint,plant,BP
+,Momordica charantia,bitter melon,plant,BP
+,Morus nigra,mulberry,plant,JL
+,Murraya koenigii,curry leaf,plant,BP
+,Musa acuminata,banana,plant,BP
+,Musa balbisiana,banana,plant,BP
+,Musa x paradisiaca,plantain,plant,JL
+,Myristica fragrans,nutmeg,plant,BP
+,Nasturtium microphyllum,one-row watercress,plant,BP
+,Nelumbo nucifera,lotus root,plant,JL
+,Ocimum basilicum,basil,plant,BP
+,Olea europaea,olive,plant,BP
+,Origanum vulgare,oregano,plant,BP
+,Oryza sativa,rice,plant,BP
+,Osmundastrum cinnamomeum,cinnamon fern,plant,BP
+,Oxalis pes-caprae,african wood-sorrel,plant,"van Wyk, ""Food Plants of the World"""
+,Oxalis tuberosa,oca,plant,JL
+,Oxypolis filiformis,water cowbane,plant,BP
+,Pachyrhizus erosus,jicama,plant,BP
+,Paederia foetida,stinkvine,plant,BP
+,Panax vietnamensis,vietnamese ginseng,plant,BP
+,Panicum miliaceum,proso millet,plant,BP
+,Papaver somniferum,poppy,plant,JL
+,Passiflora edulis,passion fruit,plant,BP
+,Passiflora quadrangularis,"giant granadilla, grenadine",plant,BP
+,Pastinaca sativa,parsnip,plant,JL
+,Persea americana,avocado,plant,BP
+,Petroselinum crispum,parsley,plant,BP
+,Phaseolus lunatus,lima bean,plant,BP
+,Phaseolus vulgaris,"common bean, green bean, French bean",plant,BP
+,Phoenix dactylifera,date,plant,BP
+,Phyllanthus acidus,sour gooseberry,plant,BP
+,Physalis angulata,cutleaf groundcherry,plant,BP
+,Physalis philadelphica,tomatillo,plant,JL
+,Pimenta dioica,allspice,plant,BP
+,Pimpinella anisum,anise seed,plant,BP
+,Pinus albicaulis,pine nut,plant,BP
+,Pinus armandii,pine nut,plant,BP
+,Pinus bungeana,pine nut,plant,BP
+,Pinus cembra,pine nut,plant,BP
+,Pinus cembroides,pine nut,plant,BP
+,Pinus coulteri,pine nut,plant,BP
+,Pinus culminicola,pine nut,plant,BP
+,Pinus edulis,pine nut,plant,BP
+,Pinus gerardiana,pine nut,plant,BP
+,Pinus johannis,pine nut,plant,BP
+,Pinus koraiensis,pine nut,plant,BP
+,Pinus monophylla,pine nut,plant,BP
+,Pinus orizabensis,pine nut,plant,BP
+,Pinus pinea,pine nut,plant,BP
+,Pinus pumila,pine nut,plant,BP
+,Pinus quadrifolia,pine nut,plant,BP
+,Pinus remota,pine nut,plant,BP
+,Pinus sabiniana,pine nut,plant,BP
+,Pinus sibirica,pine nut,plant,BP
+,Piper guineense,ashanti pepper,plant,BP
+,Piper longum,long pepper,plant,JL
+,Piper nigrum,black pepper,plant,BP
+,Piper sarmentosum,wild betel,plant,BP
+,Pistacia vera,pistachio,plant,BP
+,Pisum sativum,pea,plant,BP
+,Pisum sativum var. macrocarpum,snow pea,plant,BP
+,Plantago afra,black psyllium,plant,BP
+,Plantago arenaria,french psyllium,plant,BP
+,Plantago ovata,blond psyllium,plant,BP
+,Platostoma palustre,chinese mestoma,plant,BP
+,Polygonum odoratum ,"vietnamese coriander, rau ram",plant,BP
+,Polystichum munitum,fiddleheads,plant,JL
+,Porphyra,nori,plant,FAO Cultured Aquatic Species Fact Sheets
+,Prunus armeniaca,apricot,plant,JL
+,Prunus avium,sweet cherry,plant,BP
+,Prunus domestica,plum,plant,BP
+,Prunus dulcis,almond,plant,JL
+,Prunus grayana,japanese bird cherry,plant,BP
+,Prunus mume,"ume, Chinese plum",plant,JL
+,Prunus persica,peach,plant,BP
+,Prunus spinosa,sloe,plant,BP
+,Psidium guajava,common guava,plant,BP
+,Psophocarpus scandens,tropical african winged bean,plant,BP
+,Punica granatum,pomegranate,plant,JL
+,Pyropia tenera,nori,plant,JL
+,Pyropia yezoensis,nori,plant,JL
+,Pyrus × sinkiangensis,xinjiang pear,plant,BP
+,Pyrus communis,european pear,plant,BP
+,Pyrus pashia,afghan pear,plant,BP
+,Pyrus pyrifolia,nashi pear,plant,BP
+,Pyrus ussuriensis,siberian pear,plant,BP
+,Pyrus x bretschneideri,hybrid chinese white pear,plant,BP
+,Quercus robur,"acorn, oak",plant,JL
+,Raphanus sativus,radish,plant,BP
+,Ribes divaricatum,coast gooseberry,plant,BP
+,Ribes hirtellum,american gooseberry,plant,BP
+,Ribes lobbii,gummy gooseberry,plant,BP
+,Ribes oxyacanthoides subsp. irriguum,idaho gooseberry,plant,BP
+,Rosa canina,dog rose,plant,"van Wyk, ""Food Plants of the World"""
+,Rosa gallica,common rose,plant,"van Wyk, ""Food Plants of the World"""
+,Rosa rugosa,beach rose,plant,"van Wyk, ""Food Plants of the World"""
+,Rosa x centifolia,cabbage rose,plant,"van Wyk, ""Food Plants of the World"""
+,Rosa x damascena,damask rose,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus allegheniensis,common blackberry,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus caesius,european dewberry,plant,BP
+,Rubus chamaemorus,cloudberry,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus fruticosus,european blackberry,plant,BP
+,Rubus glaucus,andean raspberry,plant,"Milla, ""CropOrigins and PhyloFood"""
+,Rubus idaeus,raspberry,plant,BP
+,Rubus illecebrosus,strawberry raspberry,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus laciniatus,evergreen blackberry,plant,"Milla, ""CropOrigins and PhyloFood"""
+,Rubus loganobaccus,boysenberry,plant,JL
+,Rubus occidentalis,black raspberry,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus phoenicolasius,wineberry,plant,"van Wyk, ""Food Plants of the World"""
+,Rubus ulmifolius,elmleaf blackberry,plant,"van Wyk, ""Food Plants of the World"""
+,Saccharum officinarum,sugarcane,plant,BP
+,Salsola soda,saltwort,plant,JL
+,Salvia hispanica,chia seed,plant,JL
+,Salvia officinalis,sage,plant,BP
+,Salvia rosmarinus,rosemary,plant,BP
+,Sauropus androgynus,katuk,plant,BP
+,Schinus molle,pink peppercorn,plant,JL
+,Scorodophloeus zenkeri,"garlic tree, divida",plant,BP
+,Scorzonera hispanica,"Spanish salsify, black salsify",plant,JL
+,Secale cereale,rye,plant,BP
+,Secale cereale x Triticum aestivum,triticale,plant,BP
+,Sechium edule,chayote,plant,BP
+,Sesamum indicum,sesame,plant,BP
+,Sinapis alba,white mustard,plant,BP
+,Smallanthus sonchifolius,yacon,plant,JL
+,Solanum aethiopicum,"bitter tomato, african eggplant",plant,BP
+,Solanum americanum,nightshade,plant,BP
+,Solanum anguivi,"african eggplant, forest bitterberry",plant,BP
+,Solanum lycopersicum,tomato,plant,BP
+,Solanum macrocarpon,"african eggplant, vietnamese eggplant",plant,BP
+,Solanum melongena,eggplant,plant,BP
+,Solanum nigrum,blackberry nightshade,plant,BP
+,Solanum quitoense,naranjilla,plant,BP
+,Solanum tuberosum,potato,plant,BP
+,Sorghum bicolor,sorghum,plant,BP
+,Spinacia oleracea,spinach,plant,BP
+,Spinacia tetrandra,spinach,plant,BP
+,Spondias dulcis,ambarella,plant,BP
+,Stachys affinis,"Chinese artichoke, crosne",plant,JL
+,Synsepalum dulcificum,miracle berry,plant,JL
+,Syzygium aromaticum,clove,plant,BP
+,Talinum fruticosum ,ceylon spinach,plant,BP
+,Tamarindus indica,tamarind,plant,BP
+,Taraxacum officinale,dandelion,plant,"van Wyk, ""Food Plants of the World"""
+,Theobroma cacao,cocoa bean,plant,BP
+,Thymus vulgaris,thyme,plant,BP
+,Tragopogon porrifolius,salsify,plant,JL
+,Trigonella foenum-graecum,fenugreek,plant,JL
+,Triticum aestivum,bread wheat,plant,BP
+,Triticum aestivum subsp. compactum,club wheat,plant,GRIN Taxonomy for Plants
+,Triticum aestivum subsp. sphaerococcum,indian dwarf wheat,plant,GRIN Taxonomy for Plants
+,Triticum araraticum,wild hulled wheat,plant,GRIN Taxonomy for Plants
+,Triticum dicoccon,farro,plant,JL
+,Triticum durum,durum wheat,plant,JL
+,Triticum ispahanicum,emmer wheat,plant,GRIN Taxonomy for Plants
+,Triticum macha,spelt,plant,GRIN Taxonomy for Plants
+,Triticum monococcum,einkorn,plant,GRIN Taxonomy for Plants
+,Triticum monococcum subsp. aegilopoides,wild einkorn,plant,GRIN Taxonomy for Plants
+,Triticum spelta,spelt,plant,BP
+,Triticum timopheevii,domesticated hulled wheat,plant,GRIN Taxonomy for Plants
+,Triticum turanicum,"kamut, Khorasan wheat",plant,JL
+,Triticum turgidum,rivet wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. carthlicum,persian wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. dicoccoides,wild emmer wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. dicoccum,emmer wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. durum,durum wheat,plant,BP
+,Triticum turgidum subsp. paleocolchicum,emmer wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. polonicum,polish wheat,plant,GRIN Taxonomy for Plants
+,Triticum turgidum subsp. turanicum,khorasan wheat,plant,GRIN Taxonomy for Plants
+,Triticum urartu,wild einkorn,plant,GRIN Taxonomy for Plants
+,Triticum vavilovii,spelt,plant,GRIN Taxonomy for Plants
+,Ullucus tuberosus,ullucus,plant,BP
+,Undaria pinnatifida,wakame,plant,FAO Cultured Aquatic Species Fact Sheets
+,Vaccinium angustifolium,lowbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
+,Vaccinium ashei,rabbiteye blueberry,plant,"van Wyk, ""Food Plants of the World"""
+,Vaccinium corymbosum,highbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
+,Vaccinium microcarpum,cranberry,plant,BP
+,Vaccinium myrtillus,european blueberry,plant,BP
+,Vaccinium pallidum,dryland blueberry,plant,BP
+,Vaccinium tenellum,southern blueberry,plant,BP
+,Vaccinium vitis-idaea,lingonberry,plant,BP
+,Vanilla planifolia,vanilla,plant,JL
+,Vicia faba,"fava bean, broad bean",plant,BP
+,Vigna angularis,adzuki bean,plant,JL
+,Vigna radiata,mung bean,plant,BP
+,Vigna subterranea,bambara groundnut,plant,BP
+,Vigna unguiculata,cowpea,plant,BP
+,Vigna unguiculata subsp. sesquipedalis,"long bean, asparagus bean",plant,JL
+,Vitis rotundifolia,muscadine grape,plant,BP
+,Vitis vinifera,common grape vine,plant,BP
+,Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
+,Xanthosoma,various starchy corms,plant,JL
+,Xanthosoma sagittifolium,tannia,plant,"van Wyk, ""Food Plants of the World"""
+,Zamia integrifolia,arrowroot,plant,JL
+,Zea mays,corn,plant,BP
+,Zingiber officinale,ginger,plant,BP
+,Ziziphus jujuba,"jujube, red date",plant,BP
