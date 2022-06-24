@@ -147,11 +147,11 @@ ref %>%
      group_by(seq) %>% 
      summarize(taxon = paste(taxon, collapse=", "),
                commmon_name = paste(common_name, collapse=", ")) %>% 
-     # write_csv(here('data',
-     #                'processed',
-     #                'dada2-compatible',
-     #                'trnL',
-     #                'trnLGH ASV common names.csv'))
+     write_csv(here('data',
+                    'processed',
+                    'dada2-compatible',
+                    'trnL',
+                    'trnLGH ASV common names.csv'))
 ```
 
 Can then go on to manually edit these?
