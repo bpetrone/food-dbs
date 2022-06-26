@@ -140,12 +140,147 @@ table(is.na(missing$common_name.y))
 
 I think the remainder are subspecies (from a species-level query) or species (from a genus-level query). May need to go in and refine these.
 
+```{r}
+ref
+```
+
 ### Group
 
+#### LCA
+
+##### Get taxonomy
+
+This could theoretically be redone with the MButils::asv_to_taxonomy() function, but here I also want to pipe forward the common name column, and the code doesn't yet accommodate that. 
+
 ```{r}
-ref %>% 
-     group_by(seq) %>% 
-     summarize(taxon = paste(taxon, collapse=", "),
+ref <- rename(ref, 
+              index = accession,
+              label = taxon,
+              asv = seq)
+```
+
+
+```{r}
+taxmap <- metacoder::lookup_tax_data(ref,
+                                     type = 'seq_id',
+                                     column = 'index')
+```
+
+```{r}
+# Get taxonomy and join to reference data
+taxonomy <- metacoder::taxonomy_table(taxmap,
+                                      use_ranks = c('superkingdom',
+                                                    'kingdom',
+                                                    'phylum',
+                                                    'order',
+                                                    'family',
+                                                    'genus',
+                                                    'species',
+                                                    'subspecies',
+                                                    'varietas',
+                                                    'forma'),
+                                      add_id_col = TRUE)
+
+# ID taxonomy
+taxonomy.ids <- metacoder::taxonomy_table(taxmap,
+                                          value = 'taxon_ids',
+                                          use_ranks = c('superkingdom',
+                                                        'kingdom',
+                                                        'phylum',
+                                                        'order',
+                                                        'family',
+                                                        'genus',
+                                                        'species',
+                                                        'subspecies',
+                                                        'varietas',
+                                                        'forma'))
+```
+
+```{r}
+taxtab <-
+     full_join(taxmap$data$query_data,
+               taxonomy)
+```
+
+There will be missing entries here if they are nested (e.g. Cucumis sativus var. hardwickii will have an entry and C. sativus will not). Fill these in using the ID-based taxonomy:
+
+```{r}
+taxtab.add <-
+     taxtab %>%
+     filter(is.na(superkingdom) & taxon_id != 'unknown') %>%
+     select(taxon_id, index, label, asv, common_name)
+
+missing <- unique(taxtab.add$taxon_id) # Duplicates if multiple accessions
+```
+
+```{r}
+# Find the row of each missing taxon in the ID-based taxonomy table
+# Helper function to get first index (all matches should be identical):
+first_index <- function(m){
+     # m is a missing taxon ID
+     which(taxonomy.ids == m, arr.ind = TRUE)[1, ]
+}
+
+rows <-
+     lapply(missing, first_index) %>%
+     bind_rows() %>%
+     mutate(taxon_id = missing) %>%
+     mutate(pad_na = ncol(taxonomy.ids) - col)
+```
+
+```{r}
+# Now, extract each row, pad with NAs, and build out taxonomy entries to add
+taxonomy.add <- data.frame()
+# Remove taxon ID to synchronize indices now that join has been done
+taxonomy <- taxonomy[, 2:ncol(taxonomy)]
+for (i in seq(nrow(rows))){
+     entry <- taxonomy[rows$row[i], 1:rows$col[i]] # Extract
+     entry <-
+          entry %>%
+          as.character() %>%
+          c(rep(NA, rows$pad_na[i])) # Pad
+     
+     names(entry) <- names(taxonomy) # Name
+     
+     taxonomy.add <- bind_rows(taxonomy.add, entry) # Join
+}
+```
+
+```{r}
+# Join back to ASVs by lowest-level label
+taxtab.add <-
+     taxonomy.add %>%
+     MButils::lowest_level() %>%
+     left_join(taxtab.add, ., by = c('label' = 'name'))
+```
+
+```{r}
+# Make full taxonomy table
+taxtab <-
+     taxtab %>%
+     filter(!(taxon_id %in% taxtab.add$taxon_id)) %>%  # Remove entries we looked up
+     bind_rows(taxtab.add) %>% # Rejoin
+     select(asv, superkingdom:forma)
+```
+
+##### Calculate LCA
+```{r}
+# Now, calculate LCA
+taxtab <- 
+     taxtab %>% 
+     MButils::lca() %>%
+     MButils::lowest_level() # Explicitly add column for LCA name
+```
+
+#### Summarize for reference
+ 
+```{r}
+taxtab %>% 
+     rownames_to_column(var = 'asv') %>% 
+     left_join(select(ref, asv, label, common_name)) %>% # Add encompassed food details
+     group_by(asv, name) %>% 
+     summarize(
+          taxon = paste(label, collapse=", "),
                commmon_name = paste(common_name, collapse=", ")) %>% 
      write_csv(here('data',
                     'processed',
