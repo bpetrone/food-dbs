@@ -128,8 +128,13 @@
 1,Nematognathi,catfish,animal,JL
 1,Octopoda,octopus,animal,JL
 ,Odocoileus virginianus,white-tailed deer,animal,BP
+,Oncorhynchus gorbuscha,pink salmon,animal,FAO Aquatic Species Fact Sheets
+,Oncorhynchus keta,chum salmon,animal,FAO Aquatic Species Fact Sheets
 ,Oncorhynchus kisutch,coho salmon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Oncorhynchus masou,masu salmon,animal,FishBase
 ,Oncorhynchus mykiss,rainbow trout,animal,FAO Cultured Aquatic Species Fact Sheets
+,Oncorhynchus nerka,sockeye salmon,animal,FAO Aquatic Species Fact Sheets
+,Oncorhynchus tshawytscha,chinook salmon,animal,FAO Aquatic Species Fact Sheets
 ,Ophiodon elongatus,lingcod,animal,JL
 ,Oreochromis aureus,blue tilapia,animal,BP
 ,Oreochromis mossambicus,mozambique tilapia,animal,BP
@@ -274,6 +279,7 @@
 ,Allium ampeloprasum,wild leek,plant,BP
 ,Allium cepa,onion,plant,BP
 ,Allium cepa var. aggregatum,shallot,plant,BP
+,Allium chinense,chinese scallion,plant,BP
 ,Allium fistulosum,scallion,plant,BP
 ,Allium porrum,garden leek,plant,BP
 ,Allium sativum,garlic,plant,BP
@@ -470,6 +476,7 @@
 ,Fragaria,strawberry,plant,BP
 ,Fragaria x ananassa,strawberry,plant,BP
 ,Garcinia oblongifolia,south china mangosteen,plant,BP
+,Gaultheria procumbens,"teaberry, eastern teaberry, checkerberry, boxberry, American wintergreen",plant,SJ
 ,Geoffroea decorticans,chanar,plant,JL
 ,Glebionis coronaria,crown daisy,plant,BP
 ,Glycine max,soybean,plant,BP
