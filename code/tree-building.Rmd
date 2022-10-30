@@ -1,0 +1,107 @@
+---
+title: "Tree building in R"
+output: html_notebook
+---
+
+Trying to adapt Veronica's tree-building code to an R format
+
+```{r}
+library(ape)
+library(Biostrings)
+library(here)
+library(msa)
+library(tidyverse)
+```
+
+Starting out by following [this guide](https://fuzzyatelin.github.io/bioanth-stats/module-24/module-24.html#distance-based_methods).
+
+Other leads to follow up:
+* [Interface to phylogenetic software in R (ips) package](https://www.rdocumentation.org/packages/ips/versions/0.0-7)
+* [ggtree](https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/) for plotting
+
+# Read in data
+
+Use working version of trnL database in paper
+```{r}
+fasta.trnLGH <- 
+     here('data', 
+          'processed', 
+          'dada2-compatible', 
+          'trnL',
+          'trnLGH.fasta') %>% 
+     readDNAStringSet() # Biostrings
+     # read.FASTA() # ape
+```
+
+```{r}
+head(fasta.trnLGH)
+```
+
+# Align sequences
+
+This is required in order to calculate distance metric-- sequences have to be the same length.
+```{r}
+msa.trnLGH <- msaClustalOmega(inputSeqs = fasta.trnLGH)
+```
+
+```{r}
+msaConsensusSequence(msa.trnLGH)
+```
+
+Need to figure out how to customize save of output
+Ending up in /code directory
+```{r}
+msatrnLGH <- msa.trnLGH
+# Quick visualization
+
+msaPrettyPrint(msatrnLGH,
+               subset = c(1:5),
+               output = 'pdf',
+               showNames = 'none',
+               showLogo = 'none',
+               showLegend = FALSE,
+               shadingMode = 'similar',
+               shadingColors = 'blues')
+```
+
+Now convert to a format usable by ape
+
+```{r}
+aln.trnLGH <- as.DNAbin(msa.trnLGH)
+aln.trnLGH
+```
+
+# Distance-based tree
+
+```{r}
+d.trnLGH <- dist.dna(aln.trnLGH, 
+                     model = 'TN93')
+length(d.trnLGH) #number of pairwise distances, computed as n(n-1)/2
+```
+
+```{r}
+d.trnLGH <- dist.dna(aln.trnLGH, model = 'raw')
+head(d.trnLGH)
+```
+
+```{r}
+# This is a little strange-- why are these values so "discrete"?
+d.trnLGH %>% 
+     unique() %>% 
+     sort()
+```
+
+This is just 0:1 in 12 increments:
+
+```{r}
+1/12 * (0:11)
+```
+
+Quick viz
+```{r}
+temp <- as.data.frame(as.matrix(d.trnLGH)[1:50, 1:50]) # First 100 entries
+ade4::table.paint(temp, cleg=0, clabel.row=.5, clabel.col=.5)
+```
+Maybe want to check Veronica's code.
+
+# ML-based tree
