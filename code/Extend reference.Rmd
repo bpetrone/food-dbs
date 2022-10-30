@@ -21,6 +21,20 @@ library(tidyverse)
 source(here('code', 'functions', 'find_primer_pair.R'))
 ```
 
+```{r}
+# Plotting themes
+theme_set(
+     theme_bw() +
+          theme(
+               axis.text = element_text(size = 12),
+               axis.title.x = ggtext::element_markdown(size = 14),
+               axis.title.y = ggtext::element_markdown(size = 14),
+               legend.title = element_text(size = 12),
+               strip.text = element_text(size = 12)
+          )
+)
+```
+
 # Read in data
 ```{r}
 # Read in current version of reference
@@ -29,8 +43,7 @@ current <-
           'processed', 
           'dada2-compatible', 
           'trnL', 
-          # 'trnLGH.fasta') %>% 
-          '20220214_trnLGH_primers included.fasta') %>% 
+          'trnLGH.fasta') %>%
      readDNAStringSet()
 
 current
@@ -184,10 +197,10 @@ head(accs)
 ```
 
 ```{r}
-# Look up accession taxonomy with taxa package functions
+# Look up accession taxonomy with metacoder package functions
 # Note-- this takes a long time depending on # of sequence IDs
-taxmap <- taxa::lookup_tax_data(accs, 
-                                type = 'seq_id')
+taxmap <- metacoder::lookup_tax_data(accs, 
+                                     type = 'seq_id')
 ```
 
 ```{r}
@@ -325,3 +338,69 @@ trnL <- trnL[!(names(trnL) == 'JX390727.1 Murraya koenigii')]
 #                      'trnL',
 #                      '20220214_trnLGH_primers included, additions.fasta'))
 ```
+
+## Descriptive stats
+
+```{r}
+current
+```
+
+Add features of interest: length, GC content
+
+```{r}
+# Helper function for GC
+gc <- function(seq){
+     total <- nchar(seq)
+     g <- str_count(seq, 'G')
+     c <- str_count(seq, 'C')
+     
+     (g+c)/total
+}
+```
+
+```{r}
+current.df <- 
+     current.df %>% 
+     mutate(length = nchar(seq),
+            gc = gc(seq))
+```
+
+```{r}
+# Plot
+ggplot(current.df, aes(x = length)) +
+     geom_histogram(binwidth = 2,
+                    boundary = 0) +
+     # ylim(0, 190) +
+     labs(y = 'Number of<br>database sequences',
+          x = '*trnL* sequence length')
+```
+
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+
+ggsave(here('results',
+            paste0(plotID, '_trnL sequence length histogram.png')),
+       height = 3, width = 3)
+```
+
+```{r}
+# Plot
+ggplot(current.df, aes(x = gc)) +
+     geom_histogram(binwidth = 0.01,
+                    boundary = 0) +
+     # ylim(0, 190) +
+     labs(y = 'Number of<br>database sequences',
+          x = 'GC%') 
+```
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+
+ggsave(here('results',
+            paste0(plotID, '_trnL GC histogram.png')),
+       height = 3, width = 3)
+```
+
+```{r}
+current.df
+```
+
