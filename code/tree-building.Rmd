@@ -5,57 +5,63 @@ output: html_notebook
 
 Trying to adapt Veronica's tree-building code to an R format
 
-```{r}
-library(ape)
-library(Biostrings)
-library(here)
-library(msa)
-library(tidyverse)
-```
-
 Starting out by following [this guide](https://fuzzyatelin.github.io/bioanth-stats/module-24/module-24.html#distance-based_methods).
 
 Other leads to follow up:
 * [Interface to phylogenetic software in R (ips) package](https://www.rdocumentation.org/packages/ips/versions/0.0-7)
 * [ggtree](https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/) for plotting
 
+Revision: think I should follow F1000 workflow here
+https://f1000researchdata.s3.amazonaws.com/manuscripts/10545/a565a995-e2d3-4069-a0e1-52ed93a99b14_8986_-_susan_holmes_v2.pdf?doi=10.12688/f1000research.8986.2&numberOfBrowsableCollections=87&numberOfBrowsableInstitutionalCollections=4&numberOfBrowsableGateways=49
+
+```{r}
+library(ape)
+library(Biostrings)
+library(here)
+library(msa)
+library(phangorn)
+library(tidyverse)
+```
+
 # Read in data
 
-Use working version of trnL database in paper
 ```{r}
-fasta.trnLGH <- 
+# trnL reference
+# All sequences in same orientation
+trnLGH <- 
      here('data', 
-          'processed', 
+          'outputs', 
           'dada2-compatible', 
           'trnL',
           'trnLGH.fasta') %>% 
-     readDNAStringSet() # Biostrings
-     # read.FASTA() # ape
+     Biostrings::readDNAStringSet()
+     # ape::read.dna(format = 'fasta')
 ```
 
 ```{r}
-head(fasta.trnLGH)
+trnLGH
 ```
 
 # Align sequences
 
+## MUSCLE (via MSA)
+
 This is required in order to calculate distance metric-- sequences have to be the same length.
 ```{r}
-msa.trnLGH <- msaClustalOmega(inputSeqs = fasta.trnLGH)
+# msa <- msaClustalOmega(inputSeqs = trnLGH)
+msa <- msa::msaMuscle(trnLGH)
 ```
 
 ```{r}
-msaConsensusSequence(msa.trnLGH)
+msaConsensusSequence(msa)
 ```
 
 Need to figure out how to customize save of output
 Ending up in /code directory
 ```{r}
-msatrnLGH <- msa.trnLGH
 # Quick visualization
-
-msaPrettyPrint(msatrnLGH,
-               subset = c(1:5),
+msaPrettyPrint(msa,
+               subset = c(1:100),
                output = 'pdf',
                showNames = 'none',
                showLogo = 'none',
@@ -67,41 +73,121 @@ msaPrettyPrint(msatrnLGH,
 Now convert to a format usable by ape
 
 ```{r}
-aln.trnLGH <- as.DNAbin(msa.trnLGH)
-aln.trnLGH
+aln <- as.DNAbin(msa)
+aln
+```
+
+## DECIPHER
+
+```{r}
+seqs <- as.character(trnLGH)
+names(seqs) <- names(trnLGH)
+```
+
+```{r}
+# Note that there's a duplicate here for a B. oleracea accession, which has two different trnL sequences (1 nt difference)
+names(seqs)[names(seqs) == 'LR031876.1 Brassica oleracea'] <- 
+     paste(names(seqs)[names(seqs) == 'LR031876.1 Brassica oleracea'],
+           1:2)
+```
+
+```{r}
+alignment <- DECIPHER::AlignSeqs(DNAStringSet(seqs), anchor = NA)
+```
+
+```{r}
+# TODO
+# Maybe add a modelTest step here?
+```
+
+
+```{r}
+# First construct a neighbor joining tree
+phang.align <- phangorn::phyDat(as(alignment, 'matrix'), type = 'DNA')
+dm <- dist.ml(phang.align)
+treeNJ <- NJ(dm) # Note that tip order != sequence order
+```
+
+```{r}
+# pml() computes the likelihood of a given tree
+fit <- pml(treeNJ, data = phang.align)
+fit
+```
+
+```{r}
+# We changed the model a (discrete) rate across site model with 4 rate categories (using the default shape parameter of 1), to 0.2 invariant sites
+fitGTR <- update(fit, k=4, inv=0.2)
+```
+
+Good explanation for the below here:
+https://cran.r-project.org/web/packages/phangorn/vignettes/Trees.html
+```{r}
+# optim.pml() will optimize tree topology and branch length for your selected model of nucleotide evolution
+# Then fit a GTR+G+I (generalized time-reversible with Gamma rate variation) ML tree using the neightbor joining tree as a starting point
+
+# Optimize the branch lengths
+fitGTR <- optim.pml(fitGTR,
+                    model = 'GTR',
+                    optInv = TRUE,
+                    optGamma = TRUE,
+                    rearrangement = 'stochastic',
+                    control = pml.control(trace = 0))
+
+logLik(fitGTR)
+```
+
+```{r}
+# Save the tree in Newick format for plotting
+# Silently exported by plot() function
+tree <- plot(fitGTR$tree)
+write.tree(
+     fitGTR$tree,
+     here('results',
+          'trees',
+          'DECIPHER alignment, DADA2 tutorial (NJ to GTR+G+I ML fit).tre')
+)
 ```
 
 # Distance-based tree
 
 ```{r}
-d.trnLGH <- dist.dna(aln.trnLGH, 
-                     model = 'TN93')
-length(d.trnLGH) #number of pairwise distances, computed as n(n-1)/2
+d <- dist.dna(aln, 
+              model = 'TN93')
+length(d) #number of pairwise distances, computed as n(n-1)/2
 ```
 
 ```{r}
-d.trnLGH <- dist.dna(aln.trnLGH, model = 'raw')
-head(d.trnLGH)
+d <- dist.dna(aln, model = 'raw')
+head(d)
 ```
 
 ```{r}
 # This is a little strange-- why are these values so "discrete"?
-d.trnLGH %>% 
+d %>% 
      unique() %>% 
      sort()
 ```
 
-This is just 0:1 in 12 increments:
-
-```{r}
-1/12 * (0:11)
-```
-
 Quick viz
 ```{r}
-temp <- as.data.frame(as.matrix(d.trnLGH)[1:50, 1:50]) # First 100 entries
+test <- sample(1:791, 50)
+temp <- as.data.frame(as.matrix(d)[test, test]) # Random 50
 ade4::table.paint(temp, cleg=0, clabel.row=.5, clabel.col=.5)
 ```
 Maybe want to check Veronica's code.
 
 # ML-based tree
+
+```{r}
+# Convert alignment (or source fasta) to phyDat object?
+phy <- phangorn::as.phyDat(msa)
+phy
+```
+
+```{r}
+# Decide on model of nucleotide evolution that best fits data (LRT)
+tree <- NJ(dist.ml(phy, model = 'JC69')) # Jukes-Cantor 69 
+mt <- phangorn::modelTest(phy, tree = tree)
+```
+
+
