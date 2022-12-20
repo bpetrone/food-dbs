@@ -268,6 +268,7 @@
 ,Acer nigrum,black maple,plant,JL
 ,Acer rubrum,red maple,plant,JL
 ,Acer saccharum,sugar maple,plant,JL
+,Acrocomia aculeata,macaw palm,plant,"Sterling, ""Yucatan"""
 ,Actinidia deliciosa,kiwi,plant,BP
 ,﻿Adansonia digitata,baobab,plant,BP
 ,Aegle marmelos,bael,plant,JL
@@ -303,6 +304,7 @@
 ,Angelica archangelica,angelica,plant,"van Wyk, ""Food Plants of the World"""
 ,Annona cherimola,cherimoya,plant,"van Wyk, ""Food Plants of the World"""
 ,Annona muricata,soursop,plant,BP
+,Annona reticulata,bullock's heart,plant,"Sterling, ""Yucatan"""
 ,Annona squamosa,sweetsop,plant,"van Wyk, ""Food Plants of the World"""
 ,Anonidium mannii,bobo,plant,BP
 ,Anthriscus cerefolium,chervil,plant,"van Wyk, ""Food Plants of the World"""
@@ -378,7 +380,10 @@
 ,Brassica rapa subsp. trilocularis,yellow sarson,plant,BP
 ,Brassica rapa var. glabra,bomdong,plant,BP
 ,Brassica rapa var. rapifera,rapini,plant,BP
+,Bromelia pinguin,wild pineapple,plant,BP
+,Brosimum alicastrum,breadnut,plant,"Sterling, ""Yucatan"""
 ,Browningia candelaris,candleholder cactus,plant,JL
+,Byrsonima crassifolia,murici,plant,"Sterling, ""Yucatan"""
 ,Camellia sinensis,tea,plant,BP
 ,Cannabis sativa,hemp seed,plant,JL
 ,Capparis spinosa,caper,plant,BP
@@ -400,6 +405,7 @@
 ,Chenopodium pallidicaule,canihua,plant,JL
 ,Chenopodium quinoa,quinoa,plant,BP
 ,Chondrus crispus,carageenan,plant,JL
+,Chrysophyllum cainito,star apple,plant,"Sterling, ""Yucatan"""
 ,Cicer arietinum,chickpea,plant,BP
 ,Cichorium endivia ,endive,plant,JL
 ,Cichorium intybus ,chicory,plant,JL
@@ -419,14 +425,18 @@
 ,Citrus x aurantium,"bitter orange, seville orange",plant,BP
 ,Citrus x paradisi,grapefruit,plant,BP
 ,Cleome gynandra,"shona cabbage, african cabbage",plant,BP
+,Cnidoscolus aconitifolius,chaya,plant,"Sterling, ""Yucatan"""
 ,Cocos nucifera,coconut,plant,BP
 ,Coffea arabica,coffee,plant,"van Wyk, ""Food Plants of the World"""
 ,Coffea canephora,robusta coffee,plant,BP
 ,Coffea liberica,Liberian coffee,plant,"van Wyk, ""Food Plants of the World"""
+,Coleus amboinicus,cuban oregano,plant,"Sterling, ""Yucatan"""
 ,Colocasia antiquorum,eddo,plant,JL
 ,Colocasia esculenta,taro,plant,BP
 ,Corchorus capsularis,white jute,plant,BP
 ,Corchorus olitorius,jute mallow,plant,BP
+,Cordia decandra,carbón,plant,BP
+,Cordia dodecandra,ciricote,plant,"Sterling, ""Yucatan"""
 ,Coriandrum sativum,"coriander, cilantro",plant,BP
 ,Corylus avellana,hazelnut,plant,BP
 ,Crithmum maritimum,sea beans,plant,JL
@@ -435,7 +445,7 @@
 ,Crotalaria grahamiana,tum-thang,plant,BP
 ,Cucumis melo,"muskmelon, canteloupe",plant,BP
 ,Cucumis sativus,cucumber,plant,BP
-,Cucurbita argyrosperma,japanese pie pumpkin,plant,BP
+,Cucurbita argyrosperma,cushaw,plant,"Sterling, ""Yucatan"""
 ,Cucurbita ficifolia,fig-leaf gourd,plant,BP
 ,Cucurbita maxima,winter squash,plant,BP
 ,Cucurbita moschata,"squash, pumpkin",plant,BP
@@ -458,8 +468,10 @@
 ,Dioscorea alata,"ube, purple yam",plant,JL
 ,Dioscorea rotundata,white yam,plant,BP
 ,Dioscorea trifida,indian yam,plant,BP
+,Diospyros digyna,black persimmon,plant,"Sterling, ""Yucatan"""
 ,Diplotaxis tenuifolia,wild rocket,plant,SJ
 ,Durio zibethinus,durian,plant,BP
+,Dysphania ambrosioides,mexican tea,plant,"Sterling, ""Yucatan"""
 ,Elaeis guineensis,oil palm,plant,BP
 ,Eleocharis dulcis,water chestnut,plant,JL
 ,Elettaria cardamomum,green cardamom,plant,BP
@@ -467,7 +479,7 @@
 ,Enydra fluctuans,buffalo spinach,plant,BP
 ,Eragrostis tef,teff,plant,JL
 ,Eruca vesicaria,rocket,plant,SJ
-,Eryngium foetidum,culantro,plant,BP
+,Eryngium foetidum,culantro,plant,"Sterling, ""Yucatan"""
 ,Eucheuma,eucheuma seaweeds,plant,FAO Cultured Aquatic Species Fact Sheets
 ,Euterpe oleracea,acai,plant,JL
 ,Fagopyrum esculentum,buckwheat,plant,BP
@@ -477,7 +489,6 @@
 ,Fragaria x ananassa,strawberry,plant,BP
 ,Garcinia oblongifolia,south china mangosteen,plant,BP
 ,Gaultheria procumbens,"teaberry, eastern teaberry, checkerberry, boxberry, American wintergreen",plant,SJ
-,Gelidium,red algae (agar),,"Eschliman, ""Ingredients"""
 ,Geoffroea decorticans,chanar,plant,JL
 ,Glebionis coronaria,crown daisy,plant,BP
 ,Glycine max,soybean,plant,BP
@@ -499,6 +510,7 @@
 ,Ipomoea aquatica,"water spinach, swamp morning glory",plant,BP
 ,Ipomoea batatas,sweet potato,plant,BP
 ,Irvingia gabonensis,bush mango,plant,BP
+,Jacaratia mexicana,wild papaya,plant,"Sterling, ""Yucatan"""
 ,Juglans nigra,black walnut,plant,JL
 ,Juglans regia,walnut,plant,BP
 ,Kaempferia galanga,black galangal,plant,BP
@@ -511,6 +523,8 @@
 ,Lepidium meyenii,maca root,plant,BP
 ,Limonia acidissima,"wood apple, elephant apple",plant,JL
 ,Linum usitatissimum,flaxseed,plant,BP
+,Lippia graveolens,mexican oregano,plant,"Sterling, ""Yucatan"""
+,Lucuma campechiana,canistel,plant,"Sterling, ""Yucatan"""
 ,Luffa acutangula,chinese okra,plant,BP
 ,Luffa cylindrica ,sponge gourd,plant,BP
 ,Lupinus albus,lupini beans,plant,JL
@@ -523,6 +537,7 @@
 ,Malus sylvestris,crab apple,plant,BP
 ,Mangifera indica,mango,plant,BP
 ,Manihot esculenta,cassava,plant,BP
+,Manilkara zapota,sapodilla,plant,"Sterling, ""Yucatan"""
 ,Marsilea quadrifolia,water clover,plant,BP
 ,Megaphrynium macrostachyum,yoruba soft cane,plant,BP
 ,Melissa officinalis,lemon balm,plant,BP
@@ -547,11 +562,12 @@
 ,Oxalis pes-caprae,african wood-sorrel,plant,"van Wyk, ""Food Plants of the World"""
 ,Oxalis tuberosa,oca,plant,JL
 ,Oxypolis filiformis,water cowbane,plant,BP
-,Pachyrhizus erosus,jicama,plant,BP
+,Pachyrhizus erosus,jicama,plant,"Sterling, ""Yucatan"""
 ,Paederia foetida,stinkvine,plant,BP
 ,Panax vietnamensis,vietnamese ginseng,plant,BP
 ,Panicum miliaceum,proso millet,plant,BP
 ,Papaver somniferum,poppy,plant,JL
+,Parmentiera aculeata,tree cucumber,plant,"Sterling, ""Yucatan"""
 ,Passiflora edulis,passion fruit,plant,BP
 ,Passiflora quadrangularis,"giant granadilla, grenadine",plant,BP
 ,Pastinaca sativa,parsnip,plant,JL
@@ -584,6 +600,7 @@
 ,Pinus remota,pine nut,plant,BP
 ,Pinus sabiniana,pine nut,plant,BP
 ,Pinus sibirica,pine nut,plant,BP
+,Piper auritum,mexican pepperleaf,plant,"Sterling, ""Yucatan"""
 ,Piper guineense,ashanti pepper,plant,BP
 ,Piper longum,long pepper,plant,JL
 ,Piper nigrum,black pepper,plant,BP
@@ -598,6 +615,7 @@
 ,Polygonum odoratum ,"vietnamese coriander, rau ram",plant,BP
 ,Polystichum munitum,fiddleheads,plant,JL
 ,Porphyra,nori,plant,FAO Cultured Aquatic Species Fact Sheets
+,Pouteria sapota,mamey sapote,plant,"Sterling, ""Yucatan"""
 ,Prunus armeniaca,apricot,plant,JL
 ,Prunus avium,sweet cherry,plant,BP
 ,Prunus domestica,plum,plant,BP
@@ -651,7 +669,7 @@
 ,Scorzonera hispanica,"Spanish salsify, black salsify",plant,JL
 ,Secale cereale,rye,plant,BP
 ,Secale cereale x Triticum aestivum,triticale,plant,BP
-,Sechium edule,chayote,plant,BP
+,Sechium edule,chayote,plant,"Sterling, ""Yucatan"""
 ,Sesamum indicum,sesame,plant,BP
 ,Sinapis alba,white mustard,plant,BP
 ,Smallanthus sonchifolius,yacon,plant,JL
@@ -668,10 +686,12 @@
 ,Spinacia oleracea,spinach,plant,BP
 ,Spinacia tetrandra,spinach,plant,BP
 ,Spondias dulcis,ambarella,plant,BP
+,Spondias purpurea,hog plum,plant,"Sterling, ""Yucatan"""
 ,Stachys affinis,"Chinese artichoke, crosne",plant,JL
 ,Synsepalum dulcificum,miracle berry,plant,JL
 ,Syzygium aromaticum,clove,plant,BP
 ,Talinum fruticosum ,ceylon spinach,plant,BP
+,Talisia olivaeformis,honeyberry,plant,"Sterling, ""Yucatan"""
 ,Tamarindus indica,tamarind,plant,BP
 ,Taraxacum officinale,dandelion,plant,"van Wyk, ""Food Plants of the World"""
 ,Theobroma cacao,cocoa bean,plant,BP
@@ -722,8 +742,9 @@
 ,Vitis vinifera,common grape vine,plant,BP
 ,Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
 ,Xanthosoma,various starchy corms,plant,JL
-,Xanthosoma sagittifolium,tannia,plant,"van Wyk, ""Food Plants of the World"""
+,Xanthosoma sagittifolium,malanga,plant,"van Wyk, ""Food Plants of the World"""
 ,Zamia integrifolia,arrowroot,plant,JL
 ,Zea mays,corn,plant,BP
 ,Zingiber officinale,ginger,plant,BP
 ,Ziziphus jujuba,"jujube, red date",plant,BP
+,Gelidium,red algae (agar),,"Eschliman, ""Ingredients"""
