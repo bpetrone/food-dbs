@@ -2,5 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+
+/data/inputs/genomes
+/data/inputs/NCBI taxonomy
+/data/inputs/organelles
+/data/inputs/other-dbs
 /results
 *.html
