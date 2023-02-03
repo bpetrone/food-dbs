@@ -1,0 +1,215 @@
+---
+title: "Descriptive statistics"
+output: html_notebook
+---
+
+# Setup
+
+```{r setup, include = FALSE, echo = FALSE}
+require(knitr)
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+```{r}
+library(Biostrings)
+library(here)
+library(MButils)
+library(tidyverse)
+```
+
+```{r}
+# Plotting themes
+theme_set(
+     theme_bw() +
+          theme(
+               axis.text = element_text(size = 12),
+               axis.title.x = ggtext::element_markdown(size = 14),
+               axis.title.y = ggtext::element_markdown(size = 14),
+               legend.title = element_text(size = 12),
+               strip.text = element_text(size = 12)
+          )
+)
+```
+
+# Read in data
+```{r}
+# Read in current version of reference
+current <- 
+     here('data', 
+          'outputs', 
+          'dada2-compatible', 
+          'trnL', 
+          'trnLGH.fasta') %>%
+     readDNAStringSet()
+
+current
+```
+# Pre-process
+
+```{r}
+# Organize as dataframe for referencing back to accession
+current.df <- 
+     data.frame(
+          name = names(current),
+          seq = current
+     ) 
+
+row.names(current.df) <- NULL
+current.df
+```
+
+```{r}
+# Separate accession number from species name
+current.df <- 
+     separate(current.df,
+              name,
+              sep = ' ',
+              into = c('accession', 'taxon'),
+              extra = 'merge',
+              remove = FALSE)
+```
+
+```{r}
+current.df
+```
+
+# Describe
+
+## Number
+
+### Sequences
+
+```{r}
+dim(current.df)
+```
+
+### Plant taxa
+
+```{r}
+n_distinct(current.df$taxon)
+```
+
+### Plant species
+
+```{r}
+# Catch any subspecies level category, indicated as "var.", "subsp.", etc., and
+# strip it
+pull(current.df, taxon) %>% 
+     gsub(pattern = '\\s\\w+\\..+',
+          replacement = '') %>% 
+     unique() %>% 
+     length()
+```
+
+## GC content
+
+```{r}
+# Helper function for GC
+gc <- function(seq){
+     total <- nchar(seq)
+     g <- str_count(seq, 'G')
+     c <- str_count(seq, 'C')
+     
+     (g+c)/total
+}
+```
+
+```{r}
+current.df <- 
+     current.df %>% 
+     mutate(gc = gc(seq))
+```
+
+```{r}
+# Plot
+ggplot(current.df, aes(x = gc)) +
+     geom_histogram(binwidth = 0.01,
+                    boundary = 0) +
+     # ylim(0, 190) +
+     labs(y = 'Number of<br>database sequences',
+          x = 'GC%') 
+```
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+
+ggsave(here('results',
+            paste0(plotID, '_trnL GC histogram.png')),
+       height = 3, width = 3)
+```
+
+## Length distribution
+
+```{r}
+# Length inclusive of primer sequences
+current.df$length <- nchar(current.df$seq)
+```
+
+```{r}
+range(current.df$length)
+```
+
+```{r}
+arrange(current.df, 
+        desc(length)) %>% 
+     select(taxon, length)
+```
+
+```{r}
+# Plot
+ggplot(current.df, aes(x = length)) +
+     geom_histogram(binwidth = 2,
+                    boundary = 0) +
+     # ylim(0, 190) +
+     labs(y = 'Number of<br>database sequences',
+          x = '*trnL* sequence length')
+```
+
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+
+ggsave(here('results',
+            paste0(plotID, '_trnL sequence length histogram.png')),
+       height = 3, width = 3)
+```
+
+## Taxonomic specificity 
+
+This could theoretically be redone with the MButils::asv_to_taxonomy() function, but here I also want to pipe forward the common name column, and the code doesn't yet accommodate that. 
+
+```{r}
+taxtab <- MButils::assignSpecies_mod(unique(current.df$seq),
+                                     refFasta = here('data',
+                                                     'outputs',
+                                                     'dada2-compatible',
+                                                     'trnL',
+                                                     'trnLGH.fasta'))
+```
+
+Now want to build out whole tree
+```{r}
+# Get taxmap object
+taxtab <- 
+     taxtab %>%
+     separate(col = Species,
+              into = c('index', 'label'), sep = '\\s',
+              extra = 'merge')
+
+taxmap <- MButils::lookup_tax_data(taxtab, 
+                                   type = 'seq_id', 
+                                   column = 'index')
+```
+
+```{r}
+# Join to taxonomy
+taxtab.species <- MButils::asv_to_taxonomy(taxmap)
+```
+
+```{r}
+# Get last common ancestor of all matched taxonomic assignments
+taxtab.lca <- MButils::lca(taxtab.species)
+```
+
+```{r}
+# To what label are assignments made?
+colSums(!is.na(taxtab.lca))/nrow(taxtab.lca)
+```
