@@ -273,6 +273,7 @@
 ,﻿Adansonia digitata,baobab,plant,BP
 ,Aegle marmelos,bael,plant,JL
 ,Aframomum laurentii,bongongoo,plant,BP
+,Aframomum melegueta,grains of paradise,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Agathosma betulina,buchu,plant,"van Wyk, ""Food Plants of the World"""
 ,Agave americana,century plant,plant,"van Wyk, ""Food Plants of the World"""
 ,Agave tequilana,tequila plant,plant,"van Wyk, ""Food Plants of the World"""
@@ -516,6 +517,7 @@
 ,Juglans nigra,black walnut,plant,JL
 ,Juglans regia,walnut,plant,BP
 ,Kaempferia galanga,black galangal,plant,BP
+,Kyllinga brevifolia,shortleaf spikesedge,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Lablab purpureus,hyacinth bean,plant,BP
 ,Lactuca sativa,lettuce,plant,BP
 ,Lagenaria siceraria,calabash,plant,BP
@@ -558,6 +560,7 @@
 ,Myristica fragrans,nutmeg,plant,BP
 ,Nasturtium microphyllum,one-row watercress,plant,BP
 ,Nelumbo nucifera,lotus root,plant,JL
+,Nigella sativa,black caraway,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Ocimum basilicum,basil,plant,BP
 ,Olea europaea,olive,plant,BP
 ,Origanum vulgare,oregano,plant,BP
@@ -752,7 +755,9 @@
 ,Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
 ,Xanthosoma,various starchy corms,plant,JL
 ,Xanthosoma sagittifolium,malanga,plant,"van Wyk, ""Food Plants of the World"""
+,Xylopia aethiopica,Grains of Selim,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Zamia integrifolia,arrowroot,plant,JL
+,Zanthoxylum capense,small knobwood,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Zea mays,corn,plant,BP
 ,Zingiber officinale,ginger,plant,BP
 ,Ziziphus jujuba,"jujube, red date",plant,BP
