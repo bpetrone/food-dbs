@@ -21,9 +21,8 @@ library(tidyverse)
 ```{r}
 milla <- 
      here('data',
-          'processed',
-          'Crop_Origins_Phylo',
-          'Crop_Origins_Phylo_v_live',
+          'inputs',
+          'crop-origins',
           'crop_origins_v_live',
           'crop_origins_live_db.csv') %>% 
      read_delim(delim = ';')
@@ -36,7 +35,7 @@ milla
 ```{r}
 foods <- 
      here('data',
-          'raw',
+          'inputs',
           'human-foods.csv') %>% 
      read_csv()
 
@@ -48,7 +47,7 @@ foods
 ```{r}
 ref <- 
      here('data',
-          'processed',
+          'outputs',
           'dada2-compatible',
           'trnL',
           'trnLGH.fasta') %>% 
