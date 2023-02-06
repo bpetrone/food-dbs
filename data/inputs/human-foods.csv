@@ -5,6 +5,9 @@
 ,Acipenser baerii,siberian sturgeon,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Alces alces,moose,animal,BP
 1,Alosinae,shad,animal,JL
+,Alphitobius diaperinus,lesser mealworm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anacridium melanorhodon melanorhodon,tree locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anaphe panda,silk worm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Anas,duck,animal,BP
 1,Anas platyrhynchos,mallard duck,animal,BP
 ,Anguilla anguilla,european eel,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -35,6 +38,7 @@
 ,Capra hircus,goat,animal,BP
 ,Carassius carassius,crucian carp,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Cardiidae,cockle,animal,JL
+,Carebara vidua,black ant,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Catla catla,catla,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cavia porcellus,guinea pig,animal,JL
 ,Centropus sinensis,crow pheasant,animal,BP
@@ -45,6 +49,7 @@
 1,Cetacea,whales,animal,JL
 1,Channidae,Snakehead,animal,JL
 ,Chanos chanos,milkfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Chaoborus edulis,glass worm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Chionoecetes,snow crab,animal,JL
 1,Chirostyloidea,"langostino, squat lobster",animal,JL
 ,Chondracris rosea,grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
@@ -66,6 +71,7 @@
 ,Cyclochila virens,northern greengrocer,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Cyclopterus lumpus,lumpfish roe,animal,JL
 ,Cyprinus carpio,common carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cyriopagopus albostriatus,Thailand zebra leg tarantula,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Decapodiformes,"squid, calamari",animal,JL
 1,Delphinidae,dolphin,animal,JL
 ,Dicentrarchus labrax,european seabass,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -73,6 +79,7 @@
 ,Dissostichus eleginoides,chilean seabass,animal,JL
 ,Dromaius novaehollandiae,emu,animal,BP
 1,Dytiscidae,predaceous diving beetles,animal,JZ
+,Encosternum delegorguei,edible stink bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Engraulidae,anchovy,animal,JL
 1,Epinephelinae,Grouper,animal,JL
 ,Epinephelus coioides,orange-spotted grouper,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -84,6 +91,7 @@
 ,Evechinus chloroticus,kina (new zealand urchin),animal,BP
 1,Exocoetidae,"flying fish, tobiko (roe)",animal,JL
 ,Felis catus,cat,animal,BP
+,Formica rufa,"red wood ant, southern wood ant, horse ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gadus,Cod,animal,JL
 ,Gadus morhua,atlantic cod,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Galatheoidea,"langostino, squat lobster",animal,JL
@@ -93,6 +101,7 @@
 1,Gryllus,field cricket,animal,BP
 1,Harpadon nehereus,"Bombay duck, bummalo",animal,JL
 ,Helix pomatia,escargot,animal,BP
+,Hemijana variegata,edible caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Hippocampus comes,tiger tail seahorse,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Hippoglossus hippoglossus,halibut,animal,JL
 ,Hippoglossus stenolepis,halibut,animal,JL
@@ -105,10 +114,12 @@
 ,Hypophthalmichthys molitrix,silver carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Hypophthalmichthys nobilis,bighead carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ictalurus punctatus,channel catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Imbrasia belina,mopane caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Iniidae,dolphin,animal,JL
 ,Labeo rohita,roho labeo,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Lagocephalus,fugu fish,animal,JL
 ,Laminaria japonica,japanese kelp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Lasius fuliginosus,"jet ant, jet black ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Lates calcarifer,barramundi,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Latidae,Asian sea bass,animal,JL
 ,Lethocerus indicus,giant water bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
@@ -118,6 +129,8 @@
 1,Lophius,Monkfish,animal,JL
 1,Lutjanidae,Snapper,animal,JL
 ,Macrobrachium rosenbergii,giant river prawn,animal,FAO Cultured Aquatic Species Fact Sheets
+,Macrotermes bellicosus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Macrotermes subhyalinus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Magallana gigas,pacific cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Malacanthidae,tilefish,animal,JL
 ,Mallotus villosus,"capelin, masago (roe)",animal,JL
@@ -156,6 +169,8 @@
 ,Oreochromis aureus,blue tilapia,animal,BP
 ,Oreochromis mossambicus,mozambique tilapia,animal,BP
 ,Oreochromis niloticus,nile tilapia,animal,FAO Cultured Aquatic Species Fact Sheets
+,Orycteo rhinoceros,rhinoceros beetle larvae,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Oryctes boas,rhinoceros beetle larvae,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Osmeridae,smelt,animal,JL
 ,Osphronemus goramy,giant gourami,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ostrea edulis,european flat oyster,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -185,14 +200,19 @@
 ,Pollachius virens,pollock,animal,JL
 ,Pomatomus saltatrix,shad,animal,JL
 ,Procambarus clarkii,red swamp crawfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Pseudacanthotermes militaris,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Pseudacanthotermes spiniger,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rachycentron canadum,cobia,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Rajidae,Skate,animal,JL
 ,Rana catesbeiana,american bull frog,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Rangifer tarandus,caribou,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rastrineobola argenta,silver cyprinid,animal,BP
 ,Rattus rattus,rat,animal,BP
+,Rhynchophorus phoenicis,African Palm Weevil,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Ruditapes decussatus,grooved carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ruditapes philippinarum,japanese carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ruspolia differens,Longhorn grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Ruspolia nitidula,Senene,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rutilus rutilus,common roach (fish),animal,BP
 ,Saccostrea glomerata,sydney cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Salmo salar,atlantic salmon,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -201,6 +221,7 @@
 ,Sardina pilchardus,european pilchard,animal,BP
 ,Sardinops sagax,south american pilchard,animal,BP
 1,Scaridae,Parrotfish,animal,JL
+,Schistocerca gregaria,desert locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Sciaenops ocellatus,red drum,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
 ,Scophthalmus maximus,turbot,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -230,6 +251,7 @@
 ,Sus scrofa,pig,animal,BP
 ,Sylvilagus,cottontail rabbit,animal,BP
 ,Takifugu,fugu fish,animal,JL
+,Tenebrio molitor,yellow mealworm beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Tenualosa ilisha,ilish,animal,JL
 ,Tessaratoma quadrata,"stink bug, monam tari",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Tetraodontidae ,"Blowfish, pufferfish",animal,JL
@@ -249,6 +271,7 @@
 ,Xiphias gladius,swordfish,animal,JL
 ,Xylotrupes gideon,brown rhinoceros beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Zeus faber,john dory,animal,JL
+,Zonocerus variegatus,"painted grasshopper, variegated grasshopper","Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Arthrospira maxima,spirulina,bacteria,JL
 ,Arthrospira platensis,spirulina,bacteria,JL
 ,Agaricus arvensis,Horse mushroom,fungus,JL
