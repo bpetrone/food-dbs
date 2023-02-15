@@ -1,23 +1,31 @@
-﻿needs_QC,scientific_name,common_name,category,source
+needs_QC,scientific_name,common_name,category,source
 ,Abramis brama,common bream,animal,JL
 1,Acanthocybium solandri,"Wahoo, ono",animal,JL
+,Acheta domesticus,house cricket,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Acipenser baerii,siberian sturgeon,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Alces alces,moose,animal,BP
 1,Alosinae,shad,animal,JL
+,Alphitobius diaperinus,lesser mealworm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anacridium melanorhodon melanorhodon,tree locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anaphe panda,silk worm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Anas,duck,animal,BP
 1,Anas platyrhynchos,mallard duck,animal,BP
 ,Anguilla anguilla,european eel,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Anguilla japonica,japanese eel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Anoplopoma fimbria,"Sablefish, black cod",animal,JL
 ,Anser anser,greylag goose,animal,BP
+,Apis cerana,eastern honey bee,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Apis dorsata,giant honey bee,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Apis mellifera,honeybee,animal,JL
 ,Apostichopus japonicus,japanese sea cucumber,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Arapaima gigas,arapaima,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Argyrosomus regius,meagre,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Artemia,brine shrimps,animal,FAO Cultured Aquatic Species Fact Sheets
+,Aspongopus nepalensis,"stink bug, ghondibug",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Astacoidea,"crayfish, crawfish",animal,JL
 ,Barbonymus gonionotus,silver barb,animal,BP
 ,Barbonymus schwanenfeldii,tinfoil barb,animal,BP
+,Batocera roylei,beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Bison bison,bison,animal,BP
 ,Bombyx mori,silkworm,animal,SJ
 ,Bos taurus,cattle,animal,BP
@@ -30,17 +38,22 @@
 ,Capra hircus,goat,animal,BP
 ,Carassius carassius,crucian carp,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Cardiidae,cockle,animal,JL
+,Carebara vidua,black ant,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Catla catla,catla,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cavia porcellus,guinea pig,animal,JL
 ,Centropus sinensis,crow pheasant,animal,BP
 ,Cephalophus natalensis,red forest duiker,animal,BP
+,Cephenemyia trompe,caribou nose bot fly,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Cerax quadricarinatus,red claw crayfish,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cervus canadensis,elk,animal,BP
 1,Cetacea,whales,animal,JL
 1,Channidae,Snakehead,animal,JL
 ,Chanos chanos,milkfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Chaoborus edulis,glass worm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Chionoecetes,snow crab,animal,JL
 1,Chirostyloidea,"langostino, squat lobster",animal,JL
+,Chondracris rosea,grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+1,Cicadidae,true cicadas,animal,JZ
 ,Cirrhinus molitorella,mud carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cirrhinus mrigala,mrigal carp,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Citharichthys,Sanddab,animal,JL
@@ -55,14 +68,18 @@
 ,Crocothemis servilia,scarlet skimmer dragonfly,animal,BP
 ,Ctenopharyngodon idellus,grass carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cuniculus paca,lowland paca,animal,BP
+,Cyclochila virens,northern greengrocer,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Cyclopterus lumpus,lumpfish roe,animal,JL
 ,Cyprinus carpio,common carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cyriopagopus albostriatus,Thailand zebra leg tarantula,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Decapodiformes,"squid, calamari",animal,JL
 1,Delphinidae,dolphin,animal,JL
 ,Dicentrarchus labrax,european seabass,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Diodon,fugu fish,animal,JL
 ,Dissostichus eleginoides,chilean seabass,animal,JL
 ,Dromaius novaehollandiae,emu,animal,BP
+1,Dytiscidae,predaceous diving beetles,animal,JZ
+,Encosternum delegorguei,edible stink bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Engraulidae,anchovy,animal,JL
 1,Epinephelinae,Grouper,animal,JL
 ,Epinephelus coioides,orange-spotted grouper,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -74,14 +91,17 @@
 ,Evechinus chloroticus,kina (new zealand urchin),animal,BP
 1,Exocoetidae,"flying fish, tobiko (roe)",animal,JL
 ,Felis catus,cat,animal,BP
+,Formica rufa,"red wood ant, southern wood ant, horse ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gadus,Cod,animal,JL
 ,Gadus morhua,atlantic cod,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Galatheoidea,"langostino, squat lobster",animal,JL
 ,Gallus gallus,chicken,animal,BP
 ,Glyptocephalus cynoglossus,"Witch, righteye flounder",animal,JL
+,Gryllodes sigillatus,tropical house cricket,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gryllus,field cricket,animal,BP
 1,Harpadon nehereus,"Bombay duck, bummalo",animal,JL
 ,Helix pomatia,escargot,animal,BP
+,Hemijana variegata,edible caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Hippocampus comes,tiger tail seahorse,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Hippoglossus hippoglossus,halibut,animal,JL
 ,Hippoglossus stenolepis,halibut,animal,JL
@@ -90,21 +110,27 @@
 ,Homarus americanus,lobster,animal,BP
 ,Hoplobatrachus tigerinus,indian bullfrog,animal,BP
 ,Hoplostethus atlanticus,orange roughy,animal,JL
+,Hypoderma tarandi,caribou warble fly,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Hypophthalmichthys molitrix,silver carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Hypophthalmichthys nobilis,bighead carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ictalurus punctatus,channel catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Imbrasia belina,mopane caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Iniidae,dolphin,animal,JL
 ,Labeo rohita,roho labeo,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Lagocephalus,fugu fish,animal,JL
 ,Laminaria japonica,japanese kelp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Lasius fuliginosus,"jet ant, jet black ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Lates calcarifer,barramundi,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Latidae,Asian sea bass,animal,JL
+,Lethocerus indicus,giant water bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Lithodidae,king crab,animal,JL
 ,Litopenaeus vannamei,whiteleg shrimp,animal,BP
 ,Littorina littorea,periwinkle,animal,JL
 1,Lophius,Monkfish,animal,JL
 1,Lutjanidae,Snapper,animal,JL
 ,Macrobrachium rosenbergii,giant river prawn,animal,FAO Cultured Aquatic Species Fact Sheets
+,Macrotermes bellicosus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Macrotermes subhyalinus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Magallana gigas,pacific cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Malacanthidae,tilefish,animal,JL
 ,Mallotus villosus,"capelin, masago (roe)",animal,JL
@@ -118,6 +144,7 @@
 ,Metacarcinus magister,dungeness crab,animal,JL
 ,Microcosmus sabatieri,"sea fig, violet",animal,JL
 ,Mizuhopecten yessoensis,yesso scallop,animal,FAO Cultured Aquatic Species Fact Sheets
+,Monochamus versteegi,beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Morone chrysops x Morone saxatilis,striped bass hybrid,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Morone saxatilis,striped bass,animal,JL
 ,Mugil cephalus,flathead grey mullet,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -126,8 +153,11 @@
 ,Mytilus galloprovincalis,mediterranean mussel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Nautilus,nautilus,animal,JL
 1,Nematognathi,catfish,animal,JL
+,Nezara viridula,southern green stink bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Octopoda,octopus,animal,JL
+,Odobenus rosmarus,walrus,animal,SJ
 ,Odocoileus virginianus,white-tailed deer,animal,BP
+,Oecophylla smaragdina,Asian weaver ant,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Oncorhynchus gorbuscha,pink salmon,animal,FAO Aquatic Species Fact Sheets
 ,Oncorhynchus keta,chum salmon,animal,FAO Aquatic Species Fact Sheets
 ,Oncorhynchus kisutch,coho salmon,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -139,6 +169,8 @@
 ,Oreochromis aureus,blue tilapia,animal,BP
 ,Oreochromis mossambicus,mozambique tilapia,animal,BP
 ,Oreochromis niloticus,nile tilapia,animal,FAO Cultured Aquatic Species Fact Sheets
+,Orycteo rhinoceros,rhinoceros beetle larvae,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Oryctes boas,rhinoceros beetle larvae,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Osmeridae,smelt,animal,JL
 ,Osphronemus goramy,giant gourami,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ostrea edulis,european flat oyster,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -168,13 +200,19 @@
 ,Pollachius virens,pollock,animal,JL
 ,Pomatomus saltatrix,shad,animal,JL
 ,Procambarus clarkii,red swamp crawfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Pseudacanthotermes militaris,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Pseudacanthotermes spiniger,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rachycentron canadum,cobia,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Rajidae,Skate,animal,JL
 ,Rana catesbeiana,american bull frog,animal,FAO Cultured Aquatic Species Fact Sheets
+,Rangifer tarandus,caribou,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rastrineobola argenta,silver cyprinid,animal,BP
 ,Rattus rattus,rat,animal,BP
+,Rhynchophorus phoenicis,African Palm Weevil,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Ruditapes decussatus,grooved carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ruditapes philippinarum,japanese carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ruspolia differens,Longhorn grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Ruspolia nitidula,Senene,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rutilus rutilus,common roach (fish),animal,BP
 ,Saccostrea glomerata,sydney cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Salmo salar,atlantic salmon,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -183,6 +221,7 @@
 ,Sardina pilchardus,european pilchard,animal,BP
 ,Sardinops sagax,south american pilchard,animal,BP
 1,Scaridae,Parrotfish,animal,JL
+,Schistocerca gregaria,desert locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Sciaenops ocellatus,red drum,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
 ,Scophthalmus maximus,turbot,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -200,6 +239,7 @@
 ,Solea solea,common sole,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Soleidae,Sole,animal,JL
 ,Sparus aurata,gilthead seabream,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sphenarium purpurascens,grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Sphoeroides,fugu fish,animal,JL
 1,Sphyraena,barracuda,animal,JL
 1,Sprattus,Sprat,animal,JL
@@ -211,21 +251,27 @@
 ,Sus scrofa,pig,animal,BP
 ,Sylvilagus,cottontail rabbit,animal,BP
 ,Takifugu,fugu fish,animal,JL
+,Tenebrio molitor,yellow mealworm beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Tenualosa ilisha,ilish,animal,JL
+,Tessaratoma quadrata,"stink bug, monam tari",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Tetraodontidae ,"Blowfish, pufferfish",animal,JL
 ,Thunnus alalunga,albacore tuna,animal,JL
 ,Thunnus albacares,yellowfin tuna,animal,BP
 ,Thunnus obesus,bigeye tuna,animal,JL
 ,Thunnus thynnus,atlantic bluefin tuna,animal,FAO Cultured Aquatic Species Fact Sheets
+,Tibicen pruinosus,cicada,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Trachinotus,Pompano,animal,JL
 ,Trachinotus blochii,snubnose pompano,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Trionyx sinensis,chinese softshell turtle,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ucides occidentalis,pacific mangrove ghost crab,animal,BP
 ,Venerupis philippinarum,japanese littleneck,animal,BP
+,Vespa orientalis,Oriental hornet,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Vespa velutina,asian hornet,animal,BP
 1,Xanthidae,mud crab,animal,JL
 ,Xiphias gladius,swordfish,animal,JL
+,Xylotrupes gideon,brown rhinoceros beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Zeus faber,john dory,animal,JL
+,Zonocerus variegatus,"painted grasshopper, variegated grasshopper",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Arthrospira maxima,spirulina,bacteria,JL
 ,Arthrospira platensis,spirulina,bacteria,JL
 ,Agaricus arvensis,Horse mushroom,fungus,JL
@@ -273,6 +319,7 @@
 ,﻿Adansonia digitata,baobab,plant,BP
 ,Aegle marmelos,bael,plant,JL
 ,Aframomum laurentii,bongongoo,plant,BP
+,Aframomum melegueta,grains of paradise,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Agathosma betulina,buchu,plant,"van Wyk, ""Food Plants of the World"""
 ,Agave americana,century plant,plant,"van Wyk, ""Food Plants of the World"""
 ,Agave tequilana,tequila plant,plant,"van Wyk, ""Food Plants of the World"""
@@ -385,6 +432,7 @@
 ,Browningia candelaris,candleholder cactus,plant,JL
 ,Byrsonima crassifolia,murici,plant,"Sterling, ""Yucatan"""
 ,Camellia sinensis,tea,plant,BP
+,Canarium schweinfurthii,African elemi,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Cannabis sativa,hemp seed,plant,JL
 ,Capparis spinosa,caper,plant,BP
 ,Capsicum annuum,"bell peppers, sweet/Italian peppers, serrano, cayenne, paprika, jalapeno",plant,BP
@@ -498,6 +546,7 @@
 ,Gurania,jungle cucumber,plant,Lachat
 ,Helianthus annuus,sunflower,plant,BP
 ,Helianthus tuberosus,"jerusalem artichoke, sunchoke",plant,JL
+,Hemerocallis fulva,orange day-lily,plant,SJ
 ,Hibiscus sabdariffa,roselle,plant,BP
 ,Hordeum vulgare,barley,plant,BP
 ,Houttuynia cordata,fish mint,plant,BP
@@ -514,9 +563,11 @@
 ,Juglans nigra,black walnut,plant,JL
 ,Juglans regia,walnut,plant,BP
 ,Kaempferia galanga,black galangal,plant,BP
+,Kyllinga brevifolia,shortleaf spikesedge,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Lablab purpureus,hyacinth bean,plant,BP
 ,Lactuca sativa,lettuce,plant,BP
 ,Lagenaria siceraria,calabash,plant,BP
+,Lamium album,white nettle,plant,SJ
 ,Lasia spinosa,"lasia, geli-geli",plant,BP
 ,Laurus nobilis,bay leaf,plant,BP
 ,Lens culinaris,lentil,plant,BP
@@ -546,6 +597,7 @@
 ,Mentha spicata,spearmint,plant,BP
 ,Mentha x piperita,peppermint,plant,BP
 ,Momordica charantia,bitter melon,plant,BP
+,Moringa oleifera,Moringa,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Morus nigra,mulberry,plant,JL
 ,Murraya koenigii,curry leaf,plant,BP
 ,Musa acuminata,banana,plant,BP
@@ -554,6 +606,7 @@
 ,Myristica fragrans,nutmeg,plant,BP
 ,Nasturtium microphyllum,one-row watercress,plant,BP
 ,Nelumbo nucifera,lotus root,plant,JL
+,Nigella sativa,black caraway,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Ocimum basilicum,basil,plant,BP
 ,Olea europaea,olive,plant,BP
 ,Origanum vulgare,oregano,plant,BP
@@ -603,6 +656,7 @@
 ,Piper auritum,mexican pepperleaf,plant,"Sterling, ""Yucatan"""
 ,Piper guineense,ashanti pepper,plant,BP
 ,Piper longum,long pepper,plant,JL
+,Piper methysticum,kava kava,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Piper nigrum,black pepper,plant,BP
 ,Piper sarmentosum,wild betel,plant,BP
 ,Pistacia vera,pistachio,plant,BP
@@ -664,6 +718,7 @@
 ,Salvia hispanica,chia seed,plant,JL
 ,Salvia officinalis,sage,plant,BP
 ,Salvia rosmarinus,rosemary,plant,BP
+,Santalum acuminatum,desert quandong,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Sauropus androgynus,katuk,plant,BP
 ,Schinus molle,pink peppercorn,plant,JL
 ,Scorodophloeus zenkeri,"garlic tree, divida",plant,BP
@@ -724,6 +779,7 @@
 ,Triticum vavilovii,spelt,plant,GRIN Taxonomy for Plants
 ,Ullucus tuberosus,ullucus,plant,BP
 ,Undaria pinnatifida,wakame,plant,FAO Cultured Aquatic Species Fact Sheets
+,Urtica dioica,common nettle,plant,SJ
 ,Vaccinium angustifolium,lowbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
 ,Vaccinium ashei,rabbiteye blueberry,plant,"van Wyk, ""Food Plants of the World"""
 ,Vaccinium corymbosum,highbush blueberry,plant,"van Wyk, ""Food Plants of the World"""
@@ -733,19 +789,557 @@
 ,Vaccinium tenellum,southern blueberry,plant,BP
 ,Vaccinium vitis-idaea,lingonberry,plant,BP
 ,Vanilla planifolia,vanilla,plant,JL
+,Vanilla pompona,vanilla,plant,OO
 ,Vicia faba,"fava bean, broad bean",plant,BP
 ,Vigna angularis,adzuki bean,plant,JL
 ,Vigna radiata,mung bean,plant,BP
 ,Vigna subterranea,bambara groundnut,plant,BP
 ,Vigna unguiculata,cowpea,plant,BP
 ,Vigna unguiculata subsp. sesquipedalis,"long bean, asparagus bean",plant,JL
+,Vitellaria paradoxa,shea butter,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Vitis rotundifolia,muscadine grape,plant,BP
 ,Vitis vinifera,common grape vine,plant,BP
 ,Wasabia japonica,wasabi,plant,"van Wyk, ""Food Plants of the World"""
 ,Xanthosoma,various starchy corms,plant,JL
 ,Xanthosoma sagittifolium,malanga,plant,"van Wyk, ""Food Plants of the World"""
+,Xylopia aethiopica,Grains of Selim,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Zamia integrifolia,arrowroot,plant,JL
+,Zanthoxylum capense,small knobwood,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Zea mays,corn,plant,BP
 ,Zingiber officinale,ginger,plant,BP
 ,Ziziphus jujuba,"jujube, red date",plant,BP
 ,Gelidium,red algae (agar),,"Eschliman, ""Ingredients"""
+,Nostoc flagelliforme,fat choy,,SJ
+,Actinidia chinensis,"Chinese Actinidia, Gold Kiwi Fruit, Kiwifruit, Kiwi Gold, Yellow-Fleshed Actinidia",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sambucus nigra,"Black Elder, Common Elder, Pipe Tree, Bore Tree, Bour Tree, Danewort, Elder Bush, Elder, Elderberry, European Alder, European Black Elder, European Black Elderberry, European Elder, European Elderberry, Pipe Tree, Sambu, Tree Of Medicine, Tree Of Music",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bouea macrophylla,"Gandaria, Marian Plum, Plum Mango",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bouea oppositifolia,"Burmese Plum, Marian Plum, Marian Tree, Plum-Mango",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dracontomelon dao,"Argus Pheasant-Tree, Mon Fruit, New Guinea Walnut, Pacific Walnut, Papua New Guinea Walnut",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera caesia,"Binjai",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera foetida,"Bachang, Gray bacang, Grey bacang, Horse Bacang, Machang",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera kemanga,Kemang,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera laurina,"Egg Mango, Padi Mango, Water Mango",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera odorata,"Fragrant Mango, Kuini, Kurwini Mango, Kwini, Kwini Mango, Saipan Mango",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera pajang,"Bambangan, Pajang",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera quadrifida,Asam Kumbang,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mangifera similis, Lamantan,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pentaspadon motleyi,"Pelajau, Pelong Tree, Plajau,White Pelon Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Spondias cytherea,"Ambarella, Golden Apple, Hog Plum, Indian Mombin, Jew Plum, June Plum, Otaheite Apple, Polynesian Plum, Tahitian Quince, Vi Apple, Wi Apple, Yellow Plum",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Annona atemoya,"Atemoya, Custard Apple, Pineapple Sweetsop",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Annona diversifolia,"Cherimoya of the Lowlands, Ilama",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Annona glabra,"Alligator Apple, Bob Wood, Corkwood, Cow Apple, Mangrove Annona, Monkey Apple, Pond Apple",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Annona montana,"Mountain Soursop, Wild Custard Apple, Wild Soursop",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rollinia mucosa,"Biriba, Biribah, Rollinia, Lancewood, Wild Cachiman, Wild Custard Apple, Wild Sugar Apple",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Stelechocarpus burahol,"Burahol, Kepel, Kepel Apple",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Uvaria chamae,"Bush Banana, Finger Root",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Carissa macrocarpa,"Carissa, Big Num Num, Large Num Num, Natal Plum",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Carissa spinarum,"Bengal Currant, Carandas Plum, Carissa, Christ’ Thorns, Karanda",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Willughbeia angustifolia,"Kubal Madu, Pitabu, Serapit",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Willughbeia coriacea,"Kubal Tusu, Borneo Rubber",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Monstera deliciosa,"Breadfruit-Vine, Ceriman, Cut-Leaf-Philodendron, Delicious Monster, Fruit Salad Plant, hurricane-plant, Mexican Breadfruit, Monster Fruit, Monstera, Locust and Wild Honey, Pine Fruit Tree, Split-Leaf Philodendron, Swiss Cheese Plant, Window-Leaf",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Adonidia merrillii,"Adonidia Palm, Christmas Palm, Chinese Betel-Nut, Dwarf Royal Palm, Kerpis Palm, Manila Palm, Merrill Palm, Veitchia Palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Areca catechu,"Areca nut, Areca nut palm, Betel palm, Betelnut, Betel nut, Betelnut, Betelnut palm, Indian nut, Pinang palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Areca triandra,"Australian Areca Palm, Bungua, Clumping Betel Nut, Triandra Palm, Wild Areca Palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eleiodoxa conferta,"Asam Paya, Edible-Fruited Salak Palm, Kelubi",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lodoicea maldivica,"Coco-De-Mer, Coco De Mer Palm, Double Coconut, Double-Coconut, Love Nuts, Maldive Coconut, Sea Coconut, Sea-Coconut, Seychelles Coconut, Seychelles Nut, Seychelles Nut Palm, Seychelles Palm Nut Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nypa fruticans,"Mangrove Palm, Nipa, Nipa Palm, Nipah, Nypa Palm, Spelt Nipa, Water Coconut, Water Palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Phoenix reclinata,"Coffee Palm, Dwarf Date-Palm, False Date Palm, Feather Palm, Mukindu Palm, Senegal Date Palm, Swamp Date-Palm, Wild Date Palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salacca affinis,"Edible-Fruited Salak Palm, Jungle Salak, Palm Heart (Vegetable), Red Salak, Salak, Snakefruit",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salacca glabrescens,"Jungle Salak",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salacca magnifica,"Greater Salak, Remayong",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salacca wallichiana,"Edible-Fruited Rakum Palm, Edible-Fruited Salak Palm, Rakum Palm",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salacca zalacca,"Edible-Fruited Salak Palm, Edible Salacca, Salak, Salak Palm, Snake Fruit, Snake Palm, Snake-Skinned Fruit",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Serenoa repens,"American Dwarf Palm Tree, Cabbage Palm, Saw Palmetto, Scrub Palmetto, Serenoa",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Averrhoa dolichocarpa,Forest Bilimbi,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Averrhoa leucopetala,Forest Bilimbi,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Crescentia cujete,"Calabash, Calabash Tree, Gourd Tree, Hue Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Kiegelia africana,"African Sausage Tree, Cucumber Tree, Liver Sausage Tree, Sausage Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Oroxylum indicum,"Broken Bones Plant, Indian Trumpet Flower, Midday Marvel, Tree of Damocles",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Parmentiera cereifera,"Candle Tree, Candlestick Tree, Panama Candle Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Adansonia digitata,"African Baobab, Baobab, Bottle Tree, Cream Of Tartar Tree, Dead-Rat Tree, Ethiopian Sour Tree, Judas Fruit, Monkey-Bread Tree, Senegal Calabash, Sour Gourd, Upside Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Adansonia gregorii,"Australian Baobab, Boab, Cream Of Tartar Tree, Bottle Tree, Dead Rat Tree, Gouty Stem Tree, Sour Gourd",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ceiba pentandra,"Ceiba, Corkwood, Cotton Silk Tree, Cotton Tree, Cottonwood Tree, Java Cotton, Java Kapok, Kapok, Kapok Tree, Kapoktree, Silk Cotton Tree, Silk-Cottontree, White Silk Cotton Tree, White Silk-Cottontree, White-Flowered Silk-Cotton Tree",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio dulcis,"Red Durian, Lahong",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio graveolens,"Orange-Fleshed Durian, Red-Fleshed Durian, Yellow Durian",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio kinabaluensis,Durian Kinabalu,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio kutejensis,"Borneo Durian, Durian Nyekek",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio oxleyanus,"Oxyleyanus Durian, Durian Lai, Isu",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Durio testudinarum,"Tortoise Durian, Turtle Durian, Durian Kura-kura",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pachira aquatica,"American Chestnut, Fortune Tree, Guiana Chestnut, Guyana Chestnut, Malabar Chestnut, Money Plant, Money Tree, Provision Tree, Saba Nut, Shaving Brush Tree, Wild Cocoa",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pachira insignis,"Guiana Chestnut, Malabar Chestnut, Trinidad Pachira, Wild Breadnut, Wild Chataigne, Wild Chestnut",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Quararibea cordata,"Chupa-Chupa, Matisia, Sapote Columbiana, South American Sapote",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canarium decumanum,Pig Canary,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canarium indicum,"Blume Galip, Canarium Almond, Canarium Nut, Galip, Galip Nut, Java Almond, Java Olive, Kanari, Nangai Nut, Ngali Nut",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canarium odontophyllum,"Dabai, Sibu Olive",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canarium vulgare,"Chinese Olive, Java Almond, Kenari Nut, Kenari Nut Tree, Wild Almond",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dacryodes rostrata,Kembayau,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hylocereus megalanthus,"Pitahaya, Pitaya, Yellow Dragonfruit, Yellow Pitahaya",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hylocereus polyrhizus,"Belle Of The Night, Common Night Blooming Cereus, Conderella Plant, Dragon Fruit, Nanettikafruit, Night Blooming Cereus, Pitahaya, Red-fleshed Dragon Fruit, Red-fleshed Pitahaya, Red Pitahaya, Queen Of The Night, Strawberry Pear",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nopalea cochenillifera,"Cochineal Cactus, Cochineal Nopal Cactus, Cochineal-Plant, Nopal Cactus, Nopalea Grande, Nopales Opuntia, Prickly Pear, Tunita, Velvet Opuntia, Warm Hand, Wooly Joint Prickly Pear",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Opuntia ficus-indica,"Barbary-Fig, Indian Fig, Indian Fig Opuntia, Indian-Fig Prickly-Pear, Mission Cactus, Mission Prickly-Pear, Nopal, Nopalito, Prickly Pear, Smooth Mountain Prickly-Pear, Smooth Prickly-Pear, Spineless Cactus, Tuberous Prickly-Pear, Tuna Cactus",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Opuntia monacantha,"Barberry Fig, Barbary Fig, Cochineal Fig, Cochineal Prickly-Pear, Common Prickly Pear, Drooping Prickly Pear, Indian Fig, Prickly Pear",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Opuntia stricta,"Araluen Pear, Australian Pest Pear, Coastal Prickly Pear, Coastal Prickly-Pear, Common Pest Pear, Common Prickly Pear, Dildo, Eltham Indian Fig, Eltham Indian-Fig, Erect Prickly Pear, Erect Prickly-Pear, Erect Pricklypear, Erect Pricklypear Cactus, Gayndah Pear, Pakan, Pest Pear Of Australia, Pest Prickly-Pear, Pest Pricklypear, Sour Prickly Pear, Southern Spineless Cactus, Spineless Prickly Pear, Spiny Pest Pear, Sweet Prickly Pear, Sweet Prickly-Pear",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Vasconcellea x heilbornii,"Babaco, Champagne Fruit",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Juniperus communis,"Common Juniper, Fairy Circle, Dwarf Juniper, Ground Juniper, Hackmatack, Horse Savin, Juniper, Juniper Berry, Malchangel, Mountain Common Juniper, Mountain Juniper, Old Field Common Juniper, Prostrate Juniper, Siberian Juniper",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cycas revoluta,"False Sago, Sago Palm, Sago Palm of Japan, King Sago Palm, Sago Cycas, Sotetsu Nut",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canna indica,"Achira, African Arrowfoot, African Arrowroot, African Turmeric, Calenda, Canna, Canna Lily, English Shot, Edible Canna, Edible Arrowroot, English Shot (South America), Indian Canna Arrowroot, Indian Shot, Indian-Shot, Purple Arrowroot, Queensland Arrowroot, Sierra Leone Arrowroot, Wild Tapioca",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cibotium barometz,"Chain Fern, Chain Fern Rhizome, Cibot Rhizome, Cibota, Cibotium, Golden Chicken Fern, Golden Hair Dog Fern, Golden Moss, Golden Lamb, Lamb of Tartary, Scythian Lamb, Tartarian Lamb, Vegetable lamb of Tartary, Wooly Fern",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cyperus papyrus,"Bulrushes, Egyptian Paper Plant, Egyptian Paper Reed, Egyptian Papyrus, Mediterranean Sedge, Paper Reed, Papyrus, Papyrus Sedge",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cyperus rotundus,"Brown Nutsedge, Coco Grass, Java Grass, Ground Almond, Nutgrass, Nutsedge, Purple Nutsedge, Red Nutsedge",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dioscorea bulbifera,"Air Yam, Air Potato, Aerial Yam, Bubil Bitter Yam, Bearing Yam, Cheeky Yam, Malacca Yam, Otaheite Potato, Otaheite Yam, Potato Yam, Shoebutton Air Potato",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dioscorea esculenta,"Asiatic Yam, Birch Rind Yam, Chinese Yam, Goa Potato, Hausa Potato, Karen Potato, Lesser Yam, Sweet Yam, Spiny Chinese Yam",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dioscorea hamiltonii,"Mountain Yam, Yam",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dioscorea hispida,"Asiatic Bitter Yam, Intoxicating Yam, Spirit Yam, Wild Yam",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dioscorea oppositifolia,"Air Potato, Betel Yam, Chinese Potato, Chinese Yam, Cinnamon Vine, Cinnamon Yam, Korean Yam, Common Yam, Japanese Yam, Long Chinese Yam, Wild Yam",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tacca leontopetaloides,"Arrowroot, East Indian Arrowroot, Fiji Arrowroot, Indian Arrowroot, Polynesian Arrowroot, Tacca, Tahiti Arrowroot, Williams Arrowroot",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pachyrhizus ahipa,"Ahipa, Andean Bean, Andean Yam Bean, Yam Bean",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pueraria montana var. lobata,"Foot-A-Night Vine, Ko-Hemp, Kudsu, Kudzu, Kudzu Bean, Kudzu Hemp, Kudzu Vine, Japanese Arrowroot, Taiwan Kudzu, Vine-That-Ate-The-South, Tropical Kudzu, Wild Kudzu",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Iris x germanica,"Bearded Iris, Common Orrisroot, Flag, Florentine Orris, Florentine Iris, Garden Iris, German Iris, German Orrisroot, Iris, Orris, Orrisroot, Purple Flag, Queen Elizabeth Root, Tall Bearded German Iris, Tall Bearded Iris",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Maranta arundinacea,"Arrow Head, Arrow-root, Arrowroot, Bermuda Arrowroot, Maranta, Obedience Plant, St. Vincent Arrowroot, West Indian Arrowroot",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mirabilis expansa,"Chago, Mauka",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nymphaea odorata,"American White Water Lily, Beaver Root, Fragrant Water Lily, Sweet-Scented Water Lily, Tuberous Water Lily, White Water Lily",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nymphaea x rubra,"Red Water Lily, Red Indian Lily, Mini Water Lily, Dwarf Lily, Red Lily of the Nile",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Victoria amazonica,"Amazon Water Lily, Amazon Water Platter, Giant Amazon Water Lily, Giant Water Lily, Royal Water Lily, Victoria Lily, Water Maize",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Diuris semilunulata,"Donkey Orchid, Late Leopard Orchid, Spotted Double-Tail Orchid",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Diuris sulphurea,"Hornet Orchid, Tiger Orchid, Yellow Tiger Orchid Tiger Orchid, Hornet Orchid",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pterostylis curta,Blunt Greenhood,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pterostylis pedunculata,Maroonhood,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Chrysopogon zizanioides,"Cus-Cus, Cuscus Grass, Indian Couch Grass, Khus-Khus Grass, Kuskus, Vetiver, Vetiver Grass, Vetiveria",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eleusine indica,"Bullgrass, Crabgrass, Crow’s Foot, Crowfoot Grass, Crowsfoot Grass, Dog Grass, Foul Foot,Fowl Foot Grass, Fowl-Foot Grass, Goose Grass, Goosegrass, India Goosegrass, Indian Goose Grass, Indian Goosegrass, Iron Grass, Silver Crabgrass, Wire Grass, Wire Grass, Yard Grass, Yardgrass",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Morinda officinalis,"Chinese Herbal Morinda, Medicinal Indian Mulberry, Morinda Root",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eurycoma longifolia,"Ali’s Umbrella, Ali’s Walking Stick, Tongkat Ali, Long Jack, Longjack, Malaysian Ginseng, Manotes Asiatica, Picroxylon Siamese",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tropaeolum tuberosum,"Anu, Anyu, Bulbous Nasturtium, Capucine, Edible Nasturtium, Mashua, Patagonian Capucine, Peruvian Capucine, Peruvian Nasturtium, Tuber Nasturtium, Tuberous Nasturtium, Tuberous Rooted Nasturtium",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Typha angustifolia,"Cattail, Lesser Bulrush, Lesser Reed-Mace, Nail-Rod, Narrow-Leaf Cattail, Narrowleaf Cattail, Reed-Mace, Small Reed-Mace, Small Bulrush",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Typha domingensis,"Bulrush, Cattail, Indian Reed Mace, Narrow-leaf Cattail, Narrow-leaved Cumbungi, Lesser Reed Mace, Santo Domingo Cattail, Southern Cattail, Southern Reed Mace, Tall Cattail, Tule",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Alpinia conchigera,"Joint-whip Ginger, Lesser Alpinia, Mussel Galangal",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Alpinia latilabris,Shell Ginger,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Alpinia malaccensis,"Malacca Ginger, Malacca Galangal, Rieng Malacca",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Alpinia zerumbet,"Bright Ginger, Butterfly Ginger, Light Galangal, Pink Porcelain Lily, Pink Shell Heliconia, Shell Flower, Shell Ginger, Shell Plant, Variegated Ginger, Variegated Shell Ginger",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Curcuma aeruginosa,"Black Ginger, Hidden Lily, Pink and Blue Ginger",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Curcuma mangga,"Mango Ginger, Mango Turmeric",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Curcuma zanthorrhiza,"False Turmeric, Giant Curcuma, Indian Saffron, Java Turmeric, Javan Turmeric, Javanese Turmeric",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Curcuma zedoaria,"Cochin Turmeric, Hidden Lily Ginger, Indian Arrowroot, Kua, Long Zedoary, Round Zedoary, Setwall, White Turmeric, Wild Turmeric, Yellow Zedoary, Zedoary, Zedoary Turmeric",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Kaempferia rotunda,"Asian Crocus, Hainan Resurrection Lily, Himalayan Crocus, Indian Crocus, Peacock Ginger, Resurrection Lily, Round-rooted Galangal, Tropical Crocus",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Zingiber montanum,"Bengal Ginger, Bitter Ginger, Cassumunar Ginger, Thai Ginger",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Zingiber spectabile,"Beehive Ginger, Black Gingerwort, Champagne Beehive, Malaysian Ginger, Nodding Ginger",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Calophyllum inophyllum,"Alexandrian Laurel, Ball Nut, Ball Nut Tree, Beach Callophyllum, Beauty Leaf, Borneo Mahogany, Indian Laurel, India-Oil Nut, Laurelwood, Mastwood, Oi Nut Tree, Portia Tree, Poon, Poonay Oil Plant, Satin Touraga, Sweet-Scented Calophyllum",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia atroviridis,"Asam Gelugor, Som-Khaek",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia cowa,"Cowa, Cowa Mangosteen",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia dulcis,"Baniti, Egg Tree, Gourka, Mundu, Rata Fruit",plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia forbesii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia gummi-gutta,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia hombroniana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia humilis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia intermedia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia livingstonei,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia macrophylla,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia madruno,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia malaccensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia mangostana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia nervosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia nitida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia parvifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia prainiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia schomburgkiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia spicata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Garcinia xanthochymus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mammea americana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Terminalia catappa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Terminalia ferdinandiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Terminalia kaernbachii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Coccinia grandis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cucumis metuliferus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Luffa aegyptiaca,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Momordica cochinchinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Momordica subangulata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Siraitia grosvenorii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Trichosanthes cucumerina,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dillenia indica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dillenia philippinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dillenia serrata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Diospyros blancoi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Diospyros kaki,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Elateriospermum tapos,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hevea brasiliensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ricinus communis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Acacia cyclops,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Adenanthera pavonina,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Archidendron bubalinum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Archidendron jiringa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cajanus cajan,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Canavalia gladiata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cassia fistula,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Castanospermum australe,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cynometra cauliflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Delonix regia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dialium indum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Entada phaseolides,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Inga edulis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Inga feuillei,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Inga jinicuil,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Inocarpus fagifer,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Leucaena leucocephala,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lupinus angustifolius,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mucuna pruriens,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Parkia speciosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Psophocarpus tetragonolobus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Vigna mungo,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ginkgo biloba,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Gnetum gnemon,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Carya illinoensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Litsea garciae,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia asiatica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia edulis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia novae-hiberniae,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia procera,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia racemosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Barringtonia scortechinii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Couroupita guianensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lecythis ollaria,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lecythis pisonis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lecythis zabucaja,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Michelia mediocris,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bunchosia armeniaca,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Malpighia emarginata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cola acuminata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cola nitida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Grewia asiatica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Scaphium macropodum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sterculia foetida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sterculia monosperma,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sterculia parviflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Theobroma bicolor,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Theobroma grandiflorum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Thaumatococcus daniellii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lansium domesticum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sandoricum koetjape,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus hypargyreus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus altilis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus anisophyllus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus camansi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus dadah,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus elasticus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus glaucus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus integer,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus odoratissimus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus rigidus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus sericicarpus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Artocarpus tamaran,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ficus aspera,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ficus auriculata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ficus dammaropsis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ficus pumila,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ficus rubiginosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Morus alba,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Morus rubra,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Prainea limpato,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Treculia africana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Muntingia calabura,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa acuminata x balbisiana (AAB Group) ‘Horn Plantain’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa acuminata x balbisiana (ABB Group) ‘Saba’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa acuminata x balbisiana (AAB Group) ‘Pisang Raja’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa acuminata x balbisiana (AAB Group) ‘Silk’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa acuminata x balbisiana (ABB Group) ‘Bluggoe’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa coccinea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa troglodytarum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Musa velutina,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Horsfi eldia australiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Myristica fatua,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eugenia brasiliensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eugenia coronata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eugenia stipitata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eugenia uniflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Myrciaria dubia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Myrciaria vexator,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Myrtus communis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Plinia cauliflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Psidium acutangulum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Psidium cattleianum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Psidium friedrichsthalianum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Psidium guineense,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rhodomyrtus tomentosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium aqueum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium australe,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium cumini,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium jambos,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium luehmannii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium malaccense,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium polycephalum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium samarangense,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium smithii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syzygium suborbiculare,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Castanea sativa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Quercus infectoria,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ribes nigrum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ribes rubrum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ribes uva-crispa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ribes x nidigrolaria,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Molineria latifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ardisia crenata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ardisia elliptica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Scorodocarpus borneensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sarcotheca diversifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus conoideus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus dubius,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus julianettii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus leram,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus spiralis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pandanus tectorius,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Passiflora foetida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Passiflora ligularis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Passiflora miniata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Antidesma bunius,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea angulata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea dulcis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea edulis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea lanceolata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea macrocarpa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea motleyana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea racemosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Baccaurea ramiflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Phyllanthus emblica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Piper cubeba,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Piper retrofractum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amelanchier alnifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Chaenomeles speciosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cydonia oblonga,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eriobotrya japonica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Malus spectabilis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mespilus germanica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Prunus salicina,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pseudocydonia sinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pyrus bretschneideri,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rubus ursinus x idaeus ,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rubus x loganobaccus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sorbus domestica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x meyeri,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus amblycarpa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus australasica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus australis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus garrawayi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus hystrix,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus inodora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus japonica ,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus medica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus reticulata Satsuma Group,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus reticulata ‘Shiranui’,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus wintersii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x aurantiifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x floridana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x taitensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x limon,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Citrus x microcarpa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Clausena lansium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Merrillia caloxylon,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Poncirus trifoliata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Triphasia trifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Zanthoxylum simulans,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Foeniculum vulgare,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Trachyspermum ammi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Davidsonia pruriens,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Trapa natans,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Coix lachryma-jobi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Echinochloa frumentacea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Setaria italica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Zizania palustris,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Xanthophyllum amoenum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Coccoloba uvifera,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Macadamia tetraphylla,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hovenia dulcis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ziziphus mauritiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Morinda citrifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nauclea orientalis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dovyalis hebecarpa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Flacourtia indica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Flacourtia inermis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Flacourtia jangomas,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Flacourtia rukam,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pangium edule,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dianella caerulea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amomum aromaticum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amomum compactum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amomum longiligulare,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amomum tsao-ko,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dimocarpus fumatus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lepisanthes alata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lepisanthes fruticosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Litchi chinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nephelium cuspidatu,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nephelium lappaceum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nephelium maingayi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nephelium ramboutan-ake,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Paullinia cupana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pometia pinnata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Chrysophyllum oliviforme,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Manilkara jaimiqui,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Manilkara kauki,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mimusops elengi,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pouteria caimito,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pouteria campechiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pouteria viridis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Physalis peruviana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum betaceam,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum lasiocarpum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum linearifolium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum mammosum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum muricatum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum sessiliflorum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Solanum torvum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Phaleria capitata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pourouma cecropiifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tasmannia insipida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tasmannia lanceolata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tulbaghia violacea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Plumeria obtusa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Plumeria rubra,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Telosma cordata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Agave sisalana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Muscari neglectum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Polianthes tuberosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Yucca filamentosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Achillea millefolium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Acmella oleracea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ageratum conyzoides,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Argyranthemum frutescens,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bellis perennis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Calendula officinalis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Centaurea cyanus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Chrysanthemum morifolium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Chrysanthemum indicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cosmos sulphureus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dahlia coccinea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dahlia pinnata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Echinacea purpurea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Matricaria chamomilla,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tagetes erecta,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tagetes lucida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tagetes patula,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tagetes tenuifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tanacetum parthenium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tanacetum vulgare,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Taraxacum offi cinale,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Impatiens balsamina,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Impatiens walleriana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Begonia cucullata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Begonia x tuberhybrida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Spathodea campanulata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lobularia maritima,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Matthiola incana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Epiphyllum oxypetalum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mesua ferrea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lonicera confusa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lonicera japonica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dianthus barbatus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dianthus caryophyllus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dianthus chinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Combretum indicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ipomoea alba,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cheilocostus speciosus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Costus barbatus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Costus erythrophyllus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Costus productus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Doryanthes excelsa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Acacia cultriformis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Acacia longifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bauhinia purpurea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bauhinia variegata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Caesalpinia pulcherrima,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Clitoria ternatea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Erythrina variegata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Gliricidia sepium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hardenbergia violacea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mimosa pudica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pterocarpus indicus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Senna alata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Senna auriculata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Senna siamea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Senna timoriensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sesbania grandiflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sesbania javanica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Styphnolobium japonicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Trifolium pratense,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Trifolium repens,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Pelargonium crispum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Freesia leichtlinii subsp,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Gladiolus dalenii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Gladiolus grandiflorus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Agastache foeniculum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lavandula angustifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lavandula dentata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lavandula stoechas,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Salvia elegans,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sideritis scardica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Lilium lancifolium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tulip gesneriana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Limnocharis flava,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Magnolia denudata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Magnolia grandiflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Abutilon indicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Abutilon megapotamicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Alcea rosea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus mutabilis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus rosa-sinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus schizopetalus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus syriacus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus taiwanensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hibiscus tiliaceus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Malva sylvestris,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Malvaviscus arboreus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Azadirachta indica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Corymbia calophylla,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bougainvillea glabra,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Bougainvillea spectabilis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Mirabilis jalapa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nymphaea lotus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Nymphaea nouchali,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Forsythia × intermedia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Jasminum sambac,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Syringa vulgaris,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Fuchsia × hybrida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Oenothera speciosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Dendrobium bigibbum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Paeonia lactiflora,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Paeonia × suffruticosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eschscholzia californica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Antirrhinum majus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Saccharum spontaneum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Antigonon leptopus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Primula × polyantha,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Banksia grandis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Banksia integrifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Telopea speciosissima,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Aquilegia caerulea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rosa × hybrida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Rosa × rugosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Galium odoratum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Gardenia jasminoides,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ixora chinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ixora coccinea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ixora javanica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Boronia megastigma,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Petunia hybrida,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Camellia japonica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Tropaeolum majus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Typha orientalis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Viola hederacea,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Viola odorata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Viola tricolor,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Viola × wittrockiana,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hemerocallis lilioasphodelus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Etlingera elatior,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Etlingera hemisphaerica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Hedychium coronarium,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Zingiber zerumbet,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Sagittaria trifolia,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Arracacia xanthorrhiza,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Amorphophallus paeoniifolius,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cyrtosperma merkusii,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Panax ginseng,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Asparagus cochinchinensis,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Cordyline fruticosa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Ophiopogon japonicus,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Arctium lappa,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Eutrema japonicum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Raphanus raphanistrum,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Codonopsis javanica,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
+,Codonopsis lanceolata,,plant,"Lim, “Edible Medicinal and Non-Medicinal Plants”"
