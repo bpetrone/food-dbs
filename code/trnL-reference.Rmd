@@ -15,11 +15,26 @@ opts_knit$set(root.dir = file.path(getwd(), '..'))
 library(Biostrings)
 library(here)
 library(ShortRead) # for clean()
+library(taxonomizr) # for NCBI accession lookup
 library(tidyverse)
 
 source(here('code', 'functions', 'find_primer_pair.R'))
 source(here('code', 'functions', 'get_binomial.R'))
 source(here('code', 'functions', 'query_ncbi.R'))
+```
+
+```{r}
+theme_set(theme_bw() +
+               theme(
+                    axis.text = element_text(size = 12),
+                    axis.title = element_text(size = 14,
+                                              face = 'bold'),
+                    legend.title = element_text(size = 12,
+                                                face = 'bold'),
+                    strip.text = element_text(size = 12,
+                                              face = 'bold')
+                     )
+)
 ```
 
 ### Primer sequences
@@ -33,12 +48,12 @@ primers <- list(trnLG, trnLH)
 ### Dietary plants
 ```{r}
 plants <- 
-     here('data', 'raw', 'human-foods.csv') %>%
+     here('data', 'inputs', 'human-foods.csv') %>%
      read.csv(stringsAsFactors = FALSE) %>%
      filter(category == 'plant') %>% 
      pull(scientific_name)
 
-head(plants)
+length(plants)
 ```
 
 # Compile reference sequences
@@ -48,16 +63,18 @@ head(plants)
 Downloaded from RefSeq FTP site on 6/1/2021.
 ```{r}
 fs <- 
-     here('data', 'raw', 'organelles', 'refseq_plastid') %>% 
-     list.files(full.names = TRUE)
+     here('data', 
+          'inputs', 
+          'organelles',
+          'refseq_plastid') %>% 
+     list.files(full.names = TRUE,
+                pattern = 'fna.gz$')
 
 basename(fs)
 
 plastid <- 
-     c(readDNAStringSet(fs[1]), 
-       readDNAStringSet(fs[2]),
-       readDNAStringSet(fs[3]),
-       readDNAStringSet(fs[4]))
+     lapply(fs, readDNAStringSet) %>% 
+     do.call(c, .)
 
 plastid
 ```
@@ -75,7 +92,7 @@ names(plastid) <-
 
 names(plastid) <- 
      names(plastid) %>%
-     str_split(' voucher| isolate| culture| genotype| clone| ecotype') %>% 
+     str_split(' voucher| isolate| culture| genotype| clone| ecotype| bio-material') %>% 
      lapply('[[', 1) %>% 
      unlist()
 
@@ -101,7 +118,6 @@ names(plastid)[grep('(\\S+\\s){3,}', # More than 3 words
                     names(plastid))]
 ```
 
-
 ```{r}
 # Are any names duplicated?
 any(duplicated(names(plastid)))
@@ -109,12 +125,15 @@ any(duplicated(names(plastid)))
 
 ```{r}
 # Write to file
-# writeXStringSet(plastid,
-#                 here('data', 'processed', 'parsed-refs', 'RefSeq',
-#                      'refseq_plastid_species.fasta'))
+writeXStringSet(plastid,
+                here('data', 
+                     'outputs', 
+                     'parsed-refs',
+                     'RefSeq',
+                     'refseq_plastid_species.fasta'))
 ```
 
-### Find primer binding sites
+### Find primers
 
 ```{r}
 # Note this discrepancy-- could potentially do better screening of these sequences.  Worried that I am tossing things for Ns that occur nowhere near trnL-P6
@@ -130,9 +149,11 @@ refseq.trnL <- find_primer_pair(plastid,
 cat(length(refseq.trnL), 'sequences have the primer set')
 ```
 
-5290 from cleaned data
+### Subset to foods
 
-### Subset by food species
+Just doing this by a simple grep for now
+Could imagine it would be cleaner to process RefSeq to a comparable name as in our query
+Keep accessions from raw files, look up taxonomy, then assign a "lowest level" name that would correspond to entries in human-foods.txt.
 
 ```{r}
 # Find indices of entries matching 
@@ -145,6 +166,18 @@ cat('There are', length(plants), 'food plants in our query\n')
 # Subset
 refseq.trnL <- refseq.trnL[plants.i]
 cat(length(refseq.trnL), 'have a trnL sequence in the RefSeq plastid database')
+```
+
+```{r}
+# Strip name to only NCBI accession
+names(refseq.trnL) %>% head()
+
+names(refseq.trnL) <- 
+     gsub(names(refseq.trnL),
+     pattern = ' .+$',
+     replacement = '')
+
+head(names(refseq.trnL))
 ```
 
 ## NCBI
@@ -177,8 +210,6 @@ ncbi.trnL <- find_primer_pair(ncbi.trnL,
 cat(length(ncbi.trnL), 'sequences have the primer set')
 ```
 
-2996 from cleaned data, 2997 from sequences containing Ns. 
-
 ```{r}
 # Inspect names
 data.frame(names(ncbi.trnL))
@@ -195,69 +226,129 @@ ncbi.trnL <- ncbi.trnL[!(grepl('UNVERIFIED', names(ncbi.trnL)))]
 length(ncbi.trnL)
 ```
 
-### Tidy names
+```{r}
+# Strip name to only NCBI accession
+names(ncbi.trnL) %>% head()
+names(ncbi.trnL) <- 
+     names(ncbi.trnL) %>% 
+     gsub(pattern = ' .+$', replacement = '') %>% 
+     gsub(pattern = '^>', replacement = '')
 
-Lots of variation in descriptors.  Try pulling taxon name by NCBI query of accession number
+head(names(ncbi.trnL))
+```
+#  Tidy names
 
 ```{r}
-accs <- 
-     names(ncbi.trnL) %>% 
-     str_split(pattern = '\\s') %>% 
-     lapply('[[', 1) %>% 
-     unlist() %>% 
-     gsub(pattern = '>', replacement = '')
+accs <- c(names(refseq.trnL),
+          names(ncbi.trnL))
 
 head(accs)
+length(accs)
 ```
 
 ```{r}
-# Look up accession taxonomy with taxa package functions
-# Note-- this takes a long time depending on # of sequence IDs
-taxmap <- taxa::lookup_tax_data(accs, 
-                                type = 'seq_id')
-```
-
-```{r}
-str(taxmap$data)
-```
-
-```{r}
-# Want to combine these two, to get name for each query id
-# Get query info
-query_names <- 
-     data.frame(acc = taxmap$data$query_data,
-                taxon_id = names(taxmap$data$query_data))
-
-# Join to NCBI names
-ncbi_names <- taxmap$data$tax_data
-
-query_names <- 
-     left_join(query_names, ncbi_names)
-
-query_names
+# Look up accession taxonomy using taxonomizr-formatted SQL database
+# Need to have Isilon network drive mapped-- this is where database (70 Gb) currently stored
+# This takes a few minutes
+sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
+ids <- taxonomizr::accessionToTaxa(accs, sql)
 ```
 
 ```{r}
 # Any names missing?
-any(is.na(query_names$ncbi_name))
+any(is.na(ids))
+sum(is.na(ids))
 ```
 
 ```{r}
-# How complete are entries?
-query_names %>% 
-     group_by(ncbi_rank) %>% 
-     count()
+# Which ones?
+accs[is.na(ids)]
+```
+
+Wow that's amazing-- think this is literally the gap between when I made database until now
+
+NC_070364.1 Physalis philadelphica (tomatillo) chloroplast, uploaded 1/26/2023
+ON054983.1 Parkia speciosa (bitter bean) 1/22/2023
+ON054982.1 "
+ON054979.1 Solanum torvum (turkey berry) 1/22/2023
+ON054978.1 "
+ON054977.1 "
+ON054972.1 Solanum lasiocarpum 1/22/2023
+ON054971.1 "
+ON054970.1 "
+ON054969.1 "
+ON054968.1 "
+
+```{r}
+# Remove these before proceeding
+accs <- accs[!is.na(ids)]
+ids <- ids[!is.na(ids)]
 ```
 
 ```{r}
-# Hmmm-- what's this forma and no rank?
-query_names %>% 
-     filter(ncbi_rank %in% c('forma', 'no rank'))
+taxonomy.raw <- 
+     taxonomizr::getRawTaxonomy(ids, sql)
 ```
+
 ```{r}
-# Rename sequences
-names(ncbi.trnL) <- paste(query_names$acc,
-                          query_names$ncbi_name)
+# Pull desired levels from this structure
+# Not working within getTaxonomy function
+vars <- c("superkingdom", 
+          "phylum", 
+          "class", 
+          "order", 
+          "family", 
+          "genus",
+          "species",
+          "subspecies",
+          "varietas",
+          "forma")
+
+taxonomy <- data.frame(superkingdom = NULL,
+                       phylum = NULL,
+                       class = NULL,
+                       order = NULL,
+                       family = NULL,
+                       genus = NULL,
+                       species = NULL,
+                       subspecies = NULL,
+                       varietas = NULL,
+                       forma = NULL)
+
+for (i in seq_along(taxonomy.raw)){
+     row.i <- 
+          taxonomy.raw[[i]] %>% 
+          t() %>% 
+          data.frame() 
+     
+     # Pick columns we're interested in
+     shared <- intersect(vars, names(row.i))
+     row.i <- select(row.i, one_of(shared))
+     
+     taxonomy <- bind_rows(taxonomy, row.i)
+}
+
+# Add taxon ID
+taxonomy$taxid <- 
+     names(taxonomy.raw) %>% 
+     trimws() %>% 
+     as.integer()
+
+taxonomy <- select(taxonomy, taxid, everything())
+```
+
+```{r}
+head(taxonomy)
+```
+
+```{r}
+# Join back to accession
+dim(taxonomy)
+taxonomy <- 
+     data.frame(accession = accs,
+                taxid = ids) %>% 
+     full_join(distinct(taxonomy))
+dim(taxonomy)
 ```
 
 ## Combine
@@ -273,26 +364,24 @@ length(ncbi.trnL)
 # Data frame of results
 seqs.df <- 
      data.frame(source = 'RefSeq',
-                name = names(refseq.trnL),
+                accession = names(refseq.trnL),
                 seq = as.character(refseq.trnL))
 
 seqs.df <- 
      data.frame(source = 'GenBank',
-                name = names(ncbi.trnL),
+                accession = names(ncbi.trnL),
                 seq = as.character(ncbi.trnL)) %>% 
      bind_rows(seqs.df)
 
 head(seqs.df)
 ```
+
 ```{r}
-# Clean up name
+# Re-name with lowest-level taxon
+taxonomy <- MButils::lowest_level(taxonomy)
 seqs.df <- 
      seqs.df %>% 
-     separate(name, 
-              into = c('acc', 'taxon'),
-              sep = ' ',
-              extra = 'merge',
-              remove = FALSE)
+     left_join(select(taxonomy, accession, taxon = name)) 
 ```
 
 ```{r}
@@ -312,6 +401,41 @@ seqs.df %>%
                unique = n_distinct(taxon))
 ```
 ```{r}
+# Plot this
+seqs.df %>% 
+     group_by(source) %>% 
+     summarize(across(.cols = c(taxon, seq),
+                      .fns = list(total=length, 
+                                  unique=n_distinct))) %>% 
+     pivot_longer(-source,
+                  names_to = 'unit',
+                  values_to = 'value') %>% 
+     separate(unit,
+              into = c('unit', 'type'),
+              sep = '_') %>% 
+     mutate(unit = factor(unit,
+                          levels = c('taxon', 'seq'),
+                          labels = c('Taxa', 'Sequences')),
+            source = factor(source,
+                            levels = c('RefSeq', 'GenBank')),
+            type = str_to_title(type)) %>% 
+     ggplot(aes(x = source, y = value, fill = type)) +
+          geom_bar(stat = 'identity',
+                   position = 'dodge') +
+     facet_wrap(~unit) +
+     labs(y = 'Count') +
+     scale_fill_manual(values = c('#6b6b6b', '#91b3d7')) +
+     theme(axis.title.x = element_blank(),
+           legend.title = element_blank())
+```
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+# ggsave(here('results',
+#             'Total and unique contributions by source.pdf'),
+#        height = 3, width = 5)
+```
+
+```{r}
 # What's the intersection between taxa in each set?
 gb.taxa <- 
      seqs.df %>% 
@@ -327,21 +451,33 @@ refseq.taxa <-
 ```
 
 ```{r}
-intersect(gb.taxa, refseq.taxa) %>% 
-     length()
+# Make dataframe for plot input
+db.df <- 
+     data.frame(taxon = unique(seqs.df$taxon)) %>% 
+     mutate(RefSeq = taxon %in% refseq.taxa,
+            GenBank = taxon %in% gb.taxa)
+
+head(db.df)
 ```
 
 ```{r}
-# In RefSeq, but not NCBI
-setdiff(refseq.taxa, gb.taxa) %>% 
-     length()
+# Version with labels for reference
+eulerr::euler(db.df[,c('RefSeq', 'GenBank')]) %>% 
+     plot(
+          fills = c('#e15759', 'white'),
+          labels = FALSE,
+          shape = "ellipse", 
+          quantities = TRUE
+     )
+```
+```{r}
+plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
+# pdf(here('results',
+#          paste0(plotID,
+#                 '_Taxon contributions of RefSeq and GenBank.pdf')),
+#     height = 3, width = 3)
 ```
 
-```{r}
-# In NCBI, but not RefSeq
-setdiff(gb.taxa, refseq.taxa) %>% 
-     length()
-```
 
 What's weird here is that the nucleotide database should *include* RefSeq, so I don't know why I'm pulling some things out but not others.
 
@@ -358,10 +494,6 @@ length(missing)
 #### QC
 
 Check for common errors
-
-```{r}
-any(duplicated(seqs.df$ID))
-```
 
 ```{r}
 # Check for degenerate nucleotide characters
@@ -389,8 +521,9 @@ seqs.df %>%
 Okay, so for all taxa but
 - Amaranthus cruentus
 - Amaranthus dubius
-- Amaranthus tricolor
+- Costus erythrophyllus
 - Vaccinium tenellum
+- Victoria amazonica
 
 we are covered by a second sequence. 
 
@@ -411,6 +544,11 @@ rev_err <- floor(0.2*length(trnLH))
 
 fwd_err
 rev_err
+```
+
+```{r}
+ref <- DNAStringSet(seqs.df$seq)
+names(ref) <- paste(seqs.df$accession, seqs.df$taxon)
 ```
 
 ```{r}
