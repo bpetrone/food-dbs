@@ -39,7 +39,8 @@ current <-
           'outputs', 
           'dada2-compatible', 
           'trnL', 
-          'trnLGH.fasta') %>%
+          # 'trnLGH.fasta') %>%
+          'trnLGH_update.fasta') %>%
      readDNAStringSet()
 
 current
@@ -177,39 +178,87 @@ ggsave(here('results',
 This could theoretically be redone with the MButils::asv_to_taxonomy() function, but here I also want to pipe forward the common name column, and the code doesn't yet accommodate that. 
 
 ```{r}
-taxtab <- MButils::assignSpecies_mod(unique(current.df$seq),
-                                     refFasta = here('data',
-                                                     'outputs',
-                                                     'dada2-compatible',
-                                                     'trnL',
-                                                     'trnLGH.fasta'))
-```
-
-Now want to build out whole tree
-```{r}
-# Get taxmap object
-taxtab <- 
-     taxtab %>%
-     separate(col = Species,
-              into = c('index', 'label'), sep = '\\s',
-              extra = 'merge')
-
-taxmap <- MButils::lookup_tax_data(taxtab, 
-                                   type = 'seq_id', 
-                                   column = 'index')
-```
-
-```{r}
-# Join to taxonomy
-taxtab.species <- MButils::asv_to_taxonomy(taxmap)
+sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
+taxids <- 
+     taxonomizr::accessionToTaxa(current.df$accession,
+                                 sql)
 ```
 
 ```{r}
 # Get last common ancestor of all matched taxonomic assignments
-taxtab.lca <- MButils::lca(taxtab.species)
+taxonomy.raw <- 
+     taxonomizr::getRawTaxonomy(taxids, sql)
 ```
 
 ```{r}
+# Pull desired levels from this structure
+# Not working within getTaxonomy function
+vars <- c("superkingdom", 
+          "phylum", 
+          "class", 
+          "order", 
+          "family", 
+          "genus",
+          "species",
+          "subspecies",
+          "varietas",
+          "forma")
+
+taxonomy <- data.frame(superkingdom = NULL,
+                       phylum = NULL,
+                       class = NULL,
+                       order = NULL,
+                       family = NULL,
+                       genus = NULL,
+                       species = NULL,
+                       subspecies = NULL,
+                       varietas = NULL,
+                       forma = NULL)
+
+for (i in seq_along(taxonomy.raw)){
+     row.i <- 
+          taxonomy.raw[[i]] %>% 
+          t() %>% 
+          data.frame() 
+     
+     # Pick columns we're interested in
+     shared <- intersect(vars, names(row.i))
+     row.i <- select(row.i, one_of(shared))
+     
+     taxonomy <- bind_rows(taxonomy, row.i)
+}
+
+# Add taxon ID
+taxonomy$taxid <- 
+     names(taxonomy.raw) %>% 
+     trimws() %>% 
+     as.integer()
+
+taxonomy <- select(taxonomy, taxid, everything())
+```
+
+```{r}
+head(taxonomy)
+```
+
+```{r}
+# Now join these to sequences, group by sequence, use taxonomizr function
+current.df <- bind_cols(current.df, taxonomy)
+```
+
+```{r}
+# How many do I expect?
+n_distinct(current.df$seq)
+assignments <- 
+     taxonomy %>% 
+     select(-taxid) %>% 
+     taxonomizr::condenseTaxa(.,
+                              groupings = current.df$seq)
+dim(assignments)
+```
+
+
+```{r}
 # To what label are assignments made?
-colSums(!is.na(taxtab.lca))/nrow(taxtab.lca)
+colSums(!is.na(assignments))/nrow(assignments)
 ```
