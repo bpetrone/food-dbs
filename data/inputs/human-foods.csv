@@ -118,7 +118,6 @@ needs_QC,scientific_name,common_name,category,source
 1,Iniidae,dolphin,animal,JL
 ,Labeo rohita,roho labeo,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Lagocephalus,fugu fish,animal,JL
-,Laminaria japonica,japanese kelp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Lasius fuliginosus,"jet ant, jet black ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Lates calcarifer,barramundi,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Latidae,Asian sea bass,animal,JL
@@ -1334,4 +1333,5 @@ needs_QC,scientific_name,common_name,category,source
 ,Ziziphus jujuba,"jujube, red date",plant,BP
 ,Ziziphus mauritiana,"Bear Tree, Ber, Chinee Apple, Common Jujube, Cottony Jujube, Desert Apple, Dunks, Indian Cherry, Indian Jujube, Indian Plum, Jujube, Sour Jujube, Yunnan Jujube, Yunnan Spiny Jujube",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Gelidium,red algae (agar),,"Eschliman, ""Ingredients"""
+,Laminaria japonica,japanese kelp,,FAO Cultured Aquatic Species Fact Sheets
 ,Nostoc flagelliforme,fat choy,,SJ
