@@ -639,14 +639,7 @@ seqs.df <-
 dim(seqs.df)
 ```
 
-## Formats
-
-### Species
-
-As-is:
-```{r}
-trnL
-```
+## Get taxonomy
 
 ### Taxonomy
 
@@ -718,6 +711,7 @@ seqs.df <- bind_cols(seqs.df, taxonomy)
 
 ## Save
 
+### DADA2
 ```{r}
 # Sort alphabetically (first by species name, and then accession number)
 seqs.df <- arrange(seqs.df, 
@@ -743,12 +737,13 @@ trnL
 ```
 
 ```{r}
-names(trnL) <-
+seqs.df <- 
      seqs.df %>% 
      unite(col = 'name',
            superkingdom:forma,
-           sep = ';') %>% 
-     pull(name)
+           sep = ';') 
+
+names(trnL) <- seqs.df$name
 ```
 
 ```{r}
@@ -758,5 +753,59 @@ names(trnL) <-
 #                      'dada2-compatible',
 #                      'trnL',
 #                      'trnLGH_taxonomy.fasta'))
+```
+
+### QIIME2 
+
+Taxonomic assignment in QIIME2 with `classify-consensus-vsearch` requires two files:
+- `i-reference-reads`, a QIIME artifact containing a FASTA file of sequences identified by their accession
+- `i-reference-taxonomy`, a QIIME artifact containing a TSV (tab-separated value) file with two columns: "Feature ID", the same accessions, and "Taxon", the taxonomic lineage with ranks separated by semicolons
+
+```{r}
+outdir <- here('data',
+               'outputs',
+               'qiime2-compatible')
+
+Sys.setenv(QIIME2 = outdir)
+```
+
+Note that QIIME2 requires that the FASTA file have unique accessions, so make these unique before proceeding
+
+```{r}
+seqs.df <- mutate(seqs.df,
+                  acc = make.unique(acc,
+                                    sep = '_'))
+
+names(trnL) <- seqs.df$acc
+# writeXStringSet(trnL,
+#                 file.path(outdir,
+#                           'trnL-sequences.fasta'))
+```
+
+```{r}
+# seqs.df %>%
+#      select(`Feature ID` = acc,
+#             Taxon = name) %>%
+#      write_delim(delim = '\t',
+#                  file.path(outdir,
+#                            'trnL-taxonomy.tsv'))
+```
+
+```{bash engine.opts='-l'}
+# Running this block requires a QIIME2 conda environment on local machine
+# Note that yours may differ from the "qiime2-2022.8"; you can find correct name by running conda env list in the terminal
+# Convert both of the above objects to QIIME2 artifacts (QZA)
+cd "$QIIME2"
+conda activate qiime2-2022.8 
+
+qiime tools import \
+     --input-path trnL-sequences.fasta \
+     --output-path trnL-sequences.qza \
+     --type 'FeatureData[Sequence]'
+     
+qiime tools import \
+     --input-path trnL-taxonomy.tsv \
+     --output-path trnL-taxonomy.qza \
+     --type 'FeatureData[Taxonomy]'
 ```
 
