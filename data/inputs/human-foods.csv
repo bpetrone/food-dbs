@@ -692,7 +692,9 @@ needs_QC,scientific_name,common_name,category,source
 ,Dahlia coccinea,Red Dahlia,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dahlia pinnata,"Aztec Dahlia, Dahlia, Garden Dahlia, Pinnate Dahlia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Daucus carota,wild carrot,plant,BP
-,Daucus carota subsp. sativus,carrot,plant,BP
+,Daucus carota subsp. sativDavidsonia jerseyanaus,carrot,plant,BP
+,Davidsonia jerseyana,"Davidson's plum, Mullumbimby plum",plant,"Newton, ""The Oldest Foods on Earth"""
+,Davidsonia johnsonii,smooth Davidson's plum,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Davidsonia pruriens,"Davidson plum, Davidson’s Plum, Davidsonia Plum, Queensland Davidson plum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Delonix regia,"False Acacia, Flambouyant, Flamboyant, Flametree, Flame-Of-The-Forest, Gold Mohur, Gul Mohr, Julu Tree, Malinche, Peacock-Flower, Poinciana, Red Tree, Royal Poinciana",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dendrobium bigibbum,"Cooktown Orchid, Den-Phal, Mauve Butterfly Orchid, The Two-Humped Dendrobium",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1245,6 +1247,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Styphnolobium japonicum,"Chinese Scholar Tree, Japanese Pagoda Tree, Pagoda Tree, Scholar Tree, Umbrella Tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Synsepalum dulcificum,miracle berry,plant,JL
 ,Syringa vulgaris,"Common Lilac, French Lilac, Lilac, Syringa",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Syzygium anisatum,"ringwood, aniseed tree, aniseed myrtle, anise myrtle",plant,"Newton, ""The Oldest Foods on Earth""
 ,Syzygium aqueum,"Bell Apple, Bell Fruit, Water Apple, Water Cherry, Watery Rose Apple",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Syzygium aromaticum,clove,plant,BP
 ,Syzygium australe,"Brush Cherry, Creek Lilly Pilly, Creek Satinash, Magenta Cherry, Purple Monkey Apple, Scrub Cherry",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
