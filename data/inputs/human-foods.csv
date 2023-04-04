@@ -7,6 +7,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Actinopyga mauritiana,surf redfish,animal,Australian Fisheries Management Authority
 ,Alces alces,moose,animal,BP
 ,Alectura lathami,"Australian brushturkey, Australian brush-turkey, gweela, scrub turkey, bush turkey",animal,"Newton, ""The Oldest Foods on Earth"""
+,Alopias vulpinus,Atlantic common thresher shark,animal,NOAA Fisheries
 1,Alosinae,shad,animal,JL
 ,Alphitobius diaperinus,lesser mealworm,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Anacridium melanorhodon melanorhodon,tree locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
@@ -17,6 +18,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Anguilla japonica,japanese eel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Anoplopoma fimbria,"Sablefish, black cod",animal,JL
 ,Anser anser,greylag goose,animal,BP
+,Aphareus rutilans,silverjaw snapper,animal,NOAA Fisheries
 ,Apis cerana,eastern honey bee,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Apis dorsata,giant honey bee,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Apis mellifera,honeybee,animal,JL
@@ -27,6 +29,8 @@ needs_QC,scientific_name,common_name,category,source
 ,Artemia,brine shrimps,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Aspongopus nepalensis,"stink bug, ghondibug",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Astacoidea,"crayfish, crawfish",animal,JL
+,Atheresthes stomias,arrowtooth flounder,animal,NOAA Fisheries
+,Balistes capriscus,gray triggerfish,animal,NOAA Fisheries
 ,Barbonymus gonionotus,silver barb,animal,BP
 ,Barbonymus schwanenfeldii,tinfoil barb,animal,BP
 ,Batocera roylei,beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
@@ -34,6 +38,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Bombyx mori,silkworm,animal,SJ
 ,Bos taurus,cattle,animal,BP
 ,Bramidae,pomfret,animal,JL
+,Brevoortia tyrannus,Atlantic menhaden,animal,NOAA Fisheries
 ,Bubalus bubalis,water buffalo,animal,BP
 ,Cairina moschata,muscovy duck,animal,BP
 ,Callinectes sapidus,atlantic blue crab,animal,BP
@@ -41,10 +46,13 @@ needs_QC,scientific_name,common_name,category,source
 ,Canis lupus,wolf,animal,BP
 ,Capra hircus,goat,animal,BP
 ,Carassius carassius,crucian carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Carcharhinus limbatus,Atlantic blacktip shark,animal,NOAA Fisheries
 1,Cardiidae,cockle,animal,JL
 ,Carebara vidua,black ant,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Catla catla,catla,animal,FAO Cultured Aquatic Species Fact Sheets
+,Caulolatilus microps,tilefish,animal,NOAA Fisheries
 ,Cavia porcellus,guinea pig,animal,JL
+,Centropristis striata,black sea bass,animal,NOAA Fisheries
 ,Centropus sinensis,crow pheasant,animal,BP
 ,Cephalophus natalensis,red forest duiker,animal,BP
 ,Cephenemyia trompe,caribou nose bot fly,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
@@ -65,6 +73,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Cirrhinus mrigala,mrigal carp,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Citharichthys,Sanddab,animal,JL
 ,Clarias gariepinus,north african catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Clupea harengus,Atlantic herring,animal,NOAA Fisheries
 1,Clupeidae,herring,animal,JL
 ,Concholepas concholepas,"loco, Chilean abalone",animal,JL
 1,Coregonus,whitefish,animal,JL
@@ -89,28 +98,39 @@ needs_QC,scientific_name,common_name,category,source
 ,Encosternum delegorguei,edible stink bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Endoxyla leucomochla,witchetty grub,animal,"Newton, ""The Oldest Foods on Earth"""
 1,Engraulidae,anchovy,animal,JL
+,Engraulis mordax,northern anchovy,animal,NOAA Fisheries
+,Eopsetta jordani,petrale sole,animal,NOAA Fisheries
 1,Epinephelinae,Grouper,animal,JL
 ,Epinephelus coioides,orange-spotted grouper,animal,FAO Cultured Aquatic Species Fact Sheets
+,Epinephelus itajara,Atlantic goliath grouper,animal,NOAA Fisheries
+,Epinephelus morio,red grouper,animal,NOAA Fisheries
 1,Equus africanus asinus,donkey,animal,SJ
 ,Equus caballus,horse,animal,BP
 ,Eriocheir sinensis,chinese mitten crab,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Esox,pike,animal,JL
+,Etelis carbunculus,squirrelfish snapper,animal,NOAA Fisheries
+,Etelis coruscans,longtail snapper,animal,NOAA Fisheries
 ,Eucidaris tribuloides,slate pencil urchin,animal,BP
 ,Evechinus chloroticus,kina (new zealand urchin),animal,BP
 1,Exocoetidae,"flying fish, tobiko (roe)",animal,JL
 ,Felis catus,cat,animal,BP
 ,Formica rufa,"red wood ant, southern wood ant, horse ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gadus,Cod,animal,JL
+,Gadus chalcogrammus,Alaska pollock,animal,NOAA Fisheries
+,Gadus macrocephalus,Pacific cod,animal,NOAA Fisheries
 ,Gadus morhua,atlantic cod,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Galatheoidea,"langostino, squat lobster",animal,JL
 ,Gallus gallus,chicken,animal,BP
 ,Glyptocephalus cynoglossus,"Witch, righteye flounder",animal,JL
+,Glyptocephalus zachirus,rex sole,animal,NOAA Fisheries
 ,Gryllodes sigillatus,tropical house cricket,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gryllus,field cricket,animal,BP
 1,Harpadon nehereus,"Bombay duck, bummalo",animal,JL
 ,Helix pomatia,escargot,animal,BP
 ,Hemijana variegata,edible caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Hippocampus comes,tiger tail seahorse,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hippoglossoides elassodon,flathead sole,animal,NOAA Fisheries
+,Hippoglossoides platessoides,American plaice,animal,NOAA Fisheries
 ,Hippoglossus hippoglossus,halibut,animal,JL
 ,Hippoglossus stenolepis,halibut,animal,JL
 1,Hippoidea,"sand crab, mole crab",animal,JL
@@ -123,28 +143,41 @@ needs_QC,scientific_name,common_name,category,source
 ,Hypoderma tarandi,caribou warble fly,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Hypophthalmichthys molitrix,silver carp,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Hypophthalmichthys nobilis,bighead carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hyporthodus quernus,"Seale's grouper, Hawaiian grouper",animal,NOAA Fisheries
+,Ictalurus furcatus,blue catfish,animal,NOAA Fisheries
 ,Ictalurus punctatus,channel catfish,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Imbrasia belina,mopane caterpillar,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Iniidae,dolphin,animal,JL
+,Isurus oxyrinchus,Pacific shortfin mako shark,animal,NOAA Fisheries
 ,Jasus edwardsii,"southern rock lobster, red rock lobster, spiny rock lobster",animal,"Newton, ""The Oldest Foods on Earth"""
+,Katsuwonus pelamis,"Atlantic skipjack tuna, Pacific skipjack tuna",animal,NOAA Fisheries
 ,Labeo rohita,roho labeo,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Lagocephalus,fugu fish,animal,JL
+,Lampris guttatus,opah,animal,NOAA Fisheries
 ,Lasius fuliginosus,"jet ant, jet black ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Lates calcarifer,barramundi,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Latidae,Asian sea bass,animal,JL
+,Lepidopsetta billineta,southern rock sole,animal,NOAA Fisheries
+,Lepidopsetta polyxystra,northern rock sole,animal,NOAA Fisheries
 ,Lethocerus indicus,giant water bug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Leucoraja ocellata,winter skate,animal,NOAA Fisheries
+,Limanda aspera,yellowfin sole,animal,NOAA Fisheries
+,Limanda ferruginea,yellowtail flounder,animal,NOAA Fisheries
 1,Lithodidae,king crab,animal,JL
 ,Litopenaeus vannamei,whiteleg shrimp,animal,BP
 ,Littorina littorea,periwinkle,animal,JL
 1,Lophius,Monkfish,animal,JL
+,Lophius americanus,Monkfish,animal,NOAA Fisheries
 ,Lopholatilus chamaeleonticeps,golden tilefish,animal,NOAA Fisheries
 1,Lutjanidae,Snapper,animal,JL
+,Lutjanus campechanus,red snapper,animal,NOAA Fisheries
 ,Macrobrachium rosenbergii,giant river prawn,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Macropus fuliginosus,"western grey kangaroo, western grey giant kangaroo, black-faced kangaroo, mallee kangaroo, sooty kangaroo",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Macropus giganteus,"eastern grey kangaroo, great grey kangaroo, forester kangaroo",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Macrotermes bellicosus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Macrotermes subhyalinus,winged termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Magallana gigas,pacific cupped oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Makaira nigricans,Pacific blue marlin,animal,NOAA Fisheries
 1,Malacanthidae,tilefish,animal,JL
 ,Mallotus villosus,"capelin, masago (roe)",animal,JL
 1,Medusozoa,jellyfish,animal,JL
@@ -152,17 +185,22 @@ needs_QC,scientific_name,common_name,category,source
 1,Meleagris,turkey,animal,BP
 ,Melophorus bagoti,red honey ant,animal,"Newton, ""The Oldest Foods on Earth"""
 ,Mercenaria mercenaria,northern quahog,animal,FAO Cultured Aquatic Species Fact Sheets
+,Mercluccius productus,"Pacific whiting, hake",animal,NOAA Fisheries
 ,Merlangius merlangus,whiting,animal,JL
 1,Merlucciidae,hake,animal,JL
+,Merluccius bilinearis,silver hake,animal,NOAA Fisheries
 ,Mesocentrotus franciscanus,red sea urchin,animal,BP
 ,Metacarcinus magister,dungeness crab,animal,JL
 ,Microcosmus sabatieri,"sea fig, violet",animal,JL
+,Microstomus pacificus,Dover sole,animal,NOAA Fisheries
 ,Mizuhopecten yessoensis,yesso scallop,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Monochamus versteegi,beetle,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Morone chrysops x Morone saxatilis,striped bass hybrid,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Morone saxatilis,striped bass,animal,JL
 ,Mugil cephalus,flathead grey mullet,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Mugilidae,Mullet,animal,JL
+,Mycteroperca bonaci,black grouper,animal,NOAA Fisheries
+,Mycteroperca microlepis,gag grouper,animal,NOAA Fisheries
 ,Mytilus edulis,blue mussel,animal,BP
 ,Mytilus galloprovincalis,mediterranean mussel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Nautilus,nautilus,animal,JL
@@ -202,13 +240,16 @@ needs_QC,scientific_name,common_name,category,source
 ,Panulirus homarus,scalloped spiny lobster,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Panulirus ornatus,tropical rock lobster,animal,Australian Fisheries Management Authority
 ,Paracentrotus lividus,atlantic purple sea urchin,animal,BP
+,Paralichthys dentatus,summer flounder,animal,NOAA Fisheries
 ,Paralichthys lethostigma,flounder,animal,BP
 1,Parastacoidea,crayfish,animal,JL
+,Parophrys vetulus,English sole,animal,NOAA Fisheries
 1,Pectinidae,scallop,animal,JL
 ,Penaeus indicus,indian white prawn,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Penaeus monodon,black tiger shrimp,animal,BP
 ,Penaeus setiferus,white shrimp,animal,BP
 ,Penaeus vannamei,whiteleg shrimp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Peprilus triacanthus,butterfish,animal,NOAA Fisheries
 ,Perca fluviatilis,common perch,animal,BP
 ,Perna canaliculus,new zealand mussel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Petromyzontiformes,lamprey,animal,JL
@@ -218,16 +259,24 @@ needs_QC,scientific_name,common_name,category,source
 1,Platanistidae,dolphin,animal,JL
 ,Pollachius pollachius,pollock,animal,JL
 ,Pollachius virens,pollock,animal,JL
-,Pomatomus saltatrix,shad,animal,JL
+,Polyprion americanus,wreckfish,animal,NOAA Fisheries
+,Pomatomus saltatrix,bluefish,animal,NOAA Fisheries
+,Pristipomoides filamentosus,"crimson jobfish, pink snapper",animal,NOAA Fisheries
+,Pristipomoides sieboldii,Von Siebold's snapper,animal,NOAA Fisheries
+,Pristipomoides zonatus,Brigham's snapper,animal,NOAA Fisheries
 ,Procambarus clarkii,red swamp crawfish,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Pseudacanthotermes militaris,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Pseudacanthotermes spiniger,termite,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Pseudopleuronectes americanus,winter flounder,animal,NOAA Fisheries
 ,Rachycentron canadum,cobia,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Rajidae,Skate,animal,JL
 ,Rana catesbeiana,american bull frog,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Rangifer tarandus,caribou,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Rastrineobola argenta,silver cyprinid,animal,BP
 ,Rattus rattus,rat,animal,BP
+,Reinhardtius hippoglossoides,Greenland turbot,animal,NOAA Fisheries
+,Rhizoprionodon terraenovae,Atlantic sharpnose shark,animal,NOAA Fisheries
+,Rhomboplites aurorubens,vermilion snapper,animal,NOAA Fisheries
 ,Rhynchophorus phoenicis,African Palm Weevil,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Ruditapes decussatus,grooved carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ruditapes philippinarum,japanese carpet shell,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -243,12 +292,26 @@ needs_QC,scientific_name,common_name,category,source
 1,Scaridae,Parrotfish,animal,JL
 ,Schistocerca gregaria,desert locust,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Sciaenops ocellatus,red drum,animal,FAO Cultured Aquatic Species Fact Sheets
+,Scomber colias,Atlantic chub mackerel,animal,NOAA Fisheries
+,Scomber japonicus,Pacific mackerel,animal,NOAA Fisheries
+,Scomber scombrus,Atlantic mackerel,animal,NOAA Fisheries
+,Scomberomorus cavalla,king mackerel,animal,NOAA Fisheries
 ,Scomberomorus lineolatus,streaked spanish mackerel,animal,BP
+,Scomberomorus maculatus,Spanish mackerel,animal,NOAA Fisheries
+,Scophthalmus aquosus,windowpane flounder,animal,NOAA Fisheries
 ,Scophthalmus maximus,turbot,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Scophthalmus rhombus,brill,animal,JL
 ,Scorpaena scrofa,"red scorpionfish, bigscale scorpionfish, large-scaled scorpion fish, rascasse",animal,"Newton, ""The Oldest Foods on Earth"""
 1,Scylla,mud crab,animal,JL
 ,Scylla serrata,indo-pacific swamp crab,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sebastes alutus,Pacific ocean perch,animal,NOAA Fisheries
+,Sebastes entomelas,widow rockfish,animal,NOAA Fisheries
+,Sebastes fasciatus,Acadian redfish,animal,NOAA Fisheries
+,Sebastes flavidus,yellowtail rockfish,animal,NOAA Fisheries
+,Sebastes paucispinis,bocaccio,animal,NOAA Fisheries
+,Sebastes pinniger,canary rockfish,animal,NOAA Fisheries
+,Sebastes ruberrimus,yelloweye rockfish,animal,NOAA Fisheries
+,Sebastolobus alascanus,shortspine thornyhead,animal,NOAA Fisheries
 1,Selachimorpha,Shark,animal,JL
 1,Sepiida,cuttlefish,animal,JL
 ,Seriola dumerili,greater amberjack,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -265,6 +328,9 @@ needs_QC,scientific_name,common_name,category,source
 1,Sphyraena,barracuda,animal,JL
 1,Sprattus,Sprat,animal,JL
 1,Squalidae,Dogfish,animal,JL
+,Squalus acanthias,Atlantic spiny dogfish,animal,NOAA Fisheries
+,Squalus suckleyi,Pacific spiny dogfish,animal,NOAA Fisheries
+,Stenotomus chrysops,scup,animal,NOAA Fisheries
 1,Stromateidae,Butter fish,animal,JL
 1,Strombidae,conch,animal,JL
 ,Strongylocentrotus droebachiensis,green sea urchin,animal,BP
@@ -280,12 +346,15 @@ needs_QC,scientific_name,common_name,category,source
 ,Thunnus alalunga,albacore tuna,animal,JL
 ,Thunnus albacares,yellowfin tuna,animal,BP
 ,Thunnus obesus,bigeye tuna,animal,JL
+,Thunnus orientalis,Pacific bluefin tuna,animal,NOAA Fisheries
 ,Thunnus thynnus,atlantic bluefin tuna,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Tibicen pruinosus,cicada,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Trachinotus,Pompano,animal,JL
 ,Trachinotus blochii,snubnose pompano,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Trionyx sinensis,chinese softshell turtle,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ucides occidentalis,pacific mangrove ghost crab,animal,BP
+,Urophycis chuss,red hake,animal,NOAA Fisheries
+,Urophycis tenuis,white hake,animal,NOAA Fisheries
 ,Varanus giganteus,perentie,animal,"Newton, ""The Oldest Foods on Earth"""
 ,Venerupis philippinarum,japanese littleneck,animal,BP
 ,Vespa orientalis,Oriental hornet,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
