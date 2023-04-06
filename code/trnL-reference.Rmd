@@ -1,17 +1,17 @@
 ---
 title: "trnL reference"
-author: "brianna petrone"
-output: html_document
+output: 
+     html_document:
+          df_print: paged
+          toc: true
+          toc_float: true
 ---
 
-# Setup 
-### Packages and functions
-```{r setup, include=FALSE, echo=FALSE}
-require("knitr")
-opts_knit$set(root.dir = file.path(getwd(), '..'))
-```
+Stepping through this notebook will build a *trnL* reference database, trimmed to sequences amplified by the desired primer set (here, *trnL*g and *trnL*h).
 
-```{r}
+This notebook use 
+
+```{r libraries, include=FALSE, echo=FALSE}
 library(Biostrings)
 library(here)
 library(ShortRead) # for clean()
@@ -23,7 +23,7 @@ source(here('code', 'functions', 'get_binomial.R'))
 source(here('code', 'functions', 'query_ncbi.R'))
 ```
 
-```{r}
+```{r plotting, include=FALSE, echo=FALSE}
 theme_set(theme_bw() +
                theme(
                     axis.text = element_text(size = 12),
@@ -37,8 +37,10 @@ theme_set(theme_bw() +
 )
 ```
 
-### Primer sequences
+## Read in data 
+
 ```{r}
+# Primer sequences 
 trnLG <- DNAString('GGGCAATCCTGAGCCAA')
 trnLH <- DNAString('CCATTGAGTCTCTGCACCTATC')
 
@@ -46,7 +48,9 @@ primers <- list(trnLG, trnLH)
 ```
 
 ### Dietary plants
+
 ```{r}
+# Manually curated list of dietary and medicinal plants
 plants <- 
      here('data', 'inputs', 'human-foods.csv') %>%
      read.csv(stringsAsFactors = FALSE) %>%
@@ -54,14 +58,12 @@ plants <-
      pull(scientific_name)
 
 length(plants)
+head(plants)
+tail(plants)
 ```
-
-# Compile reference sequences
-
-## RefSeq plastid database
-
-Downloaded from RefSeq FTP site on 6/1/2021.
+We'll Downloaded from RefSeq FTP site on 6/1/2021.
 ```{r}
+# RefSeq plastid database
 fs <- 
      here('data', 
           'inputs', 
