@@ -47,28 +47,33 @@ trnLH <- DNAString('CCATTGAGTCTCTGCACCTATC')
 primers <- list(trnLG, trnLH)
 ```
 
-### Dietary plants
-
 ```{r}
 # Manually curated list of dietary and medicinal plants
 plants <- 
-     here('data', 'inputs', 'human-foods.csv') %>%
-     read.csv(stringsAsFactors = FALSE) %>%
-     filter(category == 'plant') %>% 
+     here('data', 'inputs', 'human-foods.csv') |>
+     read.csv(stringsAsFactors = FALSE) |>
+     filter(category == 'plant') |> 
      pull(scientific_name)
 
 length(plants)
 head(plants)
 tail(plants)
 ```
-## NCBI
 
-### Pull sequences
+```{r}
+# Manual edits
+edits <- 
+     here('data', 'inputs', 'Manual renaming.csv') |> 
+     read_csv() 
+
+edits
+```
+
+## Submit query
 
 ```{r}
 # Pull sequences from NCBI
 ncbi.trnL <- query_ncbi(marker = 'trnL',
-                        # organisms = plants.missing)
                         organisms = plants)
 ```
 
@@ -81,7 +86,6 @@ length(clean(ncbi.trnL))
 
 ### Find primers
 Now look for primer binding sites within retrieved sequences.
-Have now addressed 
 
 ```{r}
 ncbi.trnL <- find_primer_pair(ncbi.trnL, 
@@ -92,39 +96,26 @@ cat(length(ncbi.trnL), 'sequences have the primer set')
 ```
 
 ```{r}
-# Inspect names
-data.frame(names(ncbi.trnL))
-```
-```{r}
 # Note some entries are marked as unverified
-names(ncbi.trnL)[grepl('UNVERIFIED', names(ncbi.trnL))]
-```
+names(ncbi.trnL)[grepl('UNVERIFIED', names(ncbi.trnL))] |> 
+     head(5)
 
-```{r}
-# Remove these
+# Remove 
 length(ncbi.trnL)
 ncbi.trnL <- ncbi.trnL[!(grepl('UNVERIFIED', names(ncbi.trnL)))]
 length(ncbi.trnL)
 ```
+Want to convert these long, descriptive names to just an accession and taxon. Strip to accession number, and then use this to do a taxonomic lookup.
 
 ```{r}
 # Strip name to only NCBI accession
-names(ncbi.trnL) %>% head()
+names(ncbi.trnL) |> head()
 names(ncbi.trnL) <- 
-     names(ncbi.trnL) %>% 
-     gsub(pattern = ' .+$', replacement = '') %>% 
+     names(ncbi.trnL) |> 
+     gsub(pattern = ' .+$', replacement = '') |> 
      gsub(pattern = '^>', replacement = '')
 
 head(names(ncbi.trnL))
-```
-#  Tidy names
-
-```{r}
-accs <- c(names(refseq.trnL),
-          names(ncbi.trnL))
-
-head(accs)
-length(accs)
 ```
 
 ```{r}
@@ -132,7 +123,7 @@ length(accs)
 # Need to have Isilon network drive mapped-- this is where database (70 Gb) currently stored
 # This takes a few minutes
 sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
-ids <- taxonomizr::accessionToTaxa(accs, sql)
+ids <- taxonomizr::accessionToTaxa(names(ncbi.trnL), sql)
 ```
 
 ```{r}
@@ -143,32 +134,21 @@ sum(is.na(ids))
 
 ```{r}
 # Which ones?
-accs[is.na(ids)]
+names(ncbi.trnL)[is.na(ids)]
 ```
 
-Wow that's amazing-- think this is literally the gap between when I made database until now
+Missing entries are sequence records that have been added to NCBI in the time between making the taxonomic SQL file and now.  
 
-NC_070364.1 Physalis philadelphica (tomatillo) chloroplast, uploaded 1/26/2023
-ON054983.1 Parkia speciosa (bitter bean) 1/22/2023
-ON054982.1 "
-ON054979.1 Solanum torvum (turkey berry) 1/22/2023
-ON054978.1 "
-ON054977.1 "
-ON054972.1 Solanum lasiocarpum 1/22/2023
-ON054971.1 "
-ON054970.1 "
-ON054969.1 "
-ON054968.1 "
+As of Apr 2023 this includes tomatillo, bitter bean, turkey berry, hyacinth berry, and hairy-fruited eggplant
 
 ```{r}
 # Remove these before proceeding
-accs <- accs[!is.na(ids)]
+ncbi.trnL <- ncbi.trnL[!is.na(ids)]
 ids <- ids[!is.na(ids)]
 ```
 
 ```{r}
-taxonomy.raw <- 
-     taxonomizr::getRawTaxonomy(ids, sql)
+taxonomy.raw <- taxonomizr::getRawTaxonomy(ids, sql)
 ```
 
 ```{r}
@@ -198,8 +178,8 @@ taxonomy <- data.frame(superkingdom = NULL,
 
 for (i in seq_along(taxonomy.raw)){
      row.i <- 
-          taxonomy.raw[[i]] %>% 
-          t() %>% 
+          taxonomy.raw[[i]] |> 
+          t() |> 
           data.frame() 
      
      # Pick columns we're interested in
@@ -211,8 +191,8 @@ for (i in seq_along(taxonomy.raw)){
 
 # Add taxon ID
 taxonomy$taxid <- 
-     names(taxonomy.raw) %>% 
-     trimws() %>% 
+     names(taxonomy.raw) |> 
+     trimws() |> 
      as.integer()
 
 taxonomy <- select(taxonomy, taxid, everything())
@@ -226,8 +206,8 @@ head(taxonomy)
 # Join back to accession
 dim(taxonomy)
 taxonomy <- 
-     data.frame(accession = accs,
-                taxid = ids) %>% 
+     data.frame(accession = names(ncbi.trnL),
+                taxid = ids) |> 
      full_join(distinct(taxonomy))
 dim(taxonomy)
 ```
@@ -251,7 +231,7 @@ seqs.df <-
 seqs.df <- 
      data.frame(source = 'GenBank',
                 accession = names(ncbi.trnL),
-                seq = as.character(ncbi.trnL)) %>% 
+                seq = as.character(ncbi.trnL)) |> 
      bind_rows(seqs.df)
 
 head(seqs.df)
@@ -261,45 +241,45 @@ head(seqs.df)
 # Re-name with lowest-level taxon
 taxonomy <- MButils::lowest_level(taxonomy)
 seqs.df <- 
-     seqs.df %>% 
+     seqs.df |> 
      left_join(select(taxonomy, accession, taxon = name)) 
 ```
 
 ```{r}
 # Compare
 # How many unique sequences?
-seqs.df %>% 
-     group_by(source) %>% 
+seqs.df |> 
+     group_by(source) |> 
      summarize(total = length(seq),
                unique = n_distinct(seq))
 ```
 
 ```{r}
 # How many unique species?
-seqs.df %>% 
-     group_by(source) %>% 
+seqs.df |> 
+     group_by(source) |> 
      summarize(total = length(taxon),
                unique = n_distinct(taxon))
 ```
 ```{r}
 # Plot this
-seqs.df %>% 
-     group_by(source) %>% 
+seqs.df |> 
+     group_by(source) |> 
      summarize(across(.cols = c(taxon, seq),
                       .fns = list(total=length, 
-                                  unique=n_distinct))) %>% 
+                                  unique=n_distinct))) |> 
      pivot_longer(-source,
                   names_to = 'unit',
-                  values_to = 'value') %>% 
+                  values_to = 'value') |> 
      separate(unit,
               into = c('unit', 'type'),
-              sep = '_') %>% 
+              sep = '_') |> 
      mutate(unit = factor(unit,
                           levels = c('taxon', 'seq'),
                           labels = c('Taxa', 'Sequences')),
             source = factor(source,
                             levels = c('RefSeq', 'GenBank')),
-            type = str_to_title(type)) %>% 
+            type = str_to_title(type)) |> 
      ggplot(aes(x = source, y = value, fill = type)) +
           geom_bar(stat = 'identity',
                    position = 'dodge') +
@@ -319,22 +299,22 @@ plotID <- paste(Sys.Date(), as.character(sample(000:999,1)), sep=".")
 ```{r}
 # What's the intersection between taxa in each set?
 gb.taxa <- 
-     seqs.df %>% 
-     filter(source == 'GenBank') %>% 
-     pull(taxon) %>% 
+     seqs.df |> 
+     filter(source == 'GenBank') |> 
+     pull(taxon) |> 
      unique()
 
 refseq.taxa <- 
-     seqs.df %>% 
-     filter(source == 'RefSeq') %>% 
-     pull(taxon) %>% 
+     seqs.df |> 
+     filter(source == 'RefSeq') |> 
+     pull(taxon) |> 
      unique()
 ```
 
 ```{r}
 # Make dataframe for plot input
 db.df <- 
-     data.frame(taxon = unique(seqs.df$taxon)) %>% 
+     data.frame(taxon = unique(seqs.df$taxon)) |> 
      mutate(RefSeq = taxon %in% refseq.taxa,
             GenBank = taxon %in% gb.taxa)
 
@@ -343,7 +323,7 @@ head(db.df)
 
 ```{r}
 # Version with labels for reference
-eulerr::euler(db.df[,c('RefSeq', 'GenBank')]) %>% 
+eulerr::euler(db.df[,c('RefSeq', 'GenBank')]) |> 
      plot(
           fills = c('#e15759', 'white'),
           labels = FALSE,
@@ -372,6 +352,12 @@ length(missing)
 
 ### Merge
 
+### Manual annotations
+
+```{r}
+
+```
+
 #### QC
 
 Check for common errors
@@ -386,17 +372,17 @@ grep('[AGCT]*[^AGCT]+', seqs.df$seq)
 seqs.df$N <- grepl('[AGCT]*[^AGCT]+', seqs.df$seq)
 
 with_n <- 
-     seqs.df$taxon[grepl('[AGCT]*[^AGCT]+', seqs.df$seq)] %>% 
+     seqs.df$taxon[grepl('[AGCT]*[^AGCT]+', seqs.df$seq)] |> 
      unique()
 ```
 
 ```{r}
-seqs.df %>% 
-     filter(taxon %in% with_n) %>% 
-     group_by(taxon, N) %>% 
-     count() %>% 
-     ungroup() %>% 
-     group_by(taxon) %>% 
+seqs.df |> 
+     filter(taxon %in% with_n) |> 
+     group_by(taxon, N) |> 
+     count() |> 
+     ungroup() |> 
+     group_by(taxon) |> 
      summarize(any(!N))
 ```
 Okay, so for all taxa but
@@ -438,10 +424,10 @@ fwd_matches <-
      vmatchPattern(trnLG, 
                    ref, 
                    max.mismatch = fwd_err,
-                   fixed = TRUE) %>%
-     as.data.frame() %>% 
-     filter(start <= 1) %>% 
-     mutate(type = 'forward') %>% 
+                   fixed = TRUE) |>
+     as.data.frame() |> 
+     filter(start <= 1) |> 
+     mutate(type = 'forward') |> 
      select(group, type)
 
 # Reverse primer at start of read
@@ -449,10 +435,10 @@ rev_matches <-
      vmatchPattern(trnLH, 
                    ref, 
                    max.mismatch = rev_err,
-                   fixed = TRUE) %>%
-     as.data.frame() %>% 
-     filter(start <= 1) %>% 
-     mutate(type = 'reverse') %>% 
+                   fixed = TRUE) |>
+     as.data.frame() |> 
+     filter(start <= 1) |> 
+     mutate(type = 'reverse') |> 
      select(group, type)
 ```
 
@@ -463,12 +449,12 @@ nrow(rev_matches) + nrow(fwd_matches) == nrow(seqs.df)
 ```{r}
 seqs.df <- 
      bind_rows(fwd_matches,
-          rev_matches) %>% 
-     arrange(group) %>% 
+          rev_matches) |> 
+     arrange(group) |> 
      bind_cols(seqs.df)
 
-seqs.df %>% 
-     group_by(type) %>% 
+seqs.df |> 
+     group_by(type) |> 
      count()
 ```
 Now, if a read is reversed, we want to replace it with its reverse complement
@@ -476,11 +462,11 @@ Now, if a read is reversed, we want to replace it with its reverse complement
 seqs.df <- 
      mutate(seqs.df,
             seq = ifelse(type == 'reverse',
-                         yes = seq %>% 
-                              DNAStringSet() %>% 
-                              reverseComplement() %>% 
+                         yes = seq |> 
+                              DNAStringSet() |> 
+                              reverseComplement() |> 
                               as.character(),
-                         no = seq)) %>% 
+                         no = seq)) |> 
      select(-c(type, group))
 ```
 
@@ -490,13 +476,13 @@ seqs.df <-
 * Sequences that are different and come from the same species must be preserved
 
 ```{r}
-seqs.df %>% 
+seqs.df |> 
      group_by(taxon, seq)
 ```
 ```{r}
 dups <- 
-     seqs.df %>% 
-     group_by(taxon) %>% 
+     seqs.df |> 
+     group_by(taxon) |> 
      summarize(n = sum(duplicated(seq)))
 
 arrange(dups, desc(n))
@@ -512,9 +498,9 @@ dim(seqs.df)[1] - sum(dups$n)
 
 ```{r}
 seqs.df <- 
-     seqs.df %>%
-     group_by(taxon, seq) %>% 
-     arrange(acc) %>% 
+     seqs.df |>
+     group_by(taxon, seq) |> 
+     arrange(acc) |> 
      summarize(acc = first(acc)) # Choose the first accession number
 
 dim(seqs.df)
@@ -561,8 +547,8 @@ taxonomy <- data.frame(superkingdom = NULL,
 
 for (i in seq_along(taxonomy.raw)){
      row.i <- 
-          taxonomy.raw[[i]] %>% 
-          t() %>% 
+          taxonomy.raw[[i]] |> 
+          t() |> 
           data.frame() 
      
      # Pick columns we're interested in
@@ -574,8 +560,8 @@ for (i in seq_along(taxonomy.raw)){
 
 # Add taxon ID
 taxonomy$taxid <- 
-     names(taxonomy.raw) %>% 
-     trimws() %>% 
+     names(taxonomy.raw) |> 
+     trimws() |> 
      as.integer()
 
 taxonomy <- select(taxonomy, taxid, everything())
@@ -619,7 +605,7 @@ trnL
 
 ```{r}
 seqs.df <- 
-     seqs.df %>% 
+     seqs.df |> 
      unite(col = 'name',
            superkingdom:forma,
            sep = ';') 
@@ -664,9 +650,9 @@ names(trnL) <- seqs.df$acc
 ```
 
 ```{r}
-# seqs.df %>%
+# seqs.df |>
 #      select(`Feature ID` = acc,
-#             Taxon = name) %>%
+#             Taxon = name) |>
 #      write_delim(delim = '\t',
 #                  file.path(outdir,
 #                            'trnL-taxonomy.tsv'))
