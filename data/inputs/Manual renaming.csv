@@ -1,0 +1,8 @@
+﻿type,accession,name_initial,name_update,date,by,notes
+rename,LR031876.1,Brassica oleracea,Brassica oleracea var. italica,1/4/23,BP,Identified to variety level in cited reference for accession
+rename,AB213010.1,Brassica oleracea,Brassica oleracea var. capitata,1/7/23,BP,Identified to variety level in cited reference for accession
+rename,AC183493.1,Brassica oleracea,Brassica oleracea var. alboglabra,1/7/23,BP,Identified to variety level in cited reference for accession
+rename,LR031874.1,Brassica oleracea,Brassica oleracea var. italica,1/7/23,BP,Identified to variety level in cited reference for accession
+omit,JX390727.1,Murraya koenigii,,2/11/22,BP,"Suspected misannotation: by BLAST, multiple matches to peanut accessions; does not match any other curry accessions"
+omit,KF550171.1,Allium schoenoprasum,,2/17/22,BP,Suspected sequencing error: nearly double the length of other Allium accessions
+omit,GU595140.1,Secale cereale,,5/20/22,BP,"Suspected misannotation: by BLAST, multiple matches to rice accessions; does not match any other rye accessions"
