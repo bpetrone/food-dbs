@@ -387,6 +387,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Hypomyces lactifluorum,lobster mushroom,fungus,JL
 ,Hypsizygus marmoreus,white beech,fungus,BP
 ,Laccocephalum mylittae,native bread,fungus,"Newton, ""The Oldest Foods on Earth"""
+,Lactarius deliciosus,saffron milk cap,fungus,"Newton, ""The Oldest Foods on Earth"""
 ,Laetiporus ,chicken of the woods,fungus,JL
 ,Leccinum scabrum,Birch bolete,fungus,JL
 ,Lentinula edodes,shiitake,fungus,BP
@@ -1360,6 +1361,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Telopea speciosissima,"New South Wales waratah, Warath, Native Tulip",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Telosma cordata,"Chinese Violet, Cowslip, East Coast Creeper, Fragrant Telosma, Night Fragrant Flower, Pakalana Vine, Primrose Creeper, Tonkin Creeper, Tonkin Jasmine, Tonkin Telosma",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Terminalia catappa,"Barbados Almond, Bastard Almond, Beach Almond, Bengal Almond, Catappa, Coastal Almond, Country Almond, Demarara Almond, False Kamani, Fiji Almond, Indian Almond, Katapang, Java Almond, Malabar Almond, Malay Almond, Sea Almond, Singapore Almond, Story Tree, Talisay Tree, Tavola Nut, Tropical Almond, Water Almond, West Indian Almond, Umbrella Tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Terminalia cunninghamii,pindan walnut,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Terminalia ferdinandiana,"Billy Goat Plum, Green Plum, Gubinge, Kakadu Plum, Salty Plum, Wild Plum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Terminalia kaernbachii,"Okari, Okari Nut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Tetragonia tetragonioides,"New Zealand spinach, Warrigal greens",plant,"Newton, ""The Oldest Foods on Earth"""
