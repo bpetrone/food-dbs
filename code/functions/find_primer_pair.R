@@ -96,8 +96,14 @@ find_primer_pair <- function(seqs, fwd, rev, err=0.2, removePrimers = FALSE){
      # Take intersect of matches between primer pairs to find sequences
      # containing hits to both
      combined <- 
-          inner_join(fwd_matches, rev_rc_matches, by='group') %>%
-          rbind(inner_join(rev_matches, fwd_rc_matches, by='group')) %>%
+          inner_join(fwd_matches, 
+                     rev_rc_matches, 
+                     by='group',
+                     multiple = 'all') %>%
+          rbind(inner_join(rev_matches, 
+                           fwd_rc_matches, 
+                           by='group',
+                           multiple = 'all')) %>%
           # Confirm amplicon size is within reason
           mutate(size = trim_end-trim_start) %>%
           filter(size > 0 & size <1000)
