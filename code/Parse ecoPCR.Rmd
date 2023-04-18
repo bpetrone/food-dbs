@@ -1,0 +1,257 @@
+---
+title: "Parse ecoPCR"
+output: html_notebook
+---
+
+This notebook parses reference databases for 12SV5 and trnL from Schneider et al.
+
+```{r setup, include=FALSE, echo=FALSE}
+require("knitr")
+opts_knit$set(root.dir = file.path(getwd(), '..'))
+```
+
+```{r}
+library(Biostrings)
+library(DECIPHER) # For Disambiguate()
+library(here)
+library(readxl)
+library(ShortRead) # For clean()
+library(tidyverse)
+```
+
+## Read in data
+
+### 12SV5
+
+Called "Vert01" by Schneider et al. 
+
+```{r}
+ref.raw <- 
+     here('data', 
+          'inputs', 
+          'other-dbs', 
+          'Schneider_ScientificReports_2021_SUPP.xlsx') %>% 
+     read_xlsx(sheet = 'Data S1') # Vert01
+
+names(ref.raw) <- 'line'
+
+head(ref.raw)
+```
+Interesting: two sequence lines per header.  Think that these have just been text wrapped. Also interesting is that many of these have degenerate nucleotides. Will I need to specify those out?  Are these degenerate nucleotides also in the EMBL reference? 
+
+```{r}
+dim(ref.raw)
+```
+
+## Tidy
+```{r}
+# Header lines
+headers.i <- grep('^>', ref.raw$line)
+length(headers.i)
+
+# Sequence lines
+seqs.i <- grep('^[^>]', ref.raw$line)
+length(seqs.i)
+```
+Reported # of sequences in reference from paper is 16,292. Yay!
+
+Most sequences appear to be over two lines, but some have more.
+```{r}
+32595/16292
+```
+
+We want headers in one column, and sequences following them in another.
+```{r}
+# Helper function to join sequences from two adjacent lines
+concat_split <- function(lines, seqs.i){
+     # Create a new data structure
+     seqs.concat <- character()
+     
+     # Loop over indices, concatenating sequences to one another if they occur
+     # on adjacent lines
+     
+     current.seq = lines[seqs.i[1]] # Initialize with first sequence
+     for (i in 2:length(seqs.i)){
+          if (seqs.i[i] - seqs.i[i-1] == 1){ # If the seq index is +1 from prior
+               current.seq = paste0(current.seq, lines[seqs.i[i]]) # Join them
+          } else { 
+               seqs.concat <- append(seqs.concat, current.seq) # Save prior one
+               current.seq = lines[seqs.i[i]] # Start a new sequence
+          }
+     }
+     
+     # Need to append the final sequence (won't trigger else condition above)
+     seqs.concat <- append(seqs.concat, current.seq)
+     
+     seqs.concat
+}
+```
+
+```{r}
+seqs <- concat_split(ref.raw$line, seqs.i)
+length(seqs)
+```
+
+```{r}
+hist(nchar(seqs))
+```
+
+```{r}
+# Make new dataframe (can't do this until synchronized)
+ref <- data.frame(header = ref.raw$line[headers.i],
+                  seq = seqs)
+```
+
+Now, work on header column.  There are a variable number of entries, which makes splitting difficult.  Start by just isolating the ones I'm interested in, which are:
+
+- accession
+- taxid
+- scientific_name: Am I correct in thinking that this pulls the lowest taxonomic level of those available?
+
+- Maybe also merged_taxid? But I don't know exactly what this is.  Idea would be to dive into source code and try to figure out
+
+```{r}
+ex.acc <- '(?<=^>)\\S+' # First word following > at start of string
+ex.taxid <- '(?<= taxid=)\\d+' # Digits following 'taxid='
+ex.name <- '(?<= scientific_name=)[^;]+'
+
+ref <- mutate(ref,
+              accession = str_extract(header, ex.acc),
+              taxid = str_extract(header, ex.taxid),
+              scientific_name = str_extract(header, ex.name))
+
+dim(ref)
+```
+
+## Subset to dietary animals
+
+```{r}
+# List of consumed animals from our curated record
+# Note-- suspect fish are underrepresented here
+foods <- 
+     here('data', 
+          'inputs',
+          'human-foods.csv') %>%
+     read.csv(stringsAsFactors = FALSE) %>%
+     filter(category == 'animal') %>% 
+     # Add human so we can filter out downstream
+     bind_rows(data.frame(scientific_name = 'Homo sapiens',
+                          common_name = 'human',
+                          category = 'host',
+                          added_by = NA))
+```
+
+```{r}
+cat('Sequences from a curated food species:',
+    sum(ref$scientific_name %in% foods$scientific_name), '\n')
+cat('Percentage of sequences from a curated food species:', 
+    sum(ref$scientific_name %in% foods$scientific_name)/dim(ref)[1], '%')
+```
+
+```{r}
+ref <- filter(ref, scientific_name %in% foods$scientific_name)
+```
+
+### Sequence ambiguities
+
+#### Preliminary: Keep only specified sequences
+
+```{r}
+# Accept only sequences with A, C, G, T nucleotides
+dim(ref)
+ref.known <- filter(ref, grepl('^[agct]+$', seq))
+dim(ref.known)
+```
+
+```{r}
+# Confirm
+ref.known$seq %>% 
+     DNAStringSet() %>% 
+     alphabetFrequency() %>% 
+     colSums()
+```
+
+```{r}
+# Format as reference and save
+ref.fasta <- DNAStringSet(ref$seq)
+names(ref.fasta) <- paste(ref$accession, ref$scientific_name)
+
+# writeXStringSet(ref.fasta, here('data', 'processed',
+#                                 'dada2-compatible','12SV5',
+#                                 '12SV5_Schneider_foods.fasta'))
+```
+
+#### Disambiguate sequences
+
+Try to sort out degenerate nucleotides-- do these all specify distinct sequences? 
+At first I was thinking so, but some sequences have long runs of N. Filter these out? Or can always reference back
+```{r}
+# What's the overall breakdown
+ref$seq %>% 
+     DNAStringSet() %>% 
+     alphabetFrequency() %>% 
+     colSums()
+```
+
+```{r}
+# Test out Disambiguate() function
+Disambiguate(DNAStringSet(ref$seq[1])) %>% 
+     unlist() %>% 
+     as.character()
+```
+
+```{r}
+# DNAStringSet of exclusively ambiguous sequences
+ref.ambig <- filter(ref, !grepl('^[agct]+$', seq))
+dim(ref.ambig)
+```
+
+The problem here is that some sequences appear to have many Ns, for example:
+```{r}
+ref.ambig$seq[16]
+```
+
+```{r}
+# Exclude N from the accepted letters
+ref.ambig <- filter(ref.ambig, !grepl('n', seq))
+dim(ref.ambig)
+```
+
+```{r}
+# For each ambiguous sequence, want to
+ambig_to_char <- function(seq){
+     seq %>% 
+          DNAStringSet() %>% 
+          Disambiguate() %>% 
+          unlist() %>% 
+          as.character() %>% 
+          paste(collapse = ',')
+}
+
+# Disambiguate it
+ref.ambig <- 
+     ref.ambig %>% 
+     mutate(seq_disambig = ambig_to_char(seq)) %>% 
+     mutate(seq_disambig = strsplit(as.character(seq_disambig), ",")) %>% # Split 
+     unnest(seq_disambig) # Associated with the same metadata in rows
+```
+
+```{r}
+dim(ref.ambig)
+n_distinct(ref.ambig$seq)
+n_distinct(ref.ambig$seq_disambig)
+```
+
+Don't understand how these numbers map up to dimensions of overall dataframe.  It looks like there are maybe some overlapping combinations?
+
+```{r}
+ref.ambig %>% filter(seq_disambig == 'TTAGCCCTAAACCTCAACAGTTAAATCAACAAAACTGCTCGCCAGAACACTACGAGCCACAGCTTAAAACTCAAAGGACCTGGCGGTGCTTCATATCCCT') %>% group_by(scientific_name) %>% dplyr::count() %>% arrange(desc(n))
+```
+Okay, so I think the lesson here is that this is not the database strategy we want (open-ended pulling).  We want instead to generate a list of food species, then filter accordingly.  
+
+```{r}
+# Also, will need to come up with an additional labeling scheme, because labels (accession + scientific_name) will no longer be unique
+```
+
+## Taxonomy 
+
