@@ -12,7 +12,6 @@ opts_knit$set(root.dir = file.path(getwd(), '..'))
 
 ```{r}
 library(Biostrings)
-library(DECIPHER) # For Disambiguate()
 library(here)
 library(readxl)
 library(ShortRead) # For clean()
@@ -154,8 +153,6 @@ ref <- filter(ref, scientific_name %in% foods$scientific_name)
 
 ### Sequence ambiguities
 
-#### Preliminary: Keep only specified sequences
-
 ```{r}
 # Accept only sequences with A, C, G, T nucleotides
 dim(ref)
@@ -170,6 +167,39 @@ ref.known$seq %>%
      alphabetFrequency() %>% 
      colSums()
 ```
+## Taxonomy 
+
+Format for DADA2 taxonomic lookup:
+```{r}
+sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
+```
+
+```{r}
+# Use taxid to look up full taxonomy
+taxonomy <- taxonomizr::getTaxonomy(ref$taxid,
+                                    sql)
+```
+
+```{r}
+# Join to reference
+ref <- 
+     taxonomy |> 
+     data.frame() |> 
+     bind_cols(ref)
+```
+
+```{r}
+# Make taxonomic header
+ref <- 
+     ref |> 
+     unite(col = 'taxonomy',
+           superkingdom:species,
+           sep = ';') 
+```
+
+## Save
+
+### Species
 
 ```{r}
 # Format as reference and save
@@ -181,5 +211,14 @@ names(ref.fasta) <- paste(ref$accession, ref$scientific_name)
 #                                 '12SV5_Schneider_foods.fasta'))
 ```
 
-## Taxonomy 
-
+### Taxonomy
+```{r}
+# Save
+names(ref.fasta) <- ref$taxonomy
+writeXStringSet(ref.fasta,
+                here('data',
+                     'outputs',
+                     'dada2-compatible',
+                     '12SV5',
+                     '12SV5_Schneider_taxonomy.fasta'))
+```
