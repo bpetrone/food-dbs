@@ -257,6 +257,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Piaractus brachypomus,pirapitinga,animal,BP
 1,Pinnipedia,seal,animal,JL
 1,Platanistidae,dolphin,animal,JL
+,Plebidonax deltoides,pipi,animal,"Newton, ""The Oldest Foods on Earth"""
 ,Pollachius pollachius,pollock,animal,JL
 ,Pollachius virens,pollock,animal,JL
 ,Polyprion americanus,wreckfish,animal,NOAA Fisheries
@@ -420,6 +421,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Achillea millefolium,"Bad Man's Plaything, Bloodwort, Carpenter's Weed, Common Yarrow, Devil's Nettle, Devil's Plaything, Fernweed, Gordaldo, Knight's Milfoil, Milfoil, Musk Milfoil, Nosebleed, Nosebleed Plant, Old Man's Pepper, Plumajillo, Sanguinary, Sneezewort, Soldier's Friend, Soldier's Woundwort, Staunchweed, Thousand-Seal, Thousand-Seal Bad Man's Plaything, Thousand Weed, Thousand-Leaf, Thousand-Seal, Thousand Weed, Thousand-Leaf, Western Yarrow, Woundwort, Yarrow, Yarrow Bloodwort, Yarrow Milfoil, Yarroway",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Acmella oleracea,"Brazil Cress, Eyeball Plant, Para Cress, Peek-A-Boo Plant, Perennial Para Cress, Spot Flower, Toothache Plant",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Acrocomia aculeata,macaw palm,plant,"Sterling, ""Yucatan"""
+,Acronychia acidula,"lemon aspen, lemon wood",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Actinidia chinensis,"Chinese Actinidia, Gold Kiwi Fruit, Kiwifruit, Kiwi Gold, Yellow-Fleshed Actinidia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Actinidia deliciosa,kiwi,plant,BP
 ,Adansonia digitata,baobab,plant,BP
@@ -1184,6 +1186,7 @@ needs_QC,scientific_name,common_name,category,source
 ,Pometia pinnata,"Fijian Longan, Dawa, Island Lychee, Oceanic Lychee, Pacific Lychee",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Poncirus trifoliata,"Bitter Orange, Citrange, Citrangequat, Flying Dragon, Hardy Orange, Japanese Bitter Orange, Japanese Hardy Orange, Mock Orange, Trifoliata, Trifoliata Orange, Trifoliate-Orange",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Porphyra,nori,plant,FAO Cultured Aquatic Species Fact Sheets
+,Portulaca oleracea,"common purslane, little hogweed, pursley",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Pourouma cecropiifolia,"Amazon Grape, Amazon Tree Grape; Tree Grape, Uvilla",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pouteria caimito,"Abiu, Yellow Star Apple",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pouteria campechiana,"Canistel, Egg Fruit, Egg Fruit Tree, Mexican Sapodilla, Ti-Es, Yellow Sapote",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
