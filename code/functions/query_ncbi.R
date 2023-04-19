@@ -10,9 +10,7 @@ query_ncbi <- function(marker, organisms){
      library(Biostrings)
      library(rentrez)
      
-     # Build one big query;
-     # 2020/03/05 Getting HTTP failure for longer queries:
-     # Chunk into a list of 50-species units
+     # Long queries cause HTTP failure, so chunk into 50-species units
      organisms <- split(organisms, ceiling(seq_along(organisms)/50))
      
      organism_query <- 
@@ -28,6 +26,10 @@ query_ncbi <- function(marker, organisms){
      ids <- lapply(query, 
                    entrez_search, 
                    db='nucleotide', retmax = 10000, use_history=TRUE)
+     
+     # Maybe-- flag how many times we hit retmax?
+     # What's the default retmax?
+     # Could also just prioritize trying this on the "old" version of human-foods
      
      seqs.return = NULL # Store results here
      seqs.count = 0
