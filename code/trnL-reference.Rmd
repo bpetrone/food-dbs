@@ -74,7 +74,7 @@ sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
 ```
 
 ```{r}
-# Parsed RefSeq data
+# Parsed RefSeq data (last organized Jan 2023)
 plastid <- 
      readDNAStringSet(
           here('data', 
@@ -200,6 +200,9 @@ intersect(names(ncbi.trnL), names(refseq.trnL)) |> length()
 setdiff(names(refseq.trnL), names(ncbi.trnL)) |> length()
 setdiff(names(ncbi.trnL), names(refseq.trnL)) |> length()
 ```
+
+Theoretically, RefSeq is entirely contained within NCBI's nucleotide record, but there are entries that are unique to RefSeq here.  Think this is because I restrict the query to "big" NCBI to have the term "trnL" in the record name-- not impossible to overcome, but currently don't have a strategy for handling the # and length of records that get pulled down without that filter in our query term.  This can be an area for future updates.
+
 ### Merge
 ```{r}
 # Data frame of results
@@ -215,6 +218,57 @@ seqs.df <-
      bind_rows(seqs.df)
 
 head(seqs.df)
+```
+
+```{r}
+# Also add manual additions here
+additions <- filter(edits, type == 'add')
+additions
+```
+
+```{r}
+# Note that these don't have primers currently
+# To get the most accurate sequence, let's just pull these records from NCBI by their accession number and trim directly
+# Note some of these returned sequences are whole genomes-- takes a few mins.
+seqs <- 
+     entrez_fetch(db='nucleotide', 
+                  id = additions$accession, 
+                  rettype='fasta') %>%
+     # This returns concatenated sequence strings; split apart 
+     # so we can re-name inline
+     strsplit('\n{2,}') %>% # Usually two newline chars, but sometimes more
+     unlist()
+
+# Save this to ultimately combine with taxonomy data, as want to
+# be able to identify these sequences after the fact
+ex <- '[^>]\\S*' 
+accs <- str_extract(seqs, ex) 
+
+# Keep full header for descriptive name
+headers <- str_extract(seqs, '^[^\n]*')
+
+seqs <- 
+     seqs %>%
+     # Now update seqs to sequence only, stripping header
+     sub('^[^\n]*\n', '', .) %>%
+     # And removing separating \n characters
+     gsub('\n', '', .)
+
+# Now add to DNAStringSet
+seqs <- DNAStringSet(seqs)
+names(seqs) <- accs
+
+seqs <- find_primer_pair(seqs, 
+                         fwd = primers[[1]],
+                         rev = primers[[2]])
+```
+
+```{r}
+# This leaves 'source' labeled as NA for these entries
+seqs.df <-
+     data.frame(seq = as.character(seqs),
+                accession = names(seqs)) |> 
+     bind_rows(seqs.df) 
 ```
 
 ### Taxonomy
@@ -237,12 +291,30 @@ seqs.df[is.na(ids), c('source', 'accession')]
 
 Missing entries are sequence records that have been added to NCBI in the time between making the taxonomic SQL file and now.  
 
-As of Apr 2023 this includes tomatillo, bitter bean, turkey berry, hyacinth berry, and hairy-fruited eggplant
-
 ```{r}
-# Remove these before proceeding
-seqs.df <- seqs.df[!is.na(ids),]
-ids <- ids[!is.na(ids)]
+# Manually add these by querying in browser with accession
+# IMPORTANT: If repeating, check these to make sure they still line up
+# If any additions/changes to input files, likely they will not
+
+ids[12] <- 3747 # OP764691.1 Fragaria x ananassa		
+ids[2659]	<- 3673 # OP222139.1 Momordica charantia		
+ids[2660]	<- 3673 # OP222138.1 Momordica charantia
+ids[2983]	<- 59072 # OP096332.1 Muscari neglectum		
+ids[2984]	<- 59072 # OP096331.1 Muscari neglectum		
+ids[3323]	<- 304130 # NC_070364.1 Physalis philadelphica
+ids[3326]	<- 148714 # ON054983.1 Parkia speciosa
+ids[3327]	<- 148714 # ON054982.1 Parkia speciosa		
+ids[4120]	<- 119830 # ON054979.1 Solanum torvum		
+ids[4121]	<- 119830 # ON054978.1 Solanum torvum
+ids[4122]	<- 119830 # ON054977.1 Solanum torvum		
+ids[4123]	<- 227722 # ON054972.1 Solanum lasiocarpum		
+ids[4124]	<- 227722 # ON054971.1 Solanum lasiocarpum
+ids[4125]	<- 227722 # ON054970.1 Solanum lasiocarpum	
+ids[4126]	<- 227722 # ON054969.1 Solanum lasiocarpum			
+ids[4127]	<- 227722 # ON054968.1 Solanum lasiocarpum
+
+# Confirm got them all
+any(is.na(ids))
 ```
 
 ```{r}
@@ -335,11 +407,15 @@ name.update <- filter(edits, type=='rename')
 filter(seqs.df,
        accession %in% name.update$accession)
 ```
-Interesting that only one of these found.  What happened to LR031876.1 and LR031874.1, which were pulled in prior query? 
 
 ```{r}
+# Note that original sequence 'AC183493.1' not found, leaving off for now
 # Will need to generalize this later, but now can just update specifically
 seqs.df$varietas[seqs.df$accession == 'AB213010.1'] <- 'Brassica oleracea var. capitata'
+seqs.df$varietas[seqs.df$accession == 'AC183493.1'] <- 'Brassica oleracea var. alboglabra'
+seqs.df$varietas[seqs.df$accession == 'LR031874.1'] <- 'Brassica oleracea var. italica'
+seqs.df$varietas[seqs.df$accession == 'LR031875.1'] <- 'Brassica oleracea var. italica'
+seqs.df$varietas[seqs.df$accession == 'LR031876.1'] <- 'Brassica oleracea var. italica'
 ```
 
 ```{r}
@@ -495,7 +571,18 @@ dim(seqs.df)[1] - sum(dups$n)
 ```{r}
 seqs.df <- 
      seqs.df |>
-     group_by(taxon, seq) |> 
+     group_by(superkingdom,
+              phylum,
+              class,
+              order,
+              family,
+              genus,
+              species,
+              subspecies,
+              varietas,
+              forma, 
+              taxon, 
+              seq) |> 
      arrange(desc(source), accession) |> # Puts RefSeq accessions first 
      summarize(accession = first(accession)) # Choose the first accession number
 
@@ -521,13 +608,12 @@ trnL
 ```
 ```{r}
 # Save to file
-# Consider updating name below so I can compare to prior file
-writeXStringSet(trnL,
-                here('data',
-                     'outputs',
-                     'dada2-compatible',
-                     'trnL',
-                     'trnLGH_update_update.fasta'))
+# writeXStringSet(trnL,
+#                 here('data',
+#                      'outputs',
+#                      'dada2-compatible',
+#                      'trnL',
+#                      'trnLGH.fasta'))
 ```
 
 ```{r}
