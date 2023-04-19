@@ -68,12 +68,13 @@ edits <-
 edits
 ```
 
-# Submit query
-
-## RefSeq (local)
+```{r}
+# SQL reference
+sql <- '/Volumes/All_Staff/localreference/ncbi_taxonomy/accessionTaxa.sql'
+```
 
 ```{r}
-# Write to file
+# Parsed RefSeq data
 plastid <- 
      readDNAStringSet(
           here('data', 
@@ -84,6 +85,11 @@ plastid <-
 
 plastid
 ```
+
+# Submit query
+
+## RefSeq (local)
+
 ### Find primers
 
 ```{r}
@@ -131,6 +137,103 @@ names(refseq.trnL) <-
 head(names(refseq.trnL))
 ```
 ## NCBI (remote)
+
+### Whole genomes
+
+```{r}
+entrez_dbs()
+```
+```{r}
+entrez_db_links('genome')
+```
+Note that not all of these come down with a trnL marker query
+
+```{r}
+# try for a few of those missing
+organism <- 'Brassica oleracea'
+```
+
+```{r}
+ids <- lapply(organism_query, 
+              entrez_search, 
+              db='genome', use_history=TRUE)
+
+seqs.return = NULL # Store results here
+seqs.count = 0
+
+
+links <- entrez_link(dbfrom = 'genome',
+                     web_history = ids[[i]]$web_history,
+                     db = 'nuccore')
+
+# This is the single case: in practice, links will probably return a vector of links rather than just one
+
+seqs <- entrez_fetch(db='nuccore', 
+                     id = links$links$genome_nuccore[1],
+                     rettype='fasta') 
+
+seqs <- lapply(seqs,
+               entrez_fetch,
+               db = 'nuccore',
+               )
+     # This returns concatenated sequence strings; split apart 
+     # so we can re-name inline
+strsplit('\n{1,}') %>% # Usually two newline chars, but sometimes more
+     unlist()
+
+# Check for primers on the fly to keep data manageable
+
+
+for (i in seq_along(ids)){
+     if (ids[[i]]$count==0){
+          # Do nothing further if there aren't any hits
+     } else {
+          # Need to link from genome to nucleotide, and then fetch
+          # that record
+          ex <- '[^>]\\S*' 
+          seqs <- 
+               entrez_fetch(db='nuccore', 
+                            web_history = ids[[i]]$web_history, 
+                            rettype='fasta') %>%
+               # This returns concatenated sequence strings; split apart 
+               # so we can re-name inline
+               strsplit('\n{2,}') %>% # Usually two newline chars, but sometimes more
+               unlist()
+          # Save this to ultimately combine with taxonomy data, as want to
+          # be able to identify these sequences after the fact
+          accs <- str_extract(seqs, ex) 
+          
+          # Keep full header for descriptive name
+          headers <- str_extract(seqs, '^[^\n]*')
+          
+          seqs <- 
+               seqs %>%
+               # Now update seqs to sequence only, stripping header
+               sub('^[^\n]*\n', '', .) %>%
+               # And removing separating \n characters
+               gsub('\n', '', .)
+          
+          
+          
+          # Now add to DNAStringSet
+          seqs <- DNAStringSet(seqs)
+          names(seqs) <- headers
+          
+          # Update counters
+          seqs.count <- seqs.count + ids[[i]]$count
+          seqs.return <- append(seqs.return, seqs)
+          
+          cat('50 species processed... \n')
+          cat('Equal lengths:', seqs.count == length(seqs.return), '\n')
+     }
+} 
+
+cat(seqs.count, 'sequences processed for', marker, '\n')
+seqs.return
+```
+
+
+### trnL
 
 ```{r}
 # Pull sequences from NCBI
@@ -209,12 +312,6 @@ seqs.df <-
      bind_rows(seqs.df)
 
 head(seqs.df)
-```
-
-```{r}
-missing <- plants[!(plants %in% seqs.df$taxon)]
-length(plants)
-length(missing)
 ```
 
 ### Taxonomy
@@ -304,9 +401,9 @@ head(taxonomy)
 # Join back to accession
 nrow(taxonomy) == nrow(seqs.df)
 
-data.frame(taxid = ids) |> 
-     full_join(distinct(taxonomy))
-dim(taxonomy)
+seqs.df <- 
+     bind_cols(seqs.df,
+               taxonomy)
 ```
 
 ### Manual edits
@@ -335,7 +432,21 @@ name.update <- filter(edits, type=='rename')
 filter(seqs.df,
        accession %in% name.update$accession)
 ```
+Interesting that only one of these found.  What happened to LR031876.1 and LR031874.1, which were pulled in prior query? 
 
+```{r}
+# Will need to generalize this later, but now can just update specifically
+seqs.df$varietas[seqs.df$accession == 'AB213010.1'] <- 'Brassica oleracea var. capitata'
+```
+
+```{r}
+# Get lowest-level taxon name
+seqs.df <- 
+     seqs.df |> 
+     MButils::lowest_level() |>
+     rename(taxon = 'name') |> 
+     select(source, accession, taxon, taxid, superkingdom:forma, seq)
+```
 
 #### QC
 
@@ -362,7 +473,8 @@ seqs.df |>
      count() |> 
      ungroup() |> 
      group_by(taxon) |> 
-     summarize(any(!N))
+     summarize(any(!N)) |> 
+     arrange(`any(!N)`)
 ```
 Okay, so for all taxa but
 - Amaranthus cruentus
@@ -422,10 +534,6 @@ rev_matches <-
 ```
 
 ```{r}
-nrow(rev_matches) + nrow(fwd_matches) == nrow(seqs.df)
-```
-
-```{r}
 seqs.df <- 
      bind_rows(fwd_matches,
           rev_matches) |> 
@@ -436,6 +544,11 @@ seqs.df |>
      group_by(type) |> 
      count()
 ```
+
+```{r}
+nrow(rev_matches) + nrow(fwd_matches) == nrow(seqs.df)
+```
+
 Now, if a read is reversed, we want to replace it with its reverse complement
 ```{r}
 seqs.df <- 
@@ -466,6 +579,7 @@ dups <-
 
 arrange(dups, desc(n))
 ```
+
 ```{r}
 sum(dups$n)
 ```
@@ -479,8 +593,8 @@ dim(seqs.df)[1] - sum(dups$n)
 seqs.df <- 
      seqs.df |>
      group_by(taxon, seq) |> 
-     arrange(acc) |> 
-     summarize(acc = first(acc)) # Choose the first accession number
+     arrange(desc(source), accession) |> # Puts RefSeq accessions first 
+     summarize(accession = first(accession)) # Choose the first accession number
 
 dim(seqs.df)
 ```
@@ -488,15 +602,16 @@ dim(seqs.df)
 ## Save
 
 ### DADA2
+
 ```{r}
 # Sort alphabetically (first by species name, and then accession number)
 seqs.df <- arrange(seqs.df, 
                    taxon,
-                   acc)
+                   accession)
 
 # Convert back to DNAStringSet object
 trnL <- seqs.df$seq
-names(trnL) <- paste(seqs.df$acc, seqs.df$taxon)
+names(trnL) <- paste(seqs.df$accession, seqs.df$taxon)
 
 trnL <- DNAStringSet(trnL)
 trnL
@@ -504,12 +619,12 @@ trnL
 ```{r}
 # Save to file
 # Consider updating name below so I can compare to prior file
-# writeXStringSet(trnL,
-#                 here('data',
-#                      'processed',
-#                      'dada2-compatible',
-#                      'trnL',
-#                      'trnLGH.fasta'))
+writeXStringSet(trnL,
+                here('data',
+                     'outputs',
+                     'dada2-compatible',
+                     'trnL',
+                     'trnLGH_update_update.fasta'))
 ```
 
 ```{r}
