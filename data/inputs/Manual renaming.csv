@@ -7,24 +7,25 @@ rename,LR031875.1,Brassica oleracea,Brassica oleracea var. italica,,,,
 omit,JX390727.1,Murraya koenigii,,GGGTAATCCTGAGCCAAATCCCGTTTTCGGAAAGGAAATAAACATTAAGAAAGCGAGAATAAAAAAGGGATAGGTGCAGAGACTCAATGG,2/11/22,BP,"Suspected misannotation: by BLAST, multiple matches to peanut accessions; does not match any other curry accessions"
 omit,KF550171.1,Allium schoenoprasum,,GGGCAATCCTGAGCCAAATCTTTATTTTTTGAAAAACAAAGGAAAACTTCCAAATTCAGAGAAACCCTGGAACTAAAAATGGGCAATCCTGAGCCAAATCTTTATTTTTTGAAAAACAAGGGTTTAAAAAAGAGAATAAAAAAGGATAGGTGCAGAGACTCAATGG,2/17/22,BP,Suspected sequencing error: nearly double the length of other Allium accessions
 omit,GU595140.1,Secale cereale,,GGGCAATCCTGAGCCAAATCCATGTTTTGAGAAAACAAGCGGTTCTCGAACTAGAACCCAAAGGAAAAGGATAGGTGCAGAGACTCAATGG,5/20/22,BP,"Suspected misannotation: by BLAST, multiple matches to rice accessions; does not match any other rye accessions"
-add,LR031876.1,Brassica oleracea,,ATCCTAGGTTACGCGAACAAACCAAAGTTTAGAAAGCGG,,,
-add,LR031875.1,Brassica oleracea,,ATCCTGGGTTACGCGAACAAACCAAAGTTTAGAAAGCGG,,,
-add,MN082371.1,Corylus avellana,,ATCCTGTTTTCCCAAAACAAATAAAACAAATTGAAGGGTTCATAAAGCGAGAATAAAAAAG,,,
-add,LR031874.1,Brassica oleracea,,ATCTTGGGTTACGCGAACAAACCAGAGTTTAGAAAGCGG,,,
-add,HG994366.1,Brassica napus,,ATCTTGGGTTACGCGAACAAACCAGAGTTTAGAAAGCGG,,,
-add,MK187055.1,Eclipta prostrata,,ATCACGTTTTCTGAAAACAAACAAAGGTTCAGAAAGCGAAAATAAAAAAG,,,Not in plant list (4/2023)
-add,NC_039346.1,Sphagneticola calendulacea,,ATCACGTTTTCTGAAAACAAACAAAGGTTCAGAAAGCGAAAATAAAAAAG,,,Not in plant list (4/2023); ingredient in traditional Chinese medicine
-add,MZ997428.1,Rheum rhabarbarum,,CTCCTTCTTTAAAAAAGGAAGAATAAAAAAG,,,
-add,LT606769.1,Vaccinium uliginosum ,,ATCCTTTTTTTGGCAAACAAATAAAGATTCCGAAAGAAAAAGG,,,
-add,LT606432.1,Vaccinium vitis-idaea,,ATCCTTTTTTTGGCAAACAAATAAAGATTCCGAAAGAAAAAGG,,,
-add,OP764691.1,Fragaria x ananassa,,ATCCCGTTTTATGAAAACAAACAAGGGTTTCAGAAAGAGAGAATAAATAAAG,,,
-add,CP023761.1,Solanum lycopersicum,,ATTTTGTTTTCTGAAAACAAACAAAGGTTCAGAAAAAAAG,,,
-add,NC_047211.1,Rubus amabilis,,ATCCCGTTTTATGAAAACAAACAAGGGTTTCAGAAAGTGAGAATAAATAAAG,,,Note this is one nucleotide off from a Fragaria x ananassa sequence 
-add,KX668086.1,Anthemis arvensis,,AAATCACGTTTTCCGAAAACAAACAAAGGTTCAGAAAGCGAAAAGAAAAAAAG,,,
-add,CP018165.1,Oryza sativa Indica group,,AATCCGTGTTTTAAGAAAACAAGCGGTTCTTGAATTAGAATCCAAAGGAAAAG,,,
-add,AP014965.1,Oryza sativa Japonica group,,AATCCGTGTTTTAAGAAAACAAGCGGTTCTTGAATTAGAATCCAAAGGAAAAG,,,
-add,CP018165.1,Oryza sativa Indica group,,ATCCGTGTTTTAAGAAAACAAGCGGTTCTTGAATTAGAATCCAAAGGAAAAG,,,
-add,AP014965.1,Oryza sativa Japonica group,,ATCCGTGTTTTAAGAAAACAAGCGGTTCTTGAATTAGAATCCAAAGGAAAAG,,,
-add,AP014968.1,Oryza sativa Japonica group,,AATCCATGTTTTGAGAAAACAAGTGGTTCTCGAACTAGAACCCAAAGGAAAAG,,,
-add,OV049954.1,Oryza rufipogon,,AATCCATGTTTTGAGAAAACAAGTGGTTCTCGAACTAGAACCCAAAGGAAAAG,,,
-add,CP013008.1,Arthrospira platensis,,GCCCTTGAAGGGGTGAAGGAAATACCTAATTTCTGGAACTTCTTGATCG,,,
+add,LR031876.1,Brassica oleracea,,,,,
+add,LR031875.1,Brassica oleracea,,,,,
+add,MN082371.1,Corylus avellana,,,,,
+add,LR031874.1,Brassica oleracea,,,,,
+add,HG994366.1,Brassica napus,,,,,
+add,MK187055.1,Eclipta prostrata,,,,,Not in plant list (4/2023)
+add,NC_039346.1,Sphagneticola calendulacea,,,,,Not in plant list (4/2023); ingredient in traditional Chinese medicine
+add,MZ997428.1,Rheum rhabarbarum,,,,,
+add,LT606769.1,Vaccinium uliginosum ,,,,,
+add,LT606432.1,Vaccinium vitis-idaea,,,,,
+add,OP764691.1,Fragaria x ananassa,,,,,
+add,CP023761.1,Solanum lycopersicum,,,,,
+add,NC_047211.1,Rubus amabilis,,,,,Note this is one nucleotide off from a Fragaria x ananassa sequence 
+add,KX668086.1,Anthemis arvensis,,,,,
+add,CP018165.1,Oryza sativa Indica group,,,,,
+add,AP014965.1,Oryza sativa Japonica group,,,,,
+add,CP018165.1,Oryza sativa Indica group,,,,,
+add,AP014965.1,Oryza sativa Japonica group,,,,,
+add,AP014968.1,Oryza sativa Japonica group,,,,,
+add,OV049954.1,Oryza rufipogon,,,,,
+add,CP013008.1,Arthrospira platensis,,,,,
+add,AC183493.1,Brassica oleracea,,,,,
