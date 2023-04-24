@@ -475,7 +475,6 @@ needs_QC,scientific_name,common_name,category,source
 ,Hericium americanum,bear's head tooth,fungus,BP
 ,Hericium coralloides,comb tooth,fungus,BP
 ,Hericium erinaceus,"lion's mane, monkey head",fungus,BP
-,Hericium erinaceus,lion's mane,fungus,JL
 ,Hypomyces lactifluorum,lobster mushroom,fungus,JL
 ,Hypsizygus marmoreus,white beech,fungus,BP
 ,Laccocephalum mylittae,native bread,fungus,"Newton, ""The Oldest Foods on Earth"""
@@ -515,7 +514,6 @@ needs_QC,scientific_name,common_name,category,source
 ,Acronychia acidula,"lemon aspen, lemon wood",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Actinidia chinensis,"Chinese Actinidia, Gold Kiwi Fruit, Kiwifruit, Kiwi Gold, Yellow-Fleshed Actinidia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Actinidia deliciosa,kiwi,plant,BP
-,Adansonia digitata,baobab,plant,BP
 ,Adansonia digitata,"African Baobab, Baobab, Bottle Tree, Cream Of Tartar Tree, Dead-Rat Tree, Ethiopian Sour Tree, Judas Fruit, Monkey-Bread Tree, Senegal Calabash, Sour Gourd, Upside Tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Adansonia gregorii,"Australian Baobab, Boab, Cream Of Tartar Tree, Bottle Tree, Dead Rat Tree, Gouty Stem Tree, Sour Gourd",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Adenanthera pavonina,"Barbados Pride, Bead Tree, Crab's Eyes, Circassian Bean, Circassian Seed, Condori Wood, Coral Bean Tree, Coral-Wood, Coralwood, Crab's Eyes, False Sandalwood, False Wiliwili, Jumbi Bead, Jumble-Bead, Peacock Flower Fence, Polynesian Peanut, Red Bead, Red Beadtree, Red Bean Tree, Red Sandalwood, Red Wood, Saga Tree, Sandalwood Tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -603,7 +601,6 @@ needs_QC,scientific_name,common_name,category,source
 ,Artemisia dracunculus,tarragon,plant,BP
 ,Artemisia vulgaris,mugwort,plant,SJ
 ,Artocarpus altilis,"Breadfruit, Breadnut, Breadnut Tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Artocarpus altilis ,breadfruit,plant,BP
 ,Artocarpus anisophyllus,Entawak,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Artocarpus camansi,Breadnut,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Artocarpus dadah,"Dadak, Tampang Bulu",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -699,7 +696,6 @@ needs_QC,scientific_name,common_name,category,source
 ,Brassica rapa subsp. chinensis,bok choy,plant,BP
 ,Brassica rapa subsp. narinosa,tatsoi,plant,BP
 ,Brassica rapa subsp. oleifera,field mustard,plant,BP
-,Brassica rapa subsp. oleifera,"canola, rapeseed",plant,JL
 ,Brassica rapa subsp. parachinensis,choy sum,plant,BP
 ,Brassica rapa subsp. pekinensis,napa cabbage,plant,BP
 ,Brassica rapa subsp. perviridis,komatsuna,plant,BP
