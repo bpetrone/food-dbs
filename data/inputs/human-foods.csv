@@ -738,9 +738,9 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Carya illinoinensis,pecan,"illinois nut, pecan, pecan nut, soft-shelled hickory",plant,BP
 ,Cassia fistula,golden shower,"golden shower tree, indian laburnum, pudding-pine tree, pudding-pipe tree, purging cassia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Castanea sativa,sweet chestnut,"chestnut, chestnut tree, edible chestnut, european chestnut, italian chestnut, marron, portuguese chestnut, spanish chestnut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Castanospermum australe,"australian chestnut, black bean, moreton bay chestnut","australian chestnut, black bean, moreton bay chestnut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Ceiba pentandra,"ceiba, corkwood, cotton silk tree, cotton tree, cottonwood tree, java cotton, java kapok, kapok, kapok tree, kapoktree, silk cotton tree, silk-cottontree, white silk cotton tree, white silk-cottontree, white-flowered silk-cotton tree","ceiba, corkwood, cotton silk tree, cotton tree, cottonwood tree, java cotton, java kapok, kapok, kapok tree, kapoktree, silk cotton tree, silk-cottontree, white silk cotton tree, white silk-cottontree, white-flowered silk-cotton tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Centaurea cyanus,"bachelors button, blue bottle, blue cap, blue poppy, blueblow, bluebonnets, bluebottle, boutonniere flower, cornflower, cyani flower, garden cornflower, hurtsickle","bachelors button, blue bottle, blue cap, blue poppy, blueblow, bluebonnets, bluebottle, boutonniere flower, cornflower, cyani flower, garden cornflower, hurtsickle",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Castanospermum australe,moreton bay chestnut,"australian chestnut, black bean",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Ceiba pentandra,kapok,"ceiba, corkwood, cotton silk tree, cotton tree, cottonwood tree, java cotton, java kapok, kapok tree, kapoktree, silk cotton tree, silk-cottontree, white silk cotton tree, white silk-cottontree, white-flowered silk-cotton tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Centaurea cyanus,cornflower,"bachelors button, blue bottle, blue cap, blue poppy, blueblow, bluebonnets, bluebottle, boutonniere flower, cyani flower, garden cornflower, hurtsickle",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Centella asiatica,pennywort,,plant,BP
 ,Ceratonia siliqua,carob bean,,plant,JL
 ,Cereus repandus,peruvian apple cactus,,plant,JL
