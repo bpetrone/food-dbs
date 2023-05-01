@@ -1,4 +1,4 @@
-needs_QC,scientific_name,common_name,alternative_names,category,source
+needs_QC,scientific_name,common_name,alternative names,category,source
 ,Abramis brama,common bream,,animal,JL
 1,Acanthocybium solandri,wahoo,ono,animal,JL
 ,Acanthopagrus schlegelii,blackhead seabream,"japanese black porgy, sea bream",animal,"Newton, ""The Oldest Foods on Earth"""
@@ -539,6 +539,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Allium schoenoprasum,chive,,plant,BP
 ,Allium tuberosum,garlic chive,,plant,"van Wyk, ""Food Plants of the World"""
 ,Alocasia macrorrhizos,giant taro,,plant,BP
+,Aloe cooperi,cooper's aloe,iputumane,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Aloe vera,aloe,,plant,JL
 ,Aloysia triphylla,lemon verbena,,plant,"van Wyk, ""Food Plants of the World"""
 ,Alpinia conchigera,lesser alpinia,"joint-whip ginger, mussel galangal",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -550,16 +551,22 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Amalocalyx microlobus,mak sim,,plant,BP
 ,Amaranthus cruentus,red amaranth,,plant,BP
 ,Amaranthus dubius,red spinach,,plant,BP
+,Amaranthus graecizans,mediterranean amaranth,short-tepalled pigweed,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Amaranthus thunbergii,thunberg's amaranthus,thunberg's pigweed,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Amaranthus tricolor,chinese spinach,,plant,"van Wyk, ""Food Plants of the World"""
 ,Amelanchier alnifolia,saskatoon berry,"alder leaf shadbush, mountain juneberry, pacific serviceberry, rocky mountain blueberry, saskatoon, saskatoon serviceberry, serviceberry, sarvisberry, shadbush, juneberry, western serviceberry, western shadbush",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Amomum aromaticum,nepal cardamon,"bengal cardamon, jalpaiguri cardamom",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Amomum compactum,round cardamom,"chester cardamom, cluster cardamom, false cardamom, java cardamom, siam cardamom",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Amomum longiligulare,hainan amomum,"malabar cardamom, tavoy cardamom",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Amomum subulatum,black cardamom,,plant,BP
+,Amorphophallus abyssinicus,bagana,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Amorphophallus konjac,konjac,,plant,JL
 ,Amorphophallus paeoniifolius,elephant foot yam,"cheeky yam, corpse flower, corpse plant, elephant yam, stink lily, telinga potato, voodoo lily, white-spot giant arum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Anacardium occidentale,cashew,,plant,JL
 ,Ananas comosus,pineapple,,plant,BP
+,Ancylobothrys petersiana,climbing milk-apricot,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Andrographis paniculata,creat,green chiretta,plant,SJ
+,Aneilema aequinoctiale,clinging aneilema,efiajija,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Anethum foeniculum,fennel,,plant,BP
 ,Anethum graveolens,dill,,plant,BP
 ,Angelica archangelica,angelica,,plant,"van Wyk, ""Food Plants of the World"""
@@ -570,6 +577,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Annona montana,mountain soursop,"wild custard apple, wild soursop",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Annona muricata,soursop,,plant,BP
 ,Annona reticulata,bullock's heart,,plant,"Sterling, ""Yucatan"""
+,Annona senegalensis,african custard-apple,"wild custard apple, wild soursop, abo ibobo, sunkungo, dorgot",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Annona squamosa,sweetsop,,plant,"van Wyk, ""Food Plants of the World"""
 ,Anonidium mannii,bobo,,plant,BP
 ,Anthriscus cerefolium,chervil,,plant,"van Wyk, ""Food Plants of the World"""
@@ -614,8 +622,10 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Artocarpus tamaran,elephant jack,tamaran,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Asimina triloba,pawpaw,,plant,JL
 ,Aspalathus linearis,rooibos,,plant,BP
+,Asparagus africanus,african asparagus,"bush asparagus, wild asparagus, climbing asparagus fern, ornamental asparagus, sparrow grass",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Asparagus cochinchinensis,chinese asparagus,"cochinchinese asparagus, shiny asparagus, wild asparagus",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Asparagus officinalis,asparagus,,plant,BP
+,Asparagus racemosus,shatavari,"satavar, shatamull, shatawari",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Atriplex hortensis,orache,,plant,"van Wyk, ""Food Plants of the World"""
 ,Avena sativa,oat,,plant,BP
 ,Averrhoa bilimbi,bilimbi,,plant,"van Wyk, ""Food Plants of the World"""
@@ -665,6 +675,8 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Bouea oppositifolia,plum-mango,"burmese plum, marian plum, marian tree,",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Bougainvillea glabra,lesser bougainvillea,"bougainvillea, glory of the garden, paper flower",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Bougainvillea spectabilis,great bougainvillea,"bougainvillea, paper flower, purple bougainvillea",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Brachiaria deflexa,guinea millet,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Brachiaria ramosa,browntop millet,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Brassica juncea var. juncea,brown mustard,,plant,BP
 ,Brassica juncea var. rugosa,mustard greens,,plant,"van Wyk, ""Food Plants of the World"""
 ,Brassica napobrassica,rutabaga,,plant,JL
@@ -740,6 +752,9 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Castanea sativa,sweet chestnut,"chestnut, chestnut tree, edible chestnut, european chestnut, italian chestnut, marron, portuguese chestnut, spanish chestnut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Castanospermum australe,moreton bay chestnut,"australian chestnut, black bean",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Ceiba pentandra,kapok,"ceiba, corkwood, cotton silk tree, cotton tree, cottonwood tree, java cotton, java kapok, kapok tree, kapoktree, silk cotton tree, silk-cottontree, white silk cotton tree, white silk-cottontree, white-flowered silk-cotton tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Celosia trigyna,woolflower,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Cenchrus americanus,pearl millet,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Cenchrus biflorus,indian sandbur,"bhurat, bhurut, haskaneet, aneeti, k 'arangiya, ngibbi, cram-cram",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Centaurea cyanus,cornflower,"bachelors button, blue bottle, blue cap, blue poppy, blueblow, bluebonnets, bluebottle, boutonniere flower, cyani flower, garden cornflower, hurtsickle",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Centella asiatica,pennywort,,plant,BP
 ,Ceratonia siliqua,carob bean,,plant,JL
@@ -754,6 +769,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Chrysanthemum morifolium,florist's daisy,"chrysanthemum, mum, mums, florists chrysanthemum, garden mums",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Chrysophyllum cainito,star apple,,plant,"Sterling, ""Yucatan"""
 ,Chrysophyllum oliviforme,satin leaf,"damson plum, date plum, olive plum, satin leaf fruit, satin-leaf tree, tuko, wild star apple",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Chrysopogon nigritanus,black vetivergrass,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Chrysopogon zizanioides,vetiver,"cus-cus, cuscus grass, indian couch grass, khus-khus grass, kuskus, vetiver grass, vetiveria",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Cibotium barometz,barometz,"chain fern, chain fern rhizome, cibot rhizome, cibota, cibotium, golden chicken fern, golden hair dog fern, golden moss, golden lamb, lamb of tartary, scythian lamb, tartarian lamb, vegetable lamb of tartary, wooly fern",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Cicer arietinum,chickpea,,plant,BP
@@ -809,6 +825,9 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Colocasia antiquorum,eddo,,plant,JL
 ,Colocasia esculenta,taro,,plant,BP
 ,Combretum indicum,rangoon creeper,"burma creeper, chinese honeysuckle, drunken sailor, liane vermifuge, love and innocence",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Commelina africana,common yellow commelina,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Commelina benghalensis,benghal dayflower,tropical spiderwort,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Commelina diffusa,climbing dayflower,spreading dayflower,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Corchorus capsularis,white jute,,plant,BP
 ,Corchorus olitorius,jute mallow,,plant,BP
 ,Cordia decandra,carbon,carbonillo,plant,BP
@@ -851,7 +870,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Cynometra cauliflora,nam-nam,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Cyperus esculentus,tiger nut,,plant,JL
 ,Cyperus papyrus,papyrus,"bulrushes, egyptian paper plant, egyptian paper reed, egyptian papyrus, mediterranean sedge, paper reed, papyrus sedge",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Cyperus rotundus,coco grass,"brown nutsedge, java grass, ground almond, nutgrass, nutsedge, purple nutsedge, red nutsedge",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Cyperus rotundus,coco-grass,"brown nutsedge, java grass, ground almond, nutgrass, nutsedge, purple nutsedge, red nutsedge",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Cyphomandra betacea,tamarillo,,plant,BP
 ,Cyrtosperma merkusii,giant swamp taro,"gallan, swamp taro",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dacryodes edulis,safou,butterfruit,plant,BP
@@ -879,6 +898,8 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Dimocarpus longan,longan,,plant,BP
 ,Dioscorea alata,ube/purple yam,"ube, purple yam",plant,JL
 ,Dioscorea bulbifera,air potato,"air yam, aerial yam, bubil bitter yam, bearing yam, cheeky yam, malacca yam, otaheite potato, otaheite yam, potato yam, shoebutton air potato",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Dioscorea cayenensis,guinea yam,"yellow yam, yellow guinea yam",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Dioscorea dumetorum,bitter yam,"cluster yam, trifoliate yam, three-leaved yam",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Dioscorea esculenta,lesser yam,"asiatic yam, birch rind yam, chinese yam, goa potato, hausa potato, karen potato, sweet yam, spiny chinese yam",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dioscorea hamiltonii,mountain yam,yam,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dioscorea hispida,indian three-leaved yam,"asiatic bitter yam, intoxicating yam, spirit yam, wild yam",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -888,11 +909,13 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Diospyros blancoi,velvet apple,"butter fruit, camogan ebony, mabolo, mabola persimmon, mabola-tree, velvet persimmon",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Diospyros digyna,black persimmon,,plant,"Sterling, ""Yucatan"""
 ,Diospyros kaki,oriental persimmon,"chinese persimmon, chinese fig, chinese plum, date plum, kakee plum, kaki, kaki persimmon, japanese persimmon, keg fig, persimmon, sharon fruit",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Diplorhynchus condylocarpon,horn-pod tree,wild rubber,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Diplotaxis tenuifolia,wild rocket,,plant,SJ
 ,Diuris semilunulata,late leopard orchid,"donkey orchid, spotted double-tail orchid",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Diuris sulphurea,tiger orchid,"hornet orchid, yellow tiger orchid tiger orchid, hornet orchid",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Doryanthes excelsa,gymea lily,"flame lily, giant lily, globe spear lily, guinea lily, illawara lily, spear lily",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Dovyalis hebecarpa,ceylon gooseberry,"ketembilla, kitembilla",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Dracaena mannii,small-leaved dragon tree,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Dracontomelon dao,argus pheasant-tree,"mon fruit, new guinea walnut, pacific walnut, papua new guinea walnut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Durio dulcis,red durian,lahong,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Durio graveolens,red-fleshed durian,"orange-fleshed durian, yellow durian",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -903,6 +926,8 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Durio zibethinus,durian,,plant,BP
 ,Dysphania ambrosioides,mexican tea,,plant,"Sterling, ""Yucatan"""
 ,Echinacea purpurea,echinacea,"black sampson, comb flower, coneflower, eastern purple coneflower, indian head, missouri snakeroot, purple coneflower, red sunflower",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Echinochloa colona,jungli/wild rice,"deccan grass, jharua, awnless barnyard grass",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Echinochloa crus-galli,cockspur,"cockspur grass, barnyard millet, japanese millet, water grass, common barnyard grass, barnyard grass",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Echinochloa frumentacea,indian barnyard millet,"billion-dollar grass, cockspur grass, japanese millet, japanese barnyard millet, sanwa millet, sawa millet, shama millet, siberian millet, white millet, white panic, white panicum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Elaeis guineensis,oil palm,,plant,BP
 ,Elateriospermum tapos,buah perah,"parah tree, perah tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -911,6 +936,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Elettaria cardamomum,green cardamom,,plant,BP
 ,Eleusine coracana,finger millet,,plant,BP
 ,Eleusine indica,indian goosegrass,"bullgrass, crabgrass, crow's foot, crowfoot grass, crowsfoot grass, dog grass, foul foot,fowl foot grass, fowl-foot grass, goose grass, goosegrass, india goosegrass, indian goose grass, iron grass, silver crabgrass, wire grass, wire grass, yard grass, yardgrass",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Ensete ventricosum,enset,"ensete, ethiopian banana, abyssinian banana, pseudo-banana, false banana, wild banana",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Entada phaseolides,st thomas bean,"cali bean, calinut, elephant creeper, elva, elva climber, garbee bean, gila bean, go-go, go-go vine, gogo, mackay bean, matchbox bean, go-go, monkey ladder pod, nicker bean, sea bean, sea heart",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Enydra fluctuans,buffalo spinach,,plant,BP
 ,Epiphyllum oxypetalum,queen of the night,"dutchman's pipe, jungle cactus, night blooming cereus, night queen, orchid cactus",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -984,7 +1010,8 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Gliricidia sepium,quick stick,"gliricidia, glory cedar, mexican lilac, mother of cocoa, nicaraguan cacao shade, st. vincent plum, tree of iron",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Glycine max,soybean,,plant,BP
 ,Glycyrrhiza glabra,licorice,,plant,JL
-,Gnetum africanum,eru,,plant,BP
+,Gnetum africanum,eru,african jointfir,plant,BP
+,Gnetum buchholzianum,jointfir,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Gnetum gnemon,gnetum nut,"daeking tree, gnemon tree, jointfir, joint-fir spinach, melinjo nut, paddy oats, spanish jointfir, tulip tree, two leaf",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Gracilaria,gracilaria seaweeds (agar),,plant,FAO Cultured Aquatic Species Fact Sheets
 ,Grewia asiatica,phalsa,"grewia, falsa, indian phalsa, parsa phalsa",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1012,6 +1039,8 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Hylocereus megalanthus,pitahaya,"pitaya, yellow dragonfruit, yellow pitahaya",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Hylocereus polyrhizus,red-fleshed dragon fruit,"belle of the night, common night blooming cereus, conderella plant, dragon fruit, nanettikafruit, night blooming cereus, pitahaya, red-fleshed pitahaya, red pitahaya, queen of the night, strawberry pear",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Hylocereus undatus,dragon fruit/pitahaya,"dragon fruit, pitahaya",plant,BP
+,Hyphaene petersiana,real fan palm,makalani palm,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Hyphaene thebaica,doum palm,gingerbread tree,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Ilex paraguariensis,yerba mate,,plant,BP
 ,Illicium verum,star anise,,plant,SJ
 ,Impatiens balsamina,balsam,"garden balsam, touch me not balsam, garden balsam, garden balsamine, impatiens, jewelweed, rose balsam, spotted snapweed",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1036,7 +1065,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Juniperus communis,common juniper,"fairy circle, dwarf juniper, ground juniper, hackmatack, horse savin, juniper, juniper berry, malchangel, mountain common juniper, mountain juniper, old field common juniper, prostrate juniper, siberian juniper",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Kaempferia galanga,black galangal,,plant,BP
 ,Kaempferia rotunda,asian crocus,"hainan resurrection lily, himalayan crocus, indian crocus, peacock ginger, resurrection lily, round-rooted galangal, tropical crocus",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Kiegelia africana,sausage tree,"african sausage tree, cucumber tree, liver sausage tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Kigelia africana,sausage tree,"african sausage tree, cucumber tree, liver sausage tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Kunzea pomifera,muntries,"emu apples, native cranberries, munthari, muntaberry, monterry",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Kyllinga brevifolia,shortleaf spikesedge,,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Lablab purpureus,hyacinth bean,,plant,BP
@@ -1044,6 +1073,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Lagenaria siceraria,calabash,,plant,BP
 ,Lamium album,white nettle,,plant,SJ
 ,Lansium domesticum,langsat,"duku, malaysian duku, very sweet duku, dokong, duku-langsat, lonkong (intermediate form), lansones, lanzon (thin-skinned form), duku (thick-skinned form)",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Landolphia dulcis,landolphia,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Lanxangia tsaoko,tsaoko amomum,black cardamom,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Lasia spinosa,lasia,geli-geli,plant,BP
 ,Laurus nobilis,bay leaf,,plant,BP
@@ -1173,6 +1203,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Opuntia stricta,erect prickly pear,"araluen pear, australian pest pear, coastal prickly pear, coastal prickly-pear, common pest pear, common prickly pear, dildo, eltham indian fig, eltham indian-fig, erect prickly-pear, erect pricklypear, erect pricklypear cactus, gayndah pear, pakan, pest pear of australia, pest prickly-pear, pest pricklypear, sour prickly pear, southern spineless cactus, spineless prickly pear, spiny pest pear, sweet prickly pear, sweet prickly-pear",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Origanum vulgare,oregano,,plant,BP
 ,Oroxylum indicum,indian trumpet flower,"broken bones plant, midday marvel, tree of damocles",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Oryza glaberrima,african rice,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Oryza sativa,rice,,plant,BP
 ,Osmundastrum cinnamomeum,cinnamon fern,,plant,BP
 ,Oxalis pes-caprae,african wood-sorrel,,plant,"van Wyk, ""Food Plants of the World"""
@@ -1182,6 +1213,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Pachira insignis,guiana chestnut,"malabar chestnut, trinidad pachira, wild breadnut, wild chataigne, wild chestnut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pachyrhizus ahipa,ahipa,"andean bean, andean yam bean, yam bean",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pachyrhizus erosus,jicama,,plant,"Sterling, ""Yucatan"""
+,Paspalum scrobiculatum,kodo millet,"koda millet, arikelu, varagu, varak, arka, kodo, kodra",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Paederia foetida,stinkvine,,plant,BP
 ,Paeonia lactiflora,chinese peony,"common garden peony, common peony, coral peony, fragrant peony, white peony",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Paeonia x suffruticosa,tree peonies,"mountain peony, moutan, moutan cortex, moutan peony, tree peony",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1294,6 +1326,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Psidium guineense,brazilian guava,"castilian guava, guinea guava, gã¼isara guava, guisaro sour guava, wild guava",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Psophocarpus scandens,tropical african winged bean,,plant,BP
 ,Psophocarpus tetragonolobus,winged bean,"asparagus bean, asparagus pea, princess bean, princess-pea, four-angled bean, goa bean, manila bean, supermarket bean, short day asparagus pea",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Pteridium aquilinum,bracken,"brake, common bracken, eagle fern",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Pterocarpus indicus,amboyna wood,"andaman redwood, angsana, beeswing narra, blanco's narra, burmese rosewood, malay paduak, narra, new guinea rosewood, pashu padauk, philippine mahogany, prickly narra, red sandalwood, redwood, tenasserim mahogany",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pterostylis curta,blunt greenhood,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pterostylis pedunculata,maroonhood,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1345,6 +1378,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Rubus ulmifolius,elmleaf blackberry,,plant,"van Wyk, ""Food Plants of the World"""
 ,Rubus ursinus x idaeus,boysenberry,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Rubus x loganobaccus,loganberry,"phenomenal-berry, tayberry",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Saba comorensis,bungo fruit,"mbungo, rubber vine",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Saccharum officinarum,sugarcane,,plant,BP
 ,Saccharum spontaneum,wild sugarcane,"cane inflorescence, coastal pitpit, cultivated sugarcane, duruka, fiji asparagus, pitpit, vegetable cane",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Sagittaria trifolia,threeleaf arrowhead,"arrowhead, arrow-head, arrow-weed, chinese arrowhead, chinese potato, duck potato, old world arrowhead, swamp potato",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1364,8 +1398,10 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Santalum acuminatum,desert quandong,,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Sarcotheca diversifolia,jungle belimbing,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Sauropus androgynus,katuk,,plant,BP
+,Scadoxus puniceus,paintbrush lily,"snake lily, royal paintbrush, king-of-candida, african blood lily, rooikwas, isisphompho, umgola",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Scaphium macropodum,malva nut,"makjong, kembang semangkok",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Schinus molle,pink peppercorn,,plant,JL
+,Sclerocarya birrea,marula,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Scorodocarpus borneensis,garlic nut,"bawang hutan, forest onion, nutwood garlic, sindu, wood garlic, woodland onion",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Scorodophloeus zenkeri,garlic tree,divida,plant,BP
 ,Scorzonera hispanica,black salsify,spanish salsify,plant,JL
@@ -1404,7 +1440,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Solanum torvum,turkey berry,"cherry eggplant, devil's fig, green-fruited pea eggplant, gully bean, pea aubergine, pea eggplant, plate brush, susumba, susumber, thai pea eggplant, thai cultivated nightshade, thornapple, water nightshade, wild eggplant",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Solanum tuberosum,potato,,plant,BP
 ,Sorbus domestica,sorb tree,"beam tree, checker tree, chess tree, service tree, service tree mountain ash, true service tree, whitty pear",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Sorghum bicolor,sorghum,,plant,BP
+,Sorghum bicolor,sorghum,"great millet, broomcorn, guinea corn, durra, imphee, jowar, milo",plant,BP
 ,Spathodea campanulata,african tulip tree,"african flame tree, african tuliptree, african-tuliptree, fireball, firebell, fire tree, flame of the forest, flame-of-the-forest, flame tree, fountain tree, indian cedar, nandi flame, nile flame, pichkari, nandi flame, st. dominic's mahogany, santo domingo mahogany, scarlet bell tree, squirt tree, tuliptree, ugandan flame",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Spinacia oleracea,spinach,,plant,BP
 ,Spinacia tetrandra,spinach,,plant,BP
