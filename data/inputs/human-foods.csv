@@ -664,6 +664,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Beta vulgaris,beet,chard,plant,BP
 ,Beta vulgaris subsp. cicla,chard,,plant,"van Wyk, ""Food Plants of the World"""
 ,Beta vulgaris subsp. vulgaris,beet,chard,plant,BP
+,Bidens pilosa,michicha,"hitch hikers, black-jack, beggarticks, farmer's friends, spanish needle, cobblers pegs, tsine",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Billardiera scandens,apple berry,"apple berry, apple dumpling",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Bixa orellana,annato,,plant,BP
 ,Blighia sapida,akee,,plant,"van Wyk, ""Food Plants of the World"""
@@ -762,6 +763,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Chaenomeles speciosa,chinese flowering quince,"chinese-quince, flowering-quince, ornamental quince, japanese quince",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Chamaedorea tepejilote,pacaya,,plant,JL
 ,Cheilocostus speciosus,crepe ginger,"cane reed, crape ginger, elegant costus, malay ginger, spiral flag, spiral ginger, white costus, wild ginger",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Chenopodium album,melde,"lamb's quarters, goosefoot, wild spinach, fat-hen, white goosefoot",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Chenopodium pallidicaule,canihua,,plant,JL
 ,Chenopodium quinoa,quinoa,,plant,BP
 ,Chondrus crispus,carageenan,,plant,JL
@@ -824,14 +826,18 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Coleus amboinicus,cuban oregano,,plant,"Sterling, ""Yucatan"""
 ,Colocasia antiquorum,eddo,,plant,JL
 ,Colocasia esculenta,taro,,plant,BP
+,Combretum hereroense,russet bushwillow,mouse-eared combretum,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Combretum indicum,rangoon creeper,"burma creeper, chinese honeysuckle, drunken sailor, liane vermifuge, love and innocence",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Commelina africana,common yellow commelina,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Commelina benghalensis,benghal dayflower,tropical spiderwort,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Commelina diffusa,climbing dayflower,spreading dayflower,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
+,Commiphora africana,african myrrh,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Corchorus capsularis,white jute,,plant,BP
 ,Corchorus olitorius,jute mallow,,plant,BP
+,Cordia africana,sudan teak,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Cordia decandra,carbon,carbonillo,plant,BP
 ,Cordia dodecandra,ciricote,,plant,"Sterling, ""Yucatan"""
+,Cordia sinensis,grey-leaved saucer berry,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Cordyline fruticosa,ti plant,"boundary marsh, broadleaf palm-lily, cabbage palm, chinese fire leaf, cordyline, false palm, good luck plant, goodluck plant, hawaiian ti, hawaiian ti leaf, hawaiian ti plant, palm lily, polynesian ti plant, tree of kings",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Coriandrum sativum,coriander/cilantro,"coriander, cilantro",plant,BP
 ,Corylus avellana,hazelnut,,plant,BP
@@ -1112,6 +1118,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Macadamia tetraphylla,macadamia nut,"queensland-nut, rough-leaved queensland nut, rough-shelled bush nut, rough-shelled macadamia, rough-shelled queensland-nut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Maclura pomifera,osage orange,,plant,JL
 ,Macrozamia riedlei,zamia,zamia palm,plant,"Newton, ""The Oldest Foods on Earth"""
+,Maerua angolensis,bead-bean tree,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Magnolia denudata,lily tree,"hsin-i, jade lily, jade orchid, white magnolia, white yulan, yulan, yulan magnolia, yulan tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Magnolia grandiflora,southern magnolia,"big laurel, bull bay, great laurel magnolia, large-flower magnolia, laurel-leaved magnolia, evergreen magnolia, loblolly magnolia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Malpighia emarginata,acerola cherry,"acerola, barbados cherry, dwarf barbados cherry, garden cherry, huesito, indian cherry, manzanita, native cherry, puerto rico cherry, surinam cherry, west indian cherry",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1228,6 +1235,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Pangium edule,pangi,"football fruit, sis nut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Panicum miliaceum,proso millet,,plant,BP
 ,Papaver somniferum,poppy,,plant,JL
+,Parinari curatellifolia,mobola plum,"mmupudu, mupundu",plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Parkia speciosa,bitter bean,"petai bean, stink bean, twisted cluster bean",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Parmentiera aculeata,tree cucumber,,plant,"Sterling, ""Yucatan"""
 ,Parmentiera cereifera,candle tree,"candlestick tree, panama candle tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
