@@ -33,6 +33,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Apostichopus japonicus,japanese sea cucumber,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Arapaima gigas,arapaima,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Archosargus probatocephalus,sheepshead,,animal,SJ
+,Arctica islandica,ocean quahog,,animal,Marty Smith
 ,Ardeotis australis,australian bustard,,animal,"Newton, ""The Oldest Foods on Earth"""
 ,Argopecten irradians,atlantic bay scallop,,animal,SJ
 ,Argyrosomus regius,meagre,,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -203,6 +204,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Lepidopsetta polyxystra,northern rock sole,,animal,NOAA Fisheries
 ,Lethocerus indicus,giant water bug,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Leucoraja ocellata,winter skate,,animal,NOAA Fisheries
+,Leukoma staminea,littleneck clam,,animal,Marty Smith
 ,Limanda aspera,yellowfin sole,,animal,NOAA Fisheries
 ,Limanda ferruginea,yellowtail flounder,,animal,NOAA Fisheries
 1,Lithodidae,king crab,,animal,JL
@@ -294,6 +296,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 1,Ostreoidea,oyster,,animal,JL
 ,Ovis aries,sheep,,animal,BP
 ,Pandalus borealis,northern prawn,,animal,SJ
+,Pandalus jordani,ocean (coldwater) shrimp,,animal,Marty Smith
 ,Pangasianodon hypophthalmus,striped catfish,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Pangasius bocourti,swai,,animal,JL
 ,Panopea generosa,geoduck,,animal,SJ
@@ -336,6 +339,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Polydactylus sexfilis,moi,,animal,SJ
 ,Polyprion americanus,wreckfish,,animal,NOAA Fisheries
 ,Pomatomus saltatrix,bluefish,,animal,NOAA Fisheries
+,Portunus armatus,blue swimmer crab,,animal,SJ
 ,Portunus pelagicus,flower crab,,animal,SJ
 ,Pristipomoides filamentosus,crimson jobfish,pink snapper,animal,NOAA Fisheries
 ,Pristipomoides sieboldii,von siebold's snapper,,animal,NOAA Fisheries
@@ -345,6 +349,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Pseudacanthotermes militaris,termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Pseudacanthotermes spiniger,termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Pseudopleuronectes americanus,winter flounder,,animal,NOAA Fisheries
+,Pylodictis olivaris,flathead catfish,,animal,Marty Smith
 ,Rachycentron canadum,cobia,,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Rajidae,skate,,animal,JL
 ,Rana catesbeiana,american bull frog,,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -400,6 +405,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 1,Serranidae,sea bass,,animal,JL
 ,Sicyonia brevirostris,brown rock shrimp,,animal,SJ
 1,Siganus,spinefeet,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Siliqua patula,razor clam,,animal,Marty Smith
 1,Siluriformes,catfish,,animal,JL
 ,Siniperca chuatsi,mandarin fish,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Solea solea,common sole,,animal,FAO Cultured Aquatic Species Fact Sheets
@@ -409,6 +415,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 1,Sphoeroides,fugu fish,,animal,JL
 1,Sphyraena,barracuda,,animal,JL
 ,Spisula solida,surf clam,,animal,SJ
+,Spisula solidissima,atlantic surf clam,,animal,Marty Smith
 1,Sprattus,sprat,,animal,JL
 1,Squalidae,dogfish,,animal,JL
 ,Squalus acanthias,atlantic spiny dogfish,,animal,NOAA Fisheries
