@@ -650,6 +650,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Baccaurea ramiflora,burmese grape,"baccaurea, lantern tree, mafai",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Backhousia citriodora,lemon myrtle,,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Bactris gasipaes,peach palm,,plant,"van Wyk, ""Food Plants of the World"""
+,Bambusa odashimae,odashimae bamboo,,plant,FAO major crops 2019
 ,Bambusa vulgaris,common bamboo,,plant,BP
 ,Banksia attenuata,candlestick banksia,"slender banksia, biara",plant,"Newton, ""The Oldest Foods on Earth"""
 ,Banksia grandis,bull banksia,"giant banksia, mangite",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -733,9 +734,11 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Calophyllum inophyllum,tamanu,"alexandrian laurel, ball nut, ball nut tree, beach callophyllum, beauty leaf, borneo mahogany, indian laurel, india-oil nut, laurelwood, mastwood, oil nut tree, portia tree, poon, poonay oil plant, satin touraga, sweet-scented calophyllum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Camellia japonica,common camellia,"camellia, japanese camellia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Camellia sinensis,tea,,plant,BP
+,Canarium album,nam liap,,plant,FAO major crops 2019
 ,Canarium decumanum,pig canary,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Canarium indicum,galip nut,"blume galip, canarium almond, canarium nut, galip, java almond, java olive, kanari, nangai nut, ngali nut",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Canarium odontophyllum,dabai,sibu olive,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Canarium ovatum,pili nut,,plant,FAO major crops 2019
 ,Canarium schweinfurthii,african elemi,,plant,"Kuete, ""Medicinal Spices and Vegetables from Africa"""
 ,Canarium vulgare,java almond,"chinese olive, kenari nut, kenari nut tree, wild almond",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Canavalia gladiata,sword bean,"japanese jackbean, jamaican horse bean, scimitar bean",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -754,6 +757,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Carissa macrocarpa,natal plum,"carissa, big num num, large num num",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Carissa spinarum,conkerberry,"bengal currant, carandas plum, carissa, karanda, bush plum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Carnegiea gigantea,saguaro,,plant,JL
+,Carthamus tinctorius,safflower seed,,plant,FAO major crops 2019
 ,Carum carvi,caraway seeds,,plant,JL
 ,Carya illinoinensis,pecan,"illinois nut, pecan, pecan nut, soft-shelled hickory",plant,BP
 ,Cassia fistula,golden shower,"golden shower tree, indian laburnum, pudding-pine tree, pudding-pipe tree, purging cassia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -921,6 +925,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Dioscorea trifida,indian yam,,plant,BP
 ,Diospyros blancoi,velvet apple,"butter fruit, camogan ebony, mabolo, mabola persimmon, mabola-tree, velvet persimmon",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Diospyros digyna,black persimmon,,plant,"Sterling, ""Yucatan"""
+,Diospyros virginiana,american persimmon,,plant,FAO major crops 2019
 ,Diospyros kaki,oriental persimmon,"chinese persimmon, chinese fig, chinese plum, date plum, kakee plum, kaki, kaki persimmon, japanese persimmon, keg fig, persimmon, sharon fruit",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Diplorhynchus condylocarpon,horn-pod tree,wild rubber,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Diplotaxis tenuifolia,wild rocket,,plant,SJ
@@ -1026,6 +1031,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Gnetum africanum,eru,african jointfir,plant,BP
 ,Gnetum buchholzianum,jointfir,,plant,"Peters, ""Edible Wild Plants of Subsaharan Africa"""
 ,Gnetum gnemon,gnetum nut,"daeking tree, gnemon tree, jointfir, joint-fir spinach, melinjo nut, paddy oats, spanish jointfir, tulip tree, two leaf",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Gossypium hirsutum,seed cotton,,plant,FAO major crops 2019
 ,Gracilaria,gracilaria seaweeds (agar),,plant,FAO Cultured Aquatic Species Fact Sheets
 ,Grewia asiatica,phalsa,"grewia, falsa, indian phalsa, parsa phalsa",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Gurania,jungle cucumber,,plant,Lachat
@@ -1162,6 +1168,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Merrillia caloxylon,flowering merrillia,"katinga, malay lemon",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Mespilus germanica,medlar,medlar tree,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Mesua ferrea,ceylon ironwood,"cobra's saffron, indian rose chestnut, ironwood, ironwood tree, ironwood of assam, mesua, poached egg tree, sembawang tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Metroxylon sagu,sago palm,,plant,FAO major crops 2019
 ,Michelia mediocris,michelia,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Microlaena stipoides,alpine rice,,plant,"Newton, ""The Oldest Foods on Earth"""
 ,Mimosa pudica,sensitive plant,"action plant, ant-plant, bashful mimosa, humble plant, live-and-die, modest plant, sensitive weed, sleeping grass, shame plant, shameful plant, shrinking plant, shy plant, tickle-me plant, touch-me-not, touch-shy plant, virgin plant",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1195,6 +1202,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Myristica fragrans,nutmeg,,plant,BP
 ,Myrtus communis,common myrtle,"european myrtle, greek myrtle, myrtle, sweet myrtle, true myrtle",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Nasturtium microphyllum,one-row watercress,,plant,BP
+,Nasturtium officinale,watercress,,plant,FAO major crops 2019
 ,Nauclea orientalis,bur tree,"burr tree, cheesewood, canary cheesewood, canary wood, cape york leichardt, leichhardt pine, leichhardt tree, soft leichhardt, yellow cheesewood",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Nelumbo nucifera,lotus root,,plant,JL
 ,Nephelium cuspidatum,giant rambutan,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1254,6 +1262,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Pastinaca sativa,parsnip,,plant,JL
 ,Paullinia cupana,guarana,brazilian cocoa,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Pelargonium crispum,crisped leaf pelargonium,"curled leaved cranesbill, finger bowl geranium, lemon geranium, lemon-scented geranium, lemon-scented leaved geranium, variegated lemon-scented pelargonium",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Pennisetum glaucum,millet pearl,,plant,FAO major crops 2019
 ,Pentaspadon motleyi,pelong,"pelajau, pelong tree, plajau,white pelon tree",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Persea americana,avocado,,plant,BP
 ,Petroselinum crispum,parsley,,plant,BP
@@ -1326,6 +1335,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Primula x polyantha,polyanthus primrose,"elatior hybrid primroses, false oxlip, florist primrose polyanthus, polyanthus primula",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Prunus armeniaca,apricot,,plant,JL
 ,Prunus avium,sweet cherry,,plant,BP
+,Prunus cerasus,sour cherry,,plant,FAO major crops 2019
 ,Prunus domestica,plum,,plant,BP
 ,Prunus dulcis,almond,,plant,JL
 ,Prunus grayana,japanese bird cherry,,plant,BP
@@ -1461,6 +1471,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Spinacia tetrandra,spinach,,plant,BP
 ,Spondias cytherea,ambarella,"golden apple, hog plum, indian mombin, jew plum, june plum, otaheite apple, polynesian plum, tahitian quince, vi apple, wi apple, yellow plum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Spondias dulcis,ambarella,,plant,BP
+,Spondias mombin,yellow mombin,,plant,FAO major crops 2019
 ,Spondias purpurea,hog plum,,plant,"Sterling, ""Yucatan"""
 ,Stachys affinis,crosne,chinese artichoke,plant,JL
 ,Stelechocarpus burahol,burahol,"kepel, kepel apple",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1548,6 +1559,7 @@ needs_QC,scientific_name,common_name,alternative names,category,source
 ,Typha orientalis,bulrush,"asian bulrush, broad leaf cumbungi, broad-leaf cumbungi, broad-leaf cumbungi, broad-leaved cumbungi, bull rush, bull-rush, bullrush, cat-tail, cumbungi, japanese cattail lesser reed mace, oriental bulrush, oriental cattail, raupo, raupo bulrush",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Ullucus tuberosus,ullucus,,plant,BP
 ,Undaria pinnatifida,wakame,,plant,FAO Cultured Aquatic Species Fact Sheets
+,Urena lobata,urena congo jute,,plant,FAO major crops 2019
 ,Urtica dioica,common nettle,,plant,SJ
 ,Uvaria chamae,finger root,bush banana,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Vaccinium angustifolium,lowbush blueberry,,plant,"van Wyk, ""Food Plants of the World"""
