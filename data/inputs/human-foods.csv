@@ -1,468 +1,2168 @@
 needs_QC,scientific_name,common_name,alternative_names,category,source
-,Abramis brama,common bream,,animal,JL
+,Abalistes stellatus,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Abramis brama,common bream,bream,animal,JL
+,Abudefduf saxatilis,sergeant-major,,animal,"FDA The Seafood List, 2023/07/21"
+,Abudefduf septemfasciatus,damselfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Abudefduf sordidus,surgeonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthistius brasilianus,sea bass,argentine sea bass,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthocardia aculeata,cockle,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthocardia tuberculata,cockle,knotted cockle,animal,"FDA The Seafood List, 2023/07/21"
 1,Acanthocybium solandri,wahoo,ono,animal,JL
-,Acanthopagrus schlegelii,blackhead seabream,"japanese black porgy, sea bream",animal,"Newton, ""The Oldest Foods on Earth"""
+,Acanthopagrus berda,porgy,sea bream,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthopagrus schlegelii,blackhead seabream,"japanese black porgy, sea bream, porgy",animal,"Newton, ""The Oldest Foods on Earth"""
+,Acanthostracion polygonius,cowfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthostracion quadricornis,cowfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus achilles,surgeonfish,tang,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus chirurgus,tang,"doctorfish, surgeonfish",animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus coeruleus,tang ,"blue tang, surgeonfish",animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus dussumieri,surgeonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus gahhm,surgeonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus mata,tang ,"striped surgeonfish, surgeonfish",animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus nigrofuscus,surgeonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus nubilus,tang ,surgeonfish,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus olivaceus,surgeonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus triostegus,tang ,surgeonfish,animal,"FDA The Seafood List, 2023/07/21"
+,Acanthurus xanthopterus,tang ,"yellowfin surgeonfish, surgeonfish",animal,"FDA The Seafood List, 2023/07/21"
+,Acetes japonicus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Achatina fulica,snail,"giant african snail, escargot",animal,"FDA The Seafood List, 2023/07/21"
 ,Acheta domesticus,house cricket,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Acipenser baerii,siberian sturgeon,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Acipenser gueldenstaedtii,russian sturgeon,,animal,SJ
-,Acipenser ruthenus,sterlet,,animal,SJ
-,Acipenser stellatus,starry sturgeon,,animal,SJ
-,Acipenser transmontanus,white sturgeon,,animal,SJ
+,Acipenser baerii,siberian sturgeon,sturgeon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Acipenser dabryanus,sturgeon,yangtze sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser fulvescens,sturgeon,lake sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser gueldenstaedtii,russian sturgeon,sturgeon,animal,SJ
+,Acipenser medirostris,sturgeon,green sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser multiscutatus,sturgeon,japanese sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser nudiventris,sturgeon,thorn sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser oxyrinchus,sturgeon,atlantic sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser ruthenus,sterlet,sturgeon,animal,SJ
+,Acipenser schrenckii,sturgeon,amur sturgeon,animal,"FDA The Seafood List, 2023/07/21"
+,Acipenser stellatus,starry sturgeon,"sturgeon, stellate sturgeon",animal,SJ
+,Acipenser transmontanus,white sturgeon,sturgeon,animal,SJ
 ,Actinopyga mauritiana,surf redfish,,animal,Australian Fisheries Management Authority
+,Aequipecten glyptus,scallop,red-ribbed scallop,animal,"FDA The Seafood List, 2023/07/21"
+,Aethaloperca rogaa,grouper,redmouth grouper,animal,"FDA The Seafood List, 2023/07/21"
+,Aetobatus narinari,eagle ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Agonostomus monticola,mullet,mountain mullet,animal,"FDA The Seafood List, 2023/07/21"
+,Ailia coila,gangetic ailia,,animal,"FDA The Seafood List, 2023/07/21"
+,Ailichthys punctatus,kajuli,,animal,"FDA The Seafood List, 2023/07/21"
+,Albatrossia pectoralis,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
+,Albula vulpes,bonefish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Alces alces,moose,,animal,BP
+,Aldrichetta forsteri,mullet,yelloweye mullet,animal,"FDA The Seafood List, 2023/07/21"
+,Alectis ciliaris,pompano,african pompano,animal,"FDA The Seafood List, 2023/07/21"
+,Alectis indicus,jack,"indian threadfish, crevalle",animal,"FDA The Seafood List, 2023/07/21"
 ,Alectura lathami,australian brushturkey,"australian brush-turkey, gweela, scrub turkey, bush turkey",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Aliger gigas,queen conch,,animal,SJ
-,Alopias vulpinus,atlantic common thresher shark,,animal,NOAA Fisheries
-,Alosa sapidissima,american shad,,animal,SJ
+,Alligator mississippiensis,alligator,american alligator,animal,"FDA The Seafood List, 2023/07/21"
+,Alligator sinensis,alligator,chinese alligator,animal,"FDA The Seafood List, 2023/07/21"
+,Allocyttus niger,oreo dory,deep sea dory,animal,"FDA The Seafood List, 2023/07/21"
+,Allosmerus elongatus,smelt,whitebait smelt,animal,"FDA The Seafood List, 2023/07/21"
+,Allothunnus fallai,tuna,slender tuna,animal,"FDA The Seafood List, 2023/07/21"
+,Alopias pelagicus,thresher shark,shark,animal,"FDA The Seafood List, 2023/07/21"
+,Alopias superciliosus,thresher shark,shark,animal,"FDA The Seafood List, 2023/07/21"
+,Alopias vulpinus,atlantic common thresher shark,"thresher shark, common thresher shark, shark",animal,NOAA Fisheries
+,Alosa aestivalis,herring,"blueback herring, river herring",animal,"FDA The Seafood List, 2023/07/21"
+,Alosa agone,shad,twaite shad,animal,"FDA The Seafood List, 2023/07/21"
+,Alosa alabamae,shad,alabama shad,animal,"FDA The Seafood List, 2023/07/21"
+,Alosa alosa,shad,allis shad,animal,"FDA The Seafood List, 2023/07/21"
+,Alosa chrysochloris,herring,"skipjack herring, river herring",animal,"FDA The Seafood List, 2023/07/21"
+,Alosa mediocris,shad,hickory shad,animal,"FDA The Seafood List, 2023/07/21"
+,Alosa pseudoharengus,alewife,"alewife, river herring",animal,"FDA The Seafood List, 2023/07/21"
+,Alosa sapidissima,american shad,shad,animal,SJ
 1,Alosinae,shad,,animal,JL
+,Alphestes afer,mutton hamlet,hamlet,animal,"FDA The Seafood List, 2023/07/21"
 ,Alphitobius diaperinus,lesser mealworm,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Aluterus monoceros,filefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Aluterus schoepfii,filefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ambloplites cavifrons,bass,roanoke bass,animal,"FDA The Seafood List, 2023/07/21"
+,Ambloplites constellatus,bass,ozark bass,animal,"FDA The Seafood List, 2023/07/21"
+,Ambloplites rupestris,bass,rock bass,animal,"FDA The Seafood List, 2023/07/21"
+,Amblypharyngodon mola,carplet,mola,animal,"FDA The Seafood List, 2023/07/21"
+,Amblyraja radiata,skate,thorny skate,animal,"FDA The Seafood List, 2023/07/21"
+,Ameiurus catus,catfish,white catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Ameiurus melas,bullhead,"black bullhead, catfish",animal,"FDA The Seafood List, 2023/07/21"
+,Ameiurus natalis,bullhead,yellow bullhead,animal,"FDA The Seafood List, 2023/07/21"
+,Ameiurus nebulosus,bullhead,"brown bullhead, catfish",animal,"FDA The Seafood List, 2023/07/21"
+,Ameiurus platycephalus,bullhead,flat bullhead,animal,"FDA The Seafood List, 2023/07/21"
+,Amia calva,bowfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Ammodytes americanus,sand lance,,animal,"FDA The Seafood List, 2023/07/21"
+,Ammodytes dubius,sand lance,,animal,"FDA The Seafood List, 2023/07/21"
+,Ammodytes hexapterus,sand lance,,animal,"FDA The Seafood List, 2023/07/21"
+,Amphilophus alfari,cichlid,,animal,"FDA The Seafood List, 2023/07/21"
+,Amphilophus citrinellus,cichlid,,animal,"FDA The Seafood List, 2023/07/21"
+,Amphilophus longimanus,cichlid,carate,animal,"FDA The Seafood List, 2023/07/21"
 ,Amphioctopus fangsiao,webfoot octopus,,animal,SJ
+,Amphistichus argenteus,surfperch,barred surfperch,animal,"FDA The Seafood List, 2023/07/21"
+,Amphistichus koelzi,surfperch,calico surfperch,animal,"FDA The Seafood List, 2023/07/21"
+,Amphistichus rhodoterus,surfperch,redtail surfperch,animal,"FDA The Seafood List, 2023/07/21"
+,Amusium japonicum,scallop,scallop saucer,animal,"FDA The Seafood List, 2023/07/21"
+,Amusium papyraceum,scallop,paper scallop,animal,"FDA The Seafood List, 2023/07/21"
+,Amusium pleuronectes,scallop,thailand moon scallop,animal,"FDA The Seafood List, 2023/07/21"
+,Anabas testudineus,climbing perch,,animal,"FDA The Seafood List, 2023/07/21"
 ,Anacridium melanorhodon melanorhodon,tree locust,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anadara baughmani,arkshell,skewed ark,animal,"FDA The Seafood List, 2023/07/21"
+,Anadara subcrenata,arkshell,mogai clam,animal,"FDA The Seafood List, 2023/07/21"
 ,Anaphe panda,silk worm,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Anarhichas denticulatus,wolffish,northern wolffish,animal,"FDA The Seafood List, 2023/07/21"
+,Anarhichas lupus,wolffish,atlantic wolffish,animal,"FDA The Seafood List, 2023/07/21"
+,Anarhichas minor,wolffish,spotted wolffish,animal,"FDA The Seafood List, 2023/07/21"
+,Anarhichas orientalis,wolffish,bering wolffish,animal,"FDA The Seafood List, 2023/07/21"
 ,Anarrhichthys ocellatus,wolf eel,,animal,SJ
 1,Anas,duck,,animal,BP
 1,Anas platyrhynchos,mallard duck,,animal,BP
-,Anguilla anguilla,european eel,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Anguilla japonica,japanese eel,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Anchoa cayorum,anchovy,key anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoa compressa,anchovy,deepbody anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoa delicatissima,anchovy,slough anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoa hepsetus,anchovy,striped anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoa lyolepis,anchovy,dusky anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoa mitchilli,anchovy,bay anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoviella lepidentostole,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Anchoviella perfasciata,anchovy,flat anchovy,animal,"FDA The Seafood List, 2023/07/21"
+,Ancylopsetta dilecta,flounder,three-eye flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Anguilla anguilla,european eel,eel,animal,FAO Cultured Aquatic Species Fact Sheets
+,Anguilla australis,eel,short-finned eel,animal,"FDA The Seafood List, 2023/07/21"
+,Anguilla dieffenbachii,eel,long-finned eel,animal,"FDA The Seafood List, 2023/07/21"
+,Anguilla japonica,japanese eel,eel,animal,FAO Cultured Aquatic Species Fact Sheets
+,Anguilla rostrata,freshwater eel,"american eel, eel",animal,"FDA The Seafood List, 2023/07/21"
+,Anisotremus davidsonii,grunt,sargo,animal,"FDA The Seafood List, 2023/07/21"
+,Anisotremus interruptus,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Anisotremus surinamensis,grunt,margate,animal,"FDA The Seafood List, 2023/07/21"
+,Anisotremus taeniatus,grunt,catalina,animal,"FDA The Seafood List, 2023/07/21"
+,Anisotremus virginicus,grunt,porkfish,animal,"FDA The Seafood List, 2023/07/21"
 1,Anoplopoma fimbria,sablefish,black cod,animal,JL
 ,Anser anser,greylag goose,,animal,BP
-,Aphareus rutilans,silverjaw snapper,,animal,NOAA Fisheries
+,Antigonia capros,boarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Antigonia combatia,boarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Antimora rostrata,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Anyperodon leucogrammicus,grouper,slender grouper,animal,"FDA The Seafood List, 2023/07/21"
+,Aphanopus carbo,cutlassfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Aphareus furca,jobfish,"smalltooth jobfish, snapper",animal,"FDA The Seafood List, 2023/07/21"
+,Aphareus rutilans,silverjaw snapper,"jobfish, rusty jobfish, snapper",animal,NOAA Fisheries
 ,Apis cerana,eastern honey bee,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Apis dorsata,giant honey bee,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Apis mellifera,honeybee,,animal,JL
+,Aplodinotus grunniens,freshwater drum,drum,animal,"FDA The Seafood List, 2023/07/21"
+,Apocryptes bato,chiring,,animal,"FDA The Seafood List, 2023/07/21"
 ,Apostichopus japonicus,japanese sea cucumber,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Arapaima gigas,arapaima,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Aprion virescens,jobfish,"green jobfish, snapper",animal,"FDA The Seafood List, 2023/07/21"
+,Apsilus dentatus,snapper,black snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Apsilus fuscus,snapper,african forktail snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Arapaima gigas,arapaima,"pirarucu, paima",animal,FAO Cultured Aquatic Species Fact Sheets
+,Arca granosa,cockle,,animal,"FDA The Seafood List, 2023/07/21"
+,Arca imbricata,arkshell,mossy ark,animal,"FDA The Seafood List, 2023/07/21"
+,Arca noae,arkshell,noah's ark,animal,"FDA The Seafood List, 2023/07/21"
+,Arca zebra,arkshell,turkey wing,animal,"FDA The Seafood List, 2023/07/21"
+,Archoplites interruptus,sunfish,sacramento perch,animal,"FDA The Seafood List, 2023/07/21"
 ,Archosargus probatocephalus,sheepshead,,animal,SJ
-,Arctica islandica,ocean quahog,,animal,Marty Smith
+,Archosargus rhomboidalis,sea bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Arctica islandica,ocean quahog,"clam, hard clam",animal,Marty Smith
+,Arctogadus borisovi,cod,toothed cod,animal,"FDA The Seafood List, 2023/07/21"
+,Arctogadus glacialis,cod,polar cod,animal,"FDA The Seafood List, 2023/07/21"
 ,Ardeotis australis,australian bustard,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Argopecten irradians,atlantic bay scallop,,animal,SJ
-,Argyrosomus regius,meagre,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Argentina elongata,argentine,,animal,"FDA The Seafood List, 2023/07/21"
+,Argentina silus,smelt,great silver smelt,animal,"FDA The Seafood List, 2023/07/21"
+,Argentina sphyraena,smelt,lesser silver smelt,animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten aequisulcatus,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten gibbus,calico scallop,"atlantic calico scallop, scallop",animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten irradians,atlantic bay scallop,"bay scallop, scallop",animal,SJ
+,Argopecten lineolaris,scallop,lined scallop,animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten nucleus,scallop,nucleus scallop,animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten purpuratus,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Argopecten ventricosus,calico scallop,"pacific calico scallop, scallop",animal,"FDA The Seafood List, 2023/07/21"
+,Argyrops bleekeri,bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Argyrops spinifer,bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Argyrosomus hololepidotus,croaker,cob,animal,"FDA The Seafood List, 2023/07/21"
+,Argyrosomus japonicus,croaker,japanese croaker,animal,"FDA The Seafood List, 2023/07/21"
+,Argyrosomus regius,meagre,"croaker, shadefish",animal,FAO Cultured Aquatic Species Fact Sheets
+,Ariopsis felis,whiskered fish,hardhead catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Ariosoma balearicum,conger eel,"bandtooth conger, eel",animal,"FDA The Seafood List, 2023/07/21"
+,Aristaeomorpha foliacea,shrimp,prawn,animal,"FDA The Seafood List, 2023/07/21"
+,Aristaeopsis edwardsiana,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Arnoglossus scapha,flounder,witch,animal,"FDA The Seafood List, 2023/07/21"
+,Arripis georgianus,kahawai,australian ruff,animal,"FDA The Seafood List, 2023/07/21"
+,Arripis trutta,kahawai,,animal,"FDA The Seafood List, 2023/07/21"
 ,Artemia,brine shrimps,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Aseraggodes kobensis,sole,milky spotted sole,animal,"FDA The Seafood List, 2023/07/21"
 ,Aspongopus nepalensis,stink bug,ghondibug,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Astacoidea,crayfish,crawfish,animal,JL
-,Atheresthes stomias,arrowtooth flounder,,animal,NOAA Fisheries
-,Balistes capriscus,gray triggerfish,,animal,NOAA Fisheries
-,Barbonymus gonionotus,silver barb,,animal,BP
-,Barbonymus schwanenfeldii,tinfoil barb,,animal,BP
+,Astronotus ocellatus,oscar,,animal,"FDA The Seafood List, 2023/07/21"
+,Atheresthes evermanni,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Atheresthes stomias,arrowtooth flounder,flounder,animal,NOAA Fisheries
+,Atherina boyeri,silverside,,animal,"FDA The Seafood List, 2023/07/21"
+,Atherinops affinis,silverside,topsmelt,animal,"FDA The Seafood List, 2023/07/21"
+,Atherinopsis californiensis,silverside,jacksmelt,animal,"FDA The Seafood List, 2023/07/21"
+,Atractoscion nobilis,seabass,,animal,"FDA The Seafood List, 2023/07/21"
+,Atractosteus spatula,gar,,animal,"FDA The Seafood List, 2023/07/21"
+,Atrina pectinata,pen shell,,animal,"FDA The Seafood List, 2023/07/21"
+,Atrina serrata,penshell,,animal,"FDA The Seafood List, 2023/07/21"
+,Atrobucca nibe,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Atule mate,scad,yellowtail scad,animal,"FDA The Seafood List, 2023/07/21"
+,Aulacomya ater,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Aulostomus maculatus,trumpetfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Austroglossus microlepis,sole,west coast sole,animal,"FDA The Seafood List, 2023/07/21"
+,Austroglossus pectoralis,sole,mud sole,animal,"FDA The Seafood List, 2023/07/21"
+,Austrovenus stutchburyi,venus clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Auxis rochei,tuna,bullet tuna,animal,"FDA The Seafood List, 2023/07/21"
+,Auxis thazard,tuna,frigate tuna,animal,"FDA The Seafood List, 2023/07/21"
+,Babylonia areolata,whelk,sea snail,animal,"FDA The Seafood List, 2023/07/21"
+,Bagarius bagarius,goonch,ayres,animal,"FDA The Seafood List, 2023/07/21"
+,Bagarius yarrelli,goonch,,animal,"FDA The Seafood List, 2023/07/21"
+,Bagre marinus,gafftopsail fish,"gafftopsail catfish, gafftopsail whiskered fish",animal,"FDA The Seafood List, 2023/07/21"
+,Bairdiella chrysoura,silver perch,perch,animal,"FDA The Seafood List, 2023/07/21"
+,Balistes capriscus,gray triggerfish,triggerfish,animal,NOAA Fisheries
+,Balistes vetula,triggerfish,queen triggerfish,animal,"FDA The Seafood List, 2023/07/21"
+,Barbatia cancellaria,arkshell,,animal,"FDA The Seafood List, 2023/07/21"
+,Barbonymus altus,red tailed tinfoil,barb,animal,"FDA The Seafood List, 2023/07/21"
+,Barbonymus gonionotus,silver barb,barb,animal,BP
+,Barbonymus schwanenfeldii,tinfoil barb,barb,animal,BP
+,Basilichthys australis,silverside,south american silverside,animal,"FDA The Seafood List, 2023/07/21"
+,Bathycongrus aequoreus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Bathynomus giganteus,isopod,,animal,"FDA The Seafood List, 2023/07/21"
+,Bathyraja aleutica,skate,aleutian skate,animal,"FDA The Seafood List, 2023/07/21"
+,Bathyraja interrupta,skate,sandpaper skate,animal,"FDA The Seafood List, 2023/07/21"
+,Bathyraja parmifera,skate,alaska skate,animal,"FDA The Seafood List, 2023/07/21"
+,Bathyraja spinicauda,skate,spinytail skate,animal,"FDA The Seafood List, 2023/07/21"
+,Bathyraja trachura,skate,roughtail skate,animal,"FDA The Seafood List, 2023/07/21"
+,Bathytoshia centroura,stingray,,animal,"FDA The Seafood List, 2023/07/21"
 ,Batocera roylei,beetle,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Batrachoides surinamensis,toadfish,packoo,animal,"FDA The Seafood List, 2023/07/21"
+,Berryteuthis magister,squid,"magistrate armhook squid, calamari",animal,"FDA The Seafood List, 2023/07/21"
+,Beryx decadactylus,alfonsino,,animal,"FDA The Seafood List, 2023/07/21"
+,Beryx splendens,alfonsino,,animal,"FDA The Seafood List, 2023/07/21"
 ,Bison bison,bison,,animal,BP
+,Bodianus pulchellus,hogfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Bodianus rufus,hogfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Bodianus scrofa,hogfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Bolbometopon muricatum,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Bombyx mori,silkworm,,animal,SJ
+,Boops boops,bream,bogue,animal,"FDA The Seafood List, 2023/07/21"
+,Boreogadus saida,cod,arctic cod,animal,"FDA The Seafood List, 2023/07/21"
 ,Bos taurus,cattle,,animal,BP
+,Bothus lunatus,flounder,peacock flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Bothus mancus,flounder,tropical flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Bothus ocellatus,flounder,eyed flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Bothus pantherinus,flounder,panther flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Botia dario,bengal loach,,animal,"FDA The Seafood List, 2023/07/21"
+,Brachirus orientalis,sole,oriental sole,animal,"FDA The Seafood List, 2023/07/21"
+,Brachyplatystoma filamentosum,lau-lau,,animal,"FDA The Seafood List, 2023/07/21"
+,Brachyplatystoma vaillantii,piramutaba,,animal,"FDA The Seafood List, 2023/07/21"
+,Brama australis,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
+,Brama brama,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
+,Brama dussumieri,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
+,Brama japonica,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
 ,Bramidae,pomfret,,animal,JL
-,Brevoortia tyrannus,atlantic menhaden,,animal,NOAA Fisheries
+,Branchiostegus japonicus,tilefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Brevoortia gunteri,menhaden,finescale menhaden,animal,"FDA The Seafood List, 2023/07/21"
+,Brevoortia patronus,menhaden,gulf menhaden,animal,"FDA The Seafood List, 2023/07/21"
+,Brevoortia smithi,menhaden,yellowfin menhaden,animal,"FDA The Seafood List, 2023/07/21"
+,Brevoortia tyrannus,atlantic menhaden,menhaden,animal,NOAA Fisheries
 ,Brosme brosme,cusk,,animal,SJ
+,Brotula barbata,brotula,cuskeel,animal,"FDA The Seafood List, 2023/07/21"
+,Brotula clarkae,brotula,cuskeel,animal,"FDA The Seafood List, 2023/07/21"
 ,Bubalus bubalis,water buffalo,,animal,BP
+,Buglossidium luteum,yellow sole,"solenette, sole",animal,"FDA The Seafood List, 2023/07/21"
+,Busycotypus canaliculatus,whelk,,animal,"FDA The Seafood List, 2023/07/21"
+,Busycotypus spiratus,whelk,,animal,"FDA The Seafood List, 2023/07/21"
+,Caelorinchus fasciatus,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
+,Caesio cuning,fusilier,,animal,"FDA The Seafood List, 2023/07/21"
 ,Cairina moschata,muscovy duck,,animal,BP
-,Callinectes sapidus,atlantic blue crab,,animal,BP
-,Cancer borealis,jonah crab,,animal,SJ
-,Cancer irroratus,atlantic rock crab,,animal,SJ
+,Calamus arctifrons,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Calamus leucosteus,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Callichthys callichthys,cascarudo,,animal,"FDA The Seafood List, 2023/07/21"
+,Callinectes amnicola,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Callinectes arcuatus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Callinectes bellicosus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Callinectes rathbunae,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Callinectes sapidus,atlantic blue crab,"crab, blue crab",animal,BP
+,Callinectes toxotes,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Callorhinchus milii,elephant fish,,animal,"FDA The Seafood List, 2023/07/21"
+,Calotomus carolinus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cancer anthonyi,yellow rock crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Cancer borealis,jonah crab,crab,animal,SJ
+,Cancer irroratus,atlantic rock crab,"crab, rock crab",animal,SJ
 ,Cancer magister,dungeness crab,,animal,JL
+,Cancer pagurus,rock crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Cancer productus,rock crab,crab,animal,"FDA The Seafood List, 2023/07/21"
 ,Canis lupus,wolf,,animal,BP
+,Canthidermis maculata,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Canthidermis sufflamen,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Capra hircus,goat,,animal,BP
-,Carassius carassius,crucian carp,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Carcharhinus limbatus,atlantic blacktip shark,,animal,NOAA Fisheries
+,Caprodon schlegelii,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Carangoides bartholomaei,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Carangoides otrynter,threadfin,jack,animal,"FDA The Seafood List, 2023/07/21"
+,Carangoides ruber,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx caballus,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx caninus,jack,pacific crevalle jack,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx crysos,jack ,blue runner,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx hippos,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx ignobilis,jack,trevally,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx latus,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx lugubris,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx melampygus,jack ,trevally,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx sexfasciatus,trevally,,animal,"FDA The Seafood List, 2023/07/21"
+,Caranx vinctus,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Carassius carassius,crucian carp,carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Carcharhinus acronotus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus albimarginatus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus altimus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus amblyrhynchos,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus brachyurus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus brevipinna,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus falciformis,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus isodon,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus leucas,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus limbatus,atlantic blacktip shark,"shark, blacktip shark",animal,NOAA Fisheries
+,Carcharhinus longimanus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus melanopterus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus obscurus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus perezii,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus plumbeus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus porosus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharhinus signatus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcharodon carcharias,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Carcinus aestuari,mediterranean green crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Carcinus maenas,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
 1,Cardiidae,cockle,,animal,JL
+,Cardisoma armatum,land crab,crab,animal,"FDA The Seafood List, 2023/07/21"
 ,Carebara vidua,black ant,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Carpiodes carpio,sucker,,animal,"FDA The Seafood List, 2023/07/21"
+,Carpiodes cyprinus,sucker,,animal,"FDA The Seafood List, 2023/07/21"
 ,Catla catla,catla,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Catlocarpio siamensis,barb,,animal,"FDA The Seafood List, 2023/07/21"
+,Catostomus columbianus,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Catostomus commersonii,sucker,,animal,"FDA The Seafood List, 2023/07/21"
+,Catostomus macrocheilus,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Caulolatilus affinis,tilefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Caulolatilus chrysops,tilefish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Caulolatilus microps,tilefish,,animal,NOAA Fisheries
+,Caulolatilus princeps,tilefish,ocean whitefish,animal,"FDA The Seafood List, 2023/07/21"
 ,Cavia porcellus,guinea pig,,animal,JL
-,Centropristis striata,black sea bass,,animal,NOAA Fisheries
+,Cellana denticulata,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Centroberyx affinis,alfonsino,,animal,"FDA The Seafood List, 2023/07/21"
+,Centroberyx gerrardi,alfonsino,,animal,"FDA The Seafood List, 2023/07/21"
+,Centrolophus niger,black ruff,ruff,animal,"FDA The Seafood List, 2023/07/21"
+,Centrophorus squamosus,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus armatus,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus ensiferus,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus mexicanus,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus nigrescens,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus parallelus,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus pectinatus,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus robalito,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus undecimalis,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropomus viridis,snook,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropristis ocyurus,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropristis philadelphica,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Centropristis striata,black sea bass,sea bass,animal,NOAA Fisheries
 ,Centropus sinensis,crow pheasant,,animal,BP
+,Centroscyllium fabricii,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis argus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis boenak,hind,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis cruentata,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis fulva,grouper,coney,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis miniata,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis sonnerati,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis spiloparaea,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis taeniops,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Cephalopholis urodeta,grouper,,animal,"FDA The Seafood List, 2023/07/21"
 ,Cephalophus natalensis,red forest duiker,,animal,BP
 ,Cephenemyia trompe,caribou nose bot fly,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Cerastoderma edule,common cockle,,animal,SJ
+,Cerastoderma edule,common cockle,cockle,animal,SJ
 ,Cerax quadricarinatus,red claw crayfish,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cereopsis novaehollandiae,cape barren goose,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Cervimunida johni,squat lobster,,animal,SJ
+,Cervimunida johni,squat lobster,"langostino, langostino lobster",animal,SJ
 ,Cervus canadensis,elk,,animal,BP
 1,Cetacea,whales,,animal,JL
+,Cetengraulis mysticetus,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Cetorhinus maximus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Cetoscarus bicolor,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaceon afiinis,deep sea crab,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaceon fenneri,golden crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Chaceon maritae,red crab,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaceon quinquedens,red crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Chaetodipterus faber,spadefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaetodipterus zonatus,spadefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaetodon ocellatus,butterflyfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chaetodon striatus,butterflyfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Champsocephalus gunnari,icefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Channa argus,channa,snakehead,animal,"FDA The Seafood List, 2023/07/21"
+,Channa micropeltes,channa,,animal,"FDA The Seafood List, 2023/07/21"
+,Channa punctata,channa,snakehead,animal,"FDA The Seafood List, 2023/07/21"
+,Channa striata,channa,snakehead,animal,"FDA The Seafood List, 2023/07/21"
 1,Channidae,snakehead,,animal,JL
+,Channomuraena vittata,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
 ,Chanos chanos,milkfish,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Chaoborus edulis,glass worm,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Chascanopsetta crumenalis,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilinus undulatus,wrasse,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilodactylus spectabilis,morwong,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon atrisignis,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon cyanopterus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon exsiliens,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon furcatus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon heterurus hubbsi,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon melanurus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon pinnatibarbatus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilopogon spilonotopterus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cheilotrema saturnum,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Chelidonichthys kumu,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Chelidonichthys lucernus,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Chelonia mydas,turtle,,animal,"FDA The Seafood List, 2023/07/21"
 ,Cherax cainii,smooth marron,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Cherax destructor,common yabby,,animal,"Newton, ""The Oldest Foods on Earth"""
+,Cherax destructor,common yabby,"crawfish, crayfish",animal,"Newton, ""The Oldest Foods on Earth"""
+,Cherax quadricarinatus,crawfish,crayfish,animal,"FDA The Seafood List, 2023/07/21"
+,Cherax tenuimanus,crawfish,crayfish,animal,"FDA The Seafood List, 2023/07/21"
+,Chione californiensis,venus clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Chione undatella,venus clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Chionista fluctifraga,venus clam,clam,animal,"FDA The Seafood List, 2023/07/21"
 1,Chionoecetes,snow crab,,animal,JL
-,Chionoecetes bairdi,snow crab,,animal,SJ
-,Chionoecetes opilio,snow crab,,animal,SJ
+,Chionoecetes angulatus,snow crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Chionoecetes bairdi,snow crab,crab,animal,SJ
+,Chionoecetes japonicus,beni-zuwai crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Chionoecetes opilio,snow crab,crab,animal,SJ
+,Chionoecetes tanneri,snow crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Chirocentrus dorab,dorab,,animal,"FDA The Seafood List, 2023/07/21"
+,Chironemus marmoratus,kelpfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chirostoma jordani,charal,,animal,"FDA The Seafood List, 2023/07/21"
 1,Chirostyloidea,langostino,squat lobster,animal,JL
+,Chitala chitala,knifefish,featherback,animal,"FDA The Seafood List, 2023/07/21"
+,Chitala lopis,featherback,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys albida,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys circularis aequisculata,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys farreri,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys hastata,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys islandica,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys opercularis,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys patagonica,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys purpurata,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys rubida,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlamys vitrea,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlorophthalmus albatrossis,greeneye,,animal,"FDA The Seafood List, 2023/07/21"
+,Chloroscombrus chrysurus,bumper,,animal,"FDA The Seafood List, 2023/07/21"
+,Chloroscombrus orqueta,bumper,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlorurus gibbus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Chlorurus perspicillatus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Chondracris rosea,grasshopper,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Chrysichthys nigrodigitatus,inaha,bagrid catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Chrysiptera glauca,damselfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Cicadidae,true cicadas,,animal,JZ
-,Cirrhinus molitorella,mud carp,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Cirrhinus mrigala,mrigal carp,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cichla ocellaris,peacock bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Cichla orinocensis,cichlid,,animal,"FDA The Seafood List, 2023/07/21"
+,Ciliata mustela,rockling,,animal,"FDA The Seafood List, 2023/07/21"
+,Ciliata septentrionalis,rockling,,animal,"FDA The Seafood List, 2023/07/21"
+,Cilus gilberti,corvina,,animal,"FDA The Seafood List, 2023/07/21"
+,Cipangopaludina chinensis,snail,,animal,"FDA The Seafood List, 2023/07/21"
+,Cirrhinus cirrhosus,carp,mrigal,animal,"FDA The Seafood List, 2023/07/21"
+,Cirrhinus microlepis,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Cirrhinus molitorella,mud carp,carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cirrhinus mrigala,mrigal carp,"carp, mrigala",animal,FAO Cultured Aquatic Species Fact Sheets
+,Cirrhinus reba,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Cirrhitus pinnulatus,hawkfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Citharichthys,sanddab,,animal,JL
-,Clarias gariepinus,north african catfish,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Clupea harengus,atlantic herring,,animal,NOAA Fisheries
-,Clupea pallasii,pacific herring,,animal,SJ
+,Citharichthys sordidus,sanddab,,animal,"FDA The Seafood List, 2023/07/21"
+,Citharichthys stigmaeus,sanddab,,animal,"FDA The Seafood List, 2023/07/21"
+,Clarias anguillaris,clarias fish,"mudfish, walking clarias",animal,"FDA The Seafood List, 2023/07/21"
+,Clarias batrachus,walking clarias fish,walking catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Clarias gariepinus,north african catfish,"sharptooth clarias fish, sharptooth catfish",animal,FAO Cultured Aquatic Species Fact Sheets
+,Clarias gariepinus x Clarias macrocephalus,clarias fish,,animal,"FDA The Seafood List, 2023/07/21"
+,Clarias macrocephalus,broadhead clarias fish,broadhead catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Cleisthenes pinetorum,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Clidoderma asperrimum,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Clinocardium californiense,cockle,,animal,"FDA The Seafood List, 2023/07/21"
+,Clinocardium nuttallii,cockle,cockle clam,animal,"FDA The Seafood List, 2023/07/21"
+,Clupea bentincki,herrring,,animal,"FDA The Seafood List, 2023/07/21"
+,Clupea harengus,atlantic herring,"herring, sea herring, sild",animal,NOAA Fisheries
+,Clupea pallasii,pacific herring,"herring, sea herring, sild",animal,SJ
 1,Clupeidae,herring,,animal,JL
-,Concholepas concholepas,loco,chilean abalone,animal,JL
-,Conger myriaster,whitespotted conger,,animal,SJ
+,Coilia ramcarati,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Colistium guntheri,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Colistium nudipinnis,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Cololabis saira,saury,,animal,"FDA The Seafood List, 2023/07/21"
+,Colossoma macropomum,tambaqui,cachama,animal,"FDA The Seafood List, 2023/07/21"
+,Concholepas concholepas,loco,"chilean abalone, abalone-style shellfish",animal,JL
+,Conger cinereus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Conger cinereus marginatus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Conger conger,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Conger myriaster,whitespotted conger,conger eel,animal,SJ
+,Conger oceanicus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Conger oligoporus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Conger triporiceps,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Congiopodus leucopaecilus,racehorse,,animal,"FDA The Seafood List, 2023/07/21"
+,Conodon nobilis,grunt,,animal,"FDA The Seafood List, 2023/07/21"
 1,Coregonus,whitefish,,animal,JL
-,Coregonus clupeaformis,lake whitefish,,animal,SJ
-,Coryphaena hippurus,mahi mahi,,animal,JL
+,Coregonus albula,vendace,,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus alpenae,cisco,chub,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus artedi,cisco,tullibee,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus clupeaformis,lake whitefish,whitefish,animal,SJ
+,Coregonus kiyi,chub,,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus pidschian,whitefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus reighardi,cisco,chub,animal,"FDA The Seafood List, 2023/07/21"
+,Coregonus zenithicus,cisco,chub,animal,"FDA The Seafood List, 2023/07/21"
+,Corica soborna,sprat,,animal,"FDA The Seafood List, 2023/07/21"
+,Corniger spinosus,soldierfish,squirrelfish,animal,"FDA The Seafood List, 2023/07/21"
+,Corvula batabana,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Corvula sanctaeluciae,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Coryphaena equiselis,mahi-mahi,,animal,"FDA The Seafood List, 2023/07/21"
+,Coryphaena hippurus,mahi mahi,dolphinfish,animal,JL
+,Coryphaenoides rupestris,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
 ,Coturnix japonica,japanese quail,,animal,BP
-,Crassostrea gigas,pacific cupped oyster,,animal,BP
-,Crassostrea virginica,american cupped oyster,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Crangon crangon,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Crangon franciscorum,california shrimp,"bay shrimp, gray shrimp",animal,"FDA The Seafood List, 2023/07/21"
+,Crangon septemspinosa,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea angulata,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea chilensis,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea gigas,pacific cupped oyster,oyster,animal,BP
+,Crassostrea gigas kumamoto,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea glomerata,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea skiamea,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Crassostrea virginica,american cupped oyster,oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Crenimugil crenilabis,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Crepidula fornicata,slipperysnail,,animal,"FDA The Seafood List, 2023/07/21"
 ,Crocothemis servilia,scarlet skimmer dragonfly,,animal,BP
+,Ctenochaetus hawaiiensis,tang,,animal,"FDA The Seafood List, 2023/07/21"
+,Ctenochaetus strigosus,tang,surgeonfish,animal,"FDA The Seafood List, 2023/07/21"
+,Ctenopharyngodon idella,carp,,animal,"FDA The Seafood List, 2023/07/21"
 ,Ctenopharyngodon idellus,grass carp,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Cuniculus paca,lowland paca,,animal,BP
+,Cybiosarda elegans,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Cycleptus elongatus,sucker,,animal,"FDA The Seafood List, 2023/07/21"
 ,Cyclochila virens,northern greengrocer,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Cyclopterus lumpus,lumpfish roe,,animal,JL
-,Cyprinus carpio,common carp,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cyclopsetta chittendeni,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Cyclopterus lumpus,lumpfish roe,lumpfish,animal,JL
+,Cymatogaster aggregata,surfperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Cymbium olla,volute,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion acoupa,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion albus,corvina,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion arenarius,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion jamaicensis,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion nebulosus,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion nothus,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion othonopterus,croaker,corvina,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion parvipinnis,croaker,corvina,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion regalis,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion reticulatus,corvina,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion striatus,weakfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cynoscion virescens,weakfish,corvina,animal,"FDA The Seafood List, 2023/07/21"
+,Cyprinus carpio,common carp,carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Cypselurus agoo,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cypselurus comatus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cypselurus poecilopterus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Cypselurus simus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Cyriopagopus albostriatus,thailand zebra leg tarantula,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Cyrtodaria siliqua,propeller clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Cyttus novaezealandiae,dory,,animal,"FDA The Seafood List, 2023/07/21"
+,Datnioides microlepis,tripletail,tigerfish,animal,"FDA The Seafood List, 2023/07/21"
+,Datnioides polota,tripletail,tigerfish,animal,"FDA The Seafood List, 2023/07/21"
+,Datnioides pulcher,tripletail,tigerfish,animal,"FDA The Seafood List, 2023/07/21"
 1,Decapodiformes,squid,calamari,animal,JL
+,Decapterus koheru,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus kurroides,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus macarellus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus macrosoma,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus maruadsi,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus muroadsi,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus punctatus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus russelli,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus scombrinus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Decapterus tabl,scad,,animal,"FDA The Seafood List, 2023/07/21"
 1,Delphinidae,dolphin,,animal,JL
-,Dentex dentex,common dentex,,animal,SJ
-,Dicentrarchus labrax,european seabass,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Dentex dentex,common dentex,porgy,animal,SJ
+,Dentex gibbosus,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Dentex tumifrons,sea bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Dermatolepis inermis,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Diagramma labiosum,grunt,sweetlip,animal,"FDA The Seafood List, 2023/07/21"
+,Diagramma melanacrum,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Diagramma pictum,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Diapterus auratus,mojarra,,animal,"FDA The Seafood List, 2023/07/21"
+,Dicentrarchus labrax,european seabass,sea bass,animal,FAO Cultured Aquatic Species Fact Sheets
+,Dicentrarchus punctatus,seabass,,animal,"FDA The Seafood List, 2023/07/21"
+,Dinocardium robustum,cockle,,animal,"FDA The Seafood List, 2023/07/21"
 1,Diodon,fugu fish,,animal,JL
-,Dissostichus eleginoides,chilean seabass,,animal,JL
-,Doryteuthis pealeii,longfin inshore squid,,animal,SJ
+,Diodora aspera,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Diplectrum formosum,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Diplodus argenteus,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Diplodus holbrookii,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Diplodus puntazzo,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Dipturus laevis,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Dipturus olseni,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Dissostichus eleginoides,chilean seabass,"toothfish, patagonian toothfish, chilean seabass",animal,JL
+,Dissostichus mawsoni,toothfish,chilean seabass,animal,"FDA The Seafood List, 2023/07/21"
+,Doederleinia berycoides,nodoguro,bass,animal,"FDA The Seafood List, 2023/07/21"
+,Donax texasianus,coquina,,animal,"FDA The Seafood List, 2023/07/21"
+,Donax variabilis,coquina,,animal,"FDA The Seafood List, 2023/07/21"
+,Dorosoma cepedianum,gizzard shad,shad,animal,"FDA The Seafood List, 2023/07/21"
+,Dorosoma petenense,threadfin shad,shad,animal,"FDA The Seafood List, 2023/07/21"
+,Doryteuthis opalescens,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Doryteuthis pealeii,longfin inshore squid,"squid, calamari",animal,SJ
+,Dosidicus gigas,giant calamari,,animal,"FDA The Seafood List, 2023/07/21"
 ,Dromaius novaehollandiae,emu,,animal,BP
 1,Dytiscidae,predaceous diving beetles,,animal,JZ
+,Echeneis neucratoides,remora,sharksucker,animal,"FDA The Seafood List, 2023/07/21"
+,Echidna peli,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Echiichthys vipera,weever,,animal,"FDA The Seafood List, 2023/07/21"
+,Echinus esculentus,sea urchin,,animal,"FDA The Seafood List, 2023/07/21"
+,Elagatis bipinnulata,jack,rainbow runner,animal,"FDA The Seafood List, 2023/07/21"
+,Eleginus gracilis,cod,,animal,"FDA The Seafood List, 2023/07/21"
+,Eleutheronema tetradactylum,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Elops affinis,ladyfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Elops hawaiensis,ladyfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Elops saurus,ladyfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Embassichthys bathybius,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Embiotoca jacksoni,surfperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Embiotoca lateralis,surfperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Emmelichthys nitidus,bonnetmouth,,animal,"FDA The Seafood List, 2023/07/21"
+,Enchelycore anatina,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Enchelyopus cimbrius,rockling,,animal,"FDA The Seafood List, 2023/07/21"
 ,Encosternum delegorguei,edible stink bug,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Encrasicholina punctifer,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Encrasicholina purpurea,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
 ,Endoxyla leucomochla,witchetty grub,,animal,"Newton, ""The Oldest Foods on Earth"""
 1,Engraulidae,anchovy,,animal,JL
 ,Engraulis anchoita,argentine anchovy,,animal,SJ
-,Engraulis encrasicolus,european anchovy,,animal,SJ
-,Engraulis japonicus,japanese anchoby,,animal,SJ
-,Engraulis mordax,northern anchovy,,animal,NOAA Fisheries
-,Engraulis ringens,peruvian anchoveta,,animal,SJ
+,Engraulis australis,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Engraulis encrasicolus,european anchovy,anchovy,animal,SJ
+,Engraulis eurystole,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Engraulis japonicus,japanese anchoby,anchovy,animal,SJ
+,Engraulis mordax,northern anchovy,anchovy,animal,NOAA Fisheries
+,Engraulis ringens,peruvian anchoveta,anchovy,animal,SJ
+,Ensis arcuatus,razor clam,,animal,"FDA The Seafood List, 2023/07/21"
+,Ensis directus,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Ensis ensis,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Ensis macha,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Ensis siliqua,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
 ,Enteroctopus dofleini,giant pacific octopus,,animal,SJ
-,Eopsetta jordani,petrale sole,,animal,NOAA Fisheries
+,Eopsetta jordani,petrale sole,"sole, flounder",animal,NOAA Fisheries
+,Epigonus crassicaudus,cardinalfish,cardinal perch,animal,"FDA The Seafood List, 2023/07/21"
+,Epigonus telescopus,cardinalfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Epinephelinae,grouper,,animal,JL
-,Epinephelus coioides,orange-spotted grouper,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Epinephelus itajara,atlantic goliath grouper,,animal,NOAA Fisheries
-,Epinephelus morio,red grouper,,animal,NOAA Fisheries
+,Epinephelus adscensionis,hind,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus aeneus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus akaara,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus amblycephalus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus analogus,cabrilla,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus areolatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus bleekeri,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus bruneus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus chlorostigma,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus coioides,orange-spotted grouper,grouper,animal,FAO Cultured Aquatic Species Fact Sheets
+,Epinephelus costae,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus cyanopodus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus diacanthus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus drummondhayi,hind,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus fasciatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus fucoglottus x Epinephelus lanceolatus,grouper ,"hybrid tiger, giant grouper",animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus fuscoguttatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus guttatus,grouper,hind,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus heniochus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus hexagonatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus itajara,atlantic goliath grouper,"grouper, jewfish",animal,NOAA Fisheries
+,Epinephelus lanceolatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus latifasciatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus longispinis,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus macrospilos,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus maculatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus malabaricus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus marginatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus merra,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus miliaris,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus morio,red grouper,grouper,animal,NOAA Fisheries
+,Epinephelus morrhua,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus multinotatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus mystacinus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus nigritus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus niveatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus poecilonotus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus polyphekadion,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus radiatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus rivulatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus sexfasciatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus stictus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus striatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus tauvina,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus timorensis,yellowspotted grouper,grouper ,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus trophis,plump grouper,grouper,animal,"FDA The Seafood List, 2023/07/21"
+,Epinephelus undulosus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Epinnula magistralis,gemfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Eptatretus stoutii,hagfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Equetus punctatus,drum,,animal,"FDA The Seafood List, 2023/07/21"
 1,Equus africanus asinus,donkey,,animal,SJ
 ,Equus caballus,horse,,animal,BP
-,Eriocheir sinensis,chinese mitten crab,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Erilepis zonifer,skilfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Erimacrus isenbeckii,korean variety crabmeat,kegani crabmeat,animal,"FDA The Seafood List, 2023/07/21"
+,Eriocheir sinensis,chinese mitten crab,"crab, mitten crab",animal,FAO Cultured Aquatic Species Fact Sheets
+,Escualosa thoracata,sardine,,animal,"FDA The Seafood List, 2023/07/21"
 1,Esox,pike,,animal,JL
-,Etelis carbunculus,squirrelfish snapper,,animal,NOAA Fisheries
-,Etelis coruscans,longtail snapper,,animal,NOAA Fisheries
+,Esox americanus americanus,pickerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Esox americanus vermiculatus,pickerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Esox lucius,pike,,animal,"FDA The Seafood List, 2023/07/21"
+,Esox masquinongy,muskellunge,,animal,"FDA The Seafood List, 2023/07/21"
+,Esox niger,pickerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Etelis carbunculus,squirrelfish snapper,snapper,animal,NOAA Fisheries
+,Etelis coruscans,longtail snapper,snapper,animal,NOAA Fisheries
+,Etelis oculatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Ethmalosa fimbriata,shad,,animal,"FDA The Seafood List, 2023/07/21"
+,Ethmidium maculatum,menhaden,,animal,"FDA The Seafood List, 2023/07/21"
+,Etroplus suratensis,pearlspot,,animal,"FDA The Seafood List, 2023/07/21"
+,Etrumeus teres,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Euastacus armatus,crawfish,crayfish,animal,"FDA The Seafood List, 2023/07/21"
 ,Eucidaris tribuloides,slate pencil urchin,,animal,BP
-,Evechinus chloroticus,kina (new zealand urchin),,animal,BP
+,Eugerres plumieri,mojarra,,animal,"FDA The Seafood List, 2023/07/21"
+,Euthynnus affinis,tuna,kawakawa,animal,"FDA The Seafood List, 2023/07/21"
+,Euthynnus alletteratus,tuna,,animal,"FDA The Seafood List, 2023/07/21"
+,Euthynnus lineatus,tuna,,animal,"FDA The Seafood List, 2023/07/21"
+,Eutropiichthys vacha,bacha,,animal,"FDA The Seafood List, 2023/07/21"
+,Euvola diegensis,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Euvola ziczac,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Evechinus chloroticus,kina (new zealand urchin),sea urchin,animal,BP
+,Evynnis cardinalis,porgy,,animal,"FDA The Seafood List, 2023/07/21"
 1,Exocoetidae,flying fish,tobiko (roe),animal,JL
-,Farfantepenaeus aztecus,northern brown shrimp,,animal,SJ
-,Farfantepenaeus duorarum,northern pink shrimp,,animal,SJ
+,Exocoetus obtusirostris,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Exocoetus volitans,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Exopalaemon styliferus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Farfantepenaeus aztecus,northern brown shrimp,shrimp,animal,SJ
+,Farfantepenaeus brasiliensis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Farfantepenaeus duorarum,northern pink shrimp,"shrimp, pink shrimp",animal,SJ
 ,Farfantepenaeus notialis,southern pink shrimp,,animal,SJ
+,Farfantepenaeus subtilis,brown shrimp,shrimp,animal,"FDA The Seafood List, 2023/07/21"
 ,Felis catus,cat,,animal,BP
-,Fenneropenaeus chinensis,chinese white shrimp,,animal,SJ
-,Fenneropenaeus indicus,indian prawn,,animal,SJ
+,Fenneropenaeus chinensis,chinese white shrimp,shrimp,animal,SJ
+,Fenneropenaeus indicus,indian prawn,shrimp,animal,SJ
+,Fenneropenaeus merguiensis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Fenneropenaeus penicillatus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Fissurella limbata,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Fissurella maxima,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Fistularia commersonii,reef cornetfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Fodiator acutus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Formica rufa,red wood ant,"southern wood ant, horse ant",animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Fundulus confluentus,killifish,,animal,"FDA The Seafood List, 2023/07/21"
+,Fundulus heteroclitus,killifish,,animal,"FDA The Seafood List, 2023/07/21"
+,Fundulus majalis,killifish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Gadus,cod,,animal,JL
-,Gadus chalcogrammus,alaska pollock,,animal,NOAA Fisheries
-,Gadus macrocephalus,pacific cod,,animal,NOAA Fisheries
-,Gadus morhua,atlantic cod,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Gadus ogac,greenland cod,,animal,SJ
+,Gadus chalcogrammus,alaska pollock,"pollock, walleye pollock",animal,NOAA Fisheries
+,Gadus macrocephalus,pacific cod,"cod, alaska cod",animal,NOAA Fisheries
+,Gadus morhua,atlantic cod,cod,animal,FAO Cultured Aquatic Species Fact Sheets
+,Gadus ogac,greenland cod,cod,animal,SJ
 1,Galatheoidea,langostino,squat lobster,animal,JL
+,Galeocerdo cuvier,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Galeoides decadactylus,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Galeorhinus galeus,shark,school shark,animal,"FDA The Seafood List, 2023/07/21"
 ,Gallus gallus,chicken,,animal,BP
+,Gari solida,pacific clam,"clam, white clam",animal,"FDA The Seafood List, 2023/07/21"
+,Gasterochisma melampus,mackerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Genyagnus monopterygius,stargazer,,animal,"FDA The Seafood List, 2023/07/21"
+,Genyonemus lineatus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
 ,Genypterus capensis,kingklip,,animal,SJ
-,Glycymeris glycymeris,dog cockle,,animal,SJ
-,Glyptocephalus cynoglossus,witch,righteye flounder,animal,JL
-,Glyptocephalus zachirus,rex sole,,animal,NOAA Fisheries
+,Genypterus chilensis,kingklip,,animal,"FDA The Seafood List, 2023/07/21"
+,Genypterus maculatus,kingklip,,animal,"FDA The Seafood List, 2023/07/21"
+,Geothelphusa dehaani,japanese crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Gibelion catla,catla,,animal,"FDA The Seafood List, 2023/07/21"
+,Girella nigricans,opaleye,,animal,"FDA The Seafood List, 2023/07/21"
+,Glossanodon semifasciatus,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Glossogobius giuris,goby,,animal,"FDA The Seafood List, 2023/07/21"
+,Glycymeris decussata,bittersweet,dogcockle,animal,"FDA The Seafood List, 2023/07/21"
+,Glycymeris glycymeris,dog cockle,bittersweet,animal,SJ
+,Glycymeris laticostata,bittersweet,dogcockle,animal,"FDA The Seafood List, 2023/07/21"
+,Glycymeris pilosa,cockle,,animal,"FDA The Seafood List, 2023/07/21"
+,Glycymeris violacescens,cockle,,animal,"FDA The Seafood List, 2023/07/21"
+,Glyptocephalus cynoglossus,witch,"righteye flounder, gray sole, witch flounder, sole, flounder",animal,JL
+,Glyptocephalus zachirus,rex sole,"sole, flounder",animal,NOAA Fisheries
+,Gnathanodon speciosus,trevally,,animal,"FDA The Seafood List, 2023/07/21"
+,Gnathophis cinctus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gobionotothen marionensis,icefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Goniistius gibbosus,morwong,,animal,"FDA The Seafood List, 2023/07/21"
+,Goniistius spectabilis,morwong,moki,animal,"FDA The Seafood List, 2023/07/21"
+,Grammatorcynus bicarinatus,mackerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Grammatorcynus bilineatus,mackerel,,animal,"FDA The Seafood List, 2023/07/21"
 ,Gryllodes sigillatus,tropical house cricket,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Gryllus,field cricket,,animal,BP
+,Gudusia chapra,shad,,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnachirus melas,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnocranius grandoculis,bream,sea bream,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnosarda unicolor,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax funebris,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax javanicus,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax kolpos,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax mareei,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax miliaris,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Gymnothorax unicolor,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon album,grunt,margate,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon aurolineatum,grunt,tomtate,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon bonariense,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon carbonarium,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon chrysargyreum,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon flavolineatum,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon macrostomum,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon melanurum,grunt,cottonwick,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon parra,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon plumierii,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon sciurus,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon scudderii,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon steindachneri,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haemulon striatum,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis assimilis,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis australis,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis corrugata,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis fulgens,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis gigantea,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis iris,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis kamtschatkana,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis laevigata,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis pourtalesii,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis roei,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis rubra,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis rufescens,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis tuberculata,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliotis walallensis,abalone,,animal,"FDA The Seafood List, 2023/07/21"
+,Haliporoides sibogae,shrimp,prawn,animal,"FDA The Seafood List, 2023/07/21"
+,Haliporoides triarthrus,shrimp,prawn,animal,"FDA The Seafood List, 2023/07/21"
+,Harengula clupeola,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Harengula humeralis,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Harengula jaguana,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Harengula thrissina,herring,,animal,"FDA The Seafood List, 2023/07/21"
 1,Harpadon nehereus,bombay duck,bummalo,animal,JL
-,Helix pomatia,escargot,,animal,BP
+,Harriotta raleighana,chimaera,,animal,"FDA The Seafood List, 2023/07/21"
+,Haustellum brandaris,merex,,animal,"FDA The Seafood List, 2023/07/21"
+,Helicolenus dactylopterus,rosefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Helix pomatia,escargot,snail,animal,BP
+,Hemanthias leptus,seabass,,animal,"FDA The Seafood List, 2023/07/21"
+,Hemanthias peruanus,seabass,,animal,"FDA The Seafood List, 2023/07/21"
+,Hemibagrus spilopterus,asian river bagrid fish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hemibagrus wyckioides,red mystus,,animal,"FDA The Seafood List, 2023/07/21"
 ,Hemijana variegata,edible caterpillar,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Hemilepidotus jordani,yellow irish lord,,animal,"FDA The Seafood List, 2023/07/21"
+,Hemitripterus americanus,sculpin,,animal,"FDA The Seafood List, 2023/07/21"
+,Hermosilla azurea,perch,,animal,"FDA The Seafood List, 2023/07/21"
+,Heterobranchus longifilis,sampa,,animal,"FDA The Seafood List, 2023/07/21"
+,Heterobranchus longifilis x Clarias gariepinus,claresse,hybrid clarias catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Heterocarpus laevigatus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Heterocarpus vicarius,northern nylon shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Heteropneustes fossilis,stinging fish,stinging catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Hexagrammos decagrammus,greenling,,animal,"FDA The Seafood List, 2023/07/21"
+,Hexagrammos lagocephalus,greenling,,animal,"FDA The Seafood List, 2023/07/21"
+,Hexagrammos octogrammus,greenling,,animal,"FDA The Seafood List, 2023/07/21"
+,Hexagrammos stelleri,greenling,,animal,"FDA The Seafood List, 2023/07/21"
+,Hexanchus griseus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Hiodon alosoides,goldeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Hiodon tergisus,mooneye,,animal,"FDA The Seafood List, 2023/07/21"
 ,Hippocampus comes,tiger tail seahorse,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Hippoglossoides elassodon,flathead sole,,animal,NOAA Fisheries
-,Hippoglossoides platessoides,american plaice,,animal,NOAA Fisheries
+,Hippoglossina oblonga,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Hippoglossina stomata,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Hippoglossoides dubius,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Hippoglossoides elassodon,flathead sole,"sole, flounder",animal,NOAA Fisheries
+,Hippoglossoides platessoides,american plaice,"plaice, flounder",animal,NOAA Fisheries
+,Hippoglossoides robustus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
 ,Hippoglossus hippoglossus,halibut,,animal,JL
 ,Hippoglossus stenolepis,halibut,,animal,JL
 1,Hippoidea,sand crab,mole crab,animal,JL
+,Hirundichthys affinis,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hirundichthys rondeletii,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hirundichthys speculiger,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Holacanthus bermudensis,angelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Holacanthus ciliaris,angelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Holacanthus tricolor,angelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Holocentrus adscensionis,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Holocentrus rufus,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Holothuria fuscogilva,white teatfish,,animal,Australian Fisheries Management Authority
+,Holothuria mexicana,sea cucumber,,animal,"FDA The Seafood List, 2023/07/21"
+,Holothuria poli,sea cucumber,,animal,"FDA The Seafood List, 2023/07/21"
+,Holothuria tubulosa,sea cucumber,,animal,"FDA The Seafood List, 2023/07/21"
 ,Holothuria whitmaei,black teatfish,,animal,Australian Fisheries Management Authority
 1,Holothuroidea,sea cucumber,,animal,JL
 ,Homarus americanus,lobster,,animal,BP
+,Homarus gammarus,lobster,,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplias malabaricus,tigerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplobatrachus rugulosus,frog,,animal,"FDA The Seafood List, 2023/07/21"
 ,Hoplobatrachus tigerinus,indian bullfrog,,animal,BP
-,Hoplostethus atlanticus,orange roughy,,animal,JL
+,Hoplopagrus guentherii,pargo,,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplosternum littorale,hassar,,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplostethus atlanticus,orange roughy,roughy,animal,JL
+,Hoplostethus mediterraneus mediterraneus,silver roughy,roughy,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplunnis diomediana,pike-conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplunnis macrura,pike-conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Hoplunnis tenuis,pike-conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Hucho hucho,danube salmon,salmon,animal,"FDA The Seafood List, 2023/07/21"
 ,Huso dauricus,kaluga,,animal,SJ
-,Huso huso,beluga sturgeon,,animal,SJ
+,Huso huso,beluga sturgeon,sturgeon,animal,SJ
+,Huso huso (fem) x Acipenser ruthenus (male),sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyas araneus,spider crab,"crab, great spider crab",animal,"FDA The Seafood List, 2023/07/21"
+,Hydrolagus novaezealandiae,chimaera,,animal,"FDA The Seafood List, 2023/07/21"
+,Hypanus americanus,stingray,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoglyphe antarctica,bluenose,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoglyphe bythites,driftfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoglyphe perciformis,driftfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoglyphe pringlei,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoplus immaculatus,sandeel,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperoplus lanceolatus,sandeel,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyperprosopon argenteum,surfperch,,animal,"FDA The Seafood List, 2023/07/21"
 ,Hypoderma tarandi,caribou warble fly,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Hypophthalmichthys molitrix,silver carp,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Hypophthalmichthys nobilis,bighead carp,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Hyporthodus quernus,seale's grouper,hawaiian grouper,animal,NOAA Fisheries
-,Ictalurus furcatus,blue catfish,,animal,NOAA Fisheries
-,Ictalurus punctatus,channel catfish,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hypomesus pretiosus,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Hypomesus transpacificus,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Hypophthalmichthys molitrix,silver carp,carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hypophthalmichthys nobilis,bighead carp,carp,animal,FAO Cultured Aquatic Species Fact Sheets
+,Hypophthalmus edentatus,highwaterman fish,highwaterman catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Hyporthodus acanthistius,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyporthodus flavolimbatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyporthodus niphobles,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Hyporthodus quernus,seale's grouper,"hawaiian grouper, grouper",animal,NOAA Fisheries
+,Hypsophrys nicaraguensis,cichlid,moga,animal,"FDA The Seafood List, 2023/07/21"
+,Hypsopsetta guttulata,turbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Ibacus ciliatus,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Ictalurus furcatus,blue catfish,catfish,animal,NOAA Fisheries
+,Ictalurus pricei,catfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ictalurus punctatus,channel catfish,catfish,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ictalurus punctatus x Ictalurus furcatus,catfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ictiobus bubalus,buffalofish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ictiobus cyprinellus,buffalofish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ictiobus niger,buffalofish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha africana,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha elongata,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha fuerthii,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha megaloptera,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha melastoma,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Ilisha pristigastroides,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Illex argentinus,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Illex coindetii,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Illex illecebrosus,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
 ,Imbrasia belina,mopane caterpillar,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Iniidae,dolphin,,animal,JL
-,Isurus oxyrinchus,pacific shortfin mako shark,,animal,NOAA Fisheries
-,Isurus paucus,longfin mako shark,,animal,SJ
-,Jasus edwardsii,southern rock lobster,"red rock lobster, spiny rock lobster",animal,"Newton, ""The Oldest Foods on Earth"""
-,Katsuwonus pelamis,atlantic skipjack tuna,pacific skipjack tuna,animal,NOAA Fisheries
-,Labeo rohita,roho labeo,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Iphigenia brasiliana,false coquina,coquina,animal,"FDA The Seafood List, 2023/07/21"
+,Isopisthus parvipinnis,croaker,corvina,animal,"FDA The Seafood List, 2023/07/21"
+,Isopisthus remifer,croaker,corvina,animal,"FDA The Seafood List, 2023/07/21"
+,Isopsetta isolepis,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Isostichopus badionotus,sea cucumber,,animal,"FDA The Seafood List, 2023/07/21"
+,Istiompax indica,marlin,,animal,"FDA The Seafood List, 2023/07/21"
+,Istiophorus platypterus,sailfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Isurus oxyrinchus,pacific shortfin mako shark,"shark, mako shark, shortfin mako shark",animal,NOAA Fisheries
+,Isurus paucus,longfin mako shark,"shark, mako shark",animal,SJ
+,Jacquinotia edwardsii,spider crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Jasus edwardsii,southern rock lobster,"red rock lobster, spiny rock lobster, rock lobster, lobster",animal,"Newton, ""The Oldest Foods on Earth"""
+,Jasus frontalis,rock lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Jasus lalandii,rock lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Jasus paulensis,rock lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Johnius belangerii,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Johnius dussumieri,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Kajikia albida,marlin,,animal,"FDA The Seafood List, 2023/07/21"
+,Kajikia audax,marlin,striped marlin,animal,"FDA The Seafood List, 2023/07/21"
+,Kathetostoma averruncus,stargazer,,animal,"FDA The Seafood List, 2023/07/21"
+,Kathetostoma giganteum,stargazer,,animal,"FDA The Seafood List, 2023/07/21"
+,Katsuwonus pelamis,atlantic skipjack tuna,"pacific skipjack tuna, skipjack tuna, tuna",animal,NOAA Fisheries
+,Konosirus punctatus,gizzard,scad,animal,"FDA The Seafood List, 2023/07/21"
+,Kryptopterus limpok,sheatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Kuhlia marginata,aholehole,,animal,"FDA The Seafood List, 2023/07/21"
+,Kuhlia rupestris,aholehole,,animal,"FDA The Seafood List, 2023/07/21"
+,Kuhlia sandvicensis,aholehole,,animal,"FDA The Seafood List, 2023/07/21"
+,Kyphosus cinerascens,rudderfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Kyphosus incisor,chub,,animal,"FDA The Seafood List, 2023/07/21"
+,Kyphosus sectator,chub,,animal,"FDA The Seafood List, 2023/07/21"
+,Kyphosus vaigiensis,drummer,,animal,"FDA The Seafood List, 2023/07/21"
+,Labeo bata,bata,,animal,"FDA The Seafood List, 2023/07/21"
+,Labeo calbasu,calbasu,,animal,"FDA The Seafood List, 2023/07/21"
+,Labeo rohita,roho labeo,rohu,animal,FAO Cultured Aquatic Species Fact Sheets
+,Lachnolaimus maximus,hogfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lactophrys triqueter,trunkfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Laemonema longipes,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
 1,Lagocephalus,fugu fish,,animal,JL
+,Lagocephalus laevigatus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Lagocephalus lagocephalus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Lagocephalus lunaris,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Lagodon rhomboides,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Lambis lambis,conch,,animal,"FDA The Seafood List, 2023/07/21"
+,Lamna ditropis,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Lamna nasus,shark,,animal,"FDA The Seafood List, 2023/07/21"
 ,Lampris guttatus,opah,,animal,NOAA Fisheries
 ,Lampris immaculatus,southern opah,,animal,SJ
-,Larimichthys polyactis,small yellow croaker,,animal,SJ
+,Larimichthys crocea,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Larimichthys polyactis,small yellow croaker,"redlip croaker, croaker",animal,SJ
+,Larimus fasciatus,drum,,animal,"FDA The Seafood List, 2023/07/21"
 ,Lasius fuliginosus,jet ant,jet black ant,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Lateolabrax japonicus,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
 ,Lates calcarifer,barramundi,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Lates niloticus,nile perch,,animal,SJ
+,Lates niloticus,nile perch,lake victoria perch,animal,SJ
 1,Latidae,asian sea bass,,animal,JL
-,Lepidocybium flavobrunneum,escolar,,animal,SJ
+,Latridopsis ciliaris,trumpeter,,animal,"FDA The Seafood List, 2023/07/21"
+,Latris lineata,trumpeter,,animal,"FDA The Seafood List, 2023/07/21"
+,Leiognathus equulus,slipmouth,ponyfish,animal,"FDA The Seafood List, 2023/07/21"
+,Leiostomus xanthurus,spot,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepidocybium flavobrunneum,escolar,oilfish,animal,SJ
+,Lepidopsetta bilineata,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
 ,Lepidopsetta billineta,southern rock sole,,animal,NOAA Fisheries
-,Lepidopsetta polyxystra,northern rock sole,,animal,NOAA Fisheries
+,Lepidopsetta polyxystra,northern rock sole,"sole, flounder",animal,NOAA Fisheries
+,Lepidopus caudatus,cutlassfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepidorhombus boscii,flounder,"megrim, whiff",animal,"FDA The Seafood List, 2023/07/21"
+,Lepidorhombus whiffiagonis,flounder,"megrim, whiff",animal,"FDA The Seafood List, 2023/07/21"
+,Lepidorhynchus denticulatus,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepidotrigla argus,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepisosteus osseus,gar,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis auritus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis cyanellus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis gibbosus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis gulosus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis macrochirus,bluegill,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis microlophus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepomis punctatus,sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepophidium brevibarbe,cusk-eel,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepophidium jeannae,cusk-eel,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepophidium profundorum,cusk-eel,,animal,"FDA The Seafood List, 2023/07/21"
+,Leporinus obtusidens,boga,,animal,"FDA The Seafood List, 2023/07/21"
+,Leptomelanosoma indicum,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Lepturacanthus savala,cutlassfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Lethocerus indicus,giant water bug,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Leucoraja ocellata,winter skate,,animal,NOAA Fisheries
-,Leukoma staminea,littleneck clam,,animal,Marty Smith
-,Limanda aspera,yellowfin sole,,animal,NOAA Fisheries
-,Limanda ferruginea,yellowtail flounder,,animal,NOAA Fisheries
+,Lethrinus atlanticus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus erythracanthus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus harak,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus lentjan,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus mahsena,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus microdon,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus miniatus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus nebulosus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus variegatus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Lethrinus xanthochilus,emperor,,animal,"FDA The Seafood List, 2023/07/21"
+,Leucoraja erinacea,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Leucoraja garmani,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Leucoraja ocellata,winter skate,skate,animal,NOAA Fisheries
+,Leukoma staminea,littleneck clam,clam,animal,Marty Smith
+,Leuresthes tenuis,grunion,,animal,"FDA The Seafood List, 2023/07/21"
+,Limanda aspera,yellowfin sole,"sole, flounder",animal,NOAA Fisheries
+,Limanda ferruginea,yellowtail flounder,"sole, flounder",animal,NOAA Fisheries
+,Limanda limanda,flounder,dab,animal,"FDA The Seafood List, 2023/07/21"
+,Limanda proboscidea,flounder,dab,animal,"FDA The Seafood List, 2023/07/21"
+,Limanda punctatissima,flounder,dab,animal,"FDA The Seafood List, 2023/07/21"
+,Liopsetta glacialis,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Lithodes aequispinus,golden king crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Lithodes antarcticus,centolla crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Lithodes couesi,scarlet crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Lithodes murrayi,murray crab,"crab, centolla crab",animal,"FDA The Seafood List, 2023/07/21"
+,Lithodes santolla,santolla crab ,"crab, nova crab, southern red crab",animal,"FDA The Seafood List, 2023/07/21"
 1,Lithodidae,king crab,,animal,JL
-,Litopenaeus setiferus,atlantic white shrimp,,animal,SJ
-,Litopenaeus vannamei,whiteleg shrimp,,animal,BP
+,Litopenaeus occidentalis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Litopenaeus schmitti,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Litopenaeus setiferus,atlantic white shrimp,"shrimp, white shrimp",animal,SJ
+,Litopenaeus stylirostris,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Litopenaeus vannamei,whiteleg shrimp,shrimp,animal,BP
 ,Littorina littorea,periwinkle,,animal,JL
+,Littorina sitkana,periwinkle,,animal,"FDA The Seafood List, 2023/07/21"
+,Liza grandisquamis,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Lobotes pacificus,tripletail,,animal,"FDA The Seafood List, 2023/07/21"
+,Lobotes surinamensis,tripletail,,animal,"FDA The Seafood List, 2023/07/21"
 ,Loligo forbesii,veined squid,,animal,SJ
-,Loligo vulgaris,european squid,,animal,SJ
+,Loligo gahi,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Loligo media,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Loligo ocula,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Loligo plei,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Loligo vulgaris,european squid,"squid, calamari",animal,SJ
+,Loligo vulgaris reynaudi,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Loliolus beka,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Lolliguncula brevis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Lolliguncula panamensis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
 1,Lophius,monkfish,,animal,JL
 ,Lophius americanus,monkfish,,animal,NOAA Fisheries
 ,Lophius budegassa,blackbellied angler,,animal,SJ
-,Lophius piscatorius,angler,,animal,SJ
-,Lopholatilus chamaeleonticeps,golden tilefish,,animal,NOAA Fisheries
+,Lophius gastrophysus,goosefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lophius litulon,monkfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Lophius piscatorius,angler,monkfish,animal,SJ
+,Lopholatilus chamaeleonticeps,golden tilefish,tilefish,animal,NOAA Fisheries
+,Lopholithodes foraminatus,brown box crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Lota lota,burbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Lotella rhacina,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Lottia gigantea,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Loxorhynchus grandis,sheep crab,crab,animal,"FDA The Seafood List, 2023/07/21"
 1,Lutjanidae,snapper,,animal,JL
-,Lutjanus campechanus,red snapper,,animal,NOAA Fisheries
-,Macrobrachium rosenbergii,giant river prawn,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Lutjanus agennes,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus analis,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus apodus,schoolmaster,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus aratus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus argentimaculatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus argentiventris,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus bohar,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus buccanella,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus campechanus,red snapper,snapper,animal,NOAA Fisheries
+,Lutjanus colorado,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus cyanopterus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus erythropterus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus fulvus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus gibbus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus goreensis,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus griseus,snapper,gray snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus guttatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus inermis,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus jocu,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus johnii,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus jordani,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus kasmira,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus lutjanus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus mahogoni,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus malabaricus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus monostigma,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus novemfasciatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus peru,snapper,pacific snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus purpureus,snapper,caribbean red snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus quinquelineatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus rivulatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus sanguineus,snapper,scarlet snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus sebae,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus stellatus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus synagris,snapper,lane snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Lutjanus vivanus,snapper,silk snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Luvarus imperialis,louvar,,animal,"FDA The Seafood List, 2023/07/21"
+,Lyopsetta exilis,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Maccullochella peelii,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Macolor macularis,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Macolor niger,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Macoma nasuta,bentnose clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Macquaria ambigua,golden perch,,animal,"FDA The Seafood List, 2023/07/21"
+,Macrobrachium acanthurus,freshwater shrimp,shrimp,animal,"FDA The Seafood List, 2023/07/21"
+,Macrobrachium carcinus,freshwater shrimp,shrimp,animal,"FDA The Seafood List, 2023/07/21"
+,Macrobrachium ohione,freshwater shrimp,shrimp,animal,"FDA The Seafood List, 2023/07/21"
+,Macrobrachium rosenbergii,giant river prawn,"shrimp, freshwater shrimp",animal,FAO Cultured Aquatic Species Fact Sheets
+,Macrocallista maculata,calico clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Macrocallista nimbosa,venus clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Macrodon ancylodon,weakfish,bandamary,animal,"FDA The Seafood List, 2023/07/21"
+,Macrognathus aculeatus,spiny eel,eel,animal,"FDA The Seafood List, 2023/07/21"
 ,Macropus fuliginosus,western grey kangaroo,"western grey giant kangaroo, black-faced kangaroo, mallee kangaroo, sooty kangaroo",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Macropus giganteus,eastern grey kangaroo,"great grey kangaroo, forester kangaroo",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Macrotermes bellicosus,winged termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Macrotermes subhyalinus,winged termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Macruronus novaezelandiae,hoki,,animal,SJ
+,Macruronus magellanicus,grenadier,"argentine straptail, hualca, hake, whiting",animal,"FDA The Seafood List, 2023/07/21"
+,Macruronus novaezelandiae,hoki,"whiting, blue hake, new zealand whiting",animal,SJ
+,Mactra sachalinensis,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactrellona alata,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactromeris catilliformis,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactromeris hemphillii,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactromeris polynyma,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactrotoma californica,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactrotoma fragilis,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mactrotoma nasuta,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
 ,Magallana gigas,pacific cupped oyster,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Makaira nigricans,pacific blue marlin,,animal,NOAA Fisheries
+,Maja squinado,spider crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Makaira nigricans,pacific blue marlin,"blue marlin, marlin",animal,NOAA Fisheries
 1,Malacanthidae,tilefish,,animal,JL
+,Malacanthus plumieri,tilefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Malacoraja senta,skate,,animal,"FDA The Seafood List, 2023/07/21"
 ,Mallotus villosus,capelin,masago (roe),animal,JL
-,Marsupenaeus japonicus,kurama shrimp,,animal,SJ
+,Manta birostris,manta,,animal,"FDA The Seafood List, 2023/07/21"
+,Manta hamiltoni,manta,,animal,"FDA The Seafood List, 2023/07/21"
+,Marsupenaeus japonicus,kurama shrimp,shrimp,animal,SJ
+,Mastacembelus armatus,spiny eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Medialuna californiensis,halfmoon,,animal,"FDA The Seafood List, 2023/07/21"
 1,Medusozoa,jellyfish,,animal,JL
+,Megabalanus psittacus,barnacle,,animal,"FDA The Seafood List, 2023/07/21"
+,Megalops atlanticus,tarpon,,animal,"FDA The Seafood List, 2023/07/21"
+,Meganyctiphanes norvegica,krill,,animal,"FDA The Seafood List, 2023/07/21"
 1,Melanogrammus aeglefinus,haddock,,animal,JL
 1,Meleagris,turkey,,animal,BP
-,Melicertus kerathurus,striped prawn,,animal,SJ
-,Melicertus plebejus,eastern king prawn,,animal,SJ
+,Melicertus kerathurus,striped prawn,"prawn, shrimp",animal,SJ
+,Melicertus latisulcatus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Melicertus plebejus,eastern king prawn,shrimp,animal,SJ
+,Melichthys niger,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Melophorus bagoti,red honey ant,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Mercenaria mercenaria,northern quahog,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Mene maculata,moonfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Menidia menidia,silverside,,animal,"FDA The Seafood List, 2023/07/21"
+,Menippe adina,stone crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Menippe mercenaria,stone crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Menticirrhus americanus,kingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Menticirrhus littoralis,kingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Menticirrhus saxatilis,kingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Menticirrhus undulatus,kingfish,corbina,animal,"FDA The Seafood List, 2023/07/21"
+,Mercenaria campechiensis,clam,quahog,animal,"FDA The Seafood List, 2023/07/21"
+,Mercenaria mercenaria,northern quahog,"quahog, clam",animal,FAO Cultured Aquatic Species Fact Sheets
 ,Mercluccius productus,pacific whiting,hake,animal,NOAA Fisheries
+,Meretrix lyrata,white hard clam,,animal,"FDA The Seafood List, 2023/07/21"
 ,Merlangius merlangus,whiting,,animal,JL
 1,Merlucciidae,hake,,animal,JL
-,Merluccius bilinearis,silver hake,,animal,NOAA Fisheries
-,Merluccius hubbsi,argentine hake,,animal,SJ
-,Merluccius merluccius,european hake,,animal,SJ
-,Merluccius paradoxus,deep-water cape hake,,animal,SJ
-,Merluccius productus,north pacific hake,,animal,SJ
-,Mesocentrotus franciscanus,red sea urchin,,animal,BP
-,Metacarcinus magister,dungeness crab,,animal,JL
+,Merluccius australis,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Merluccius bilinearis,silver hake,whiting,animal,NOAA Fisheries
+,Merluccius capensis,whiting,cape capensis,animal,"FDA The Seafood List, 2023/07/21"
+,Merluccius gayi,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Merluccius hubbsi,argentine hake,whiting,animal,SJ
+,Merluccius merluccius,european hake,whiting,animal,SJ
+,Merluccius paradoxus,deep-water cape hake,"hake, whiting",animal,SJ
+,Merluccius productus,north pacific hake,"whiting, pacific whiting, north pacific whiting",animal,SJ
+,Mesocentrotus franciscanus,red sea urchin,sea urchin,animal,BP
+,Metacarcinus edwardsii,rock crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Metacarcinus magister,dungeness crab,crab,animal,JL
+,Metanephrops binghami,lobsterette,,animal,"FDA The Seafood List, 2023/07/21"
+,Metanephrops challengeri,lobsterette,"baby lobster, scampi, deep sea lobster, bay prawn",animal,"FDA The Seafood List, 2023/07/21"
+,Metanephrops rubellus,lobsterette,,animal,"FDA The Seafood List, 2023/07/21"
+,Metanephrops thomsoni,lobsterette,,animal,"FDA The Seafood List, 2023/07/21"
+,Metapenaeus affinis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Metapenaeus dobsoni,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Metapenaeus endeavouri,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Metapenaeus ensis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Metapenaeus monoceros,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Meuschenia galii,leatherjacket,,animal,"FDA The Seafood List, 2023/07/21"
+,Meuschenia scaber,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Microchirus variegatus,sole,,animal,"FDA The Seafood List, 2023/07/21"
 ,Microcosmus sabatieri,sea fig,violet,animal,JL
-,Micropogonias undulatus,atlantic croaker,,animal,SJ
-,Microstomus pacificus,dover sole,,animal,NOAA Fisheries
+,Microgadus proximus,tomcod,,animal,"FDA The Seafood List, 2023/07/21"
+,Microgadus tomcod,tomcod,,animal,"FDA The Seafood List, 2023/07/21"
+,Micromesistius australis,blue whiting,whiting,animal,"FDA The Seafood List, 2023/07/21"
+,Micromesistius poutassou,blue whiting,whiting,animal,"FDA The Seafood List, 2023/07/21"
+,Micropogonias furnieri,corvina,croaker,animal,"FDA The Seafood List, 2023/07/21"
+,Micropogonias undulatus,atlantic croaker,croaker,animal,SJ
+,Micropterus dolomieu,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Micropterus notius,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Micropterus punctulatus,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Micropterus salmoides,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Micropterus treculii,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Microstomus achne,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Microstomus kitt,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Microstomus pacificus,dover sole,sole,animal,NOAA Fisheries
+,Miichthys miiuy,croaker,miiuy,animal,"FDA The Seafood List, 2023/07/21"
+,Mimachlamys varia,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Minytrema melanops,carp,,animal,"FDA The Seafood List, 2023/07/21"
 ,Mizuhopecten yessoensis,yesso scallop,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Mobula hypostoma,manta,,animal,"FDA The Seafood List, 2023/07/21"
+,Mobula japanica,manta,,animal,"FDA The Seafood List, 2023/07/21"
+,Mobula thurstoni,manta,,animal,"FDA The Seafood List, 2023/07/21"
+,Modiolus barbatus,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Modiolus modiolus,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Mola mola,ocean sunfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Molva dypterygia,ling,,animal,"FDA The Seafood List, 2023/07/21"
+,Molva macrophthalma,mediterranean ling,ling,animal,"FDA The Seafood List, 2023/07/21"
+,Molva molva,ling,,animal,"FDA The Seafood List, 2023/07/21"
+,Monacanthus ciliatus,filefish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Monochamus versteegi,beetle,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Morone chrysops,white bass,,animal,SJ
-,Morone chrysops x Morone saxatilis,striped bass hybrid,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Morone saxatilis,striped bass,,animal,JL
-,Mugil cephalus,flathead grey mullet,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Monodonta turbinata,top shell,,animal,"FDA The Seafood List, 2023/07/21"
+,Monomia haanii,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Monopterus albus,eel,,animal,"FDA The Seafood List, 2023/07/21"
+,Monotaxis grandoculis,bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Mora moro,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Morone americana,white perch,perch,animal,"FDA The Seafood List, 2023/07/21"
+,Morone chrysops,white bass,bass,animal,SJ
+,Morone chrysops x Morone saxatilis,striped bass hybrid,"sunshine bass, hybrid white bass, striped bass, bass",animal,FAO Cultured Aquatic Species Fact Sheets
+,Morone mississippiensis,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Morone saxatilis,striped bass,bass,animal,JL
+,Morone saxatilis x Morone chrysops,bass,"hybrid striped bass, white bass",animal,"FDA The Seafood List, 2023/07/21"
+,Moxostoma macrolepidotum,sucker,redhorse,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil cephalus,flathead grey mullet,mullet,animal,FAO Cultured Aquatic Species Fact Sheets
+,Mugil curema,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil gaimardianus,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil gyrans,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil hospes,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil incilis,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil liza,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugil thoburni,mullet,,animal,"FDA The Seafood List, 2023/07/21"
 1,Mugilidae,mullet,,animal,JL
-,Mya arenaria,soft-shell clams,,animal,SJ
-,Mycteroperca bonaci,black grouper,,animal,NOAA Fisheries
-,Mycteroperca microlepis,gag grouper,,animal,NOAA Fisheries
-,Mytilus edulis,blue mussel,,animal,BP
+,Mugiloides chilensis,sandperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Mugiloides fasciatus,sandperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Mulinia edulis,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Mulloidichthys dentatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mulloidichthys flavolineatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mulloidichthys martinicus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mulloidichthys vanicolensis,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mullus auratus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mullus barbatus,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Mullus surmuletus,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Munida gregaria,langostino,langostino lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Muraena helena,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Muraena melanotis,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Muraena retifera,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Muraena robusta,moray eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Muraenesox cinereus,pike-conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Mustelus antarcticus,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Mustelus californicus,shark,smoothhound,animal,"FDA The Seafood List, 2023/07/21"
+,Mustelus canis,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Mustelus henlei,shark,smoothhound,animal,"FDA The Seafood List, 2023/07/21"
+,Mustelus lenticulatus,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Mya arenaria,soft-shell clam,clam,animal,SJ
+,Mycteroperca bonaci,black grouper,grouper,animal,NOAA Fisheries
+,Mycteroperca interstitialis,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca jordani,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca microlepis,gag grouper,"gag, grouper",animal,NOAA Fisheries
+,Mycteroperca phenax,grouper,scamp,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca rubra,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca tigris,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca venenosa,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Mycteroperca xenarcha,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Myleus pacu,pacu,,animal,"FDA The Seafood List, 2023/07/21"
+,Myliobatis californica,bat ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Myliobatis freminvillii,bullnose ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Myliobatis goodei,eagle ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Mylocheilus caurinus,peamouth,"peamouth chub, redmouth sucker, northwestern dace",animal,"FDA The Seafood List, 2023/07/21"
+,Mylopharyngodon piceus,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Myoxocephalus polyacanthocephalus,sculpin,,animal,"FDA The Seafood List, 2023/07/21"
+,Myripristis amaena,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Myripristis berndti,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Mystus vittatus,striped dwarf fish,striped dwarf catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Mytilus californianus,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Mytilus chilensis,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Mytilus edulis,blue mussel,mussel,animal,BP
+,Mytilus galloprovicialis x Mytilus edulis,mussel,,animal,"FDA The Seafood List, 2023/07/21"
 ,Mytilus galloprovincalis,mediterranean mussel,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Mytilus galloprovincialis,mussel,,animal,"FDA The Seafood List, 2023/07/21"
+,Myxine glutinosa,hagfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Nandus nandus,leaffish,,animal,"FDA The Seafood List, 2023/07/21"
+,Narcine brasiliensis,electric ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Naso unicornis,unicornfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Nautilus,nautilus,,animal,JL
+,Navodon australis,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Nebris microps,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Negaprion brevirostris,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Nemadactylus bergi,morwong,,animal,"FDA The Seafood List, 2023/07/21"
+,Nemadactylus carponotatus,morwong,,animal,"FDA The Seafood List, 2023/07/21"
+,Nemadactylus douglasii,morwong,,animal,"FDA The Seafood List, 2023/07/21"
+,Nemadactylus macropterus,tarakihi,morwong,animal,"FDA The Seafood List, 2023/07/21"
+,Nematalosa vlaminghi,gizzard shad,shad,animal,"FDA The Seafood List, 2023/07/21"
+,Nematistius pectoralis,jack,roosterfish,animal,"FDA The Seafood List, 2023/07/21"
 1,Nematognathi,catfish,,animal,JL
-,Nephrops norvegicus,norway lobster,,animal,SJ
+,Nemipterus bipunctatus,threadfin bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Nemipterus furcosus,threadfin bream,bream,animal,"FDA The Seafood List, 2023/07/21"
+,Nemipterus hexodon,threadfin bream,bream,animal,"FDA The Seafood List, 2023/07/21"
+,Nemipterus japonicus,threadfin bream,bream,animal,"FDA The Seafood List, 2023/07/21"
+,Nemipterus mesoprion,threadfin bream,bream,animal,"FDA The Seafood List, 2023/07/21"
+,Nemipterus virgatus,threadfin bream,bream,animal,"FDA The Seafood List, 2023/07/21"
+,Neogobius melanostomus,goby,,animal,"FDA The Seafood List, 2023/07/21"
+,Neolithodes brodiei,lithodes crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Neomyxus leuciscus,mullet,,animal,"FDA The Seafood List, 2023/07/21"
+,Neotropius acutirostris,batashi,,animal,"FDA The Seafood List, 2023/07/21"
+,Nephrops norvegicus,norway lobster,lobster,animal,SJ
+,Nephropsis aculeata,lobsterette,,animal,"FDA The Seafood List, 2023/07/21"
+,Nesiarchus nasutus,gemfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Netuma thalassinus,giant whiskered fish,"giant catfish, whiskered fish",animal,"FDA The Seafood List, 2023/07/21"
 ,Nezara viridula,southern green stink bug,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Nezumia bairdii,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
+,Notacanthus chemnitzii,spiny eel,eel,animal,"FDA The Seafood List, 2023/07/21"
 ,Notamacropus agilis,agile wallaby,sandy wallaby,animal,"Newton, ""The Oldest Foods on Earth"""
+,Notopterus notopterus,featherback,,animal,"FDA The Seafood List, 2023/07/21"
+,Notorynchus cepedianus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Nototodarus sloanii,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Ocenebra japonica,snail,,animal,"FDA The Seafood List, 2023/07/21"
 1,Octopoda,octopus,,animal,JL
+,Octopus insularis,octopus,,animal,"FDA The Seafood List, 2023/07/21"
+,Octopus membranaceus,octopus,,animal,"FDA The Seafood List, 2023/07/21"
 ,Octopus minor,long arm octopus,,animal,SJ
+,Octopus vulgaris,octopus,,animal,"FDA The Seafood List, 2023/07/21"
 ,Ocyphaps lophotes,crested pigeon,,animal,"Newton, ""The Oldest Foods on Earth"""
+,Ocyurus chrysurus,snapper,yellowtail snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Odax pullus,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Odobenus rosmarus,walrus,,animal,SJ
 ,Odocoileus virginianus,white-tailed deer,,animal,BP
+,Odontesthes regia,silverside,,animal,"FDA The Seafood List, 2023/07/21"
+,Odontoscion dentex,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Odonus niger,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Oecophylla smaragdina,asian weaver ant,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Oncorhynchus gorbuscha,pink salmon,,animal,FAO Aquatic Species Fact Sheets
-,Oncorhynchus keta,chum salmon,,animal,FAO Aquatic Species Fact Sheets
-,Oncorhynchus kisutch,coho salmon,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Oncorhynchus masou,masu salmon,,animal,FishBase
-,Oncorhynchus mykiss,rainbow trout,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Oncorhynchus nerka,sockeye salmon,,animal,FAO Aquatic Species Fact Sheets
-,Oncorhynchus tshawytscha,chinook salmon,,animal,FAO Aquatic Species Fact Sheets
+,Oligoplites saurus,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Ommastrephes bartramii,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Ompok pabda,pabdah fish,pabdah catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Oncorhynchus aguabonita,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Oncorhynchus clarkii,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Oncorhynchus gilae,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Oncorhynchus gorbuscha,pink salmon,"humpback salmon, salmon",animal,FAO Aquatic Species Fact Sheets
+,Oncorhynchus keta,chum salmon,"salmon, keta salmon",animal,FAO Aquatic Species Fact Sheets
+,Oncorhynchus kisutch,coho salmon,"silver salmon, medium red salmon, salmon",animal,FAO Cultured Aquatic Species Fact Sheets
+,Oncorhynchus masou,masu salmon,"salmon, cherry salmon",animal,FishBase
+,Oncorhynchus mykiss,rainbow trout,"steelhead trout, trout",animal,FAO Cultured Aquatic Species Fact Sheets
+,Oncorhynchus nerka,sockeye salmon,"salmon, red salmon, blueback salmon",animal,FAO Aquatic Species Fact Sheets
+,Oncorhynchus tshawytscha,chinook salmon,"king salmon, spring salmon, salmon",animal,FAO Aquatic Species Fact Sheets
+,Ophichthus rex,snake eel,"eel, keoghfish",animal,"FDA The Seafood List, 2023/07/21"
 ,Ophiodon elongatus,lingcod,,animal,JL
-,Oreochromis aureus,blue tilapia,,animal,BP
-,Oreochromis mossambicus,mozambique tilapia,,animal,BP
-,Oreochromis niloticus,nile tilapia,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Opisthonema libertate,thread herring,herring,animal,"FDA The Seafood List, 2023/07/21"
+,Opisthonema oglinum,thread herring,herring,animal,"FDA The Seafood List, 2023/07/21"
+,Opisthopterus tardoore,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Opsanus beta,toadfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Opsanus pardus,toadfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Opsanus tau,toadfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Orcynopsis unicolor,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Oreochromis aureus,blue tilapia,tilapia,animal,BP
+,Oreochromis macrochir,tilapia,,animal,"FDA The Seafood List, 2023/07/21"
+,Oreochromis mossambicus,mozambique tilapia,tilapia,animal,BP
+,Oreochromis mossambicus x Oreochromis niloticus,red tilapia,tilapia,animal,"FDA The Seafood List, 2023/07/21"
+,Oreochromis niloticus,nile tilapia,tilapia,animal,FAO Cultured Aquatic Species Fact Sheets
+,Orthopristis chrysoptera,grunt,,animal,"FDA The Seafood List, 2023/07/21"
 ,Orycteo rhinoceros,rhinoceros beetle larvae,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Oryctes boas,rhinoceros beetle larvae,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Osmeridae,smelt,,animal,JL
-,Osmerus mordax,rainbow smelt,,animal,SJ
+,Osmerus dentex,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Osmerus eperlanus,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Osmerus mordax,rainbow smelt,"american smelt, smelt",animal,SJ
+,Osmerus mordax dentex,smelt,,animal,"FDA The Seafood List, 2023/07/21"
 ,Osphranter robustus,common wallaroo,"euro, hill wallaroo, wallaroo",animal,"Newton, ""The Oldest Foods on Earth"""
 ,Osphranter rufus,red kangaroo,,animal,"Newton, ""The Oldest Foods on Earth"""
 ,Osphronemus goramy,giant gourami,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Ostrea edulis,european flat oyster,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Osphronemus goramy ,gourami,goramy,animal,"FDA The Seafood List, 2023/07/21"
+,Osteoglossum bicirrhosum,arowana,silver arowana,animal,"FDA The Seafood List, 2023/07/21"
+,Ostorhinchus maculiferus,cardinalfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ostracion meleagris,trunkfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ostrea conchaphila,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Ostrea edulis,european flat oyster,oyster,animal,FAO Cultured Aquatic Species Fact Sheets
+,Ostrea lurida,oyster,,animal,"FDA The Seafood List, 2023/07/21"
 1,Ostreoidea,oyster,,animal,JL
+,Otolithes ruber,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Otolithoides biauritus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Otolithoides pama,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Ovalipes punctatus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
 ,Ovis aries,sheep,,animal,BP
-,Pandalus borealis,northern prawn,,animal,SJ
-,Pandalus jordani,ocean (coldwater) shrimp,,animal,Marty Smith
-,Pangasianodon hypophthalmus,striped catfish,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Pangasius bocourti,swai,,animal,JL
-,Panopea generosa,geoduck,,animal,SJ
+,Oxycheilinus arenatus,wrasse,,animal,"FDA The Seafood List, 2023/07/21"
+,Oxycheilinus orientalis,wrasse,,animal,"FDA The Seafood List, 2023/07/21"
+,Oxyporhamphus micropterus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pacifastacus leniusculus,crayfish,crawfish,animal,"FDA The Seafood List, 2023/07/21"
+,Pagellus erythrinus,bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Pagrus auratus,porgy,"squirefish, sea bream",animal,"FDA The Seafood List, 2023/07/21"
+,Pagrus major,porgy,sea bream,animal,"FDA The Seafood List, 2023/07/21"
+,Pagrus pagrus,porgy,sea bream,animal,"FDA The Seafood List, 2023/07/21"
+,Palaemon serratus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Palaemonetes vulgaris,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Palinurus delagoae,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Palinurus elephas,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Palinurus gilchristi,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Palinurus mauritanicus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Pampus argenteus,butterfish,silver pomfret,animal,"FDA The Seafood List, 2023/07/21"
+,Pampus chinensis,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
+,Pampus cinereus,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pandalopsis dispar,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pandalus borealis,northern prawn,"pink shrimp, shrimp",animal,SJ
+,Pandalus goniurus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pandalus hypsinotus,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pandalus jordani,ocean (coldwater) shrimp,"pink shrimp, shrimp",animal,Marty Smith
+,Pandalus platyceros,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pangasianodon hypophthalmus,striped catfish,"sutchi, striped pangasius, tra, swai",animal,FAO Cultured Aquatic Species Fact Sheets
+,Pangasius bocourti,swai,basa,animal,JL
+,Pangasius gigas,mekong giant pangasius,mekong giant catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Pangasius larnaudii,spot pangasius,,animal,"FDA The Seafood List, 2023/07/21"
+,Pangasius pangasius,yellowtail pangasius,yellowtail catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Pangasius sanitwongsei,giant pangasius,,animal,"FDA The Seafood List, 2023/07/21"
+,Panopea abrupta,geoduck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Panopea bitruncata,geoduck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Panopea generosa,geoduck,"geoduck clam, clam",animal,SJ
 ,Panopeidae,mud crab,,animal,JL
-,Panulirus cygnus,western rock lobster,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Panulirus homarus,scalloped spiny lobster,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Panulirus ornatus,tropical rock lobster,,animal,Australian Fisheries Management Authority
-,Paracentrotus lividus,atlantic purple sea urchin,,animal,BP
-,Paralichthys albigutta,gulf flounder,,animal,SJ
-,Paralichthys dentatus,summer flounder,,animal,NOAA Fisheries
-,Paralichthys lethostigma,flounder,,animal,BP
-,Paralichthys olivaceus,olive flounder,,animal,SJ
-,Paralithodes camtschaticus,red king crab,,animal,SJ
-,Paralithodes platypus,blue king crab,,animal,SJ
+,Panulirus argus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus cygnus,western rock lobster,"lobster, spiny lobster",animal,"Newton, ""The Oldest Foods on Earth"""
+,Panulirus gracilis,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus homarus,scalloped spiny lobster,"lobster, spiny lobster",animal,FAO Cultured Aquatic Species Fact Sheets
+,Panulirus inflatus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus interruptus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus japonicus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus laevicauda,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus marginatus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus ornatus,tropical rock lobster,"lobster, spiny lobster",animal,Australian Fisheries Management Authority
+,Panulirus penicillatus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus polyphagus,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus regius,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Panulirus versicolor,spiny lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Paphies australis,wedge clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Paphies subtriangulata,wedge clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Paphies ventricosa,wedge clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Paracaesio kusakarii,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Paracaesio xanthura,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Paracentrotus lividus,atlantic purple sea urchin,sea urchin,animal,BP
+,Parachanna obscura,channa,snakehead,animal,"FDA The Seafood List, 2023/07/21"
+,Paraconger caudilimbatus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Paralabrax callaensis,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralabrax clathratus,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralabrax maculatofasciatus,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralabrax nebulifer,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralichthys aestuarius,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralichthys albigutta,gulf flounder,flounder,animal,SJ
+,Paralichthys californicus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralichthys dentatus,summer flounder,"flounder, fluke",animal,NOAA Fisheries
+,Paralichthys lethostigma,flounder,fluke,animal,BP
+,Paralichthys microps,flounder,fluke,animal,"FDA The Seafood List, 2023/07/21"
+,Paralichthys olivaceus,olive flounder,flounder,animal,SJ
+,Paralichthys patagonicus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralichthys squamilentus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Paralithodes brevipes,king crab,"crab, hanasaki crab",animal,"FDA The Seafood List, 2023/07/21"
+,Paralithodes camtschaticus,red king crab,"crab, king crab",animal,SJ
+,Paralithodes platypus,blue king crab,"crab, king crab",animal,SJ
+,Paralomis granulosa,deepsea crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Paralonchurus peruanus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Parambassis baculis,chanda,,animal,"FDA The Seafood List, 2023/07/21"
+,Parancistrus aurantiacus,pleco,loach,animal,"FDA The Seafood List, 2023/07/21"
+,Paranotothenia magellanica,cod,,animal,"FDA The Seafood List, 2023/07/21"
+,Paranthias colonus,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Paranthias furcifer,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Parapenaeopsis sculptilis,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Parapenaeopsis stylifera,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Parapenaeus longirostris,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Parapercis colias,sandperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Paraplagusia bilineata,toungesole,"sole, flounder",animal,"FDA The Seafood List, 2023/07/21"
 1,Parastacoidea,crayfish,,animal,JL
-,Parophrys vetulus,english sole,,animal,NOAA Fisheries
+,Parastromateus niger,pomfret,black pomfret,animal,"FDA The Seafood List, 2023/07/21"
+,Paratrachichthys trailli,roughy,,animal,"FDA The Seafood List, 2023/07/21"
+,Pareques umbrosus,drum,cubbyu,animal,"FDA The Seafood List, 2023/07/21"
+,Parexocoetus brachypterus,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Paristiopterus labiosus,boarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Parona signata,argentine queenfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Parophrys vetulus,english sole,sole,animal,NOAA Fisheries
+,Parupenaeus cilatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Parupeneus ciliatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Parupeneus cyclostomus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Parupeneus multifasciatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Patella caerulea,limpet,,animal,"FDA The Seafood List, 2023/07/21"
+,Patinopecten caurinus,scallop,weathervane,animal,"FDA The Seafood List, 2023/07/21"
+,Patinopecten yessoensis,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Pecten albicans,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Pecten jacobaeus,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Pecten maximus,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Pecten meridionalis,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Pecten novaezelandiae,scallop,,animal,"FDA The Seafood List, 2023/07/21"
 1,Pectinidae,scallop,,animal,JL
-,Penaeus esculentus,brown tiger prawn,,animal,SJ
+,Pegusa lascaris,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Pelecus cultratus,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pellona ditchela,herring,,animal,"FDA The Seafood List, 2023/07/21"
+,Pelotretis flavilatus,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Peltorhamphus novaezeelandiae,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Penaeus esculentus,brown tiger prawn,shrimp,animal,SJ
 ,Penaeus indicus,indian white prawn,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Penaeus monodon,black tiger shrimp,,animal,BP
-,Penaeus semisulcatus,green tiger prawn,,animal,SJ
+,Penaeus monodon,black tiger shrimp,shrimp,animal,BP
+,Penaeus semisulcatus,green tiger prawn,shrimp,animal,SJ
 ,Penaeus setiferus,white shrimp,,animal,BP
 ,Penaeus vannamei,whiteleg shrimp,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Pennahia anea,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Pennahia argentata,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Pentapodus caninus,bream,,animal,"FDA The Seafood List, 2023/07/21"
+,Peprilus burti,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Peprilus paru,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Peprilus simillimus,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Peprilus triacanthus,butterfish,,animal,NOAA Fisheries
-,Perca flavescens,yellow perch,,animal,SJ
-,Perca fluviatilis,common perch,,animal,BP
-,Perna canaliculus,new zealand mussel,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Perca flavescens,yellow perch,"perch, lake perch",animal,SJ
+,Perca fluviatilis,common perch,perch,animal,BP
+,Percophis brasiliensis,duckbill,,animal,"FDA The Seafood List, 2023/07/21"
+,Peristedion miniatum,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Perna canaliculus,new zealand mussel,mussel,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Petromyzontiformes,lamprey,,animal,JL
 1,Phycidae,hake,,animal,JL
+,Phycis chesteri,hake,,animal,"FDA The Seafood List, 2023/07/21"
 ,Piaractus brachypomus,pirapitinga,,animal,BP
+,Pinirampus pirinampu,flatwhiskered fish,flatwhiskered catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Pinjalo pinjalo,snapper,,animal,"FDA The Seafood List, 2023/07/21"
 1,Pinnipedia,seal,,animal,JL
-,Placopecten magellanicus,atlantic deep-sea scallop,,animal,SJ
+,Placopecten magellanicus,atlantic deep-sea scallop,scallop,animal,SJ
+,Plagiogeneion rubiginosum,bonnetmouth,,animal,"FDA The Seafood List, 2023/07/21"
+,Plagioscion squamosissimus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
 1,Platanistidae,dolphin,,animal,JL
-,Platichthys flesus,european flounder,,animal,SJ
+,Platichthys flesus,european flounder,"flounder, fluke",animal,SJ
+,Platichthys stellatus,flounder,starry flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Platycephalus conatus,flathead,opal fish,animal,"FDA The Seafood List, 2023/07/21"
+,Platycephalus longispinis,flathead,,animal,"FDA The Seafood List, 2023/07/21"
+,Platynematichthys notatus,coroata,,animal,"FDA The Seafood List, 2023/07/21"
+,Platyrhinoidis triseriata,guitarfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Plebidonax deltoides,pipi,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Pleuroncodes monodon,red squat lobster,,animal,SJ
-,Pleuroncodes planipes,pelagic red crab,,animal,SJ
+,Plecoglossus altivelis,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Plectorhinchus chaetodonoides,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Plectorhinchus gibbosus,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Plectorhinchus lineatus,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Plectorhinchus orientalis,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Plectorhinchus vittatus,grunt,sweetlips,animal,"FDA The Seafood List, 2023/07/21"
+,Plectropomus areolatus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Plectropomus leopardus,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleoticus muelleri,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleoticus robustus,royal shrimp,shrimp,animal,"FDA The Seafood List, 2023/07/21"
+,Plesionika martia,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleurogrammus monopterygius,atka mackerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuroncodes monodon,red squat lobster,"langostino lobster, langostino",animal,SJ
+,Pleuroncodes planipes,pelagic red crab,"langostino lobster, langostino",animal,SJ
+,Pleuronectes platessa,plaice,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuronectes quadrituberculatus,plaice,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuronichthys coenosus,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuronichthys decurrens,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuronichthys ritteri,turbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuronichthys verticalis,turbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Pleuroploca gigantea,conch,,animal,"FDA The Seafood List, 2023/07/21"
+,Plicofollis crossocheilos,roughback whiskered fish,"hardhead sea catfish, whiskered fish",animal,"FDA The Seafood List, 2023/07/21"
+,Pogonias cromis,drum,black drum,animal,"FDA The Seafood List, 2023/07/21"
+,Polinices heros,moonsnail,,animal,"FDA The Seafood List, 2023/07/21"
 ,Pollachius pollachius,pollock,,animal,JL
 ,Pollachius virens,pollock,,animal,JL
+,Pollicipes pollicipes,barnacle,,animal,"FDA The Seafood List, 2023/07/21"
+,Pollicipes polymerus,barnacle,,animal,"FDA The Seafood List, 2023/07/21"
+,Polydactylus approximans,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Polydactylus macrochir,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Polydactylus octonemus,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Polydactylus quadrifilis,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
 ,Polydactylus sexfilis,moi,,animal,SJ
-,Polyprion americanus,wreckfish,,animal,NOAA Fisheries
+,Polydactylus sextarius,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Polymixia berndti,beardfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Polynemus paradiseus,threadfin,,animal,"FDA The Seafood List, 2023/07/21"
+,Polyodon spathula,paddlefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Polyprion americanus,wreckfish,sea bass,animal,NOAA Fisheries
+,Polyprion oxygeneios,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Polyprion yanezi,sea bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomacanthus arcuatus,angelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomacanthus paru,angelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomadasys crocro,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomadasys kaakan,grunt,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomadasys panamensis,grunt,,animal,"FDA The Seafood List, 2023/07/21"
 ,Pomatomus saltatrix,bluefish,,animal,NOAA Fisheries
+,Pomoxis annularis,crappie,,animal,"FDA The Seafood List, 2023/07/21"
+,Pomoxis nigromaculatus,crappie,,animal,"FDA The Seafood List, 2023/07/21"
+,Pontinus khulii,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pontinus macrocephalus,scorpionfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Portunus armatus,blue swimmer crab,,animal,SJ
-,Portunus pelagicus,flower crab,,animal,SJ
-,Pristipomoides filamentosus,crimson jobfish,pink snapper,animal,NOAA Fisheries
-,Pristipomoides sieboldii,von siebold's snapper,,animal,NOAA Fisheries
-,Pristipomoides zonatus,brigham's snapper,,animal,NOAA Fisheries
-,Procambarus clarkii,red swamp crawfish,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Procambarus zonangulus,white river crawfish,,animal,SJ
+,Portunus pelagicus,flower crab,"crab, swimming crab",animal,SJ
+,Portunus puber,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Portunus reticulatus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Portunus sanguinolentus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Portunus segnis,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Portunus trituberculatus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Portunus tuberculosus,swimming crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Priacanthus arenatus,bigeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Priacanthus hamrur,bigeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Priacanthus macracanthus,bigeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Priacanthus tayenus,bigeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Prionace glauca,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Prionotus carolinus,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Prionotus stephanophrys,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Pristigenys alta,bigeye,,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides aquilonaris,jobfish,snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides filamentosus,crimson jobfish,"pink snapper, jobfish, snapper",animal,NOAA Fisheries
+,Pristipomoides flavipinnis,jobfish,snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides macrophthalmus,jobfish,snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides multidens,jobfish,snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides sieboldii,von siebold's snapper,"jobfish, snapper",animal,NOAA Fisheries
+,Pristipomoides typus,jobfish,snapper,animal,"FDA The Seafood List, 2023/07/21"
+,Pristipomoides zonatus,brigham's snapper,"jobfish, snapper",animal,NOAA Fisheries
+,Pristis pectinata,sawfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pristis pristis,sawfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Probarbus jullien,barb,,animal,"FDA The Seafood List, 2023/07/21"
+,Procambarus acutus,crawfish,crayfish,animal,"FDA The Seafood List, 2023/07/21"
+,Procambarus clarkii,red swamp crawfish,"crawfish, crayfish",animal,FAO Cultured Aquatic Species Fact Sheets
+,Procambarus zonangulus,white river crawfish,"crayfish, crawfish",animal,SJ
+,Prochilodus lineatus,curimbata,,animal,"FDA The Seafood List, 2023/07/21"
+,Prochilodus reticulatus,bocachico,,animal,"FDA The Seafood List, 2023/07/21"
+,Prognichthys gibbifrons,flyingfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Prolatilus jugularis,tilefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Prosopium cylindraceum,whitefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Prosopium williamsoni,whitefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Protonibea diacanthus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Protothaca staminea,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Protothaca tenerrima,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Protothaca thaca,hardshell clam,"clam, quahog clam",animal,"FDA The Seafood List, 2023/07/21"
+,Protrachypene precipua,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Psephurus gladius,paddlefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Psettichthys melanostictus,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Psettodes belcheri,turbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Psettodes bennettii,turbot,,animal,"FDA The Seafood List, 2023/07/21"
+,Psettodes erumei,flounder,,animal,"FDA The Seafood List, 2023/07/21"
 ,Pseudacanthotermes militaris,termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Pseudacanthotermes spiniger,termite,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Pseudopleuronectes americanus,winter flounder,,animal,NOAA Fisheries
-,Pylodictis olivaris,flathead catfish,,animal,Marty Smith
+,Pseudapocryptes elongatus,goby,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudeutropius atherinoides,potasi,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudocaranx dentex,jack,trevally,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudocyttus maculatus,oreo dory,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudolais micronemus,shortbarbel pangasius,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudopentaceros richardsoni,armorhead,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudopentaceros wheeleri,armorhead,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudopercis numida,sand perch,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudopercis semifasciata,sandperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudophycis bachus,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudophycis barbata,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudophycis breviuscula,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoplatystoma corruscans,sorubi,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoplatystoma fasciatum,sorubim,pintado,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoplatystoma tigrinum,caparari,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudopleuronectes americanus,winter flounder,"blackback, sole, flounder",animal,NOAA Fisheries
+,Pseudorhombus arsius,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudorhombus jenynsii,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudorhombus pentophthalmus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoscaphirhynchus fedtschenkoi,sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoscaphirhynchus hermanni,sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudoscaphirhynchus kaufmanni,sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudotolithus elongatus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudotolithus senegalensis,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudotolithus typus,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudupeneus grandisquamis,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pseudupeneus maculatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pteraclis aesticola,fanfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pterocaesio chrysozona,fusilier,,animal,"FDA The Seafood List, 2023/07/21"
+,Pterogymnus laniarius,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Pterois volitans,lionfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Pterygotrigla picta,searobin,,animal,"FDA The Seafood List, 2023/07/21"
+,Ptychocheilus grandis,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Ptychocheilus oregonensis,carp,,animal,"FDA The Seafood List, 2023/07/21"
+,Puntius chola,punti,,animal,"FDA The Seafood List, 2023/07/21"
+,Puntius sarana,barb,,animal,"FDA The Seafood List, 2023/07/21"
+,Puntius sophore,barb,,animal,"FDA The Seafood List, 2023/07/21"
+,Pylodictis olivaris,flathead catfish,catfish,animal,Marty Smith
 ,Rachycentron canadum,cobia,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Raja binoculata,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Raja eglanteria,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Raja inornata,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Raja rhina,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Raja stellulata,skate,,animal,"FDA The Seafood List, 2023/07/21"
+,Raja texana,skate,,animal,"FDA The Seafood List, 2023/07/21"
 1,Rajidae,skate,,animal,JL
 ,Rana catesbeiana,american bull frog,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Rangia cuneata,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
 ,Rangifer tarandus,caribou,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Ranina ranina,spanner crab,,animal,SJ
+,Ranina ranina,spanner crab,"crab, kona crab",animal,SJ
+,Rapana venosa,whelk,,animal,"FDA The Seafood List, 2023/07/21"
+,Rastrelliger brachysoma,mackerel,,animal,"FDA The Seafood List, 2023/07/21"
+,Rastrelliger kanagurta,mackerel,,animal,"FDA The Seafood List, 2023/07/21"
 ,Rastrineobola argenta,silver cyprinid,,animal,BP
 ,Rattus rattus,rat,,animal,BP
 ,Reinhardtius hippoglossoides,greenland turbot,,animal,NOAA Fisheries
+,Retropinna retropinna,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Rexea solandri,gemfish,barracouta,animal,"FDA The Seafood List, 2023/07/21"
+,Rhacochilus toxotes,surfperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhacochilus vacca,pile perch,perch,animal,"FDA The Seafood List, 2023/07/21"
+,Rhinecanthus aculeatus,triggerfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhinobatos lentiginosus,guitarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhinobatos productus,guitarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhinoptera bonasus,cownose ray,ray,animal,"FDA The Seafood List, 2023/07/21"
 ,Rhizoprionodon terraenovae,atlantic sharpnose shark,,animal,NOAA Fisheries
-,Rhomboplites aurorubens,vermilion snapper,,animal,NOAA Fisheries
+,Rhomboplites aurorubens,vermilion snapper,snapper,animal,NOAA Fisheries
+,Rhombosolea leporina,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhombosolea plebeia,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhombosolea retiaria,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhombosolea tapirina,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Rhynchoconger flavus,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
+,Rhynchoconger gracilior,conger eel,eel,animal,"FDA The Seafood List, 2023/07/21"
 ,Rhynchophorus phoenicis,african palm weevil,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Rita rita,rita,,animal,"FDA The Seafood List, 2023/07/21"
+,Romaleon antennarium,rock crab,crab,animal,"FDA The Seafood List, 2023/07/21"
+,Roncador stearnsii,croaker,spotfin croaker,animal,"FDA The Seafood List, 2023/07/21"
+,Rossia macrosoma,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
 ,Ruditapes decussatus,grooved carpet shell,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ruditapes philippinarum,japanese carpet shell,,animal,FAO Cultured Aquatic Species Fact Sheets
 ,Ruspolia differens,longhorn grasshopper,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Ruspolia nitidula,senene,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Rutilus rutilus,common roach (fish),,animal,BP
+,Rutilus rutilus,common roach (fish),roach fish,animal,BP
+,Ruvettus pretiosus,oilfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Saccostrea cuccullata,oyster,,animal,"FDA The Seafood List, 2023/07/21"
 ,Saccostrea glomerata,sydney cupped oyster,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Salmo salar,atlantic salmon,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Salmo trutta,sea trout,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Salvelinus alpinus,arctic char,,animal,SJ
-,Sander lucioperca,pike-perch,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sagmariasus verreauxi,rock lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Salangichthys microdon,icefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Salanx prognathus,noodlefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Salilota australis,morid cod,cod,animal,"FDA The Seafood List, 2023/07/21"
+,Salmo labrax,black sea salmon,,animal,"FDA The Seafood List, 2023/07/21"
+,Salmo salar,atlantic salmon,salmon,animal,FAO Cultured Aquatic Species Fact Sheets
+,Salmo trutta,sea trout,trout,animal,FAO Cultured Aquatic Species Fact Sheets
+,Salmostoma bacaila,carp,minnow,animal,"FDA The Seafood List, 2023/07/21"
+,Salvelinus alpinus,arctic char,char,animal,SJ
+,Salvelinus fontinalis,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Salvelinus malma,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Salvelinus namaycush,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Samariscus triocellatus,flounder,,animal,"FDA The Seafood List, 2023/07/21"
+,Sander canadensis,sauger,,animal,"FDA The Seafood List, 2023/07/21"
+,Sander lucioperca,pike-perch,"pikeperch, zander",animal,FAO Cultured Aquatic Species Fact Sheets
 ,Sander vitreus,walleye,,animal,SJ
-,Sardina pilchardus,european pilchard,,animal,BP
-,Sardinops sagax,south american pilchard,,animal,BP
+,Sander volgensis,pikeperch,,animal,"FDA The Seafood List, 2023/07/21"
+,Sanguinolaria sanguinolenta,sanguin clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Sarda australis,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Sarda chiliensis,bonito,pacific bonito,animal,"FDA The Seafood List, 2023/07/21"
+,Sarda orientalis,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Sarda sarda,bonito,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardina pilchardus,european pilchard,"sardine, pilchard",animal,BP
+,Sardinella albella,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella aurita,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella fimbriata,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella gibbosa,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella janeiro,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella lemuru,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella longiceps,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinella zunasi,sardine,,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinops melanostictus,pilchard,sardine,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinops neopilchardus,pilchard,sardine,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinops ocellatus,pilchard,sardine,animal,"FDA The Seafood List, 2023/07/21"
+,Sardinops sagax,south american pilchard,"sardine, pilchard",animal,BP
+,Sargocentron punctatissimum,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sargocentron spiniferum,squirrelfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sarotherodon galilaeus galilaeus,tilapia,,animal,"FDA The Seafood List, 2023/07/21"
+,Sarotherodon melanotheron,tilapia,,animal,"FDA The Seafood List, 2023/07/21"
+,Saurida elongata,lizardfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Saurida filamentosa,lizardfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Saurida tumbil,lizard fish,,animal,"FDA The Seafood List, 2023/07/21"
+,Saxidomus gigantea,butter clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Saxidomus nuttalli,butter clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Scaphirhynchus albus,sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Scaphirhynchus platorynchus,sturgeon,,animal,"FDA The Seafood List, 2023/07/21"
+,Scardinius erythrophthalmus,carp,,animal,"FDA The Seafood List, 2023/07/21"
 1,Scaridae,parrotfish,,animal,JL
+,Scarus coelestinus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scarus coeruleus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scarus ghobban,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scarus taeniopterus,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Schedophilus ovalis,imperial blackfish,,animal,"FDA The Seafood List, 2023/07/21"
 ,Schistocerca gregaria,desert locust,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Sciaenops ocellatus,red drum,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Scomber colias,atlantic chub mackerel,,animal,NOAA Fisheries
-,Scomber japonicus,pacific mackerel,,animal,NOAA Fisheries
-,Scomber scombrus,atlantic mackerel,,animal,NOAA Fisheries
-,Scomberomorus cavalla,king mackerel,,animal,NOAA Fisheries
+,Sciades couma,whiskerfish,couma sea catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sciades herzbergii,whiskerfish,"pemecou sea catfish, cuirass",animal,"FDA The Seafood List, 2023/07/21"
+,Sciades parkeri,gilleybaka,"gillbacker sea catfish, whiskerfish",animal,"FDA The Seafood List, 2023/07/21"
+,Sciades proops,crucifix whiskered fish,crucifix sea catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sciaenops ocellatus,red drum,"redfish, drum",animal,FAO Cultured Aquatic Species Fact Sheets
+,Scleropages legendrei,arowana,,animal,"FDA The Seafood List, 2023/07/21"
+,Scomber australasicus,chub mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomber colias,atlantic chub mackerel,"mackerel, chub mackerel",animal,NOAA Fisheries
+,Scomber japonicus,pacific mackerel,"pacific chub mackerel, mackerel, chub mackerel",animal,NOAA Fisheries
+,Scomber scombrus,atlantic mackerel,mackerel,animal,NOAA Fisheries
+,Scomberesox saurus,saury,,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus brasiliensis,spanish mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus cavalla,king mackerel,"mackerel, spanish mackerel",animal,NOAA Fisheries
+,Scomberomorus commerson,mackerel,spanish mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus concolor,spanish mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus guttatus,spanish mackerel,,animal,"FDA The Seafood List, 2023/07/21"
 ,Scomberomorus lineolatus,streaked spanish mackerel,,animal,BP
-,Scomberomorus maculatus,spanish mackerel,,animal,NOAA Fisheries
-,Scophthalmus aquosus,windowpane flounder,,animal,NOAA Fisheries
+,Scomberomorus maculatus,spanish mackerel,mackerel,animal,NOAA Fisheries
+,Scomberomorus niphonius,spanish mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus regalis,spanish mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus sierra,spanish mackerel,"pacific sierra, mackerel",animal,"FDA The Seafood List, 2023/07/21"
+,Scomberomorus tritor,spanish mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Scophthalmus aquosus,windowpane flounder,"windowpane, flounder",animal,NOAA Fisheries
 ,Scophthalmus maximus,turbot,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Scophthalmus rhombus,brill,,animal,JL
-,Scorpaena scrofa,red scorpionfish,"bigscale scorpionfish, large-scaled scorpion fish, rascasse",animal,"Newton, ""The Oldest Foods on Earth"""
+,Scophthalmus rhombus,brill,flounder,animal,JL
+,Scorpaena cardinalis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scorpaena dispar,scorpionfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scorpaena grandicornis,scorpionfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scorpaena guttata,scorpionfish,california scorpinfish,animal,"FDA The Seafood List, 2023/07/21"
+,Scorpaena papillosa,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Scorpaena scrofa,red scorpionfish,"bigscale scorpionfish, large-scaled scorpion fish, rascasse, scorpionfish",animal,"Newton, ""The Oldest Foods on Earth"""
+,Scorpaenichthys marmoratus,sculpin,,animal,"FDA The Seafood List, 2023/07/21"
+,Scortum barcoo,tigerperch,grunter,animal,"FDA The Seafood List, 2023/07/21"
+,Scyliorhinus canicula,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Scyliorhinus stellaris,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
 1,Scylla,mud crab,,animal,JL
-,Scylla serrata,indo-pacific swamp crab,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Sebastes alutus,pacific ocean perch,,animal,NOAA Fisheries
-,Sebastes entomelas,widow rockfish,,animal,NOAA Fisheries
-,Sebastes fasciatus,acadian redfish,,animal,NOAA Fisheries
-,Sebastes flavidus,yellowtail rockfish,,animal,NOAA Fisheries
-,Sebastes norvegicus,rose fish,,animal,SJ
-,Sebastes paucispinis,bocaccio,,animal,NOAA Fisheries
-,Sebastes pinniger,canary rockfish,,animal,NOAA Fisheries
-,Sebastes ruberrimus,yelloweye rockfish,,animal,NOAA Fisheries
-,Sebastolobus alascanus,shortspine thornyhead,,animal,NOAA Fisheries
+,Scylla olivacea,swimming crab,"crab, mud crab, mangrove crab, serrated swimming crab",animal,"FDA The Seafood List, 2023/07/21"
+,Scylla paramamosain,swimming crab,"crab, mud crab, mangrove crab, serrated swimming crab",animal,"FDA The Seafood List, 2023/07/21"
+,Scylla serrata,indo-pacific swamp crab,"crab, mud crab, mangrove crab, serrated swimming crab, swimming crab",animal,FAO Cultured Aquatic Species Fact Sheets
+,Scylla tranquebarica,swimming crab,"crab, mud crab, mangrove crab, serrated swimming crab",animal,"FDA The Seafood List, 2023/07/21"
+,Scyllarides aequinoctialis,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Scyllarides brasiliensis,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Scyllarides nodifer,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Scyllarides squammosus,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes aleutianus,rockfish,rougheye rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes alutus,pacific ocean perch,"ocean perch, rockfish",animal,NOAA Fisheries
+,Sebastes atrovirens,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes auriculatus,rockfish,brown rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes aurora,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes babcocki,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes borealis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes brevispinis,rockfish,silvergray rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes capensis,scorpionfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes carnatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes caurinus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes chlorostictus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes chrysomelas,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes ciliatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes constellatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes crameri,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes dallii,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes diploproa,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes elongatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes emphaeus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes ensifer,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes entomelas,widow rockfish,rockfish,animal,NOAA Fisheries
+,Sebastes eos,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes fasciatus,acadian redfish,"perch, ocean perch",animal,NOAA Fisheries
+,Sebastes flavidus,yellowtail rockfish,rockfish,animal,NOAA Fisheries
+,Sebastes gilli,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes goodei,rockfish,chilipepper (fish),animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes helvomaculatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes hopkinsi,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes jordani,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes lentiginosus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes levis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes macdonaldi,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes maliger,rockfish,quillback rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes melanops,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes melanosema,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes melanostomus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes mentella,ocean perch,perch,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes miniatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes mystinus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes nebulosus,rockfish,china rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes nigrocinctus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes norvegicus,rose fish,"golden redfish, perch, ocean perch",animal,SJ
+,Sebastes ovalis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes paucispinis,bocaccio,rockfish,animal,NOAA Fisheries
+,Sebastes phillipsi,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes pinniger,canary rockfish,rockfish,animal,NOAA Fisheries
+,Sebastes polyspinis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes proriger,rockfish,redstripe rockfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes rastrelliger,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes reedi,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes rosaceus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes rosenblatti,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes ruberrimus,yelloweye rockfish,rockfish,animal,NOAA Fisheries
+,Sebastes rubrivinctus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes rufinanus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes rufus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes saxicola,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes semicinctus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes serranoides,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes serriceps,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes simulator,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes umbrosus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes variabilis,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes variegatus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes viviparus,ocean perch,perch,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes wilsoni,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastes zacentrus,rockfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sebastolobus alascanus,shortspine thornyhead,thornyhead,animal,NOAA Fisheries
+,Sebastolobus altivelis,thornyhead,,animal,"FDA The Seafood List, 2023/07/21"
 1,Selachimorpha,shark,,animal,JL
+,Selar crumenophthalmus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Selaroides leptolepis,jack,trevally,animal,"FDA The Seafood List, 2023/07/21"
+,Selene peruviana,jack,pacific moonfish,animal,"FDA The Seafood List, 2023/07/21"
+,Selene setapinnis,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Selene vomer,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Semicossyphus pulcher,sheephead,california sheephead,animal,"FDA The Seafood List, 2023/07/21"
+,Semotilus atromaculatus,chub,,animal,"FDA The Seafood List, 2023/07/21"
+,Sepia esculenta,cuttlefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sepia lycidas,cuttlefish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Sepiida,cuttlefish,,animal,JL
-,Seriola dumerili,greater amberjack,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Seriola quinqueradiata,japanese amberjack,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sepiola rondeletii,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Sepioteuthis australis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Sepioteuthis lessoniana,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Sepioteuthis sepioidea,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Sergia lucens,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriola dumerili,greater amberjack,amberjack,animal,FAO Cultured Aquatic Species Fact Sheets
+,Seriola fasciata,amberjack,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriola lalandi,amberjack,yellowtail,animal,"FDA The Seafood List, 2023/07/21"
+,Seriola quinqueradiata,japanese amberjack,amberjack,animal,FAO Cultured Aquatic Species Fact Sheets
+,Seriola rivoliana,amberjack,kanpachi,animal,"FDA The Seafood List, 2023/07/21"
+,Seriola zonata,amberjack,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriolella brama,warehou,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriolella caerulea,warehou,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriolella punctata,warehou,,animal,"FDA The Seafood List, 2023/07/21"
+,Seriphus politus,drum,queenfish,animal,"FDA The Seafood List, 2023/07/21"
 1,Serranidae,sea bass,,animal,JL
-,Sicyonia brevirostris,brown rock shrimp,,animal,SJ
+,Serranus atricauda,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Serranus scriba,leathered perch,,animal,"FDA The Seafood List, 2023/07/21"
+,Serripes groenlandicus,cockle,cockle clam,animal,"FDA The Seafood List, 2023/07/21"
+,Sicyonia brevirostris,brown rock shrimp,"shrimp, rock shrimp",animal,SJ
 1,Siganus,spinefeet,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Siliqua patula,razor clam,,animal,Marty Smith
+,Siganus canaliculatus,spinefoot,,animal,"FDA The Seafood List, 2023/07/21"
+,Siganus javus,spinefoot,"bluespotted spinefish, streaked spinefoot",animal,"FDA The Seafood List, 2023/07/21"
+,Siganus vulpinus,spinefoot,,animal,"FDA The Seafood List, 2023/07/21"
+,Siliqua alta,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Siliqua costata,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Siliqua patula,razor clam,clam,animal,Marty Smith
+,Sillaginodes punctatus,spotted sillago,,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago bassensis,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago domina,whiting,sillago,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago flindersi,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago japonica,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago robusta,whiting,,animal,"FDA The Seafood List, 2023/07/21"
+,Sillago sihama,whiting,,animal,"FDA The Seafood List, 2023/07/21"
 1,Siluriformes,catfish,,animal,JL
+,Silurus asotus,sheatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Silurus glanis,sheatfish,wels catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Simomactra dolabriformis,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Simomactra falcata,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Simomactra planulata,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
 ,Siniperca chuatsi,mandarin fish,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Solea solea,common sole,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sinotaia quadrata,snail,,animal,"FDA The Seafood List, 2023/07/21"
+,Solea senegalensis,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Solea solea,common sole,sole,animal,FAO Cultured Aquatic Species Fact Sheets
 1,Soleidae,sole,,animal,JL
-,Sparus aurata,gilthead seabream,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Solen grandis,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Solen marginatus,razor clam,"clam, grooved razor clam",animal,"FDA The Seafood List, 2023/07/21"
+,Solen rostriformis,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Solen viridis,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Solenocera agassizii,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Solenocera melantho,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Somileptus gongota,loach,,animal,"FDA The Seafood List, 2023/07/21"
+,Spaerechinus granularis,sea urchin,,animal,"FDA The Seafood List, 2023/07/21"
+,Sparisoma chrysopterum,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sparisoma viride,parrotfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Sparus aurata,gilthead seabream,bream,animal,FAO Cultured Aquatic Species Fact Sheets
+,Sperata aor,long whiskered fish,long whiskered catfish,animal,"FDA The Seafood List, 2023/07/21"
+,Sperata seenghala,baga ayre,giant river catfish,animal,"FDA The Seafood List, 2023/07/21"
 ,Sphenarium purpurascens,grasshopper,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Sphoeroides,fugu fish,,animal,JL
+,Sphoeroides annulatus,puffer,bullseye puffer,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides dorsalis,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides lobatus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides maculatus,puffer,northern puffer,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides nephelus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides pachygaster,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides parvus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides spengleri,puffer,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphoeroides testudineus,puffer,,animal,"FDA The Seafood List, 2023/07/21"
 1,Sphyraena,barracuda,,animal,JL
+,Sphyraena argentea,barracuda,pacific barracuda,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena barracuda,barracuda,great barracuda,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena borealis,barracuda,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena ensis,barracuda,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena guachancho,barracuda,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena japonica,barracuda,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyraena jello,barracuda,,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyrna lewini,shark,hammerhead,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyrna mokarran,shark,hammerhead,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyrna tiburo,shark,bonnethead,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyrna tudes,shark,hammerhead,animal,"FDA The Seafood List, 2023/07/21"
+,Sphyrna zygaena,shark,hammerhead,animal,"FDA The Seafood List, 2023/07/21"
+,Spicara maena,picarel,,animal,"FDA The Seafood List, 2023/07/21"
+,Spirinchus starksi,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Spirinchus thaleichthys,smelt,,animal,"FDA The Seafood List, 2023/07/21"
+,Spisula sachalinensis,surf clam,,animal,"FDA The Seafood List, 2023/07/21"
 ,Spisula solida,surf clam,,animal,SJ
-,Spisula solidissima,atlantic surf clam,,animal,Marty Smith
+,Spisula solidissima,atlantic surf clam,surfclam,animal,Marty Smith
+,Spratelloides gracilis,herring,,animal,"FDA The Seafood List, 2023/07/21"
 1,Sprattus,sprat,,animal,JL
+,Sprattus sprattus,sprat,,animal,"FDA The Seafood List, 2023/07/21"
 1,Squalidae,dogfish,,animal,JL
-,Squalus acanthias,atlantic spiny dogfish,,animal,NOAA Fisheries
-,Squalus suckleyi,pacific spiny dogfish,,animal,NOAA Fisheries
-,Stenotomus chrysops,scup,,animal,NOAA Fisheries
+,Squalus acanthias,atlantic spiny dogfish,"shark, cape shark, dogfish shark",animal,NOAA Fisheries
+,Squalus blainville,dogfish shark,"shark, cape shark",animal,"FDA The Seafood List, 2023/07/21"
+,Squalus suckleyi,pacific spiny dogfish,"cape shark, dogfish shark",animal,NOAA Fisheries
+,Squatina californica,angel shark,shark,animal,"FDA The Seafood List, 2023/07/21"
+,Squatina dumeril,angel shark,shark,animal,"FDA The Seafood List, 2023/07/21"
+,Squilla mantis,mantis shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Stellifer lanceolatus,drum,,animal,"FDA The Seafood List, 2023/07/21"
+,Stenodus leucichthys,trout,,animal,"FDA The Seafood List, 2023/07/21"
+,Stenotomus caprinus,porgy,,animal,"FDA The Seafood List, 2023/07/21"
+,Stenotomus chrysops,scup,porgy,animal,NOAA Fisheries
+,Stereolepis gigas,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Sthenoteuthis oualaniensis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Stolephorus commersonnii,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Stomolophus meleagris,jellyfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Stromateidae,butter fish,,animal,JL
+,Stromateus brasiliensis,butterfish,,animal,"FDA The Seafood List, 2023/07/21"
 1,Strombidae,conch,,animal,JL
+,Strombus alatus,conch,,animal,"FDA The Seafood List, 2023/07/21"
+,Strombus costatus,conch,,animal,"FDA The Seafood List, 2023/07/21"
+,Strombus gigas,conch,,animal,"FDA The Seafood List, 2023/07/21"
+,Strombus pugilis,conch,,animal,"FDA The Seafood List, 2023/07/21"
 ,Strongylocentrotus droebachiensis,green sea urchin,,animal,BP
 ,Strongylocentrotus purpuratus,pacific purple sea urchin,,animal,BP
+,Strongylura exilis,needlefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Styela clava,sea squirt,tunicata,animal,"FDA The Seafood List, 2023/07/21"
+,Styela plicata,sea squirt,tunicata,animal,"FDA The Seafood List, 2023/07/21"
 ,Sus scrofa,pig,,animal,BP
 ,Sylvilagus,cottontail rabbit,,animal,BP
+,Symphorichthys spilurus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Symphorus nematophorus,snapper,,animal,"FDA The Seafood List, 2023/07/21"
+,Synagrops bellus,bass,,animal,"FDA The Seafood List, 2023/07/21"
+,Synclidopus macleayanus,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Syngnathus fuscus,pipefish,,animal,"FDA The Seafood List, 2023/07/21"
+,Synodus foetens,lizardfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Synodus intermedius,lizardfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Taenioides cirratus,goby,,animal,"FDA The Seafood List, 2023/07/21"
+,Tagelus californianus,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Tagelus dombeii,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Tagelus plebeius,razor clam,clam,animal,"FDA The Seafood List, 2023/07/21"
 ,Takifugu,fugu fish,,animal,JL
+,Tapes rhomboides,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Tapes variegata,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Taractes rubescens,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
+,Tautoga onitis,tautog,,animal,"FDA The Seafood List, 2023/07/21"
+,Tautogolabrus adspersus,cunner,,animal,"FDA The Seafood List, 2023/07/21"
+,Tectura testudinalis,limpet,,animal,"FDA The Seafood List, 2023/07/21"
 ,Tegillarca granosa,blood cockle,,animal,SJ
 ,Tenebrio molitor,yellow mealworm beetle,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Tenualosa ilisha,ilish,,animal,JL
+,Tenualosa ilisha,ilish,"shad, hilsa shad",animal,JL
+,Terapon theraps,therapon,,animal,"FDA The Seafood List, 2023/07/21"
 ,Tessaratoma quadrata,stink bug,monam tari,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 1,Tetraodontidae ,blowfish,pufferfish,animal,JL
+,Tetrapturus angustirostris,spearfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Tetrapturus pfluegeri,spearfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Thaleichthys pacificus,smelt,,animal,"FDA The Seafood List, 2023/07/21"
 ,Thelenota ananas,prickly redfish,,animal,Australian Fisheries Management Authority
-,Thunnus alalunga,albacore tuna,,animal,JL
-,Thunnus albacares,yellowfin tuna,,animal,BP
-,Thunnus maccoyii,southern bluefin tuna,,animal,SJ
-,Thunnus obesus,bigeye tuna,,animal,JL
-,Thunnus orientalis,pacific bluefin tuna,,animal,NOAA Fisheries
-,Thunnus thynnus,atlantic bluefin tuna,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Thunnus tonggol,longtail tuna,,animal,SJ
+,Thenus orientalis,slipper lobster,lobster,animal,"FDA The Seafood List, 2023/07/21"
+,Thryssa encrasicholoides,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Thryssa mystax,anchovy,,animal,"FDA The Seafood List, 2023/07/21"
+,Thunnus alalunga,albacore tuna,"albacore, tuna",animal,JL
+,Thunnus albacares,yellowfin tuna,tuna,animal,BP
+,Thunnus atlanticus,tuna,,animal,"FDA The Seafood List, 2023/07/21"
+,Thunnus maccoyii,southern bluefin tuna,tuna,animal,SJ
+,Thunnus obesus,bigeye tuna,tuna,animal,JL
+,Thunnus orientalis,pacific bluefin tuna,tuna,animal,NOAA Fisheries
+,Thunnus thynnus,atlantic bluefin tuna,tuna,animal,FAO Cultured Aquatic Species Fact Sheets
+,Thunnus tonggol,longtail tuna,tuna,animal,SJ
+,Thymallus arcticus,grayling,,animal,"FDA The Seafood List, 2023/07/21"
+,Thyrsites atun,gemfish,barracouta,animal,"FDA The Seafood List, 2023/07/21"
+,Thyrsitops lepidopoides,gemfish,caballa,animal,"FDA The Seafood List, 2023/07/21"
+,Thysanoessa inermis,krill,,animal,"FDA The Seafood List, 2023/07/21"
 ,Tibicen pruinosus,cicada,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Todarodes pacificus,japanese flying squid,,animal,SJ
+,Tilapia rendalli,tilapia,,animal,"FDA The Seafood List, 2023/07/21"
+,Tinca tinca,tench,,animal,"FDA The Seafood List, 2023/07/21"
+,Tiostrea lutaria,oyster,,animal,"FDA The Seafood List, 2023/07/21"
+,Tivela stultorum,pismo clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Todarodes angolensis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Todarodes pacificus,japanese flying squid,"squid, calamari",animal,SJ
+,Todarodes sagittatus,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Tonna galea,tun,,animal,"FDA The Seafood List, 2023/07/21"
+,Torpedo californica,electric ray,ray,animal,"FDA The Seafood List, 2023/07/21"
+,Torpedo nobiliana,torpedo,,animal,"FDA The Seafood List, 2023/07/21"
+,Totoaba macdonaldi,drum,,animal,"FDA The Seafood List, 2023/07/21"
 1,Trachinotus,pompano,,animal,JL
 ,Trachinotus africanus,southern pompano,,animal,SJ
-,Trachinotus blochii,snubnose pompano,,animal,FAO Cultured Aquatic Species Fact Sheets
-,Trachinotus carolinus,florida pompano,,animal,SJ
+,Trachinotus blochii,snubnose pompano,pompano,animal,FAO Cultured Aquatic Species Fact Sheets
+,Trachinotus carolinus,florida pompano,pompano,animal,SJ
+,Trachinotus falcatus,pompano,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachinotus goodei,pompano,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachinotus kennedyi,pompano,permit,animal,"FDA The Seafood List, 2023/07/21"
 ,Trachinotus ovatus,pompano,,animal,SJ
+,Trachinotus paitensis,pompano,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachinotus rhodopus,pompano,pompanito,animal,"FDA The Seafood List, 2023/07/21"
+,Trachinus draco,weever,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus declivis,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus japonicus,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus lathami,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus murphyi,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus novaezelandiae,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus picturatus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus symmetricus,jack mackerel,mackerel,animal,"FDA The Seafood List, 2023/07/21"
+,Trachurus trachurus,scad,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachyrincus murrayi,grenadier,,animal,"FDA The Seafood List, 2023/07/21"
+,Trachysalambria curvirostris,shrimp,,animal,"FDA The Seafood List, 2023/07/21"
+,Tresus capax,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Tresus nuttallii,surfclam,,animal,"FDA The Seafood List, 2023/07/21"
+,Triaenodon obesus,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Triakis semifasciata,shark,,animal,"FDA The Seafood List, 2023/07/21"
+,Trichiurus lepturus,cutlassfish,atlantic cutlassfish,animal,"FDA The Seafood List, 2023/07/21"
+,Trichopodus pectoralis,gourami,,animal,"FDA The Seafood List, 2023/07/21"
+,Trinectes inscriptus,sole,,animal,"FDA The Seafood List, 2023/07/21"
+,Trinectes maculatus,sole,,animal,"FDA The Seafood List, 2023/07/21"
 ,Trionyx sinensis,chinese softshell turtle,,animal,FAO Cultured Aquatic Species Fact Sheets
+,Triportheus albus,hatchetfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Triportheus elongatus,hatchetfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Trophon geversianus,sea snail,,animal,"FDA The Seafood List, 2023/07/21"
+,Trypauchen vagina,goby,,animal,"FDA The Seafood List, 2023/07/21"
+,Turbo cornutus,top shell,,animal,"FDA The Seafood List, 2023/07/21"
+,Tylosurus crocodilus,houndfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Ucides cordates,fiddler crab,ghost crab,animal,"FDA The Seafood List, 2023/07/21"
 ,Ucides occidentalis,pacific mangrove ghost crab,,animal,BP
-,Urophycis chuss,red hake,,animal,NOAA Fisheries
-,Urophycis tenuis,white hake,,animal,NOAA Fisheries
+,Umbrina canosai,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Umbrina cirrosa,drum,,animal,"FDA The Seafood List, 2023/07/21"
+,Umbrina coroides,drum,,animal,"FDA The Seafood List, 2023/07/21"
+,Umbrina roncador,croaker,,animal,"FDA The Seafood List, 2023/07/21"
+,Upeneichthys lineatus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Upeneus japonicus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Upeneus parvus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Upeneus sulphureus,goatfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Uraspis helvola,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Uraspis secunda,jack,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis brasiliensis,hake,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis chuss,red hake,hake,animal,NOAA Fisheries
+,Urophycis cirrata,hake,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis earllii,hake,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis floridana,hake,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis regia,hake,,animal,"FDA The Seafood List, 2023/07/21"
+,Urophycis tenuis,white hake,hake,animal,NOAA Fisheries
+,Uroteuthis chinensis,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
+,Uroteuthis duvauceli,squid,calamari,animal,"FDA The Seafood List, 2023/07/21"
 ,Varanus giganteus,perentie,,animal,"Newton, ""The Oldest Foods on Earth"""
-,Venerupis philippinarum,japanese littleneck,,animal,BP
+,Variola albimarginata,lyretail,,animal,"FDA The Seafood List, 2023/07/21"
+,Variola louti,grouper,,animal,"FDA The Seafood List, 2023/07/21"
+,Venerupis aspera,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Venerupis aurea,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Venerupis decussata,littleneck clam,clam,animal,"FDA The Seafood List, 2023/07/21"
+,Venerupis philippinarum,japanese littleneck,"clam, littleneck clam",animal,BP
 ,Vespa orientalis,oriental hornet,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
 ,Vespa velutina,asian hornet,,animal,BP
+,Watasenia scintillans,squid,,animal,"FDA The Seafood List, 2023/07/21"
+,Wattsia mossambica,bream,,animal,"FDA The Seafood List, 2023/07/21"
 1,Xanthidae,mud crab,,animal,JL
+,Xenentodon cancila,garfish,needlefish,animal,"FDA The Seafood List, 2023/07/21"
+,Xenobrama microlepis,pomfret,,animal,"FDA The Seafood List, 2023/07/21"
 ,Xiphias gladius,swordfish,,animal,JL
+,Xiphopenaeus kroyeri,shrimp,seabob,animal,"FDA The Seafood List, 2023/07/21"
 ,Xylotrupes gideon,brown rhinoceros beetle,,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
-,Zenopsis nebulosa,mirror dory,,animal,SJ
+,Xystreurys liolepis,sole,flounder,animal,"FDA The Seafood List, 2023/07/21"
+,Zapteryx exasperata,guitarfish,,animal,"FDA The Seafood List, 2023/07/21"
+,Zebrasoma velifer,tang,,animal,"FDA The Seafood List, 2023/07/21"
+,Zenopsis conchifera,dory,,animal,"FDA The Seafood List, 2023/07/21"
+,Zenopsis nebulosa,mirror dory,dory,animal,SJ
 ,Zeus capensis,cape dory,,animal,SJ
-,Zeus faber,john dory,,animal,JL
+,Zeus faber,john dory,dory,animal,JL
+,Zidona dufresnei,snail,,animal,"FDA The Seafood List, 2023/07/21"
+,Zoarces americanus,ocean pout,,animal,"FDA The Seafood List, 2023/07/21"
+,Zoarces viviparus,eelpout,,animal,"FDA The Seafood List, 2023/07/21"
 ,Zonocerus variegatus,painted grasshopper,variegated grasshopper,animal,"Halloran, Flore, Vantomme, Roos, ""Edible Insects in Sustainable Food Systems"""
+,Zosterisessor ophiocephalus,emroldperche,goby,animal,"FDA The Seafood List, 2023/07/21"
+,Zungaro zungaro,gilded fish,"gilded catfish, zungaro",animal,"FDA The Seafood List, 2023/07/21"
+,Zygochlamys delicatula,scallop,,animal,"FDA The Seafood List, 2023/07/21"
+,Zygochlamys patagonica,scallop,,animal,"FDA The Seafood List, 2023/07/21"
 ,Arthrospira maxima,spirulina,,bacteria,JL
 ,Arthrospira platensis,spirulina,,bacteria,JL
 ,Agaricus arvensis,horse mushroom,,fungus,JL
@@ -1152,7 +2852,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Garcinia hombroniana,seashore mangosteen,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Garcinia humilis,achacha,"bolivian mangosteen, hatsland rheedia, hatstand tree, low garcinia, wild manimee",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Garcinia indica,goa butter,,plant,Milla 2020 Crop Origins
-,Garcinia intermedia,lemon drop mangosteen,"cherry mangosteen, intermediate garcinia, monkey fruit, waika plum (belize), wild lemon, wildÃ¢â‚¬â€œlemon rheedia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Garcinia intermedia,lemon drop mangosteen,"cherry mangosteen, intermediate garcinia, monkey fruit, waika plum (belize), wild lemon, wildÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“lemon rheedia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Garcinia livingstonei,african mangosteen,"gupenja, imbe, inbe, lowveld mangosteen, mwausungulu, pama, veld mangosteen, wild mangosteen, wild plum",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Garcinia macrophylla,big leaf garcinia,,plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Garcinia madruno,charichuela,"costa rica garcinia, madruno, garcinia madruno, madruno garcinia, panama garcinia",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1631,7 +3331,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Psidium cattleianum,cattley guava,"cherry guava, china guava, porpay, purple guava, red strawberry guava, strawberry guava, lemon guava, yellow strawberry guava, yellow cattley guava",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Psidium friedrichsthalianum,costa rican guava,"cas, cas acida, wild guava, wild guavo",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Psidium guajava,common guava,,plant,BP
-,Psidium guineense,brazilian guava,"castilian guava, guinea guava, gÃ£Â¼isara guava, guisaro sour guava, wild guava",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
+,Psidium guineense,brazilian guava,"castilian guava, guinea guava, gÃƒÂ£Ã‚Â¼isara guava, guisaro sour guava, wild guava",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Psidium sartorianum,guayabillo,,plant,Milla 2020 Crop Origins
 ,Psophocarpus scandens,tropical african winged bean,,plant,BP
 ,Psophocarpus tetragonolobus,winged bean,"asparagus bean, asparagus pea, princess bean, princess-pea, four-angled bean, goa bean, manila bean, supermarket bean, short day asparagus pea",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
@@ -1781,7 +3481,7 @@ needs_QC,scientific_name,common_name,alternative_names,category,source
 ,Solanum quitoense,naranjilla,,plant,BP
 ,Solanum scabrum,garden huckleberry,,plant,Milla 2020 Crop Origins
 ,Solanum sessiliflorum,cocona,"orinoco apple, peach tomato, topiro",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
-,Solanum stenotomum,pitiquiña,,plant,Milla 2020 Crop Origins
+,Solanum stenotomum,pitiquiÃ±a,,plant,Milla 2020 Crop Origins
 ,Solanum torvum,turkey berry,"cherry eggplant, devil's fig, green-fruited pea eggplant, gully bean, pea aubergine, pea eggplant, plate brush, susumba, susumber, thai pea eggplant, thai cultivated nightshade, thornapple, water nightshade, wild eggplant",plant,"Lim, ""Edible Medicinal and Non-Medicinal Plants"""
 ,Solanum tuberosum,potato,,plant,BP
 ,Solanum uporo,poro poro,,plant,Milla 2020 Crop Origins
