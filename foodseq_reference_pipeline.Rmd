@@ -1,0 +1,1648 @@
+---
+title: "FoodSeq Reference Database Pipeline"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
+---
+
+This notebook builds three reference databases:
+
+-   **Part A — trnL g/h**: Plant sequences amplified by the trnLg/trnLh primer pair, combining RefSeq plastid genomes and GenBank
+-   **Part A-CD — trnL c/d**: Plant sequences amplified by the trnLc/trnLd primer pair (the full trnL intron), re-extracted from Part A's inputs without additional NCBI queries
+-   **Part B — 12SV5**: Vertebrate dietary sequences amplified by the 12SV5 primer pair, combining RefSeq mitochondrial genomes and GenBank
+
+Both pipelines share the same setup, SLURM jobs, and taxonomy approach.
+
+**Before running:** update the paths in the Configuration chunk below to match your cluster environment.
+
+------------------------------------------------------------------------
+
+# Setup
+
+## Configuration
+
+Update these paths and parameters before running anything else. All other chunks reference these variables.
+
+```{r configuration}
+# ── Cluster paths ─────────────────────────────────────────────────────────────
+SCRATCH      <- "/scratch/your_username"                  # cluster scratch directory
+REPO_DIR     <- "/path/to/food-dbs"                       # cloned repo root
+PLASTID_DIR  <- file.path(SCRATCH, "plastid_refseq")      # RefSeq plastid download
+MITO_DIR     <- file.path(SCRATCH, "mito_refseq")         # RefSeq mitochondrial download
+SQL_PATH     <- file.path(SCRATCH, "accessionTaxa.sql")   # taxonomizr SQL database
+
+# ── SLURM parameters ──────────────────────────────────────────────────────────
+PARTITION    <- "general"    # partition/queue name; check with 'sinfo'
+R_MODULE     <- "R/4.3.0"    # R module name; check with 'module avail R'
+
+# ── QC gate ──────────────────────────────────────────────────────────────────
+# Suffix of the last archived build to compare record counts and species lists
+# against (e.g. "_v2026.10") - this pipeline always writes date-less files (see
+# A10/CD10/B9), so it has no memory of its own of what "previous" means; this
+# is the only way the QC gate at the end of the run finds out. Leaving this as
+# "-" is safe, not silent: qc_reference_build.R refuses to compare a build
+# against itself and stops immediately, so an unset value fails loudly rather
+# than comparing against the wrong build.
+QC_PREVIOUS_SUFFIX <- "-"
+
+# ── Output directories ────────────────────────────────────────────────────────
+TRNL_DADA2    <- file.path(REPO_DIR, "data", "outputs", "dada2-compatible", "trnL")
+TRNL_QIIME2   <- file.path(REPO_DIR, "data", "outputs", "qiime2-compatible", "trnL")
+TRNLCD_DADA2  <- file.path(REPO_DIR, "data", "outputs", "dada2-compatible", "trnLCD")
+TRNLCD_QIIME2 <- file.path(REPO_DIR, "data", "outputs", "qiime2-compatible", "trnLCD")
+S12V5_DADA2   <- file.path(REPO_DIR, "data", "outputs", "dada2-compatible", "12Sv5")
+S12V5_QIIME2  <- file.path(REPO_DIR, "data", "outputs", "qiime2-compatible", "12Sv5")
+
+for (d in c(TRNL_DADA2, TRNL_QIIME2, TRNLCD_DADA2, TRNLCD_QIIME2,
+            S12V5_DADA2, S12V5_QIIME2)) {
+    dir.create(d, recursive = TRUE, showWarnings = FALSE)
+}
+
+cat("Repo:   ", REPO_DIR, "\n")
+cat("Scratch:", SCRATCH,  "\n")
+```
+
+## Install packages
+
+Run once on first use; safe to skip on subsequent runs.
+
+```{r install, eval=FALSE}
+# Bioconductor packages. pwalign holds pairwiseAlignment() on Bioconductor
+# >= 3.19 (Part A-CD needs it); on older installations it is part of
+# Biostrings and this install line simply skips it.
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(c("Biostrings", "ShortRead", "pwalign"), ask = FALSE)
+
+# CRAN packages
+install.packages(c("taxonomizr", "tidyverse", "rentrez", "remotes"),
+                 repos = "https://cloud.r-project.org")
+
+# GitHub packages
+remotes::install_github("ammararuby/MButils")
+```
+
+------------------------------------------------------------------------
+
+# SLURM jobs
+
+Submit all three jobs before proceeding to Part A or B. They run in parallel and will each take several hours. Monitor progress in the following section.
+
+## Download RefSeq plastid sequences (for trnL)
+
+```{r submit_plastid}
+plastid_script <- paste0(
+"#!/bin/bash\n",
+"#SBATCH --job-name=refseq_plastid\n",
+"#SBATCH --partition=", PARTITION, "\n",
+"#SBATCH --time=04:00:00\n",
+"#SBATCH --mem=8G\n",
+"#SBATCH --cpus-per-task=2\n",
+"#SBATCH --output=", SCRATCH, "/refseq_plastid.log\n",
+"\n",
+"mkdir -p ", PLASTID_DIR, "\n",
+"wget -r -nd -A '*.genomic.fna.gz' \\\n",
+"  ftp://ftp.ncbi.nlm.nih.gov/refseq/release/plastid/ \\\n",
+"  -P ", PLASTID_DIR, "\n",
+"zcat ", PLASTID_DIR, "/*.genomic.fna.gz > ", PLASTID_DIR, "/refseq_plastid_all.fasta\n",
+"echo 'Plastid download complete.'\n"
+)
+
+plastid_sh <- file.path(SCRATCH, "download_plastid.sh")
+writeLines(plastid_script, plastid_sh)
+
+cat("Script written to:", plastid_sh, "\n")
+cat("Submit from the OOD terminal with:\n")
+cat("  sbatch", plastid_sh, "\n")
+```
+
+## Download RefSeq mitochondrial sequences (for 12SV5)
+
+```{r submit_mito}
+mito_script <- paste0(
+"#!/bin/bash\n",
+"#SBATCH --job-name=refseq_mito\n",
+"#SBATCH --partition=", PARTITION, "\n",
+"#SBATCH --time=04:00:00\n",
+"#SBATCH --mem=8G\n",
+"#SBATCH --cpus-per-task=2\n",
+"#SBATCH --output=", SCRATCH, "/refseq_mito.log\n",
+"\n",
+"mkdir -p ", MITO_DIR, "\n",
+"wget -r -nd -A '*.genomic.fna.gz' \\\n",
+"  ftp://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/ \\\n",
+"  -P ", MITO_DIR, "\n",
+"zcat ", MITO_DIR, "/*.genomic.fna.gz > ", MITO_DIR, "/refseq_mito_all.fasta\n",
+"echo 'Mitochondrial download complete.'\n"
+)
+
+mito_sh <- file.path(SCRATCH, "download_mito.sh")
+writeLines(mito_script, mito_sh)
+
+cat("Script written to:", mito_sh, "\n")
+cat("Submit from the OOD terminal with:\n")
+cat("  sbatch", mito_sh, "\n")
+```
+
+## Build taxonomizr SQL database (shared by both pipelines)
+
+```{r submit_taxonomizr}
+taxonomizr_script <- paste0(
+"#!/bin/bash\n",
+"#SBATCH --job-name=taxonomizr_build\n",
+"#SBATCH --partition=", PARTITION, "\n",
+"#SBATCH --time=12:00:00\n",
+"#SBATCH --mem=16G\n",
+"#SBATCH --cpus-per-task=4\n",
+"#SBATCH --output=", SCRATCH, "/taxonomizr_build.log\n",
+"\n",
+"module load ", R_MODULE, "\n",
+"\n",
+"Rscript -e \"\n",
+"  library(taxonomizr)\n",
+"  prepareDatabase('", SQL_PATH, "')\n",
+"  cat('taxonomizr database built.\\n')\n",
+"\""
+)
+
+tax_sh <- file.path(SCRATCH, "build_taxonomizr.sh")
+writeLines(taxonomizr_script, tax_sh)
+
+cat("Script written to:", tax_sh, "\n")
+cat("Submit from the OOD terminal with:\n")
+cat("  sbatch", tax_sh, "\n")
+```
+
+## Monitor jobs
+
+Re-run this chunk to check status. Proceed to Part A or B once the relevant jobs are no longer shown in the queue.
+
+```{r monitor}
+# Check job status from the OOD terminal with: squeue --me
+# Log files are checked here automatically as jobs run
+
+logs <- list(
+    plastid    = file.path(SCRATCH, "refseq_plastid.log"),
+    mito       = file.path(SCRATCH, "refseq_mito.log"),
+    taxonomizr = file.path(SCRATCH, "taxonomizr_build.log")
+)
+
+for (name in names(logs)) {
+    if (file.exists(logs[[name]])) {
+        lines <- readLines(logs[[name]])
+        cat("\n---", name, "---\n")
+        cat("  Lines logged:", length(lines), "\n")
+        cat("  Last 3 lines:\n")
+        cat(paste(" ", tail(lines, 3), collapse = "\n"), "\n")
+        completed <- any(grepl("complete|done|finished", lines, ignore.case = TRUE))
+        cat("  Status:", ifelse(completed, "COMPLETE", "IN PROGRESS"), "\n")
+    } else {
+        cat("\n---", name, "---\n")
+        cat("  Log not yet created (job not started or still queued)\n")
+    }
+}
+```
+
+------------------------------------------------------------------------
+
+# Shared libraries and functions
+
+Run this before starting either Part A or Part B.
+
+```{r libraries, message=FALSE, warning=FALSE}
+library(Biostrings)
+library(ShortRead)
+library(taxonomizr)
+library(tidyverse)
+library(rentrez)
+# Used for lowest_level() in A7 / CD7 / B7. Loaded here rather than only
+# called as MButils::lowest_level() so a broken install fails now, at setup,
+# instead of hours into the run. MButils imports dada2, so if this errors with
+# an undefined symbol (e.g. _ZTIN3tbb4taskE), rebuild dada2 from source
+# against the current RcppParallel:
+#   BiocManager::install("dada2", type = "source", force = TRUE)
+library(MButils)
+
+source(file.path(REPO_DIR, "code", "functions", "find_primer_pair.R"))
+source(file.path(REPO_DIR, "code", "functions", "query_ncbi.R"))
+source(file.path(REPO_DIR, "code", "functions", "query_ncbi_accession.R"))
+```
+
+## NCBI API key
+
+Setting an API key increases the NCBI e-utils rate limit from 3 to 10 requests per second, which significantly speeds up the remote queries in sections A4 and B4. Create an NCBI account, go to **Account Settings → API Key Management**, copy your key, and paste it below. Also note that NCBI recommends running large queries on weekends or between **9 PM and 5 AM EST** on weekdays.
+
+```{r ncbi_api_key, eval=FALSE}
+# Paste your NCBI API key here (keep the quotes)
+rentrez::set_entrez_key("your_api_key_here")
+```
+
+```{r plotting, include=FALSE}
+theme_set(
+    theme_bw() +
+    theme(
+        axis.text  = element_text(size = 12),
+        axis.title = element_text(size = 14, face = "bold"),
+        strip.text = element_text(size = 12, face = "bold")
+    )
+)
+```
+
+```{r extract_taxonomy_fn}
+# Shared helper: converts a vector of taxon IDs to a full taxonomy data frame
+extract_taxonomy <- function(ids, sql_path) {
+    # NCBI reclassified Eukaryota/Bacteria/Archaea from rank "superkingdom" to
+    # rank "domain" (taxonomizr >= 0.11 follows suit). getRawTaxonomy() returns
+    # the top-level rank under whichever name the underlying taxdump used, so we
+    # capture BOTH names here and merge them into "superkingdom" below. Without
+    # this, a database built from a current taxdump yields "domain" and the
+    # requested "superkingdom" column comes back 100% NA.
+    vars <- c("superkingdom", "domain", "phylum", "class", "order",
+              "family", "genus", "species", "subspecies", "varietas", "forma")
+
+    taxonomy.raw <- getRawTaxonomy(ids, sql_path)
+
+    taxonomy <- as.data.frame(
+        setNames(lapply(vars, function(v) character(0)), vars),
+        stringsAsFactors = FALSE
+    )
+
+    for (i in seq_along(taxonomy.raw)) {
+        row.i  <- taxonomy.raw[[i]] |> t() |> data.frame()
+        shared <- intersect(vars, names(row.i))
+        row.i  <- select(row.i, one_of(shared))
+        taxonomy <- bind_rows(taxonomy, row.i)
+    }
+
+    # Merge "domain" into "superkingdom" so the top-level rank is populated
+    # regardless of which name the taxdump used, then drop the helper column.
+    taxonomy$superkingdom <- coalesce(taxonomy$superkingdom, taxonomy$domain)
+    taxonomy$domain <- NULL
+
+    taxonomy$taxid <- names(taxonomy.raw) |> trimws() |> as.integer()
+    select(taxonomy, taxid, everything())
+}
+```
+
+------------------------------------------------------------------------
+
+# Part A — trnL Reference Database
+
+Primers: trnLg (`GGGCAATCCTGAGCCAA`) / trnLh (`CCATTGAGTCTCTGCACCTATC`) Source organisms: curated food plant list (`human-foods.csv`)
+
+## A1. Load inputs
+
+```{r trnl_inputs}
+trnLG <- DNAString("GGGCAATCCTGAGCCAA")
+trnLH <- DNAString("CCATTGAGTCTCTGCACCTATC")
+trnL_primers <- list(trnLG, trnLH)
+
+plants <-
+    file.path(REPO_DIR, "data", "inputs", "human-foods.csv") |>
+    read.csv(stringsAsFactors = FALSE) |>
+    filter(category == "plant") |>
+    pull(scientific_name)
+
+edits <-
+    file.path(REPO_DIR, "data", "inputs", "Manual renaming.csv") |>
+    read_csv()
+
+cat(length(plants), "food plant species\n")
+head(plants)
+```
+
+## A2. Filter RefSeq plastid to one sequence per species
+
+```{r trnl_refseq_filter}
+# "_acc" filename: names are "<accession> <Genus species>". Do NOT fall back to
+# an old refseq_plastid_species.fasta cache — its names are species-only, which
+# put a bare genus in the accession field of every RefSeq record (see B2 for the
+# full failure chain this caused in the May 2026 12S build).
+plastid_species_path <- file.path(PLASTID_DIR, "refseq_plastid_species_acc.fasta")
+
+if (!file.exists(plastid_species_path)) {
+    cat("Filtering RefSeq plastid to one sequence per species...\n")
+    plastid <- readDNAStringSet(file.path(PLASTID_DIR, "refseq_plastid_all.fasta"))
+    cat(length(plastid), "total sequences\n")
+
+    accession       <- sub("^(\\S+).*", "\\1", names(plastid))
+    species         <- sub("^\\S+\\s+(\\S+\\s+\\S+).*", "\\1", names(plastid))
+    plastid_species <- plastid[!duplicated(species)]
+    names(plastid_species) <- paste(accession, species)[!duplicated(species)]
+
+    writeXStringSet(plastid_species, plastid_species_path)
+    cat(length(plastid_species), "species retained\n")
+} else {
+    plastid_species <- readDNAStringSet(plastid_species_path)
+    cat(length(plastid_species), "species loaded from existing file\n")
+}
+
+plastid_species
+```
+
+## A3. RefSeq: in silico PCR and subset to food plants
+
+```{r trnl_refseq_pcr}
+refseq.trnL <- find_primer_pair(plastid_species,
+                                fwd = trnL_primers[[1]],
+                                rev = trnL_primers[[2]])
+cat(length(refseq.trnL), "sequences contain the trnL g/h primer pair\n")
+
+plants.i    <- lapply(plants, grep, x = names(refseq.trnL)) |> unlist()
+refseq.trnL <- refseq.trnL[plants.i]
+cat(length(refseq.trnL), "food plant trnL sequences from RefSeq\n")
+
+names(refseq.trnL) <- gsub(" .*$", "", names(refseq.trnL))
+head(names(refseq.trnL))
+```
+
+## A4. NCBI GenBank: remote query
+
+```{r trnl_ncbi_query}
+cat("Querying NCBI for trnL sequences... this may take 10-30 minutes\n")
+ncbi.trnL <- query_ncbi(marker = "trnL", organisms = plants)
+cat(length(ncbi.trnL), "sequences returned from NCBI\n")
+```
+
+```{r trnl_ncbi_pcr}
+# Keep the untrimmed pull for Part A-CD (trnL c/d), which re-extracts a
+# different amplicon from the same records without re-querying NCBI. Also
+# checkpoint it to scratch so a session restart before Part A-CD does not
+# force repeating the query.
+ncbi.trnL_raw <- ncbi.trnL
+saveRDS(ncbi.trnL_raw, file.path(SCRATCH, "ncbi_trnL_raw.rds"))
+
+ncbi.trnL <- find_primer_pair(ncbi.trnL,
+                              fwd = trnL_primers[[1]],
+                              rev = trnL_primers[[2]])
+cat(length(ncbi.trnL), "sequences contain the trnL g/h primer pair\n")
+
+n_before  <- length(ncbi.trnL)
+ncbi.trnL <- ncbi.trnL[!grepl("UNVERIFIED", names(ncbi.trnL))]
+cat("Removed", n_before - length(ncbi.trnL), "unverified sequences\n")
+
+names(ncbi.trnL) <-
+    names(ncbi.trnL) |>
+    gsub(pattern = " .+$", replacement = "") |>
+    gsub(pattern = "^>",   replacement = "")
+head(names(ncbi.trnL))
+```
+
+## A5. Combine RefSeq and GenBank
+
+```{r trnl_combine}
+cat("RefSeq sequences: ",  length(refseq.trnL), "\n")
+cat("GenBank sequences:",  length(ncbi.trnL),   "\n")
+cat("Shared accessions: ", intersect(names(ncbi.trnL), names(refseq.trnL)) |> length(), "\n")
+cat("RefSeq-only:       ", setdiff(names(refseq.trnL), names(ncbi.trnL))   |> length(), "\n")
+cat("GenBank-only:      ", setdiff(names(ncbi.trnL),   names(refseq.trnL)) |> length(), "\n")
+
+trnL.df <- bind_rows(
+    data.frame(source = "GenBank", accession = names(ncbi.trnL),   seq = as.character(ncbi.trnL)),
+    data.frame(source = "RefSeq",  accession = names(refseq.trnL), seq = as.character(refseq.trnL))
+)
+cat(nrow(trnL.df), "total sequences\n")
+```
+
+```{r trnl_manual_additions}
+additions <- filter(edits, type == "add")
+
+if (nrow(additions) > 0) {
+    cat("Fetching", nrow(additions), "manual addition(s) from NCBI...\n")
+
+    seqs_raw <-
+        entrez_fetch(db = "nucleotide", id = additions$accession, rettype = "fasta") |>
+        strsplit("\n{2,}") |>
+        unlist()
+
+    accs      <- str_extract(seqs_raw, "[^>]\\S*")
+    seqs_only <- seqs_raw |>
+        sub("^[^\n]*\n", "", x = _) |>
+        gsub("\n", "", x = _)
+
+    manual_seqs        <- DNAStringSet(seqs_only)
+    names(manual_seqs) <- accs
+    manual_seqs        <- find_primer_pair(manual_seqs,
+                                           fwd = trnL_primers[[1]],
+                                           rev = trnL_primers[[2]])
+
+    trnL.df <- bind_rows(
+        data.frame(seq = as.character(manual_seqs), accession = names(manual_seqs)),
+        trnL.df
+    )
+    cat("Manual additions appended. Total:", nrow(trnL.df), "\n")
+}
+```
+
+## A6. Taxonomy lookup
+
+```{r trnl_taxonomy_lookup}
+cat("Looking up taxonomy for", nrow(trnL.df), "accessions...\n")
+trnL_ids <- accessionToTaxa(trnL.df$accession, SQL_PATH)
+cat("Missing taxonomy IDs:", sum(is.na(trnL_ids)), "\n")
+
+if (any(is.na(trnL_ids))) {
+    cat("Accessions with missing IDs (assign manually in the next chunk):\n")
+    print(trnL.df[is.na(trnL_ids), c("source", "accession")])
+}
+```
+
+```{r trnl_taxonomy_missing}
+# Automatically resolve missing IDs using query_ncbi_accession() for accessions
+# added to NCBI after the SQL database was built.
+# Index positionally: as.character() on a DNAStringSet carries names, so
+# data.frame() adopts accessions as row names whenever they are unique, and
+# recovering an index via as.integer(rownames(...)) then yields NA. Assignment
+# to an NA index is a SILENT no-op in R, which discarded the resolved taxid
+# without any error.
+if (any(is.na(trnL_ids))) {
+    for (idx in which(is.na(trnL_ids))) {
+        trnL_ids[idx] <- query_ncbi_accession(trnL.df$accession[idx])
+    }
+}
+
+cat("Remaining missing IDs:", sum(is.na(trnL_ids)), "\n")
+```
+
+```{r trnl_taxonomy_extract}
+trnL_taxonomy <- extract_taxonomy(trnL_ids, SQL_PATH)
+trnL.df       <- bind_cols(trnL.df, trnL_taxonomy)
+head(trnL.df)
+```
+
+## A6b. Remove off-target sequences
+
+The GenBank query can return records whose deposited taxonomy is outside the food-plant clades entirely (bacterial or viral records co-deposited with plant material). Filter by phylum allowlist, mirroring the 12SV5 filter at B6b.
+
+```{r trnl_offtarget_filter}
+# Cyanobacteriota is deliberately allowed: Arthrospira platensis (spirulina)
+# and Nostoc flagelliforme (fat choy) are edible cyanobacteria on the food
+# list with real trnL records. Keep this vector in sync with ALLOWED_PHYLA
+# in code/qc_reference_build.R.
+allowed_phyla_trnL <- c("Streptophyta", "Cyanobacteriota")
+
+n_before_offtarget <- nrow(trnL.df)
+trnL.df <- filter(trnL.df, phylum %in% allowed_phyla_trnL)
+cat("Off-target filter: removed", n_before_offtarget - nrow(trnL.df),
+    "sequences with phylum outside the food-plant allowlist\n")
+cat(nrow(trnL.df), "sequences retained\n")
+```
+
+## A7. Manual curation edits
+
+```{r trnl_curation}
+# Omissions
+omit    <- filter(edits, type == "omit")
+trnL.df <- filter(trnL.df, !(accession %in% omit$accession & seq %in% omit$sequence))
+cat("After omissions:", nrow(trnL.df), "sequences\n")
+
+# Brassica oleracea variety renamings. Deliberately hard-coded: Manual renaming.csv
+# holds only "add" and "omit" rows, and these five are NOT read from it. Source
+# (BP, Jan 2023): each accession is identified to variety level in its cited
+# reference. CD7 below applies the same five to the c/d database.
+trnL.df$varietas[trnL.df$accession == "AB213010.1"] <- "Brassica oleracea var. capitata"
+trnL.df$varietas[trnL.df$accession == "AC183493.1"] <- "Brassica oleracea var. alboglabra"
+trnL.df$varietas[trnL.df$accession == "LR031874.1"] <- "Brassica oleracea var. italica"
+trnL.df$varietas[trnL.df$accession == "LR031875.1"] <- "Brassica oleracea var. italica"
+trnL.df$varietas[trnL.df$accession == "LR031876.1"] <- "Brassica oleracea var. italica"
+
+# Assign lowest available taxonomic rank as display name
+trnL.df <-
+    trnL.df |>
+    MButils::lowest_level() |>
+    rename(taxon = "name") |>
+    select(source, accession, taxon, taxid, superkingdom:forma, seq)
+```
+
+## A8. Quality control
+
+```{r trnl_qc}
+trnL.df$N <- grepl("[AGCT]*[^AGCT]+", trnL.df$seq)
+cat(sum(trnL.df$N), "sequences with degenerate nucleotides\n")
+
+# Report whether affected taxa have a clean backup sequence
+with_n <- trnL.df$taxon[trnL.df$N] |> unique()
+
+trnL.df |>
+    filter(taxon %in% with_n) |>
+    group_by(taxon, N) |>
+    count() |>
+    ungroup() |>
+    group_by(taxon) |>
+    summarize(has_clean_backup = any(!N)) |>
+    arrange(has_clean_backup)
+```
+
+```{r trnl_remove_degenerate}
+trnL.df <- filter(trnL.df, !grepl("[AGCT]*[^AGCT]+", seq))
+cat(nrow(trnL.df), "sequences after removing degenerate sequences\n")
+```
+
+## A9. Standardise orientation
+
+```{r trnl_orientation}
+fwd_err <- floor(0.2 * length(trnLG))
+rev_err <- floor(0.2 * length(trnLH))
+ref     <- DNAStringSet(trnL.df$seq)
+names(ref) <- paste(trnL.df$accession, trnL.df$taxon)
+
+fwd_matches <-
+    vmatchPattern(trnLG, ref, max.mismatch = fwd_err, fixed = TRUE) |>
+    as.data.frame() |>
+    filter(start <= 1) |>
+    mutate(type = "forward") |>
+    select(group, type)
+
+rev_matches <-
+    vmatchPattern(trnLH, ref, max.mismatch = rev_err, fixed = TRUE) |>
+    as.data.frame() |>
+    filter(start <= 1) |>
+    mutate(type = "reverse") |>
+    select(group, type)
+
+# Keep the orientation table: the summary below needs `type` after it has been
+# dropped from trnL.df.
+orientation <-
+    bind_rows(fwd_matches, rev_matches) |>
+    arrange(group)
+
+trnL.df <-
+    orientation |>
+    bind_cols(trnL.df) |>
+    mutate(seq = ifelse(type == "reverse",
+                        DNAStringSet(seq) |> reverseComplement() |> as.character(),
+                        seq)) |>
+    select(-c(type, group))
+
+count(orientation, type)
+```
+
+## A10. Deduplicate, add controls, and save
+
+```{r trnl_dedup}
+trnL.df <-
+    trnL.df |>
+    group_by(superkingdom, phylum, class, order, family,
+             genus, species, subspecies, varietas, forma, taxon, seq) |>
+    arrange(desc(source), accession) |>
+    summarize(accession = first(accession), .groups = "drop") |>
+    arrange(taxon, accession)
+
+cat(nrow(trnL.df), "sequences after deduplication\n")
+cat(n_distinct(trnL.df$taxon), "unique taxa\n")
+```
+
+Append the positive-control spike-ins defined in `data/inputs/controls.csv`. These are laboratory constructs, not NCBI records, so they never come out of the RefSeq/GenBank queries above and must be added here or they are silently absent from every rebuild.
+
+The lab convention repeats the control label across `superkingdom:species` rather than placing it at a single rank. That matters for two reasons: DADA2 then reports the label at every level and it survives last-common-ancestor condensing, and the genus field stays non-`NA`, which keeps the record from being stripped by downstream genus-NA filtering.
+
+```{r trnl_controls}
+controls.trnL <-
+    read_csv(file.path(REPO_DIR, "data", "inputs", "controls.csv"),
+             show_col_types = FALSE) |>
+    filter(marker == "trnL")
+
+if (nrow(controls.trnL) > 0) {
+    control_rows <-
+        controls.trnL |>
+        # Two kinds of control: synthetic constructs (empty lineage) get the
+        # label repeated across superkingdom:species, per the lab convention;
+        # real-species controls carry their true lineage from the lineage
+        # column so DADA2 places them correctly.
+        mutate(lineage = ifelse(is.na(lineage) | lineage == "",
+                                sapply(label, function(l)
+                                    paste(c(rep(l, 7), rep("NA", 3)),
+                                          collapse = ";")),
+                                lineage)) |>
+        separate(lineage,
+                 into = c("superkingdom", "phylum", "class", "order", "family",
+                          "genus", "species", "subspecies", "varietas", "forma"),
+                 sep = ";") |>
+        mutate(across(superkingdom:forma, \(x) na_if(x, "NA"))) |>
+        transmute(superkingdom, phylum, class, order, family, genus, species,
+                  subspecies, varietas, forma,
+                  taxon = coalesce(species, label), seq = sequence, accession) |>
+        # guard against double-adding if this chunk is re-run
+        filter(!(seq %in% trnL.df$seq))
+
+    trnL.df <- bind_rows(trnL.df, control_rows)
+    cat("Added", nrow(control_rows), "positive-control sequence(s):",
+        paste(control_rows$taxon, collapse = ", "), "\n")
+} else {
+    warning("No trnL controls found in controls.csv - reference will have no positive control.")
+}
+
+cat(nrow(trnL.df), "sequences total (including controls)\n")
+```
+
+```{r trnl_save}
+# DADA2: sequence file
+trnL_out <- DNAStringSet(trnL.df$seq)
+names(trnL_out) <- paste(trnL.df$accession, trnL.df$taxon)
+writeXStringSet(trnL_out, file.path(TRNL_DADA2, "trnLGH.fasta"))
+cat("Saved trnLGH.fasta\n")
+
+# DADA2: taxonomy file
+trnL.df_tax     <- trnL.df |> unite(col = "lineage", superkingdom:forma, sep = ";")
+names(trnL_out) <- trnL.df_tax$lineage
+writeXStringSet(trnL_out, file.path(TRNL_DADA2, "trnLGH_taxonomy.fasta"))
+cat("Saved trnLGH_taxonomy.fasta\n")
+
+# QIIME2
+trnL.df_tax     <- mutate(trnL.df_tax, acc = make.unique(accession, sep = "_"))
+names(trnL_out) <- trnL.df_tax$acc
+writeXStringSet(trnL_out, file.path(TRNL_QIIME2, "trnL-sequences.fasta"))
+trnL.df_tax |>
+    select(`Feature ID` = acc, Taxon = lineage) |>
+    write_delim(file.path(TRNL_QIIME2, "trnL-taxonomy.tsv"), delim = "\t")
+cat("Saved QIIME2 files\n")
+
+cat("\n=== trnL complete:", nrow(trnL.df), "sequences,",
+    n_distinct(trnL.df$taxon), "taxa ===\n")
+```
+
+------------------------------------------------------------------------
+
+# Part A-CD — trnL c/d Reference Database
+
+Primers: trnL-c (`CGAAATCGGTAGACGCTACG`) / trnL-d (`GGGGATAGAGGGACTTGAAC`) — the full trnL(UAA) intron, a longer amplicon (\~300–600 bp) with higher taxonomic resolution than the g/h P6 loop.
+
+This part reuses Part A's inputs directly — the RefSeq plastome set from A2 and the untrimmed GenBank pull stashed in A4 (`ncbi.trnL_raw`) — so it adds **no** NCBI queries. It must run after Part A (it also reuses `plants` and `allowed_phyla_trnL`).
+
+Extraction is **alignment-augmented**, in three tiers:
+
+1.  **Plastome introns** — extracted by primer sites from the RefSeq plastomes (complete genomes always carry the sites). These become reference records AND the alignment panel.
+2.  **GenBank primer route** — records that carry both priming sites are extracted directly.
+3.  **GenBank alignment rescue** — records without primer sites (most long trnL deposits are primer-trimmed introns) are locally aligned against family-matched plastome introns and the homologous region is extracted.
+
+All records are stored **primer-trimmed and c→d oriented**. That matches how reads are processed (primers removed before denoising) and matches the format of the 2025 trnLCD compilation.
+
+> **Method basis (validated 2026-08-13):** primer-only extraction reaches \~55–60% of the taxa the g/h reference covers, because most long GenBank trnL deposits carry neither c/d site (primer-trimmed introns and trnL-F spacer records). Alignment localized the intron in 99/100 sampled primer-less taxa, and the 2025 `trnLCD.fasta` in `data/outputs/dada2-compatible/miscellaneous/` (Ashish Subramanian; demonstrated to be annotation/alignment-based, not primer-based) reached \~90% the same way. Expected coverage here: \~90–95% of g/h taxa. The CD8 anchor check guards extraction quality.
+
+## CD1. Primers and alignment setup
+
+```{r trnlcd_inputs}
+trnLC <- DNAString("CGAAATCGGTAGACGCTACG")
+trnLD <- DNAString("GGGGATAGAGGGACTTGAAC")
+trnLCD_primers <- list(trnLC, trnLD)
+
+# Fresh-session recovery: the untrimmed A4 pull is checkpointed to scratch.
+# (In a fresh session, first rerun Configuration, Libraries, A1, A2, and
+# define allowed_phyla_trnL as in A6b.)
+if (!exists("ncbi.trnL_raw"))
+    ncbi.trnL_raw <- readRDS(file.path(SCRATCH, "ncbi_trnL_raw.rds"))
+
+# pairwiseAlignment machinery lives in pwalign on Bioconductor >= 3.19 and in
+# Biostrings itself before that; bind whichever this installation provides.
+if (requireNamespace("pwalign", quietly = TRUE)) {
+    pa_align   <- pwalign::pairwiseAlignment
+    pa_nsm     <- pwalign::nucleotideSubstitutionMatrix
+    pa_pid     <- pwalign::pid
+    pa_pattern <- pwalign::pattern
+} else {
+    pa_align   <- Biostrings::pairwiseAlignment
+    pa_nsm     <- Biostrings::nucleotideSubstitutionMatrix
+    pa_pid     <- Biostrings::pid
+    pa_pattern <- Biostrings::pattern
+}
+
+CD_SUB_MAT  <- pa_nsm(match = 1, mismatch = -1, baseOnly = FALSE)
+CD_MIN_PID  <- 60     # min % identity of the best local alignment
+CD_MIN_SPAN <- 150    # min bp extracted (2025 compilation minimum was 152)
+CD_CAND_MIN <- 250    # candidate record length window for alignment rescue
+CD_CAND_MAX <- 20000
+
+# Orient an amplicon so trnL-c is at its 5' end (whichever orientation places
+# it there with fewer edits), then trim both 20 bp primers off.
+orient_and_trim_cd <- function(amps) {
+    fwd_mm <- vapply(seq_along(amps), function(i)
+        neditStartingAt(trnLC, amps[[i]], starting.at = 1), 0L)
+    rev_mm <- vapply(seq_along(amps), function(i)
+        neditStartingAt(trnLC, reverseComplement(amps[[i]]), starting.at = 1), 0L)
+    flip <- rev_mm < fwd_mm
+    amps[flip] <- reverseComplement(amps[flip])
+    subseq(amps, 21L, width(amps) - 20L)
+}
+```
+
+## CD2. Plastome intron panel (reference records + alignment panel)
+
+```{r trnlcd_refseq_panel}
+refseq.ampCD <- find_primer_pair(plastid_species,
+                                 fwd = trnLCD_primers[[1]],
+                                 rev = trnLCD_primers[[2]])
+cat(length(refseq.ampCD), "plastome sequences contain the trnL c/d primer pair\n")
+
+plants.cd.i  <- lapply(plants, grep, x = names(refseq.ampCD)) |> unlist() |> unique()
+refseq.ampCD <- refseq.ampCD[plants.cd.i]
+refseq.ampCD <- refseq.ampCD[width(refseq.ampCD) >= 100]
+cat(length(refseq.ampCD), "food plant plastome amplicons\n")
+
+refseq.intronCD <- orient_and_trim_cd(refseq.ampCD)
+names(refseq.intronCD) <- gsub(" .*$", "", names(refseq.intronCD))
+
+# Family index for family-matched alignment in CD3b
+panel_ids <- accessionToTaxa(names(refseq.intronCD), SQL_PATH)
+panel_fam <- getTaxonomy(panel_ids, SQL_PATH, desiredRanks = "family")[, "family"]
+cat(length(refseq.intronCD), "plastome introns spanning",
+    n_distinct(na.omit(panel_fam)), "families\n")
+```
+
+## CD3. GenBank: primer route
+
+```{r trnlcd_ncbi_pcr}
+ncbi.ampCD <- find_primer_pair(ncbi.trnL_raw,
+                               fwd = trnLCD_primers[[1]],
+                               rev = trnLCD_primers[[2]])
+cat(length(ncbi.ampCD), "GenBank records contain the trnL c/d primer pair\n")
+
+ncbi.ampCD <- ncbi.ampCD[!grepl("UNVERIFIED", names(ncbi.ampCD))]
+ncbi.ampCD <- ncbi.ampCD[width(ncbi.ampCD) >= 100]
+
+ncbi.intronCD <- orient_and_trim_cd(ncbi.ampCD)
+names(ncbi.intronCD) <-
+    names(ncbi.intronCD) |>
+    gsub(pattern = " .+$", replacement = "") |>
+    gsub(pattern = "^>",   replacement = "")
+cat(length(ncbi.intronCD), "primer-extracted GenBank introns\n")
+```
+
+## CD3b. GenBank: alignment rescue
+
+Records without primer sites but long enough to hold the intron are aligned against family-matched plastome introns (falling back to a taxonomically spread set when the family is unknown or unrepresented), and the homologous region is extracted. Identical sequences are aligned once and the result mapped back to every accession sharing them.
+
+```{r trnlcd_align_rescue}
+cand <- ncbi.trnL_raw[!grepl("UNVERIFIED", names(ncbi.trnL_raw))]
+names(cand) <-
+    names(cand) |>
+    gsub(pattern = " .+$", replacement = "") |>
+    gsub(pattern = "^>",   replacement = "")
+cand <- cand[width(cand) >= CD_CAND_MIN & width(cand) <= CD_CAND_MAX]
+cand <- cand[!(names(cand) %in% names(ncbi.intronCD))]
+cat(length(cand), "candidate records for alignment rescue\n")
+
+cand_chr <- as.character(cand)
+uniq_i   <- which(!duplicated(cand_chr))
+uniq     <- cand[uniq_i]
+uniq_ids <- accessionToTaxa(names(uniq), SQL_PATH)
+uniq_fam <- getTaxonomy(uniq_ids, SQL_PATH, desiredRanks = "family")[, "family"]
+cat(length(uniq), "unique candidate sequences\n")
+
+fallback_refs <- refseq.intronCD[head(which(!duplicated(panel_fam) & !is.na(panel_fam)), 8)]
+
+align_extract_cd <- function(s, fam) {
+    refs <- fallback_refs
+    if (!is.na(fam)) {
+        fi <- which(!is.na(panel_fam) & panel_fam == fam)
+        if (length(fi) > 0) refs <- refseq.intronCD[head(fi, 3)]
+    }
+    # orient once against the first reference
+    a_f <- pa_align(s, refs[[1]], type = "local", substitutionMatrix = CD_SUB_MAT,
+                    gapOpening = 2, gapExtension = 0.5)
+    a_r <- pa_align(reverseComplement(s), refs[[1]], type = "local",
+                    substitutionMatrix = CD_SUB_MAT, gapOpening = 2, gapExtension = 0.5)
+    if (score(a_r) > score(a_f)) s <- reverseComplement(s)
+    best <- NULL
+    for (k in seq_along(refs)) {
+        a  <- pa_align(s, refs[[k]], type = "local", substitutionMatrix = CD_SUB_MAT,
+                       gapOpening = 2, gapExtension = 0.5)
+        st <- start(pa_pattern(a)); en <- end(pa_pattern(a))
+        if (is.null(best) || (en - st + 1) > best$span)
+            best <- list(span = en - st + 1, pid = pa_pid(a), st = st, en = en)
+    }
+    if (best$span >= CD_MIN_SPAN && best$pid >= CD_MIN_PID)
+        as.character(subseq(s, best$st, best$en))
+    else NA_character_
+}
+
+uniq_intron <- rep(NA_character_, length(uniq))
+for (i in seq_along(uniq)) {
+    uniq_intron[i] <- align_extract_cd(uniq[[i]], uniq_fam[i])
+    if (i %% 1000 == 0) cat("  aligned", i, "of", length(uniq), "candidates\n")
+}
+cat(sum(!is.na(uniq_intron)), "of", length(uniq),
+    "unique candidates yielded an intron\n")
+
+map          <- match(cand_chr, cand_chr[uniq_i])
+aligned_seqs <- uniq_intron[map]
+keep         <- !is.na(aligned_seqs)
+aligned.df   <- data.frame(source    = "GenBank-aligned",
+                           accession = names(cand)[keep],
+                           seq       = aligned_seqs[keep])
+cat(nrow(aligned.df), "alignment-rescued records\n")
+```
+
+## CD4. Combine all three tiers
+
+```{r trnlcd_combine}
+trnLCD.df <- bind_rows(
+    data.frame(source = "GenBank", accession = names(ncbi.intronCD),   seq = as.character(ncbi.intronCD)),
+    aligned.df,
+    data.frame(source = "RefSeq",  accession = names(refseq.intronCD), seq = as.character(refseq.intronCD))
+)
+cat(nrow(trnLCD.df), "total sequences\n")
+print(table(trnLCD.df$source))
+```
+
+## CD5. Taxonomy lookup
+
+```{r trnlcd_taxonomy}
+cat("Looking up taxonomy for", nrow(trnLCD.df), "accessions...\n")
+trnLCD_ids <- accessionToTaxa(trnLCD.df$accession, SQL_PATH)
+cat("Missing taxonomy IDs:", sum(is.na(trnLCD_ids)), "\n")
+
+# Index positionally, not via rownames -- see the note in A6.
+if (any(is.na(trnLCD_ids))) {
+    for (idx in which(is.na(trnLCD_ids))) {
+        trnLCD_ids[idx] <- query_ncbi_accession(trnLCD.df$accession[idx])
+    }
+    cat("Remaining missing IDs:", sum(is.na(trnLCD_ids)), "\n")
+}
+
+trnLCD.df <- bind_cols(trnLCD.df, extract_taxonomy(trnLCD_ids, SQL_PATH))
+```
+
+## CD6. Remove off-target sequences
+
+```{r trnlcd_offtarget_filter}
+# Same allowlist as A6b (allowed_phyla_trnL is defined there); keep in sync
+# with ALLOWED_PHYLA in code/qc_reference_build.R.
+n_before_offtarget <- nrow(trnLCD.df)
+trnLCD.df <- filter(trnLCD.df, phylum %in% allowed_phyla_trnL)
+cat("Off-target filter: removed", n_before_offtarget - nrow(trnLCD.df),
+    "sequences with phylum outside the food-plant allowlist\n")
+cat(nrow(trnLCD.df), "sequences retained\n")
+```
+
+## CD7. Naming
+
+```{r trnlcd_naming}
+# Omissions. A7's omit rows in Manual renaming.csv are keyed to g/h amplicon
+# SEQUENCES and can never match a c/d record, so the c/d records that must go are
+# listed here by accession. Both were checked against the c/d database itself
+# (Oct 2026), and both were still in the released 2026.08 database:
+#   JX390727.1  labelled Murraya koenigii: 99-100% identical to peanut (Arachis
+#               hypogaea) c/d records, 74.5% to other Murraya
+#   GU595140.1  labelled Secale cereale: 98.7-99.8% identical to rice (Oryza)
+#               records, 92.2% to other Secale
+# KF550171.1 (Allium schoenoprasum) is omitted from g/h for a doubled-length
+# amplicon, but its c/d region is normal (301 bp, 99.7% identical to other
+# Allium), so it is deliberately kept here.
+trnLCD_omit <- c("JX390727.1", "GU595140.1")
+trnLCD.df   <- filter(trnLCD.df, !(accession %in% trnLCD_omit))
+cat("After c/d omissions:", nrow(trnLCD.df), "sequences\n")
+
+# Brassica oleracea subspecies renamings — same source records as A7, applied
+# when those accessions yield a c/d amplicon.
+trnLCD.df$varietas[trnLCD.df$accession == "AB213010.1"] <- "Brassica oleracea var. capitata"
+trnLCD.df$varietas[trnLCD.df$accession == "AC183493.1"] <- "Brassica oleracea var. alboglabra"
+trnLCD.df$varietas[trnLCD.df$accession == "LR031874.1"] <- "Brassica oleracea var. italica"
+trnLCD.df$varietas[trnLCD.df$accession == "LR031875.1"] <- "Brassica oleracea var. italica"
+trnLCD.df$varietas[trnLCD.df$accession == "LR031876.1"] <- "Brassica oleracea var. italica"
+
+# Assign lowest available taxonomic rank as display name
+trnLCD.df <-
+    trnLCD.df |>
+    MButils::lowest_level() |>
+    rename(taxon = "name") |>
+    select(source, accession, taxon, taxid, superkingdom:forma, seq)
+```
+
+## CD8. Quality control
+
+```{r trnlcd_remove_degenerate}
+cat(sum(grepl("[AGCT]*[^AGCT]+", trnLCD.df$seq)),
+    "sequences with degenerate nucleotides - removing\n")
+trnLCD.df <- filter(trnLCD.df, !grepl("[AGCT]*[^AGCT]+", seq))
+cat(nrow(trnLCD.df), "sequences remaining\n")
+```
+
+## CD9. Extraction sanity check
+
+Orientation is standardised at extraction time (all three tiers emit c→d oriented, primer-trimmed introns), so no orientation pass is needed. Instead, verify extraction quality: the trnL-g primer anneals **inside** the intron, so nearly every true intron must contain a g-like site. A low anchor rate means the alignment rescue is extracting the wrong region.
+
+```{r trnlcd_anchor_check}
+g_anchor <- vcountPattern(DNAString("GGGCAATCCTGAGCCAA"),
+                          DNAStringSet(trnLCD.df$seq), max.mismatch = 3) > 0
+cat(sprintf("%.1f%% of records contain the internal trnL-g anchor\n",
+            100 * mean(g_anchor)))
+cat("anchor rate by source tier:\n")
+print(round(100 * tapply(g_anchor, trnLCD.df$source, mean), 1))
+if (mean(g_anchor) < 0.80)
+    warning("Low trnL-g anchor rate - review CD3b extraction thresholds before shipping.")
+```
+
+## CD10. Deduplicate, add controls, and save
+
+```{r trnlcd_dedup}
+trnLCD.df <-
+    trnLCD.df |>
+    group_by(superkingdom, phylum, class, order, family,
+             genus, species, subspecies, varietas, forma, taxon, seq) |>
+    arrange(desc(source), accession) |>
+    summarize(accession = first(accession), .groups = "drop") |>
+    arrange(taxon, accession)
+
+cat(nrow(trnLCD.df), "sequences after deduplication\n")
+cat(n_distinct(trnLCD.df$taxon), "unique taxa\n")
+```
+
+```{r trnlcd_controls}
+controls.trnLCD <-
+    read_csv(file.path(REPO_DIR, "data", "inputs", "controls.csv"),
+             show_col_types = FALSE) |>
+    filter(marker == "trnLCD")
+
+if (nrow(controls.trnLCD) > 0) {
+    control_rows <-
+        controls.trnLCD |>
+        mutate(lineage = ifelse(is.na(lineage) | lineage == "",
+                                sapply(label, function(l)
+                                    paste(c(rep(l, 7), rep("NA", 3)),
+                                          collapse = ";")),
+                                lineage)) |>
+        separate(lineage,
+                 into = c("superkingdom", "phylum", "class", "order", "family",
+                          "genus", "species", "subspecies", "varietas", "forma"),
+                 sep = ";") |>
+        mutate(across(superkingdom:forma, \(x) na_if(x, "NA"))) |>
+        transmute(superkingdom, phylum, class, order, family, genus, species,
+                  subspecies, varietas, forma,
+                  taxon = coalesce(species, label), seq = sequence, accession) |>
+        filter(!(seq %in% trnLCD.df$seq))
+
+    trnLCD.df <- bind_rows(trnLCD.df, control_rows)
+    cat("Added", nrow(control_rows), "positive-control sequence(s):",
+        paste(control_rows$taxon, collapse = ", "), "\n")
+} else {
+    # No c/d control is defined yet: the 50 bp synthetic construct carries no
+    # c/d priming sites. This is a deliberate gap, not an error — add a row
+    # with marker "trnLCD" to controls.csv once the wet lab settles on one.
+    cat("No trnLCD controls defined in controls.csv (expected for now).\n")
+}
+
+cat(nrow(trnLCD.df), "sequences total\n")
+```
+
+```{r trnlcd_save}
+# DADA2: sequence file
+trnLCD_out <- DNAStringSet(trnLCD.df$seq)
+names(trnLCD_out) <- paste(trnLCD.df$accession, trnLCD.df$taxon)
+writeXStringSet(trnLCD_out, file.path(TRNLCD_DADA2, "trnLCD.fasta"))
+cat("Saved trnLCD.fasta\n")
+
+# DADA2: taxonomy file
+trnLCD.df_tax     <- trnLCD.df |> unite(col = "lineage", superkingdom:forma, sep = ";")
+names(trnLCD_out) <- trnLCD.df_tax$lineage
+writeXStringSet(trnLCD_out, file.path(TRNLCD_DADA2, "trnLCD_taxonomy.fasta"))
+cat("Saved trnLCD_taxonomy.fasta\n")
+
+# QIIME2
+trnLCD.df_tax     <- mutate(trnLCD.df_tax, acc = make.unique(accession, sep = "_"))
+names(trnLCD_out) <- trnLCD.df_tax$acc
+writeXStringSet(trnLCD_out, file.path(TRNLCD_QIIME2, "trnLCD-sequences.fasta"))
+trnLCD.df_tax |>
+    select(`Feature ID` = acc, Taxon = lineage) |>
+    write_delim(file.path(TRNLCD_QIIME2, "trnLCD-taxonomy.tsv"), delim = "\t")
+cat("Saved QIIME2 files\n")
+
+cat("\n=== trnL c/d complete:", nrow(trnLCD.df), "sequences,",
+    n_distinct(trnLCD.df$taxon), "taxa ===\n")
+```
+
+------------------------------------------------------------------------
+
+# Part B — 12SV5 Reference Database
+
+Primers: V5F (`TAGAACAGGCTCCTCTAG`) / V5R (`TTAGATACCCCACTATGC`) Source organisms: curated list of dietary vertebrates (extend `animals` below as needed)
+
+> **Note:** The original `acc_to_dada()` function in the repo has incomplete code and a hardcoded legacy path. This pipeline uses the same taxonomizr-based approach as Part A instead, which is more robust and uses the same SQL database.
+
+## B1. Load inputs
+
+```{r s12v5_inputs}
+V5F <- DNAString("TAGAACAGGCTCCTCTAG")
+V5R <- DNAString("TTAGATACCCCACTATGC")
+s12v5_primers <- list(V5F, V5R)
+
+# Read dietary animal list from the same curated CSV used for plants
+animals <-
+    file.path(REPO_DIR, "data", "inputs", "human-foods.csv") |>
+    read.csv(stringsAsFactors = FALSE) |>
+    filter(category == "animal") |>
+    pull(scientific_name)
+
+cat(length(animals), "dietary animal species\n")
+head(animals)
+tail(animals)
+```
+
+## B2. Filter RefSeq mitochondrial to one sequence per species
+
+```{r s12v5_refseq_filter}
+# "_acc" filename: names are "<accession> <Genus species>". Do NOT fall back to
+# an old refseq_mito_species.fasta cache — its names are species-only, which is
+# the bug this replaces (see below).
+mito_species_path <- file.path(MITO_DIR, "refseq_mito_species_acc.fasta")
+
+if (!file.exists(mito_species_path)) {
+    cat("Filtering RefSeq mitochondrial to one sequence per species...\n")
+    mito <- readDNAStringSet(file.path(MITO_DIR, "refseq_mito_all.fasta"))
+    cat(length(mito), "total sequences\n")
+
+    # Strip 'mitochondrion' suffix for cleaner species name extraction
+    names(mito) <- names(mito) |>
+        strsplit(" mitochondrion") |>
+        lapply(`[[`, 1) |>
+        unlist()
+
+    # The accession MUST stay in the name: B3 keeps the first token as the
+    # record's accession, and taxonomy lookup depends on it. The May 2026 run
+    # named these by species only, which put a bare GENUS in the accession
+    # column of all 260 RefSeq-sourced records and sent their taxonomy lookups
+    # through the free-text NCBI fallback — 39 came back cross-genus mislabels
+    # (Esox->Salmo salar etc.).
+    accession    <- sub("^(\\S+).*", "\\1", names(mito))
+    species      <- sub("^\\S+\\s+(\\S+\\s+\\S+).*", "\\1", names(mito))
+    mito_species <- mito[!duplicated(species)]
+    names(mito_species) <- paste(accession, species)[!duplicated(species)]
+
+    writeXStringSet(mito_species, mito_species_path)
+    cat(length(mito_species), "species retained\n")
+} else {
+    mito_species <- readDNAStringSet(mito_species_path)
+    cat(length(mito_species), "species loaded from existing file\n")
+}
+
+mito_species
+```
+
+## B3. RefSeq: in silico PCR and subset to dietary animals
+
+```{r s12v5_refseq_pcr}
+refseq.12SV5 <- find_primer_pair(clean(mito_species),
+                                 fwd = s12v5_primers[[1]],
+                                 rev = s12v5_primers[[2]])
+cat(length(refseq.12SV5), "sequences contain the 12SV5 primer pair\n")
+
+animals.i    <- lapply(animals, grep, x = names(refseq.12SV5)) |> unlist()
+refseq.12SV5 <- refseq.12SV5[animals.i]
+cat(length(refseq.12SV5), "dietary animal 12SV5 sequences from RefSeq\n")
+
+# Report any animals not found in RefSeq
+found   <- sub("\\S+\\s", "", names(refseq.12SV5))
+missing <- animals[sapply(animals, function(x) length(grep(x, found))) == 0]
+if (length(missing) > 0)
+    cat("Not found in RefSeq (will rely on GenBank):", paste(missing, collapse = ", "), "\n")
+
+names(refseq.12SV5) <- gsub(" .*$", "", names(refseq.12SV5))
+head(names(refseq.12SV5))
+```
+
+## Save B3 results for SLURM job
+
+```{r s12v5_save_b3}
+saveRDS(refseq.12SV5, file.path(SCRATCH, "refseq_12sv5.rds"))
+saveRDS(animals,      file.path(SCRATCH, "animals_12sv5.rds"))
+cat("Saved refseq.12SV5 and animals to", SCRATCH, "\n")
+```
+
+## Submit B4–B6 as a SLURM job (recommended)
+
+B4 (NCBI GenBank query) and the missing-ID loop in B6 both make thousands of API calls and can take several hours. Run them as a SLURM batch job to avoid session timeouts. Once complete, load the results with the chunk below and proceed to B7.
+
+```{r submit_b4b6}
+# ── Standalone R script ────────────────────────────────────────────────────
+b4b6_r_path <- file.path(SCRATCH, "run_b4_b6.R")
+
+r_lines <- c(
+    '# run_b4_b6.R — 12SV5 GenBank query and taxonomy lookup (B4-B6)',
+    '# Standalone script; run as a SLURM job after saving B3 results from RStudio.',
+    '',
+    '# ── Configuration ────────────────────────────────────────────────────',
+    paste0('SCRATCH  <- "', SCRATCH,  '"'),
+    paste0('REPO_DIR <- "', REPO_DIR, '"'),
+    paste0('SQL_PATH <- "', SQL_PATH, '"'),
+    '',
+    '# ── NCBI API key ─────────────────────────────────────────────────────',
+    '# Set the ENTREZ_KEY environment variable in your ~/.bashrc to use your key.',
+    '# e.g.  export ENTREZ_KEY="your_key_here"',
+    'api_key <- Sys.getenv("ENTREZ_KEY", unset = "")',
+    'if (nchar(api_key) > 0) {',
+    '    rentrez::set_entrez_key(api_key)',
+    '    cat("NCBI API key set.\\n")',
+    '} else {',
+    '    cat("No NCBI API key found — running at unauthenticated rate limit.\\n")',
+    '}',
+    '',
+    '# ── Libraries ─────────────────────────────────────────────────────────',
+    'library(Biostrings)',
+    'library(taxonomizr)',
+    'library(tidyverse)',
+    'library(rentrez)',
+    '',
+    '# ── Source functions ──────────────────────────────────────────────────',
+    'source(file.path(REPO_DIR, "code", "functions", "find_primer_pair.R"))',
+    'source(file.path(REPO_DIR, "code", "functions", "query_ncbi.R"))',
+    'source(file.path(REPO_DIR, "code", "functions", "query_ncbi_accession.R"))',
+    '',
+    '# ── Inline MButils functions (avoids system-library dependency) ───────',
+    '# clean(): removes sequences containing non-ACGT characters (Ns, degenerate',
+    '# bases) before primer matching, as required by find_primer_pair()',
+    'clean <- function(seqs) {',
+    '    seqs[!grepl("[^ACGTacgt]", as.character(seqs))]',
+    '}',
+    '',
+    '# lowest_level(): assigns the lowest available taxonomic rank as display name',
+    'lowest_level <- function(df) {',
+    '    tax_ranks <- c("forma", "varietas", "subspecies", "species",',
+    '                   "genus", "family", "order", "class", "phylum", "superkingdom")',
+    '    present <- tax_ranks[tax_ranks %in% names(df)]',
+    '    df$name <- apply(df[, present, drop = FALSE], 1, function(row) {',
+    '        vals <- row[!is.na(row) & nchar(trimws(as.character(row))) > 0]',
+    '        if (length(vals) > 0) vals[[1]] else NA_character_',
+    '    })',
+    '    df',
+    '}',
+    '',
+    '# ── Primers ───────────────────────────────────────────────────────────',
+    'V5F <- DNAString("TAGAACAGGCTCCTCTAG")',
+    'V5R <- DNAString("TTAGATACCCCACTATGC")',
+    's12v5_primers <- list(V5F, V5R)',
+    '',
+    '# ── Shared helper: accession IDs to full taxonomy data frame ──────────',
+    '# NCBI reclassified Eukaryota/Bacteria/Archaea from rank "superkingdom" to',
+    '# rank "domain" (taxonomizr >= 0.11 follows suit). Capture both names and',
+    '# merge into "superkingdom" below, or a current taxdump yields 100% NA there.',
+    'extract_taxonomy <- function(ids, sql_path) {',
+    '    vars <- c("superkingdom", "domain", "phylum", "class", "order",',
+    '              "family", "genus", "species", "subspecies", "varietas", "forma")',
+    '    taxonomy.raw <- getRawTaxonomy(ids, sql_path)',
+    '    taxonomy <- as.data.frame(',
+    '        setNames(lapply(vars, function(v) character(0)), vars),',
+    '        stringsAsFactors = FALSE',
+    '    )',
+    '    for (i in seq_along(taxonomy.raw)) {',
+    '        row.i  <- taxonomy.raw[[i]] |> t() |> data.frame()',
+    '        shared <- intersect(vars, names(row.i))',
+    '        row.i  <- select(row.i, one_of(shared))',
+    '        taxonomy <- bind_rows(taxonomy, row.i)',
+    '    }',
+    '    taxonomy$superkingdom <- coalesce(taxonomy$superkingdom, taxonomy$domain)',
+    '    taxonomy$domain <- NULL',
+    '    taxonomy$taxid <- names(taxonomy.raw) |> trimws() |> as.integer()',
+    '    select(taxonomy, taxid, everything())',
+    '}',
+    '',
+    '# ── Load B3 results ───────────────────────────────────────────────────',
+    'cat("\\n=== Loading B3 results ===\\n")',
+    'refseq.12SV5 <- readRDS(file.path(SCRATCH, "refseq_12sv5.rds"))',
+    'animals      <- readRDS(file.path(SCRATCH, "animals_12sv5.rds"))',
+    'cat(length(refseq.12SV5), "RefSeq sequences loaded\\n")',
+    'cat(length(animals), "dietary animal species loaded\\n")',
+    '',
+    '# ── B4. NCBI GenBank query ────────────────────────────────────────────',
+    'cat("\\n=== B4. NCBI GenBank query ===\\n")',
+    'ncbi.12SV5 <- query_ncbi(marker = "12S", organisms = animals)',
+    'cat(length(ncbi.12SV5), "sequences returned from NCBI\\n")',
+    '',
+    'ncbi.12SV5 <- find_primer_pair(clean(ncbi.12SV5),',
+    '                               fwd = s12v5_primers[[1]],',
+    '                               rev = s12v5_primers[[2]])',
+    'cat(length(ncbi.12SV5), "sequences contain the 12SV5 primer pair\\n")',
+    '',
+    'n_before   <- length(ncbi.12SV5)',
+    'ncbi.12SV5 <- ncbi.12SV5[!grepl("UNVERIFIED", names(ncbi.12SV5))]',
+    'cat("Removed", n_before - length(ncbi.12SV5), "unverified sequences\\n")',
+    '',
+    'names(ncbi.12SV5) <-',
+    '    names(ncbi.12SV5) |>',
+    '    gsub(pattern = " .+$", replacement = "") |>',
+    '    gsub(pattern = "^>",   replacement = "")',
+    '',
+    '# ── B5. Combine RefSeq and GenBank ───────────────────────────────────',
+    'cat("\\n=== B5. Combine RefSeq and GenBank ===\\n")',
+    'cat("RefSeq sequences: ",  length(refseq.12SV5), "\\n")',
+    'cat("GenBank sequences:",  length(ncbi.12SV5),   "\\n")',
+    's12v5.df <- bind_rows(',
+    '    data.frame(source = "GenBank", accession = names(ncbi.12SV5),   seq = as.character(ncbi.12SV5)),',
+    '    data.frame(source = "RefSeq",  accession = names(refseq.12SV5), seq = as.character(refseq.12SV5))',
+    ')',
+    'cat(nrow(s12v5.df), "total sequences\\n")',
+    '',
+    '# ── B6. Taxonomy lookup ───────────────────────────────────────────────',
+    'cat("\\n=== B6. Taxonomy lookup ===\\n")',
+    'cat("Looking up taxonomy for", nrow(s12v5.df), "accessions...\\n")',
+    's12v5_ids <- accessionToTaxa(s12v5.df$accession, SQL_PATH)',
+    'cat("Missing taxonomy IDs:", sum(is.na(s12v5_ids)), "\\n")',
+    '',
+    'checkpoint_path <- file.path(SCRATCH, "s12v5_ids_checkpoint.rds")',
+    '',
+    'if (any(is.na(s12v5_ids))) {',
+    '    # Resume from checkpoint if one exists (e.g. after a time-limit cancel)',
+    '    if (file.exists(checkpoint_path)) {',
+    '        s12v5_ids <- readRDS(checkpoint_path)',
+    '        cat("Checkpoint loaded:", sum(!is.na(s12v5_ids)), "IDs already resolved\\n")',
+    '    }',
+    '    # Index positionally. as.character() on a DNAStringSet carries names,',
+    '    # so data.frame() adopts accessions as row names when they are unique;',
+    '    # recovering an index via as.integer(rownames(...)) then yields NA, and',
+    '    # assignment to an NA index is a SILENT no-op that discards the taxid.',
+    '    missing_i <- which(is.na(s12v5_ids))',
+    '    cat("Resolving", length(missing_i), "missing IDs via NCBI API...\\n")',
+    '    for (i in seq_along(missing_i)) {',
+    '        idx            <- missing_i[i]',
+    '        s12v5_ids[idx] <- tryCatch(query_ncbi_accession(s12v5.df$accession[idx]),',
+    '                                   error = function(e) NA_integer_)',
+    '        if (i %% 100 == 0) {',
+    '            cat("  Resolved", i, "of", length(missing_i), "missing IDs\\n")',
+    '            saveRDS(s12v5_ids, checkpoint_path)',
+    '        }',
+    '    }',
+    '    cat("Remaining missing IDs:", sum(is.na(s12v5_ids)), "\\n")',
+    '    file.remove(checkpoint_path)   # clean up on successful completion',
+    '}',
+    '',
+    's12v5_taxonomy <- extract_taxonomy(s12v5_ids, SQL_PATH)',
+    's12v5.df       <- bind_cols(s12v5.df, s12v5_taxonomy)',
+    '',
+    's12v5.df <-',
+    '    s12v5.df |>',
+    '    lowest_level() |>',
+    '    rename(taxon = "name") |>',
+    '    select(source, accession, taxon, taxid, superkingdom:forma, seq)',
+    '',
+    '# ── Save results ──────────────────────────────────────────────────────',
+    'cat("\\n=== Saving results ===\\n")',
+    'saveRDS(s12v5.df,  file.path(SCRATCH, "s12v5_df_b6.rds"))',
+    'saveRDS(s12v5_ids, file.path(SCRATCH, "s12v5_ids_b6.rds"))',
+    'cat("Saved s12v5_df_b6.rds and s12v5_ids_b6.rds to", SCRATCH, "\\n")',
+    'cat("\\n=== B4-B6 complete ===\\n")'
+)
+
+writeLines(r_lines, b4b6_r_path)
+cat("R script written to:", b4b6_r_path, "\n")
+
+# ── SLURM bash script ──────────────────────────────────────────────────────
+b4b6_slurm <- paste0(
+"#!/bin/bash\n",
+"#SBATCH --job-name=12sv5_b4b6\n",
+"#SBATCH --partition=", PARTITION, "\n",
+"#SBATCH --time=24:00:00\n",
+"#SBATCH --mem=128G\n",
+"#SBATCH --cpus-per-task=2\n",
+"#SBATCH --output=", SCRATCH, "/12sv5_b4b6.log\n",
+"\n",
+"module load ", R_MODULE, "\n",
+"\n",
+"# To use your NCBI API key, uncomment and fill in the line below:\n",
+"# export ENTREZ_KEY='your_key_here'\n",
+"\n",
+"Rscript ", b4b6_r_path, "\n",
+"echo 'B4-B6 job finished.'\n"
+)
+
+b4b6_sh <- file.path(SCRATCH, "submit_b4_b6.sh")
+writeLines(b4b6_slurm, b4b6_sh)
+
+cat("SLURM script written to:", b4b6_sh, "\n\n")
+cat("Submit from the OOD terminal with:\n")
+cat("  sbatch", b4b6_sh, "\n\n")
+cat("Monitor progress with:\n")
+cat("  tail -f", file.path(SCRATCH, "12sv5_b4b6.log"), "\n")
+```
+
+## Monitor B4–B6 job
+
+Re-run this chunk to check job progress.
+
+```{r monitor_b4b6}
+log_path <- file.path(SCRATCH, "12sv5_b4b6.log")
+
+if (file.exists(log_path)) {
+    lines     <- readLines(log_path)
+    completed  <- any(grepl("B4-B6 complete", lines, ignore.case = TRUE))
+    errored    <- any(grepl("Error|Execution halted", lines))
+    timelimit  <- any(grepl("DUE TO TIME LIMIT", lines))
+    checkpoint <- file.exists(file.path(SCRATCH, "s12v5_ids_checkpoint.rds"))
+    cat("Lines logged:", length(lines), "\n")
+    cat("Last 10 lines:\n")
+    cat(paste(" ", tail(lines, 10), collapse = "\n"), "\n")
+    cat("\nStatus:", if (completed)  "COMPLETE — run the load chunk below" else
+                    if (timelimit)  paste0("TIME LIMIT — resubmit with sbatch; ",
+                                           if (checkpoint) "checkpoint exists, will resume automatically"
+                                           else            "no checkpoint found") else
+                    if (errored)    "FAILED — check log above for error message" else
+                                    "IN PROGRESS", "\n")
+} else {
+    cat("Log not yet created — job may still be queued.\n")
+    cat("Check queue with: squeue --me\n")
+}
+```
+
+## Load B4–B6 results
+
+Run once the SLURM job is complete, then proceed to B7.
+
+```{r load_b4b6_results}
+s12v5.df  <- readRDS(file.path(SCRATCH, "s12v5_df_b6.rds"))
+s12v5_ids <- readRDS(file.path(SCRATCH, "s12v5_ids_b6.rds"))
+cat(nrow(s12v5.df), "sequences loaded\n")
+cat(n_distinct(s12v5.df$taxon), "unique taxa\n")
+head(s12v5.df)
+```
+
+------------------------------------------------------------------------
+
+## B4. NCBI GenBank: remote query *(interactive alternative — see SLURM job above)*
+
+> **Note:** The SLURM submission above is recommended for B4–B6. Run the chunks below only if running interactively; skip straight to B7 if you used the SLURM job.
+
+```{r s12v5_ncbi_query}
+cat("Querying NCBI for 12S sequences... this may take several minutes\n")
+ncbi.12SV5 <- query_ncbi(marker = "12S", organisms = animals)
+cat(length(ncbi.12SV5), "sequences returned from NCBI\n")
+```
+
+```{r s12v5_ncbi_pcr}
+ncbi.12SV5 <- find_primer_pair(clean(ncbi.12SV5),
+                               fwd = s12v5_primers[[1]],
+                               rev = s12v5_primers[[2]])
+cat(length(ncbi.12SV5), "sequences contain the 12SV5 primer pair\n")
+
+n_before   <- length(ncbi.12SV5)
+ncbi.12SV5 <- ncbi.12SV5[!grepl("UNVERIFIED", names(ncbi.12SV5))]
+cat("Removed", n_before - length(ncbi.12SV5), "unverified sequences\n")
+
+names(ncbi.12SV5) <-
+    names(ncbi.12SV5) |>
+    gsub(pattern = " .+$", replacement = "") |>
+    gsub(pattern = "^>",   replacement = "")
+head(names(ncbi.12SV5))
+```
+
+## B5. Combine RefSeq and GenBank
+
+```{r s12v5_combine}
+cat("RefSeq sequences: ",  length(refseq.12SV5), "\n")
+cat("GenBank sequences:",  length(ncbi.12SV5),   "\n")
+cat("Shared accessions: ", intersect(names(ncbi.12SV5), names(refseq.12SV5)) |> length(), "\n")
+
+s12v5.df <- bind_rows(
+    data.frame(source = "GenBank", accession = names(ncbi.12SV5),   seq = as.character(ncbi.12SV5)),
+    data.frame(source = "RefSeq",  accession = names(refseq.12SV5), seq = as.character(refseq.12SV5))
+)
+cat(nrow(s12v5.df), "total sequences\n")
+```
+
+## B6. Taxonomy lookup
+
+```{r s12v5_taxonomy_lookup}
+cat("Looking up taxonomy for", nrow(s12v5.df), "accessions...\n")
+s12v5_ids <- accessionToTaxa(s12v5.df$accession, SQL_PATH)
+cat("Missing taxonomy IDs:", sum(is.na(s12v5_ids)), "\n")
+
+if (any(is.na(s12v5_ids))) {
+    cat("Accessions with missing IDs (assign manually in the next chunk):\n")
+    print(s12v5.df[is.na(s12v5_ids), c("source", "accession")])
+}
+```
+
+```{r s12v5_taxonomy_missing}
+# Automatically resolve missing IDs using query_ncbi_accession() for accessions
+# added to NCBI after the SQL database was built
+# Index positionally, not via rownames -- see the note in A6.
+if (any(is.na(s12v5_ids))) {
+    for (idx in which(is.na(s12v5_ids))) {
+        s12v5_ids[idx] <- query_ncbi_accession(s12v5.df$accession[idx])
+    }
+}
+
+cat("Remaining missing IDs:", sum(is.na(s12v5_ids)), "\n")
+```
+
+```{r s12v5_taxonomy_extract}
+s12v5_taxonomy <- extract_taxonomy(s12v5_ids, SQL_PATH)
+s12v5.df       <- bind_cols(s12v5.df, s12v5_taxonomy)
+
+# Assign lowest available taxonomic rank as display name
+s12v5.df <-
+    s12v5.df |>
+    MButils::lowest_level() |>
+    rename(taxon = "name") |>
+    select(source, accession, taxon, taxid, superkingdom:forma, seq)
+
+head(s12v5.df)
+```
+
+## B6b. Remove off-target sequences
+
+The GenBank query returns any NCBI record matching the 12SV5 primer pair for a queried species — including off-target hits: viruses co-deposited with host records (e.g. avian influenza filed under duck species), bacteria from gut-microbiome studies, and synthetic constructs. In the May 2026 build, 21 such records carried sequences identical to real fish/bird amplicons and collapsed DADA2's bootstrap to full NA for those taxa.
+
+This deliberately narrows scope relative to the 2025 reference, which carried shrimp, crab, and jellyfish records: 12SV5 is a vertebrate marker, and those records never meaningfully assigned (2 ASVs / 15 reads across 385M production reads).
+
+```{r s12v5_offtarget_filter}
+# Chordata only — lab decision 2026-08-13. 12SV5 is a vertebrate marker;
+# invertebrate reference records proved inert in production data, and edible
+# invertebrates are out of assay scope (they were likewise excluded from the
+# coverage-recheck candidate lists). Keep this vector in sync with
+# ALLOWED_PHYLA in code/qc_reference_build.R.
+allowed_phyla_12S <- c("Chordata")
+
+n_before_offtarget <- nrow(s12v5.df)
+s12v5.df <- filter(s12v5.df, phylum %in% allowed_phyla_12S)
+cat("Off-target filter: removed", n_before_offtarget - nrow(s12v5.df),
+    "sequences with phylum outside the vertebrate-marker scope\n")
+cat(nrow(s12v5.df), "sequences retained\n")
+```
+
+------------------------------------------------------------------------
+
+## B7. Quality control
+
+```{r s12v5_qc}
+s12v5.df$N <- grepl("[AGCT]*[^AGCT]+", s12v5.df$seq)
+cat(sum(s12v5.df$N), "sequences with degenerate nucleotides\n")
+s12v5.df <- filter(s12v5.df, !s12v5.df$N) |> select(-N)
+cat(nrow(s12v5.df), "sequences remaining\n")
+```
+
+## B8. Standardise orientation
+
+```{r s12v5_orientation}
+fwd_err_12 <- floor(0.2 * length(V5F))
+rev_err_12 <- floor(0.2 * length(V5R))
+ref_12     <- DNAStringSet(s12v5.df$seq)
+names(ref_12) <- paste(s12v5.df$accession, s12v5.df$taxon)
+
+fwd_matches_12 <-
+    vmatchPattern(V5F, ref_12, max.mismatch = fwd_err_12, fixed = TRUE) |>
+    as.data.frame() |>
+    filter(start <= 1) |>
+    mutate(type = "forward") |>
+    select(group, type)
+
+rev_matches_12 <-
+    vmatchPattern(V5R, ref_12, max.mismatch = rev_err_12, fixed = TRUE) |>
+    as.data.frame() |>
+    filter(start <= 1) |>
+    mutate(type = "reverse") |>
+    select(group, type)
+
+s12v5.df <-
+    bind_rows(fwd_matches_12, rev_matches_12) |>
+    arrange(group) |>
+    bind_cols(s12v5.df) |>
+    mutate(seq = ifelse(type == "reverse",
+                        DNAStringSet(seq) |> reverseComplement() |> as.character(),
+                        seq)) |>
+    select(-c(type, group))
+
+cat("Orientation standardised.\n")
+```
+
+## B9. Deduplicate, add controls, and save
+
+```{r s12v5_dedup}
+s12v5.df <-
+    s12v5.df |>
+    group_by(superkingdom, phylum, class, order, family,
+             genus, species, subspecies, varietas, forma, taxon, seq) |>
+    arrange(desc(source), accession) |>
+    summarize(accession = first(accession), .groups = "drop") |>
+    arrange(taxon, accession)
+
+cat(nrow(s12v5.df), "sequences after deduplication\n")
+cat(n_distinct(s12v5.df$taxon), "unique taxa\n")
+```
+
+Append the positive-control spike-ins, exactly as in Part A (see the note at A10). The 12SV5 control is the same physical construct as the trnL one read to a longer amplicon — the 50 bp trnL sequence is an exact prefix of this 100 bp one.
+
+This step is what was missing previously: the 12SV5 reference shipped without its control, so spike-in reads were assigned to the nearest real vertebrate (mostly Actinopteri) instead of being identified as controls.
+
+12SV5 additionally carries a real-species control: *Rhacodactylus leachianus* (New Caledonia giant gecko, AF090176.1) — a vertebrate the primers amplify but which never occurs in human diet samples (1.05M reads across 45 samples of the 2025 production megaphyloseq). Every reference up to 2025 contained it only by inheritance from older broad vertebrate databases; now that the pipeline builds strictly from `human-foods.csv`, it must be appended here or the control silently breaks.
+
+```{r s12v5_controls}
+controls.12S <-
+    read_csv(file.path(REPO_DIR, "data", "inputs", "controls.csv"),
+             show_col_types = FALSE) |>
+    filter(marker == "12SV5")
+
+if (nrow(controls.12S) > 0) {
+    control_rows <-
+        controls.12S |>
+        # Two kinds of control: synthetic constructs (empty lineage) get the
+        # label repeated across superkingdom:species, per the lab convention;
+        # real-species controls (e.g. the R. leachianus gecko) carry their true
+        # lineage from the lineage column so DADA2 places them correctly.
+        mutate(lineage = ifelse(is.na(lineage) | lineage == "",
+                                sapply(label, function(l)
+                                    paste(c(rep(l, 7), rep("NA", 3)),
+                                          collapse = ";")),
+                                lineage)) |>
+        separate(lineage,
+                 into = c("superkingdom", "phylum", "class", "order", "family",
+                          "genus", "species", "subspecies", "varietas", "forma"),
+                 sep = ";") |>
+        mutate(across(superkingdom:forma, \(x) na_if(x, "NA"))) |>
+        transmute(superkingdom, phylum, class, order, family, genus, species,
+                  subspecies, varietas, forma,
+                  taxon = coalesce(species, label), seq = sequence, accession) |>
+        # guard against double-adding if this chunk is re-run
+        filter(!(seq %in% s12v5.df$seq))
+
+    s12v5.df <- bind_rows(s12v5.df, control_rows)
+    cat("Added", nrow(control_rows), "positive-control sequence(s):",
+        paste(control_rows$taxon, collapse = ", "), "\n")
+} else {
+    warning("No 12SV5 controls found in controls.csv - reference will have no positive control.")
+}
+
+cat(nrow(s12v5.df), "sequences total (including controls)\n")
+```
+
+```{r s12v5_save}
+# DADA2: sequence file
+s12v5_out <- DNAStringSet(s12v5.df$seq)
+names(s12v5_out) <- paste(s12v5.df$accession, s12v5.df$taxon)
+writeXStringSet(s12v5_out, file.path(S12V5_DADA2, "12Sv5.fasta"))
+cat("Saved 12Sv5.fasta\n")
+
+# DADA2: taxonomy file
+s12v5.df_tax     <- s12v5.df |> unite(col = "lineage", superkingdom:forma, sep = ";")
+names(s12v5_out) <- s12v5.df_tax$lineage
+writeXStringSet(s12v5_out, file.path(S12V5_DADA2, "12Sv5_taxonomy.fasta"))
+cat("Saved 12Sv5_taxonomy.fasta\n")
+
+# QIIME2
+s12v5.df_tax     <- mutate(s12v5.df_tax, acc = make.unique(accession, sep = "_"))
+names(s12v5_out) <- s12v5.df_tax$acc
+writeXStringSet(s12v5_out, file.path(S12V5_QIIME2, "12Sv5-sequences.fasta"))
+s12v5.df_tax |>
+    select(`Feature ID` = acc, Taxon = lineage) |>
+    write_delim(file.path(S12V5_QIIME2, "12Sv5-taxonomy.tsv"), delim = "\t")
+cat("Saved QIIME2 files\n")
+
+cat("\n=== 12SV5 complete:", nrow(s12v5.df), "sequences,",
+    n_distinct(s12v5.df$taxon), "taxa ===\n")
+```
+
+------------------------------------------------------------------------
+
+# Summary
+
+```{r summary}
+cat("========================================\n")
+cat("FoodSeq Reference Database Build Summary\n")
+cat("========================================\n\n")
+
+cat("trnL g/h (plant)\n")
+cat("  Sequences:", nrow(trnL.df), "\n")
+cat("  Taxa:     ", n_distinct(trnL.df$taxon), "\n")
+cat("  Outputs:\n")
+cat("   ", file.path(TRNL_DADA2,  "trnLGH.fasta"), "\n")
+cat("   ", file.path(TRNL_DADA2,  "trnLGH_taxonomy.fasta"), "\n")
+cat("   ", file.path(TRNL_QIIME2, "trnL-sequences.fasta"), "\n")
+cat("   ", file.path(TRNL_QIIME2, "trnL-taxonomy.tsv"), "\n\n")
+
+if (exists("trnLCD.df")) {
+    cat("trnL c/d (plant)\n")
+    cat("  Sequences:", nrow(trnLCD.df), "\n")
+    cat("  Taxa:     ", n_distinct(trnLCD.df$taxon), "\n")
+    cat("  Outputs:\n")
+    cat("   ", file.path(TRNLCD_DADA2,  "trnLCD.fasta"), "\n")
+    cat("   ", file.path(TRNLCD_DADA2,  "trnLCD_taxonomy.fasta"), "\n")
+    cat("   ", file.path(TRNLCD_QIIME2, "trnLCD-sequences.fasta"), "\n")
+    cat("   ", file.path(TRNLCD_QIIME2, "trnLCD-taxonomy.tsv"), "\n\n")
+}
+
+cat("12SV5 (vertebrate)\n")
+cat("  Sequences:", nrow(s12v5.df), "\n")
+cat("  Taxa:     ", n_distinct(s12v5.df$taxon), "\n")
+cat("  Outputs:\n")
+cat("   ", file.path(S12V5_DADA2,  "12Sv5.fasta"), "\n")
+cat("   ", file.path(S12V5_DADA2,  "12Sv5_taxonomy.fasta"), "\n")
+cat("   ", file.path(S12V5_QIIME2, "12Sv5-sequences.fasta"), "\n")
+cat("   ", file.path(S12V5_QIIME2, "12Sv5-taxonomy.tsv"), "\n")
+```
+
+------------------------------------------------------------------------
+
+# Verify before shipping
+
+Runs the QC gate against everything just built — trnL, trnLCD (if built this run), and 12SV5 together, since that is what a plain run of this notebook just produced. It compares against `QC_PREVIOUS_SUFFIX` (set in Configuration) and hard-fails (exit 1) on a missing control, a rank that went almost entirely NA, or an off-target phylum — the three silent failures a rebuild has actually shipped with before this gate existed.
+
+```{r qc-gate-run}
+gate <- system2("Rscript",
+                c(shQuote(file.path(REPO_DIR, "code", "qc_reference_build.R")),
+                  shQuote(REPO_DIR), "-", QC_PREVIOUS_SUFFIX),
+                stdout = TRUE, stderr = TRUE)
+cat(gate, sep = "\n")
+
+if (!is.null(attr(gate, "status")) && attr(gate, "status") != 0)
+  warning("QC gate reported failures - do not ship this reference until they are resolved.")
+```
+
+Once this reports 0 FAIL, archive the date-less outputs under a new suffix (e.g. `trnLGH.fasta` → `trnLGH_Sep2026.fasta`) before the next rebuild overwrites them in place — see the note at the top of `code/qc_reference_build.R`.
